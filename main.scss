@@ -95,12 +95,90 @@ header {
 		}
 
 		.topcontent {
+			border-bottom: 1px solid #ddd;
 			th >.btn-group {
 				float: right;
 				ul.dropdown-menu{
 					min-width: 0;
 				}
 			}
+
+			tr {
+				margin: 5px 0;
+				border: 1px;
+			}
+
+			tr {
+				>td{
+					padding: 8px;
+					&:first-child{
+						color: white;
+						width: 23%;
+						background: url(./img/rhomboid.png) repeat-x center;
+						background-size: contain;
+						text-align: center;
+						vertical-align: middle;
+					}
+
+					h4 {
+						height: 29px;
+						margin: 0;
+					}
+					ul {
+						margin: 0;
+					}
+				}
+			}
+
+		}
+	}
+}
+.container.content {
+	form.changerequest {
+		div.panel-heading {
+			h3 {
+				display: inline-block;
+			}
+			a {
+				float: right;
+			}
+		}
+		.changeinfo {
+			&::after {
+				@include clear_float;
+			}
+
+			select {
+				height: 26px;
+				width: 174px;
+			}
+			.changelabel {
+				width: 62px;
+				text-align: right;
+			}
+			>div {
+				width: 30%;
+				display: inline-block;
+			}
+		}
+
+		.changeinfodiv, .applystatus {
+			textarea {
+				width: 100%;
+			}
+		}
+		.changeinfodiv {
+			input {
+				display: inline;
+    			padding-left: 10px;
+			}
+		}
+		input.btn-lg {
+			width: 200px;
+			margin: 0 5px;
+		}
+		div.yandnbtn {
+			text-align: center;
 		}
 	}
 }
