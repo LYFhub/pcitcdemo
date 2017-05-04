@@ -10,7 +10,7 @@ function changetab(event) {
 				$(allTabContent[k]).css('display','none');
 			}
 			$(allTabContent[i]).css('display','block');
-			drawChart();// 先显示，然后再画图，否则尺寸会有问题
+			drawChart(i-1);// 先显示，然后再画图，否则尺寸会有问题
 		}
 	}
 }

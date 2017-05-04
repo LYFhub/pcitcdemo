@@ -138,7 +138,7 @@ header {
 				}
 			}
 			
-			.toptabtwo {
+			.toptabtwo, .toptabthree, .toptabfour {
 				display: none;
 				&:after {
 					@include clear_float;
