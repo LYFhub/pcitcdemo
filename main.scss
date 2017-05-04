@@ -96,40 +96,61 @@ header {
 
 		.topcontent {
 			border-bottom: 1px solid #ddd;
-			th >.btn-group {
-				float: right;
-				ul.dropdown-menu{
-					min-width: 0;
+			.tabheader {
+				>h3 {
+					display: inline-block;
+					padding-left: 20px;
 				}
-			}
-
-			tr {
-				margin: 5px 0;
-				border: 1px;
-			}
-
-			tr {
-				>td{
-					padding: 8px;
-					&:first-child{
-						color: white;
-						width: 23%;
-						background: url(./img/rhomboid.png) repeat-x center;
-						background-size: contain;
-						text-align: center;
-						vertical-align: middle;
-					}
-
-					h4 {
-						height: 29px;
-						margin: 0;
-					}
-					ul {
-						margin: 0;
+				>.btn-group {
+					float: right;
+					margin-top: 20px;
+					ul.dropdown-menu{
+						min-width: 0;
 					}
 				}
 			}
+			.toptabone {
+				tr {
+					margin: 5px 0;
+					border: 1px;
+				}
 
+				tr {
+					>td{
+						padding: 8px;
+						&:first-child{
+							color: white;
+							width: 23%;
+							background: url(./img/rhomboid.png) repeat-x center;
+							background-size: contain;
+							text-align: center;
+							vertical-align: middle;
+						}
+
+						h4 {
+							height: 29px;
+							margin: 0;
+						}
+						ul {
+							margin: 0;
+						}
+					}
+				}
+			}
+			
+			.toptabtwo {
+				display: none;
+				&:after {
+					@include clear_float;
+				}
+				.barchart, .piechart, .linechart {
+					float: left;
+					width: 32%;
+					height: 200px;
+					background: #eeeeee;
+					margin: 5px;
+				}
+			}
 		}
 	}
 }
