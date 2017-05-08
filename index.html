@@ -7,6 +7,7 @@
 	<link href="https://cdn.bootcss.com/fullcalendar/3.4.0/fullcalendar.min.css" rel="stylesheet">
 	<link href="https://cdn.bootcss.com/fullcalendar/3.4.0/fullcalendar.print.min.css" rel="stylesheet" media='print'>
 	<link href="https://cdn.bootcss.com/timelinejs/2.36.0/css/timeline.css" rel="stylesheet">
+	<link href="https://cdn.bootcss.com/datatables/1.10.15/css/dataTables.bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="./main.css">
 </head>
 <body>
@@ -298,6 +299,53 @@
 			<div class="dateandevent">
 				<div id='calendar'></div>
 			</div>
+			<div class="projectcheck">
+				<div class="checktableitem">
+					<p>项目设计</p>
+					<table id="checktableleft" class="table">
+						<thead>
+							<tr>
+								<th>项目组</th>
+								<th>项目经理</th>
+								<th>计划完成率</th>
+								<th>成本进度比</th>
+							</tr>
+						</thead>
+						<tbody>
+						</tbody>
+					</table>
+				</div>
+				<div class="checktableitem">
+					<p>项目设计</p>
+					<table id="checktablecenter" class="table">
+						<thead>
+							<tr>
+								<th>项目组</th>
+								<th>项目经理</th>
+								<th>计划完成率</th>
+								<th>成本进度比</th>
+							</tr>
+						</thead>
+						<tbody>
+						</tbody>
+					</table>
+				</div>
+				<div class="checktableitem">
+					<p>项目设计</p>
+					<table id="checktableright" class="table">
+						<thead>
+							<tr>
+								<th>项目组</th>
+								<th>项目经理</th>
+								<th>计划完成率</th>
+								<th>成本进度比</th>
+							</tr>
+						</thead>
+						<tbody>
+						</tbody>
+					</table>
+				</div>
+			</div>
 		</div>
 	</div>
 
@@ -310,8 +358,10 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.print.css"></script> -->
 	<script src="https://cdn.bootcss.com/echarts/3.5.4/echarts.min.js"></script>
 	<script src="https://cdn.bootcss.com/fullcalendar/3.4.0/fullcalendar.min.js"></script>
+	<script src="https://cdn.bootcss.com/datatables/1.10.15/js/jquery.dataTables.min.js"></script>
 	<script src="./js/chart.js"></script>
 	<script src="./js/calendar.js"></script>
+	<script src="./js/checktable.js"></script>
 	<script src="./js/main.js"></script>
 </body>
 </html>
