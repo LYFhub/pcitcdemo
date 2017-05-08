@@ -243,15 +243,14 @@ header {
 						vertical-align: middle;
 					}
 				}
-
-				.paging_simple_numbers {
-					text-align: left;
-					a {
-						margin: 3px;
-					}
-				}
 			}
 		}
+	}
+}
+.paging_simple_numbers {
+	text-align: left;
+	a {
+		margin: 3px;
 	}
 }
 .container.content {
@@ -300,6 +299,42 @@ header {
 		}
 		div.yandnbtn {
 			text-align: center;
+		}
+	}
+
+	.requiremanagement {
+		.selectbar {
+			margin: 10px 0;
+			select {
+				margin-right: 10px;
+				width: 100px;
+			}
+		}
+		.newandall {
+			display: inline-block;
+			float: right;
+		}
+
+		.requiretableitem {
+			#requiretable {
+				thead {
+					display: none;
+				}
+				tr {
+					width: 50% !important;
+					>td {
+						width: 25% !important;
+					}
+				}
+				>tbody {
+					tr:nth-child(odd) {
+						float: left;
+					}
+					tr:nth-child(even) {
+						float: left;
+					}
+				}
+			}
 		}
 	}
 }
