@@ -303,8 +303,20 @@ header {
 	}
 
 	.requiremanagement {
+		background: rgb(230, 230, 230);
+		padding: 20px;
+		>p {
+			font-size: 20px;
+			font-weight: bold;
+			padding: 10px;
+			margin-bottom: 0;
+		}
+
+		ul.nav-tabs, div.selectbar, div.requiretableitem {
+			background: rgb(242, 242, 242);
+		}
 		.selectbar {
-			margin: 10px 0;
+			padding: 10px;
 			select {
 				margin-right: 10px;
 				width: 100px;
@@ -317,14 +329,15 @@ header {
 
 		.requiretableitem {
 			#requiretable {
+				margin-top: 0 !important;
 				thead {
 					display: none;
 				}
 				tr {
 					width: 50% !important;
 					>td {
-						width: 150px;
-    					padding: 10px 0 8px 8px;
+						width: 133px;
+    					padding: 8px 0 8px 8px;
 					}
 				}
 				>tbody {
