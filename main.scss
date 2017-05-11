@@ -4,7 +4,7 @@ html, body {
 }
 
 header {
-	background: rgb(70, 116, 199);
+	background: rgb(75, 76, 77);
 	color: white;
 
 	.pic_logo {
@@ -23,6 +23,8 @@ header {
 		}
 		img {
 			display: inline-block;
+			border-radius: 50%;
+    		margin-right: 10px;
 		}
 		a {
 			color: white !important;
@@ -36,8 +38,9 @@ header {
 	}
 
 	.pic_navbar {
-		background-color: rgb(46, 50, 59);
+		background-color: rgb(217, 217, 217);
 		padding: 0;
+		height: 42px;
 
 		ul.nav.nav-tabs {
 			display: inline-block;
@@ -46,19 +49,17 @@ header {
 				@include clear_float;
 			}
 			
+			a {
+				color: black;
+			}
 		}
 		input {
 			display: inline-block;
-			float: right;
-			width: 200px;
-    		margin-top: 5px;
-		}
-		a {
-			color: white !important;
-			
-			&:link, &:hover{
-				color: black !important;
-			}
+		    float: right;
+		    width: 200px;
+		    margin-top: 4px;
+		    border-radius: 0;
+		    margin-right: 4px;
 		}
 	}
 }
@@ -109,10 +110,20 @@ header {
 
 		.topcontent {
 			border-bottom: 1px solid #ddd;
+
+			ul.nav.nav-tabs {
+				background: rgb(187, 187, 187);
+				a {
+					color: black;
+				}
+			}
+
 			.tabheader {
-				>h3 {
+				>p {
 					display: inline-block;
-					padding-left: 20px;
+				    padding-left: 20px;
+				    font-size: 20px;
+				    margin: 10px 0;
 				}
 				>.btn-group {
 					float: right;
@@ -121,6 +132,10 @@ header {
 						min-width: 0;
 					}
 				}
+			}
+
+			.tabcontent, .tabheader, .drawtimeline {
+				background-color: rgb(230, 230, 230);
 			}
 			.toptabone {
 				tr {
@@ -174,7 +189,8 @@ header {
 			}
 		}
 		div.drawtimeline {
-			margin-top: 10px;
+			margin-bottom: 20px;
+			padding-bottom: 15px;
 			>div:after {
 				@include clear_float;
 			}
@@ -211,8 +227,15 @@ header {
 			}
 		}
 		div.projectcheck {
+			background-color: rgb(230,230,230);
 			&:after {
 				@include clear_float;
+			}
+			>p {
+				display: block;
+				padding: 10px 20px;
+			    font-size: 20px;
+			    margin: 0;
 			}
 			div.checktableitem {
 				font-size: 12px;
@@ -242,17 +265,21 @@ header {
 						width: 25%;
 						vertical-align: middle;
 					}
+					>tbody >tr {
+						background-color: rgb(242, 242, 242);
+					}
+				}
+			}
+			.paging_simple_numbers {
+				text-align: left !important;
+				a {
+					margin: 3px;
 				}
 			}
 		}
 	}
 }
-.paging_simple_numbers {
-	text-align: left;
-	a {
-		margin: 3px;
-	}
-}
+
 .container.content {
 	form.changerequest {
 		div.panel-heading {
