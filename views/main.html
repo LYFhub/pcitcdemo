@@ -4,10 +4,10 @@
 			<!-- Table -->
 			<table class="table">
 				<tr>
-					<th>工作台(<span>{{worktabledata.length}}</span>条)</th>
+					<th>工作台(<span>{{workdatasource.length}}</span>条)</th>
 					<th>
-						<a ng-click="prevPage($event)"><span class="glyphicon glyphicon-triangle-left"></span></a>
-						<a ng-click="nextPage($event)"><span class="glyphicon glyphicon-triangle-right"></span></a>
+						<a class="workdata" ng-click="prevPage($event)"><span class="glyphicon glyphicon-triangle-left"></span></a>
+						<a class="workdata" ng-click="nextPage($event)"><span class="glyphicon glyphicon-triangle-right"></span></a>
 					</th>
 				</tr>
 				<tr ng-repeat="work in workdata">
@@ -19,15 +19,15 @@
 		<div class="mytask">
 			<table class="table">
 				<tr>
-					<th>我提交的(<span>{{worktabledata.length}}</span>条)</th>
+					<th>我提交的(<span>{{taskdatasource.length}}</span>条)</th>
 					<th>
-						<a ng-click="prevPage($event)"><span class="glyphicon glyphicon-triangle-left"></span></a>
-						<a ng-click="nextPage($event)"><span class="glyphicon glyphicon-triangle-right"></span></a>
+						<a class="taskdata" ng-click="prevPage($event)"><span class="glyphicon glyphicon-triangle-left"></span></a>
+						<a class="taskdata" ng-click="nextPage($event)"><span class="glyphicon glyphicon-triangle-right"></span></a>
 					</th>
 				</tr>
-				<tr ng-repeat="work in workdata">
-					<td>{{work.title}}</td>
-					<td>{{work.status}}</td>
+				<tr ng-repeat="task in taskdata">
+					<td>{{task.title}}</td>
+					<td>{{task.status}}</td>
 				</tr>
 			</table>
 		</div>
@@ -35,9 +35,16 @@
 			<table class="table">
 				<tr>
 					<th>新闻 | 通告</th>
-					<th>下一页</th>
+					<th>
+						<a class="newsdata" ng-click="prevPage($event)"><span class="glyphicon glyphicon-triangle-left"></span></a>
+						<a class="newsdata" ng-click="nextPage($event)"><span class="glyphicon glyphicon-triangle-right"></span></a>
+					</th>
 				</tr>
-				<tr>
+				<tr ng-repeat="news in newsdata">
+					<td><img ng-src="{{news.imgurl}}" alt=""></td>
+					<td><p>{{news.title}}</p><span>{{news.time}}</span></td>
+				</tr>
+				<!-- <tr>
 					<td><img src="./img/pic_logo.png" alt=""></td>
 					<td><p>石化盈科助力中国石化信息化企业成功完成大项目</p><span>2017-04-29</span></td>
 				</tr>
@@ -48,7 +55,7 @@
 				<tr>
 					<td><img src="./img/pic_logo.png" alt=""></td>
 					<td><p>石化盈科助力中国石化信息化企业成功完成大项目</p><span>2017-04-29</span></td>
-				</tr>
+				</tr> -->
 			</table>
 		</div>
 		<div class="doccenter">
