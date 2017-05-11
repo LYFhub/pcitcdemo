@@ -24,62 +24,49 @@ $(document).ready(function() {
 		},
 		editable: true,
 		eventLimit: true, // allow "more" link when too many events
-		events: [
-			{
-				title: '项目A',
-				start: '2017-05-01'
-			},
-			{
-				title: '项目A',
-				start: '2017-05-07',
-				end: '2017-05-10'
-			},
-			{
-				id: 999,
-				title: '项目A',
-				start: '2017-05-09T16:00:00'
-			},
-			{
-				id: 999,
-				title: '项目A',
-				start: '2017-05-16T16:00:00'
-			},
-			{
-				title: '项目B',
-				start: '2017-05-11',
-				end: '2017-05-13'
-			},
-			{
-				title: '项目B',
-				start: '2017-05-12T10:30:00',
-				end: '2017-05-12T12:30:00'
-			},
-			{
-				title: '项目B',
-				start: '2017-05-12T12:00:00'
-			},
-			{
-				title: '项目C',
-				start: '2017-05-12T14:30:00'
-			},
-			{
-				title: '项目C',
-				start: '2017-05-12T17:30:00'
-			},
-			{
-				title: '项目C',
-				start: '2017-05-12T20:00:00'
-			},
-			{
-				title: '项目C',
-				start: '2017-05-13T07:00:00'
-			},
-			{
-				title: '项目C',
-				url: 'http://baidu.com/',
-				start: '2017-05-28'
-			}
-		]
+		events: [{
+			title: '项目A',
+			start: '2017-05-01'
+		}, {
+			title: '项目A',
+			start: '2017-05-07',
+			end: '2017-05-10'
+		}, {
+			id: 999,
+			title: '项目A',
+			start: '2017-05-09T16:00:00'
+		}, {
+			id: 999,
+			title: '项目A',
+			start: '2017-05-16T16:00:00'
+		}, {
+			title: '项目B',
+			start: '2017-05-11',
+			end: '2017-05-13'
+		}, {
+			title: '项目B',
+			start: '2017-05-12T10:30:00',
+			end: '2017-05-12T12:30:00'
+		}, {
+			title: '项目B',
+			start: '2017-05-12T12:00:00'
+		}, {
+			title: '项目C',
+			start: '2017-05-12T14:30:00'
+		}, {
+			title: '项目C',
+			start: '2017-05-12T17:30:00'
+		}, {
+			title: '项目C',
+			start: '2017-05-12T20:00:00'
+		}, {
+			title: '项目C',
+			start: '2017-05-13T07:00:00'
+		}, {
+			title: '项目C',
+			url: 'http://baidu.com/',
+			start: '2017-05-28'
+		}]
 	});
-	
+
 });
