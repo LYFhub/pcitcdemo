@@ -4,56 +4,30 @@
 			<!-- Table -->
 			<table class="table">
 				<tr>
-					<th>工作台(<span>6</span>条)</th>
-					<th>下一页</th>
+					<th>工作台(<span>{{worktabledata.length}}</span>条)</th>
+					<th>
+						<a ng-click="prevPage($event)"><span class="glyphicon glyphicon-triangle-left"></span></a>
+						<a ng-click="nextPage($event)"><span class="glyphicon glyphicon-triangle-right"></span></a>
+					</th>
 				</tr>
-				<tr>
-					<td>石化盈科项目A启动工作1</td>
-					<td>待审批</td>
-				</tr>
-				<tr>
-					<td>石化盈科项目A启动工作2</td>
-					<td>待审批</td>
-				</tr>
-				<tr>
-					<td>石化盈科项目A启动工作3</td>
-					<td>已审批</td>
-				</tr>
-				<tr>
-					<td>石化盈科项目A启动工作4</td>
-					<td>已审批</td>
-				</tr>
-				<tr>
-					<td>石化盈科项目A启动工作5</td>
-					<td>已审批</td>
+				<tr ng-repeat="work in workdata">
+					<td>{{work.title}}</td>
+					<td>{{work.status}}</td>
 				</tr>
 			</table>
 		</div>
 		<div class="mytask">
 			<table class="table">
 				<tr>
-					<th>我提交的(<span>6</span>条)</th>
-					<th>下一页</th>
+					<th>我提交的(<span>{{worktabledata.length}}</span>条)</th>
+					<th>
+						<a ng-click="prevPage($event)"><span class="glyphicon glyphicon-triangle-left"></span></a>
+						<a ng-click="nextPage($event)"><span class="glyphicon glyphicon-triangle-right"></span></a>
+					</th>
 				</tr>
-				<tr>
-					<td>石化盈科项目A启动工作1</td>
-					<td>待审批</td>
-				</tr>
-				<tr>
-					<td>石化盈科项目A启动工作2</td>
-					<td>待审批</td>
-				</tr>
-				<tr>
-					<td>石化盈科项目A启动工作3</td>
-					<td>已审批</td>
-				</tr>
-				<tr>
-					<td>石化盈科项目A启动工作4</td>
-					<td>已审批</td>
-				</tr>
-				<tr>
-					<td>石化盈科项目A启动工作5</td>
-					<td>已审批</td>
+				<tr ng-repeat="work in workdata">
+					<td>{{work.title}}</td>
+					<td>{{work.status}}</td>
 				</tr>
 			</table>
 		</div>
