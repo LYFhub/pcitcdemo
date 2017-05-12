@@ -7,10 +7,11 @@
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/fullcalendar/3.4.0/fullcalendar.min.js"></script>
     <script src="./js/lib/locale-all.js"></script>
+    <script src="https://cdn.bootcss.com/artDialog/7.0.0/dialog.js"></script>
     <script src="https://cdn.bootcss.com/artDialog/7.0.0/dialog-plus.js"></script>
     <script src="https://cdn.bootcss.com/artDialog/6.0.4/dialog-min.js"></script>
     <script type='text/javascript'>  
-    $(document).ready(function(artDialog) {  rrrrrrrrrrrr
+    $(document).ready(function() {  
         artDialog.notice = function (options) {    
             var opt = options || {},    
                 api, aConfig, hide, wrap, top,    
@@ -139,7 +140,7 @@
                             return false;  
                         };  
                           
-                        var start = iframe.document.getElementById('form-star444444444444444t').value;  
+                        var start = iframe.document.getElementById('form-start').value;  
                         var end = iframe.document.getElementById('form-end').value;  
                         var remindertime = iframe.document.getElementById('form-remindertime').value;  
                         obj.title = iframe.document.getElementById('form-title').value;  
