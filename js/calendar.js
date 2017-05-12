@@ -1,9 +1,20 @@
 $(document).ready(function() {
+	var initialLocaleCode = 'zh-cn';
 	$('#calendar').fullCalendar({
-		header: {
-			left: 'prev,next today',
+		height: 450,
+		buttonText: {
+	        today: '今天',
+	        month: '月',
+	        week: '周',
+	        day: '日'
+	    },
+	    allDayText: "全天",
+    	locale: initialLocaleCode,
+
+    	header: {
+    		left: '',
 			center: 'title',
-			right: 'month,agendaWeek,agendaDay'
+			right: 'prev,next'
 		},
 		defaultDate: '2017-05-12',
 		navLinks: true, // can click day/week names to navigate views
@@ -19,6 +30,7 @@ $(document).ready(function() {
 					end: end
 				};
 				$('#calendar').fullCalendar('renderEvent', eventData, true); // stick? = true
+				$('#calendar').fullCalendar('clientEvents');
 			}
 			$('#calendar').fullCalendar('unselect');
 		},
