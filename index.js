@@ -14,8 +14,6 @@ angular.module('mainApp',['ngRoute'])
 	$scope.workdatalength = 5; 
 	$scope.taskdatalength = 5;
 	$scope.newsdatalength = 3;
-
-	$scope.requireselect = '';
 	// 获取本地json数据，用于绑定table
 	$http({
 		method: 'GET',
@@ -27,6 +25,8 @@ angular.module('mainApp',['ngRoute'])
 			$scope.workdatasource = response.data.data.projecttask;
 			$scope.taskdatasource = response.data.data.projecttask;
 			$scope.newsdatasource = response.data.data.newsandnotice;
+			$scope.yearlygoalssource = response.data.data.yearlygoals;
+			$scope.yearlygoals = response.data.data.yearlygoals['lastyear'];
 
 			// 获取初始值，根据每页显示个数的不同获取数据
 			$scope.workdata = $scope.workdatasource.slice(0, $scope.workdatalength);  
@@ -66,5 +66,14 @@ angular.module('mainApp',['ngRoute'])
 			$clicknextnum--;
 			$scope[event.currentTarget.className] = dataSource.slice(displayLength*$clicknextnum, displayLength*($clicknextnum + 1));
 		}
+	}
+
+	// 按年份更改年度目标
+	// 还需要改进，具体数据格式需要和后端协商
+	$scope.changeYearGoals = function (year) {
+		var currentYear = new Date().getUTCFullYear().toString();
+		if (year === currentYear)
+			year = "lastyear";
+		$scope.yearlygoals = $scope.yearlygoalssource[year];
 	}
 });

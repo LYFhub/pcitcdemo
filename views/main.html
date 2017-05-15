@@ -92,7 +92,7 @@
 				<div class="tabheader">
 					<p>年度目标</p>
 					<div class="btn-group">
-						<select class="">
+						<select class="" ng-model="goalYear" ng-change="changeYearGoals(goalYear)">
 						  <option value="2017">2017</option>
 						  <option value="2016">2016</option>
 						  <option value="2015">2015</option>
@@ -101,79 +101,19 @@
 				</div>
 				<div class="tabcontent toptabone">
 					<table class="table">
-						<tr>
-							<td><h2>50%</h2></td>
+						<tr ng-repeat="goal_data in yearlygoals">
+							<td><h2>{{goal_data.percent}}</h2></td>
 							<td>
-								<h4>学术软著类</h4>
-								<ul><li>关于完成世界能源的学术论文30篇</li></ul>
+								<h4>{{goal_data.title}}</h4>
+								<ul><li>{{goal_data.desc[0]}}</li></ul>
 							</td>
 							<td>
 								<h4></h4>
-								<ul><li>关于完成世界能源的学术论文30篇</li></ul>
+								<ul><li>{{goal_data.desc[1]}}</li></ul>
 							</td>
 							<td>
 								<h4></h4>
-								<ul><li>关于完成世界能源的学术论文30篇</li></ul>
-							</td>
-						</tr>
-						<tr>
-							<td><h2>68%</h2></td>
-							<td>
-								<h4>国家课题类</h4>
-								<ul><li>关于完成世界能源的学术论文30篇</li></ul>
-							</td>
-							<td>
-								<h4></h4>
-								<ul><li>关于完成世界能源的学术论文30篇</li></ul>
-							</td>
-							<td>
-								<h4></h4>
-								<ul><li>关于完成世界能源的学术论文30篇</li></ul>
-							</td>
-						</tr>
-						<tr>
-							<td><h2>80%</h2></td>
-							<td>
-								<h4>中石化内部</h4>
-								<ul><li>关于完成世界能源的学术论文30篇</li></ul>
-							</td>
-							<td>
-								<h4></h4>
-								<ul><li>关于完成世界能源的学术论文30篇</li></ul>
-							</td>
-							<td>
-								<h4></h4>
-								<ul><li>关于完成世界能源的学术论文30篇</li></ul>
-							</td>
-						</tr>
-						<tr>
-							<td><h2>55%</h2></td>
-							<td>
-								<h4>外部市场类</h4>
-								<ul><li>关于完成世界能源的学术论文30篇</li></ul>
-							</td>
-							<td>
-								<h4></h4>
-								<ul><li>关于完成世界能源的学术论文30篇</li></ul>
-							</td>
-							<td>
-								<h4></h4>
-								<ul><li>关于完成世界能源的学术论文30篇</li></ul>
-							</td>
-						</tr>
-						<tr>
-							<td><h2>50%</h2></td>
-							<td>
-								<h4>产品研发类</h4>
-								<ul><li>关于完成世界能源的学术论文30篇</li></ul>
-							</td>
-							<td>
-								<h4></h4>
-								<ul><li>关于完成世界能源的学术论文30篇</li></ul>
-							</td>
-							<td>
-								<h4></h4>
-								<ul><li>关于完成世界能源的学术论文30篇</li></ul>
+								<ul><li>{{goal_data.desc[2]}}</li></ul>
 							</td>
 						</tr>
 					</table>
