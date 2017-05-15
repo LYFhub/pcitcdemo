@@ -14,6 +14,8 @@ angular.module('mainApp',['ngRoute'])
 	$scope.workdatalength = 5; 
 	$scope.taskdatalength = 5;
 	$scope.newsdatalength = 3;
+
+	$scope.requireselect = '';
 	// 获取本地json数据，用于绑定table
 	$http({
 		method: 'GET',
