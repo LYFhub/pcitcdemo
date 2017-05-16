@@ -109,7 +109,7 @@ header {
 		}
 
 		.topcontent {
-			border-bottom: 1px solid #ddd;
+			margin-bottom: 20px;
 
 			ul.nav.nav-tabs {
 				background: rgb(187, 187, 187);
@@ -134,7 +134,7 @@ header {
 				}
 			}
 
-			.tabcontent, .tabheader, .drawtimeline {
+			.tabcontent, .tabheader {
 				background-color: rgb(230, 230, 230);
 			}
 			.toptabone {
@@ -165,17 +165,26 @@ header {
 					}
 				}
 			}
-			
+
 			.toptabtwo, .toptabthree, .toptabfour {
 				display: none;
-				&:after {
-					@include clear_float;
+				.chartbox {
+					&:after {
+						@include clear_float;
+					}
+
+					& + p {
+						display: block;
+					    padding-left: 20px;
+					    font-size: 20px;
+					    margin: 7px 0;
+					}
 				}
 				.barchart, .piechart, .linechart {
 					float: left;
 					width: 32%;
-					height: 200px;
-					background: #eeeeee;
+					height: 300px;
+					background: rgb(242, 242, 242) !important;
 					margin: 5px;
 				}
 			}
@@ -186,14 +195,21 @@ header {
 				background: #eeeeee;
 				max-width: 900px;
 				margin: 0 auto;
+				
+				.fc-toolbar.fc-header-toolbar {
+					margin: 0;
+				}
 			}
 		}
 		div.drawtimeline {
-			margin-bottom: 20px;
-			padding-bottom: 15px;
+		    background: rgb(242, 242, 242);
+		    margin: 5px;
+		    padding: 10px 10px 0 10px;
+
 			>div:after {
 				@include clear_float;
 			}
+
 			.timeinfo {
 				float: left;
 				width: 20%;
@@ -221,7 +237,6 @@ header {
 			}
 			.sandetime {
 				border-top: solid 1px black;
-				margin-bottom: 6px;
 				.starttime {
 					display: inline-block;
 				}

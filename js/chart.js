@@ -11,18 +11,34 @@ function drawChart(num) {
         title: {
             text: '资源'
         },
-        tooltip: {},
+        textStyle: {
+            fontSize: 12
+        },
+        tooltip: {
+            trigger: 'axis'
+        },
         legend: {
             orient: 'horizontal',
             left: 'center',
             bottom: 'bottom',
             data: ['计划', '实际']
         },
+        grid: {
+            containLabel: true
+        },
         xAxis: {
-            data: ["人物角色1", "人物角色2", "人物角色3", "人物角色4", "人物角色5"]
+            data: ["人物角色1", "人物角色2", "人物角色3", "人物角色4", "人物角色5"],
+            axisLabel: {
+                rotate: 30
+            },
         },
         yAxis: {
-            text: '天数'
+            text: '天数',
+            axisLabel: {
+                margin: 4,
+                rotate: 30
+            },
+            interval:100
         },
         series: [{
             name: '计划',
@@ -31,7 +47,7 @@ function drawChart(num) {
         }, {
             name: '实际',
             type: 'bar',
-            data: [150, 250, 300, 100, 250]
+            data: [150, 250, 350, 100, 250]
         }]
     };
 
@@ -44,12 +60,16 @@ function drawChart(num) {
             text: '成本'
         },
         tooltip: {},
-        legend: {
+        legend: [{
             orient: 'vertical',
             left: 'left',
             bottom: 'bottom',
             data: ['料', '工', '费', '剩余']
-        },
+        }, {
+            left: 'right',
+            bottom: 'bottom',
+            data: ['工料费总量']  // 只能显示series -> data -> name的值
+        }],
         series: [{
             type: 'pie',
             data: [{
@@ -79,7 +99,10 @@ function drawChart(num) {
                         color: '#e6e6e6'
                     }
                 }
-            }],
+            }, {
+                value: 0,
+                name: '工料费总量'
+            }, ],
             itemStyle: {
                 normal: {
                     color: '#666666'
@@ -94,8 +117,7 @@ function drawChart(num) {
                 normal: {
                     show: false
                 }
-            },
-            silent: true
+            }
         }]
     };
 
@@ -107,11 +129,16 @@ function drawChart(num) {
         title: {
             text: '进度'
         },
-        tooltip: {},
+        tooltip: {
+            trigger: 'axis'
+        },
         legend: {
             left: 'center',
             bottom: 'bottom',
             data: ['实际', '预期']
+        },
+        grid: {
+            containLabel: true  // 防止标签溢出边界
         },
         xAxis: {
             data: ["第1周", "第2周", "第3周", "第4周", "第5周", "第6周"]
@@ -126,7 +153,7 @@ function drawChart(num) {
         }, {
             name: '预期',
             type: 'line',
-            data: [35, 25, 25, 20, 20, 22]
+            data: [35, 25, 20, 20, 15, 14]
         }]
     };
 
