@@ -16,3 +16,9 @@ function changetab(event) {
 		}
 	}
 }
+
+// window.onresize(fucntion () {
+// 	event.stopPropagation();
+// 	event.preventDefault();
+// 	drawChart(0); // 当用户缩放浏览器窗口时，重新绘制chart
+// });

@@ -434,3 +434,18 @@ header {
 		}
 	}
 }
+
+@media screen and (max-width: 1200px) {
+	.barchart, .piechart, .linechart, .checktableitem{
+		width: 48% !important;
+	}
+}
+
+@media screen and (max-width: 960px) {
+	.barchart, .piechart, .linechart, .checktableitem{
+		width: 98% !important;
+	}
+	.checktableitem {
+		margin: 5px;
+	}
+}
