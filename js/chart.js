@@ -1,9 +1,9 @@
 // 声明函数
-function drawChart(num) {
+function drawChart () {
     // 基于准备好的dom，初始化echarts实例
-    var barChart = echarts.init($('.barchart')[num]);
-    var pieChart = echarts.init($('.piechart')[num]);
-    var lineChart = echarts.init($('.linechart')[num]);
+    var barChart = echarts.init($('.barchart')[0]);
+    var pieChart = echarts.init($('.piechart')[0]);
+    var lineChart = echarts.init($('.linechart')[0]);
 
     // 指定图表的配置项和数据
     var barOption = {
@@ -159,4 +159,8 @@ function drawChart(num) {
 
     // 使用刚指定的配置项和数据显示图表。
     lineChart.setOption(lineOption);
+
+    barChart.resize();
+    pieChart.resize();
+    lineChart.resize();
 }

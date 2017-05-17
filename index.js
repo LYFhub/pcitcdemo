@@ -11,9 +11,11 @@ angular.module('mainApp',['ngRoute'])
 .controller('homeCtrl', function($scope, $http) {
 
 	// 用于分页，每页显示的个数
-	$scope.workdatalength = 5; 
+	$scope.workdatalength = 5;
 	$scope.taskdatalength = 5;
 	$scope.newsdatalength = 3;
+
+	$scope.homerighttab = true;
 	// 获取本地json数据，用于绑定table
 	$http({
 		method: 'GET',
@@ -76,4 +78,30 @@ angular.module('mainApp',['ngRoute'])
 			year = "lastyear";
 		$scope.yearlygoals = $scope.yearlygoalssource[year];
 	}
+
+	// 表格和图表(chart)切换功能
+	$scope.changetab = function (event) {
+		console.log(event);
+		if (event.target.className === "allplan") {
+			$scope.homerighttab = true;
+		} else {
+			$scope.homerighttab = false;
+
+			// 根据项目的不同对chart赋予不同的数据，从而实现后三个tab的切换
+			if (event.target.className === "aprocess") {
+				// 将chart中的data数据更换为a项目的数据
+				setTimeout("drawChart()", 100);  // 延迟0.1s, 目的是先让div显示, 然后再绘制图形
+			} else if (event.target.className === "bprocess") {
+				setTimeout("drawChart()", 100);
+			} else if (event.target.className === "cprocess") {
+				setTimeout("drawChart()", 100);
+			} else {
+				$scope.homerighttab = true;
+			}
+		}
+	}
+
+	$scope.$on('$viewContentLoaded', function(){  // 判断view渲染完成
+		drawChart();  // 当从主页跳转到scope页面，然后再跳回来，重新渲染chart, 否则返回主页时，chart 不显示
+	});
 });

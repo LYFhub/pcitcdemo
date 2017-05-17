@@ -84,10 +84,10 @@
 		<div class="topcontent">
 			<div>
 				<ul class="nav nav-tabs">
-				  	<li role="presentation" onclick="changetab(event)"><a class="tabbar1" href="#">智能工厂总体计划</a></li>
-				  	<li role="presentation" onclick="changetab(event)"><a class="tabbar2" href="#">项目A</a></li>
-				  	<li role="presentation" onclick="changetab(event)"><a class="tabbar3" href="#">项目B</a></li>
-				  	<li role="presentation" onclick="changetab(event)"><a class="tabbar4" href="#">项目C</a></li>
+				  	<li role="presentation" ng-click="changetab($event)"><a class="allplan">智能工厂总体计划</a></li>
+				  	<li role="presentation" ng-click="changetab($event)"><a class="aprocess">项目A</a></li>
+				  	<li role="presentation" ng-click="changetab($event)"><a class="bprocess">项目B</a></li>
+				  	<li role="presentation" ng-click="changetab($event)"><a class="cprocess">项目C</a></li>
 				</ul>
 				<div class="tabheader">
 					<p>年度目标</p>
@@ -99,7 +99,7 @@
 						</select>
 					</div>
 				</div>
-				<div class="tabcontent toptabone">
+				<div class="tabcontent toptabone" ng-show="homerighttab">
 					<table class="table">
 						<tr ng-repeat="goal_data in yearlygoals">
 							<td><h2>{{goal_data.percent}}</h2></td>
@@ -118,7 +118,7 @@
 						</tr>
 					</table>
 				</div>
-				<div class="tabcontent toptabtwo">
+				<div class="tabcontent toptabtwo" ng-show="!homerighttab">
 					<div class="chartbox">
 						<div class="barchart"></div>
 						<div class="piechart"></div>
@@ -156,7 +156,45 @@
 						</div>
 					</div>
 				</div>
-				<div class="tabcontent toptabthree">
+				<!-- <div class="tabcontent toptabtwo">
+					<div class="chartbox">
+						<div class="barchart"></div>
+						<div class="piechart"></div>
+						<div class="linechart"></div>
+					</div>
+					<p>项目关键路径</p>
+					<div class="drawtimeline">
+						<div>
+							<div class="timeinfo">
+								<p class="timetext"><span>里程碑</span>-项目A实施阶段1.0上线</p>
+								<p class="timedate">2017-4-25</p>
+							</div>
+							<div class="timeinfo">
+								<p class="timetext"><span>里程碑</span>-项目A实施阶段2.0上线</p>
+								<p class="timedate">2017-4-30</p>
+							</div>
+							<div class="timeinfo">
+								<p class="timetext"><span>里程碑</span>-项目A实施阶段3.0上线</p>
+								<p class="timedate">2017-5-25</p>
+							</div>
+							<div class="timeinfo">
+								<p class="timetext"><span>里程碑</span>-项目A实施阶段4.0上线</p>
+								<p class="timedate">2017-7-25</p>
+							</div>
+						</div>
+						<div class="sandetime">
+							<div class="starttime">
+								<p>开始</p>
+								<p>2017-4-20</p>
+							</div>
+							<div class="endtime">
+								<p>结束</p>
+								<p>2017-9-20</p>
+							</div>
+						</div>
+					</div>
+				</div> -->
+				<!-- <div class="tabcontent toptabthree">
 					<div class="chartbox">
 						<div class="piechart"></div>
 						<div class="barchart"></div>
@@ -231,7 +269,7 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> -->
 			</div>
 		</div>
 		<div class="dateandevent">
@@ -291,4 +329,3 @@
 <script src="./js/calendar.js"></script>
 <script src="./js/lib/locale-all.js"></script>
 <script src="./js/checktable.js"></script>
-<script src="./js/main.js"></script>

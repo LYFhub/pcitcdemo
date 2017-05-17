@@ -166,8 +166,7 @@ header {
 				}
 			}
 
-			.toptabtwo, .toptabthree, .toptabfour {
-				display: none;
+			.toptabtwo {
 				.chartbox {
 					&:after {
 						@include clear_float;
