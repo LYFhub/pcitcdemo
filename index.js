@@ -19,6 +19,7 @@ angular.module('mainApp',['ngRoute'])
 
 	$scope.chartdatasource = {};
 	$scope.timelinedata = {};
+	$scope.chartbinddata = {};
 	// 获取本地json数据，用于绑定table
 	$http({
 		method: 'GET',
@@ -42,6 +43,7 @@ angular.module('mainApp',['ngRoute'])
 
 			// 获取首页三个chart的数据，然后处理数据，整理成echart可以使用的格式
 			$scope.chartdatasource = response.data.data.projectprocess;
+			$chartbinddata = $scope.chartdatasource[0].project_a.chartdata;
 
 
 		}, function errorCallback(response) {
@@ -97,15 +99,29 @@ angular.module('mainApp',['ngRoute'])
 
 			// 根据项目的不同对chart赋予不同的数据，从而实现后三个tab的切换
 			if (event.target.className.indexOf("aprocess") >= 0) {
+				// 动态更新timeline的数据
 				$scope.timelinedata = $scope.chartdatasource[0].project_a;
+
 				// 将chart中的data数据更换为a项目的数据
-				setTimeout("drawChart()", 100);  // 延迟0.1s, 目的是先让div显示, 然后再绘制图形
+				$chartbinddata = $scope.timelinedata.chartdata;
+				// 利用闭包向setTimeout函数里传递局部变量chartdata
+				setTimeout(function() {
+					drawChart($chartbinddata);
+				}, 100);  // 延迟0.1s, 目的是先让div显示, 然后再绘制图形
 			} else if (event.target.className.indexOf("bprocess") >= 0) {
 				$scope.timelinedata = $scope.chartdatasource[1].project_b;
-				setTimeout("drawChart()", 100);
+
+				$chartbinddata= $scope.timelinedata.chartdata;
+				setTimeout(function() {
+					drawChart($chartbinddata);
+				}, 100);
 			} else if (event.target.className.indexOf("cprocess") >= 0) {
 				$scope.timelinedata = $scope.chartdatasource[2].project_c;
-				setTimeout("drawChart()", 100);
+
+				$chartbinddata = $scope.timelinedata.chartdata;
+				setTimeout(function() {
+					drawChart($chartbinddata);
+				}, 100);
 			} else {
 				$scope.homerighttab = true;
 				console.log('其他选项条件不正确....');
@@ -114,6 +130,6 @@ angular.module('mainApp',['ngRoute'])
 	}
 
 	$scope.$on('$viewContentLoaded', function(){  // 判断view渲染完成
-		drawChart();  // 当从主页跳转到scope页面，然后再跳回来，重新渲染chart, 否则返回主页时，chart 不显示
+		drawChart($chartbinddata);  // 当从主页跳转到scope页面，然后再跳回来，重新渲染chart, 否则返回主页时，chart 不显示
 	});
 });

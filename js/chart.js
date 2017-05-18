@@ -5,6 +5,42 @@ function drawChart (data) {
     var pieChart = echarts.init($('.piechart')[0]);
     var lineChart = echarts.init($('.linechart')[0]);
 
+    console.log('配置chart数据',data);
+
+    var bar_series = {
+        xAxisData: [],
+        actual: [],
+        plan: []
+    };
+    var pie_series = {};
+    var line_series = {
+        xAxisData: [],
+        actual: [],
+        plan: []
+    };
+
+    // 处理来自json文件中柱状图的数据
+    for (var i = 0, arr = []; i < data.bardata.length; i++) {
+        bar_series.xAxisData.push(data.bardata[i].name);
+        bar_series.actual.push(data.bardata[i].actual);
+        bar_series.plan.push(data.bardata[i].plan);
+    }
+
+    // 处理来自json文件中折线图的数据
+    for (var i = 0, arr = []; i < data.linedata.length; i++) {
+        line_series.xAxisData.push(data.linedata[i].name);
+        line_series.actual.push(data.linedata[i].actual);
+        line_series.plan.push(data.linedata[i].plan);
+    }
+
+    // 处理来自json文件中柱状图的数据
+    // for (var i = data.bardata.length - 1, arr = []; i >= 0; i--) {
+    //     bar_series.xAxisData.push(data.bardata[i].name);
+    //     bar_series.actual.push(data.bardata[i].actual);
+    //     bar_series.plan.push(data.bardata[i].plan);
+    // }
+
+
     // 指定图表的配置项和数据
     var barOption = {
         color: ['#cccccc', '#999999'],
@@ -27,7 +63,7 @@ function drawChart (data) {
             containLabel: true
         },
         xAxis: {
-            data: ["人物角色1", "人物角色2", "人物角色3", "人物角色4", "人物角色5"],
+            data: bar_series.xAxisData,
             axisLabel: {
                 rotate: 30
             },
@@ -37,17 +73,16 @@ function drawChart (data) {
             axisLabel: {
                 margin: 4,
                 rotate: 30
-            },
-            interval: 100 // 指定y轴坐标间隔为100
+            }
         },
         series: [{
             name: '计划',
             type: 'bar',
-            data: [50, 200, 310, 150, 200]
+            data: bar_series.actual
         }, {
             name: '实际',
             type: 'bar',
-            data: [150, 250, 350, 100, 250]
+            data: bar_series.plan
         }]
     };
 
@@ -141,7 +176,7 @@ function drawChart (data) {
             containLabel: true  // 防止标签溢出边界
         },
         xAxis: {
-            data: ["第1周", "第2周", "第3周", "第4周", "第5周", "第6周"]
+            data: line_series.xAxisData
         },
         yAxis: {
             text: '天数'
@@ -149,11 +184,11 @@ function drawChart (data) {
         series: [{
             name: '实际',
             type: 'line',
-            data: [35, 35, 30, 30, 25, 25]
+            data: line_series.actual
         }, {
             name: '预期',
             type: 'line',
-            data: [35, 25, 20, 20, 15, 14]
+            data: line_series.plan
         }]
     };
 
