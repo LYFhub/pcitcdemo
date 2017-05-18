@@ -150,5 +150,289 @@
 				]
 			}
 		]
-	}}
+	},
+	"projectprocess": [
+		{
+			"project_a": {
+				"name": "项目A",
+				"status_a": {"desc":"项目A实施阶段1.0上线","time": "2017-04-25"},
+				"status_b": {"desc":"项目A实施阶段2.0上线","time": "2017-05-26"},
+				"status_c": {"desc":"项目A实施阶段3.0上线","time": "2017-06-28"},
+				"status_d": {"desc":"项目A实施阶段4.0上线","time": "2017-07-30"},
+				"starttime": "2017-04-01",
+				"endtime": "2017-08-15",
+				"chartdata": {
+					"piedata": {
+						"part_a": {
+							"name": "料",
+							"percent": 0.4
+						},
+						"part_b": {
+							"name": "工",
+							"percent": 0.3
+						},
+						"part_c": {
+							"name": "费",
+							"percent": 0.2
+						},
+						"part_d": {
+							"name": "剩余",
+							"percent": 0.1
+						},
+						"part_e": {
+							"name": "工料费总量",
+							"value": 666666.00
+						}
+					},
+					"linedata": {
+						"firstweek": {
+							"name": "第一周",
+							"plan": 35,
+							"actual": 35
+						},
+						"secondtweek": {
+							"name": "第二周",
+							"plan": 35,
+							"actual": 30
+						},
+						"thirdweek": {
+							"name": "第三周",
+							"plan": 30,
+							"actual": 20
+						},
+						"fourthweek": {
+							"name": "第四周",
+							"plan": 30,
+							"actual": 20
+						},
+						"fifthtweek": {
+							"name": "第五周",
+							"plan": 25,
+							"actual": 20
+						},
+						"sixthweek": {
+							"name": "第六周",
+							"plan": 25,
+							"actual": 20
+						}
+					},
+					"bardata": {
+						"person_a": {
+							"name": "人物角色1",
+							"plan": 50,
+							"actual": 150
+						},
+						"person_b": {
+							"name": "人物角色2",
+							"plan": 200,
+							"actual": 250
+						},
+						"person_c": {
+							"name": "人物角色3",
+							"plan": 310,
+							"actual": 350
+						},
+						"person_d": {
+							"name": "人物角色4",
+							"plan": 150,
+							"actual": 100
+						},
+						"person_e": {
+							"name": "人物角色5",
+							"plan": 200,
+							"actual": 250
+						}
+					}
+				}
+			}
+		},
+		{
+			"project_b": {
+				"name": "项目B",
+				"status_a": {"desc":"项目B实施阶段1.0上线","time": "2016-10-25"},
+				"status_b": {"desc":"项目B实施阶段2.0上线","time": "2016-12-26"},
+				"status_c": {"desc":"项目B实施阶段3.0上线","time": "2017-03-28"},
+				"status_d": {"desc":"项目B实施阶段4.0上线","time": "2017-07-30"},
+				"starttime": "2016-09-25",
+				"endtime": "2017-08-30",
+				"chartdata": {
+					"piedata": {
+						"part_a": {
+							"name": "料",
+							"percent": 0.6
+						},
+						"part_b": {
+							"name": "工",
+							"percent": 0.2
+						},
+						"part_c": {
+							"name": "费",
+							"percent": 0.1
+						},
+						"part_d": {
+							"name": "剩余",
+							"percent": 0.1
+						},
+						"part_e": {
+							"name": "工料费总量",
+							"value": 888888.00
+						}
+					},
+					"linedata": {
+						"firstweek": {
+							"name": "第一周",
+							"plan": 55,
+							"actual": 55
+						},
+						"secondtweek": {
+							"name": "第二周",
+							"plan": 55,
+							"actual": 50
+						},
+						"thirdweek": {
+							"name": "第三周",
+							"plan": 50,
+							"actual": 40
+						},
+						"fourthweek": {
+							"name": "第四周",
+							"plan": 30,
+							"actual": 20
+						},
+						"fifthtweek": {
+							"name": "第五周",
+							"plan": 25,
+							"actual": 20
+						},
+						"sixthweek": {
+							"name": "第六周",
+							"plan": 25,
+							"actual": 20
+						}
+					},
+					"bardata": {
+						"person_a": {
+							"name": "人物角色1",
+							"plan": 50,
+							"actual": 150
+						},
+						"person_b": {
+							"name": "人物角色2",
+							"plan": 200,
+							"actual": 250
+						},
+						"person_c": {
+							"name": "人物角色3",
+							"plan": 310,
+							"actual": 350
+						},
+						"person_d": {
+							"name": "人物角色4",
+							"plan": 150,
+							"actual": 100
+						},
+						"person_e": {
+							"name": "人物角色5",
+							"plan": 200,
+							"actual": 250
+						}
+					}
+				}
+			}
+		},
+		{
+			"project_c": {
+				"name": "项目C",
+				"status_a": {"desc":"项目C实施阶段1.0上线","time": "2017-01-20"},
+				"status_b": {"desc":"项目C实施阶段2.0上线","time": "2017-02-26"},
+				"status_c": {"desc":"项目C实施阶段3.0上线","time": "2017-03-28"},
+				"status_d": {"desc":"项目C实施阶段4.0上线","time": "2017-05-20"},
+				"starttime": "2017-01-01",
+				"endtime": "2017-05-30",
+				"chartdata": {
+					"piedata": {
+						"part_a": {
+							"name": "料",
+							"percent": 0.6
+						},
+						"part_b": {
+							"name": "工",
+							"percent": 0.2
+						},
+						"part_c": {
+							"name": "费",
+							"percent": 0.1
+						},
+						"part_d": {
+							"name": "剩余",
+							"percent": 0.1
+						},
+						"part_e": {
+							"name": "工料费总量",
+							"value": 999999.00
+						}
+					},
+					"linedata": {
+						"firstweek": {
+							"name": "第一周",
+							"plan": 55,
+							"actual": 55
+						},
+						"secondtweek": {
+							"name": "第二周",
+							"plan": 55,
+							"actual": 50
+						},
+						"thirdweek": {
+							"name": "第三周",
+							"plan": 50,
+							"actual": 40
+						},
+						"fourthweek": {
+							"name": "第四周",
+							"plan": 30,
+							"actual": 20
+						},
+						"fifthtweek": {
+							"name": "第五周",
+							"plan": 25,
+							"actual": 20
+						},
+						"sixthweek": {
+							"name": "第六周",
+							"plan": 25,
+							"actual": 20
+						}
+					},
+					"bardata": {
+						"person_a": {
+							"name": "人物角色1",
+							"plan": 50,
+							"actual": 150
+						},
+						"person_b": {
+							"name": "人物角色2",
+							"plan": 200,
+							"actual": 250
+						},
+						"person_c": {
+							"name": "人物角色3",
+							"plan": 310,
+							"actual": 350
+						},
+						"person_d": {
+							"name": "人物角色4",
+							"plan": 150,
+							"actual": 100
+						},
+						"person_e": {
+							"name": "人物角色5",
+							"plan": 200,
+							"actual": 250
+						}
+					}
+				}
+			}
+		}
+	]}
 }

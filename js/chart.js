@@ -1,5 +1,5 @@
 // 声明函数
-function drawChart () {
+function drawChart (data) {
     // 基于准备好的dom，初始化echarts实例
     var barChart = echarts.init($('.barchart')[0]);
     var pieChart = echarts.init($('.piechart')[0]);
@@ -38,7 +38,7 @@ function drawChart () {
                 margin: 4,
                 rotate: 30
             },
-            interval:100
+            interval: 100 // 指定y轴坐标间隔为100
         },
         series: [{
             name: '计划',
@@ -159,8 +159,4 @@ function drawChart () {
 
     // 使用刚指定的配置项和数据显示图表。
     lineChart.setOption(lineOption);
-
-    barChart.resize();
-    pieChart.resize();
-    lineChart.resize();
 }

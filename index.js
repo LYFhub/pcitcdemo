@@ -16,6 +16,9 @@ angular.module('mainApp',['ngRoute'])
 	$scope.newsdatalength = 3;
 
 	$scope.homerighttab = true;
+
+	$scope.chartdatasource = {};
+	$scope.timelinedata = {};
 	// 获取本地json数据，用于绑定table
 	$http({
 		method: 'GET',
@@ -27,13 +30,18 @@ angular.module('mainApp',['ngRoute'])
 			$scope.workdatasource = response.data.data.projecttask;
 			$scope.taskdatasource = response.data.data.projecttask;
 			$scope.newsdatasource = response.data.data.newsandnotice;
+
+			// 获取初始值，根据每页显示个数的不同获取数据
+			$scope.workdata = $scope.workdatasource.slice(0, $scope.workdatalength);
+			$scope.taskdata = $scope.workdatasource.slice(0, $scope.taskdatalength);
+			$scope.newsdata = $scope.newsdatasource.slice(0, $scope.newsdatalength);
+
+			// 获取年度目标数据
 			$scope.yearlygoalssource = response.data.data.yearlygoals;
 			$scope.yearlygoals = response.data.data.yearlygoals['lastyear'];
 
-			// 获取初始值，根据每页显示个数的不同获取数据
-			$scope.workdata = $scope.workdatasource.slice(0, $scope.workdatalength);  
-			$scope.taskdata = $scope.workdatasource.slice(0, $scope.taskdatalength);
-			$scope.newsdata = $scope.newsdatasource.slice(0, $scope.newsdatalength);
+			// 获取首页三个chart的数据，然后处理数据，整理成echart可以使用的格式
+			$scope.chartdatasource = response.data.data.projectprocess;
 
 
 		}, function errorCallback(response) {
@@ -88,15 +96,19 @@ angular.module('mainApp',['ngRoute'])
 			$scope.homerighttab = false;
 
 			// 根据项目的不同对chart赋予不同的数据，从而实现后三个tab的切换
-			if (event.target.className === "aprocess") {
+			if (event.target.className.indexOf("aprocess") >= 0) {
+				$scope.timelinedata = $scope.chartdatasource[0].project_a;
 				// 将chart中的data数据更换为a项目的数据
 				setTimeout("drawChart()", 100);  // 延迟0.1s, 目的是先让div显示, 然后再绘制图形
-			} else if (event.target.className === "bprocess") {
+			} else if (event.target.className.indexOf("bprocess") >= 0) {
+				$scope.timelinedata = $scope.chartdatasource[1].project_b;
 				setTimeout("drawChart()", 100);
-			} else if (event.target.className === "cprocess") {
+			} else if (event.target.className.indexOf("cprocess") >= 0) {
+				$scope.timelinedata = $scope.chartdatasource[2].project_c;
 				setTimeout("drawChart()", 100);
 			} else {
 				$scope.homerighttab = true;
+				console.log('其他选项条件不正确....');
 			}
 		}
 	}

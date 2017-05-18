@@ -84,10 +84,11 @@
 		<div class="topcontent">
 			<div>
 				<ul class="nav nav-tabs">
-				  	<li role="presentation" ng-click="changetab($event)"><a class="allplan">智能工厂总体计划</a></li>
-				  	<li role="presentation" ng-click="changetab($event)"><a class="aprocess">项目A</a></li>
-				  	<li role="presentation" ng-click="changetab($event)"><a class="bprocess">项目B</a></li>
-				  	<li role="presentation" ng-click="changetab($event)"><a class="cprocess">项目C</a></li>
+				  	<li role="presentation" ng-click="changetab($event)"><a class="allplan">
+				  	智能工厂总体计划</a></li>
+				  	<li role="presentation" ng-click="changetab($event)"><a class="aprocess">{{chartdatasource[0].project_a.name}}</a></li>
+				  	<li role="presentation" ng-click="changetab($event)"><a class="bprocess">{{chartdatasource[1].project_b.name}}</a></li>
+				  	<li role="presentation" ng-click="changetab($event)"><a class="cprocess">{{chartdatasource[2].project_c.name}}</a></li>
 				</ul>
 				<div class="tabheader">
 					<p>年度目标</p>
@@ -128,30 +129,30 @@
 					<div class="drawtimeline">
 						<div>
 							<div class="timeinfo">
-								<p class="timetext"><span>里程碑</span>-项目A实施阶段1.0上线</p>
-								<p class="timedate">2017-4-25</p>
+								<p class="timetext"><span>里程碑</span>-{{timelinedata.status_a.desc}}</p>
+								<p class="timedate">{{timelinedata.status_a.time}}</p>
 							</div>
 							<div class="timeinfo">
-								<p class="timetext"><span>里程碑</span>-项目A实施阶段2.0上线</p>
-								<p class="timedate">2017-4-30</p>
+								<p class="timetext"><span>里程碑</span>-{{timelinedata.status_b.desc}}</p>
+								<p class="timedate">{{timelinedata.status_b.time}}</p>
 							</div>
 							<div class="timeinfo">
-								<p class="timetext"><span>里程碑</span>-项目A实施阶段3.0上线</p>
-								<p class="timedate">2017-5-25</p>
+								<p class="timetext"><span>里程碑</span>-{{timelinedata.status_c.desc}}</p>
+								<p class="timedate">{{timelinedata.status_c.time}}</p>
 							</div>
 							<div class="timeinfo">
-								<p class="timetext"><span>里程碑</span>-项目A实施阶段4.0上线</p>
-								<p class="timedate">2017-7-25</p>
+								<p class="timetext"><span>里程碑</span>-{{timelinedata.status_d.desc}}</p>
+								<p class="timedate">{{timelinedata.status_d.time}}</p>
 							</div>
 						</div>
 						<div class="sandetime">
 							<div class="starttime">
 								<p>开始</p>
-								<p>2017-4-20</p>
+								<p>{{timelinedata.starttime}}</p>
 							</div>
 							<div class="endtime">
 								<p>结束</p>
-								<p>2017-9-20</p>
+								<p>{{timelinedata.endtime}}</p>
 							</div>
 						</div>
 					</div>
