@@ -1,18 +1,21 @@
 // 声明函数
-function drawChart (data) {
+function drawChart(data) {
     // 基于准备好的dom，初始化echarts实例
     var barChart = echarts.init($('.barchart')[0]);
     var pieChart = echarts.init($('.piechart')[0]);
     var lineChart = echarts.init($('.linechart')[0]);
 
-    console.log('配置chart数据',data);
+    console.log('配置chart数据:', data);
 
     var bar_series = {
         xAxisData: [],
         actual: [],
         plan: []
     };
-    var pie_series = {};
+    var pie_series = {
+        legendData: [],
+        seriesData: []
+    };
     var line_series = {
         xAxisData: [],
         actual: [],
@@ -20,25 +23,27 @@ function drawChart (data) {
     };
 
     // 处理来自json文件中柱状图的数据
-    for (var i = 0, arr = []; i < data.bardata.length; i++) {
+    for (var i = 0; i < data.bardata.length; i++) {
         bar_series.xAxisData.push(data.bardata[i].name);
         bar_series.actual.push(data.bardata[i].actual);
         bar_series.plan.push(data.bardata[i].plan);
     }
 
     // 处理来自json文件中折线图的数据
-    for (var i = 0, arr = []; i < data.linedata.length; i++) {
+    for (var i = 0; i < data.linedata.length; i++) {
         line_series.xAxisData.push(data.linedata[i].name);
         line_series.actual.push(data.linedata[i].actual);
         line_series.plan.push(data.linedata[i].plan);
     }
 
-    // 处理来自json文件中柱状图的数据
-    // for (var i = data.bardata.length - 1, arr = []; i >= 0; i--) {
-    //     bar_series.xAxisData.push(data.bardata[i].name);
-    //     bar_series.actual.push(data.bardata[i].actual);
-    //     bar_series.plan.push(data.bardata[i].plan);
-    // }
+    // 处理来自json文件中饼图的数据
+    for (var i = 0; i < data.piedata.length; i++) {
+        pie_series.legendData.push(data.piedata[i].name + ' ' + (data.piedata[i].percent * 100) + '%');
+        pie_series.seriesData.push(data.piedata[i].percent * 360);
+        if (data.piedata[i].value) {
+            pie_series.allfee = data.piedata[i].name + data.piedata[i].value + "元";
+        }
+    }
 
 
     // 指定图表的配置项和数据
@@ -94,41 +99,40 @@ function drawChart (data) {
         title: {
             text: '成本'
         },
-        tooltip: {},
         legend: [{
             orient: 'vertical',
             left: 'left',
             bottom: 'bottom',
-            data: ['料', '工', '费', '剩余']
+            data: [pie_series.legendData[0], pie_series.legendData[1], pie_series.legendData[2], pie_series.legendData[3]]
         }, {
             left: 'right',
             bottom: 'bottom',
-            data: ['工料费总量']  // 只能显示series -> data -> name的值
+            data: [pie_series.allfee] // 只能显示series -> data -> name的值
         }],
         series: [{
             type: 'pie',
             data: [{
-                value: 170,
-                name: '料'
+                value: pie_series.seriesData[0],
+                name: pie_series.legendData[0]
             }, {
-                value: 90,
-                name: '工',
+                value: pie_series.seriesData[1],
+                name: pie_series.legendData[1],
                 itemStyle: {
                     normal: {
                         color: '#999999'
                     }
                 }
             }, {
-                value: 80,
-                name: '费',
+                value: pie_series.seriesData[2],
+                name: pie_series.legendData[2],
                 itemStyle: {
                     normal: {
                         color: '#cccccc'
                     }
                 }
             }, {
-                value: 20,
-                name: '剩余',
+                value: pie_series.seriesData[3],
+                name: pie_series.legendData[3],
                 itemStyle: {
                     normal: {
                         color: '#e6e6e6'
@@ -136,7 +140,7 @@ function drawChart (data) {
                 }
             }, {
                 value: 0,
-                name: '工料费总量'
+                name: pie_series.allfee
             }, ],
             itemStyle: {
                 normal: {
@@ -173,7 +177,7 @@ function drawChart (data) {
             data: ['实际', '预期']
         },
         grid: {
-            containLabel: true  // 防止标签溢出边界
+            containLabel: true // 防止标签溢出边界
         },
         xAxis: {
             data: line_series.xAxisData
