@@ -5,6 +5,7 @@ angular.module('mainApp',['ngRoute'])
     .when('/',{templateUrl: 'views/main.html'})
     .when('/scopemanagement',{templateUrl: 'views/scopemanagement.html'})
     .when('/scope',{templateUrl: 'views/scope.html'})
+    .when('/scopemgtproject',{templateUrl: 'views/scopemgtproject.html'})
     .otherwise({redirectTo:'/'});
 }])
 // 主页面controller

@@ -299,31 +299,62 @@ header {
 }
 
 .container.content {
+	>p {
+		margin-top: 10px;
+	}
 	form.changerequest {
+		div.panel.panel-default {
+			margin-bottom: 0;
+		}
 		div.panel-heading {
+			background-color: rgb(102, 102, 102);
 			h3 {
 				display: inline-block;
+				color: white;
 			}
 			a {
 				float: right;
 			}
 		}
-		.changeinfo {
+		p input {
+			display: inline;
+			padding-left: 10px;
+		}
+		textarea, input[type='text'], input[type='date'], select {
+			background-color: rgb(246, 246, 246);
+		}
+		input[type='text'], input[type='date'], select {
+			border: solid 1px #666;
+		}
+
+		.desctitle {
+			font-weight: 700;
+			span, input {
+				font-weight: initial;
+			}
+		}
+		.requirelist, .changeinfo {
 			&::after {
 				@include clear_float;
 			}
 
-			select {
+			select, input {
 				height: 26px;
 				width: 174px;
 			}
 			.changelabel {
-				width: 62px;
+				width: 120px;
 				text-align: right;
 			}
+			.requiretitle {
+				width: -webkit-calc(100% - 175px);
+				width: -moz-calc(100% - 175px);
+				width: calc(100% - 175px);
+			}
+
 			>div {
-				width: 30%;
 				display: inline-block;
+				margin: 5px 0;
 			}
 		}
 
@@ -339,11 +370,36 @@ header {
 			}
 		}
 		input.btn-lg {
+			color: white;
 			width: 200px;
-			margin: 0 5px;
+			margin: 10px 0;
+			background-color: rgb(102, 102, 102);
 		}
 		div.yandnbtn {
 			text-align: center;
+		}
+		.feasiblestudy {
+
+		}
+
+		.requiresearch {
+			a {
+				display: block;
+				span {
+					color: black;
+					margin-left: 10px;
+				}
+			}
+			.historyinfo {
+				textarea {
+					border: none;
+				}
+			}
+		}
+		.topdash {
+			border-top: dashed 1px #999999;
+			padding-top: 10px;
+			margin-top: 10px;
 		}
 	}
 
