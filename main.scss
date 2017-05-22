@@ -64,6 +64,27 @@ header {
 	}
 }
 
+footer {
+	background-color: rgb(153, 153, 153);
+	height: 200px;
+	width: 100%;
+	text-align: center;
+
+	p {
+		font-size: 20px;
+		color: white;
+	}
+	&::after, p{
+	    display:inline-block;
+	    vertical-align:middle;
+	}
+	&::after{
+	    content:'';
+	    height:100%;
+	}
+
+}
+
 .content {
 	padding: 0;
 	&:after {
@@ -302,7 +323,7 @@ header {
 	>p {
 		margin-top: 10px;
 	}
-	form.changerequest {
+	div.changerequest {
 		div.panel.panel-default {
 			margin-bottom: 0;
 		}
@@ -314,11 +335,15 @@ header {
 			}
 			a {
 				float: right;
+				color: white;
 			}
 		}
 		p input {
 			display: inline;
 			padding-left: 10px;
+		}
+		textarea {
+			width: 100%;
 		}
 		textarea, input[type='text'], input[type='date'], select {
 			background-color: rgb(246, 246, 246);
@@ -333,11 +358,7 @@ header {
 				font-weight: initial;
 			}
 		}
-		.requirelist, .changeinfo {
-			&::after {
-				@include clear_float;
-			}
-
+		.requirelist, .changeinfo, .manualreview {
 			select, input {
 				height: 26px;
 				width: 174px;
@@ -347,6 +368,7 @@ header {
 				text-align: right;
 			}
 			.requiretitle {
+				width: 553px;
 				width: -webkit-calc(100% - 175px);
 				width: -moz-calc(100% - 175px);
 				width: calc(100% - 175px);
@@ -359,11 +381,20 @@ header {
 		}
 
 		.changeinfodiv, .applystatus {
+			>p {
+				font-weight: 700;
+				span, input {
+					font-weight: initial;
+					background-color: initial;
+					border: none;
+				}
+			}
 			textarea {
 				width: 100%;
 			}
 		}
 		.changeinfodiv {
+			margin-bottom: 10px;
 			input {
 				display: inline;
     			padding-left: 10px;
@@ -400,6 +431,56 @@ header {
 			border-top: dashed 1px #999999;
 			padding-top: 10px;
 			margin-top: 10px;
+			width: 100%;
+		}
+
+		.manualreview {
+			.col-lg-12.col-md-12.col-sm-12 {
+				input, table {
+					width: 553.58px;
+					width: calc(66.66% - 185px);
+					display: inline;
+				}
+				
+				.uploadfile {
+					font-size: 14px;
+					overflow: hidden; 
+					position: absolute;
+					
+					a {
+						margin-left: 10px;
+						margin-top: 3px;
+					}
+					input {
+						position: absolute; 
+						z-index: 100; 
+						margin-left: -180px; 
+						font-size: 60px;
+						opacity: 0;
+						filter: alpha(opacity=0); 
+						margin-top: -5px;
+					}
+				}
+
+				table {
+    				display: inline-table;
+    				margin-bottom: 0;
+				}
+			}
+		}
+
+		.reviewresult {
+			.panel-body {
+				>p {
+					font-weight: 700;
+				}
+				label{
+					margin-left: 15px;
+				}
+			}
+			input[type='button'] {
+				margin-left: 15px;
+			}
 		}
 	}
 

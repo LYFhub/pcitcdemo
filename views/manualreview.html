@@ -1,0 +1,87 @@
+<div class="container content">
+	<p>当前位置：范围管理 > 需求规格说明书审核表单</p>
+	<div class="changerequest">
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+		    <h3 class="panel-title">需求规格说明书审核表单</h3>
+		  </div>
+		  <div class="panel-body">
+		    <div>
+		    	<div class="manualreview">
+	    			<div class="col-lg-12 col-md-12 col-sm-12">
+						<label class="changelabel">文件标题</label>
+						<input type="text" name="doctitle" />
+						<span class="uploadfile">
+							<input type="file" size="1" >
+							<a href="">上传</a>
+						</span>
+					</div>
+			    	<div class="col-lg-12 col-md-12 col-sm-12">
+					    <label class="changelabel">版本引用</label>
+					    <input type="text" name="version" />
+					    <span class="uploadfile">
+							<input type="file" size="1" >
+							<a href="">上传</a>
+						</span>
+		    		</div>
+		    		<div class="col-lg-4 col-md-4 col-sm-4">
+					    <label class="changelabel">企业名称</label>
+					    <input type="text" name="companyname" />
+		    		</div>
+		    		<div class="col-lg-4 col-md-4 col-sm-4">
+					    <label class="changelabel">业务主线</label>
+					    <input type="text" name="business" />
+		    		</div>
+		    		<div class="col-lg-12 col-md-12 col-sm-12">
+					    <label class="changelabel">相关需求</label>
+					    <table class="table table-bordered table-striped">
+					    	<tr>
+					    		<th>需求编号</th>
+					    		<th>需求标题</th>
+					    	</tr>
+				    		<tr>
+				    			<td>20170517216</td>
+				    			<td><a href="">中国石化智能工厂提升项目需求（燕山）设计生产管控一体化</a></td>
+				    		</tr>
+					    </table>
+					</div>
+		    		<div class="col-lg-4 col-md-4 col-sm-4">
+					    <label class="changelabel">创建人</label>
+					    <input type="text" name="createduser" />
+		    		</div>
+		    		<div class="col-lg-8 col-md-8 col-sm-8">
+					    <label class="changelabel">创建时间</label>
+					    <input type="date" name="createdtime" />
+		    		</div>
+		    		<div class="col-lg-4 col-md-4 col-sm-4">
+					    <label class="changelabel">修改者</label>
+					    <input type="text" name="changeduser" />
+		    		</div>
+		    		<div class="col-lg-8 col-md-8 col-sm-8">
+					    <label class="changelabel">修改时间</label>
+					    <input type="date" name="changedtime" />
+		    		</div>
+		    	</div>
+			   
+		    </div>
+		    
+		</div>
+		<div class="panel panel-default reviewresult">
+		  <div class="panel-heading">
+		    <h3 class="panel-title">工作小组审批</h3>
+		  </div>
+		  <div class="panel-body">
+		    <p>审批意见</p>
+			<textarea name="changecost" id="" cols="150" rows="5"></textarea>
+			<p>审核结论</p>
+			<label class="radio-inline">
+			    <input type="radio" name="resultradio" id="inlineRadio1" value="option1"> 通过
+			</label>
+			<label class="radio-inline">
+			    <input type="radio" name="resultradio" id="inlineRadio2" value="option2"> 未通过
+			</label>
+		  </div>
+		  <input type="button" value="提交" class="btn btn-success btn-lg">
+		</div>
+	</div>
+</div>
