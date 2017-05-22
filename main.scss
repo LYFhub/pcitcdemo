@@ -414,6 +414,21 @@ footer {
 		}
 
 		.requiresearch {
+			label {
+				margin: 0 10px 15px 10px;
+			}
+			.col-lg-4.col-md-4.col-sm-4,
+			.col-lg-8.col-md-8.col-sm-8 {
+				margin-left: 0;
+				padding-left: 0;
+				label {
+					margin-left: 0;
+				}
+				select {
+					height: 26px;
+					width: 174px;
+				}
+			}
 			a {
 				display: block;
 				span {
