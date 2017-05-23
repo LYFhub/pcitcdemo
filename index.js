@@ -8,14 +8,14 @@ angular.module('mainApp', ['ngRoute'])
 			.when('/scopemanagement', {
 				templateUrl: 'views/scopemanagement.html'
 			})
-			.when('/scope', {
-				templateUrl: 'views/scope.html'
+			.when('/changeapplication', {
+				templateUrl: 'views/changeapplication.html'
 			})
 			.when('/scopemgtproject', {
 				templateUrl: 'views/scopemgtproject.html'
 			})
-			.when('/manualreview', {
-				templateUrl: 'views/manualreview.html'
+			.when('/specsreview', {
+				templateUrl: 'views/specsreview.html'
 			})
 			.when('/requireapplication', {
 				templateUrl: 'views/requireapplication.html'
