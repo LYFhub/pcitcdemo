@@ -698,6 +698,48 @@ footer {
 	}
 }
 
+.spcomponent {
+	height: 26px;
+	>label {
+		position: relative;
+		top: -8px;
+	}
+
+	.ms-taxonomy.ms-taxonomy-height.ms-taxonomy-width {
+		width: 194px;
+		display: inline-block;
+		.ms-taxonomy-control-holder.ms-taxonomy-width {
+			width: 194px;
+			.ms-taxonomy-fieldeditor.ms-taxonomy-fieldeditor-standard {
+				width: 174px !important;
+				padding: 0;
+				border: solid 1px #666;
+
+				.ms-taxonomy-writeableregion{
+					height: 24px;
+					padding: 0;
+					border: none;
+					background-color: #f6f6f6;
+				}
+			}
+		}
+	}
+	table.ms-usereditor {
+		width: 214px;
+		display: inline-block;
+		tbody, tr {
+			width: 214px;
+			div.ms-inputuserfield.ms-inputBox {
+				width: 174px;
+				padding: 0;
+				border: solid 1px #666;
+				background-color: #f6f6f6;
+    			height: 26px !important;
+			}
+		}
+	}
+}
+
 @media screen and (max-width: 1200px) {
 	.barchart, .piechart, .linechart, .checktableitem{
 		width: 48% !important;
