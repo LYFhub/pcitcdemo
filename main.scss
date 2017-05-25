@@ -64,74 +64,118 @@ header {
 	}
 }
 
+.load {
+	position: relative;
+}
 .loadEffect {
-            width: 100%;
-            height: 100%;
-            z-index: 999;
-            background-color: #eee;
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            right: 0;
-        }
-        .loadEffect div{
-            width: 100px;
-            height: 100px;
-            position: absolute;
-            top: 45%;
-            left: 45%;
-            -webkit-animation: load 2.08s linear infinite;
-        }
-        .loadEffect div span{
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background: #999;
-            position: absolute;
-            left: 50%;
-            margin-top: -10px;
-            margin-left: -10px;
-        }
-        @-webkit-keyframes load{
-            0%{
-                -webkit-transform: rotate(0deg);
-            }
-            10%{
-                -webkit-transform: rotate(45deg);
-            }
-            50%{
-                opacity: 1;
-                -webkit-transform: rotate(160deg);
-            }
-            62%{
-                opacity: 0;
-            }
-            65%{
-                opacity: 0;
-                -webkit-transform: rotate(200deg);
-            }
-            90%{
-                -webkit-transform: rotate(340deg);
-            }
-            100%{
-                -webkit-transform: rotate(360deg);
-            }
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background-color: #eee;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.loadEffect div {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    left: calc(50% - 10px);
+    left: -webkit-calc(50% - 10px);
+    left: -moz-calc(50% - 10px);
+    -webkit-animation: load 1.66s linear infinite;
+    animation: load 1.66s linear infinite;
+}
+.loadEffect p {
+    margin: 15px 0;
+    position: relative;
+    top: 52%;
+    text-align: center;
+}
+.loadEffect div span{
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: green;
+    position: absolute;
+    left: 50%;
+    margin-top: -10px;
+    margin-left: -10px;
+}
+@-webkit-keyframes load{
+    0%{
+        -webkit-transform: rotate(0deg);
+    }
+    10%{
+        -webkit-transform: rotate(45deg);
+    }
+    50%{
+        opacity: 1;
+        -webkit-transform: rotate(160deg);
+    }
+    62%{
+        opacity: 0;
+    }
+    65%{
+        opacity: 0;
+        -webkit-transform: rotate(200deg);
+    }
+    90%{
+        -webkit-transform: rotate(340deg);
+    }
+    100%{
+        -webkit-transform: rotate(360deg);
+    }
+}
+@keyframes load{
+    0%{
+        transform: rotate(0deg);
+    }
+    10%{
+        transform: rotate(45deg);
+    }
+    50%{
+        opacity: 1;
+        transform: rotate(160deg);
+    }
+    62%{
+        opacity: 0;
+    }
+    65%{
+        opacity: 0;
+        transform: rotate(200deg);
+    }
+    90%{
+        transform: rotate(340deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.loadEffect div:nth-child(1){
+    -webkit-animation-delay:0.2s;
+    animation-delay:0.2s;
+}
+.loadEffect div:nth-child(2){
+    -webkit-animation-delay:0.4s;
+    animation-delay:0.4s;
+}
+.loadEffect div:nth-child(3){
+    -webkit-animation-delay:0.6s;
+    animation-delay:0.6s;
+}
+.loadEffect div:nth-child(4){
+    -webkit-animation-delay:0.8s;
+    animation-delay:0.8s;
+}
+.loadEffect div:nth-child(5){
+    -webkit-animation-delay:1s;
+    animation-delay:1s;
+}
 
-        }
-        .loadEffect div:nth-child(1){
-            -webkit-animation-delay:0.2s;
-        }
-        .loadEffect div:nth-child(2){
-            -webkit-animation-delay:0.4s;
-        }
-        .loadEffect div:nth-child(3){
-            -webkit-animation-delay:0.6s;
-        }
-        .loadEffect div:nth-child(4){
-            -webkit-animation-delay:0.8s;
-        }
 
 footer {
 	background-color: rgb(153, 153, 153);
@@ -518,10 +562,10 @@ footer {
 				}
 			}
 			a {
-				display: block;
+				display: inline-block;
+				margin-right: 15px;
 				span {
 					color: black;
-					margin-left: 10px;
 				}
 			}
 			.historyinfo {
