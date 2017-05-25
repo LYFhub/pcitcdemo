@@ -442,17 +442,17 @@ footer {
 		position: absolute;
 		
 		a {
-			margin-left: 10px;
+			margin:0 10px;
 			margin-top: 3px;
 		}
 		input {
 			position: absolute; 
-			z-index: 100; 
-			margin-left: -180px; 
-			font-size: 60px;
+			z-index: 100;
 			opacity: 0;
 			filter: alpha(opacity=0); 
-			margin-top: -5px;
+			height: 100%;
+			width: 100% !important;
+			padding-left: 0 !important;
 		}
 	}
 	div.changerequest {
