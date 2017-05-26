@@ -749,6 +749,16 @@ footer {
 		}
 
 		.manualreview {
+			&:after {
+				@include clear_float;
+			}
+
+			label {
+				margin-right: 10px;
+			}
+			>div {
+				margin: 15px 0;
+			}
 			.col-lg-12.col-md-12.col-sm-12 {
 				input, table {
 					width: 553.58px;
@@ -759,6 +769,20 @@ footer {
 				table {
     				display: inline-table;
     				margin-bottom: 0;
+    				width: 640px;
+    				tr {
+    					height: 40px;
+    					th, td {
+    						border: 1px solid white;
+    					}
+    					th {
+    						background-color: rgb(170, 170, 170);
+    						color: white;
+    					}
+    					td {
+    						background-color: rgb(220, 220, 220);
+    					}
+    				}
 				}
 			}
 		}
