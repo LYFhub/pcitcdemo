@@ -4,7 +4,7 @@
 			<!-- Table -->
 			<table class="table">
 				<tr>
-					<th>工作台(<span>{{workdatasource.length}}</span>条)</th>
+					<th>待办事项 (<span>{{workdatasource.length}}条</span>)</th>
 					<th>
 						<a class="workdata" ng-click="prevPage($event)"><span class="glyphicon glyphicon-triangle-left"></span></a>
 						<a class="workdata" ng-click="nextPage($event)"><span class="glyphicon glyphicon-triangle-right"></span></a>
@@ -19,7 +19,7 @@
 		<div class="mytask">
 			<table class="table">
 				<tr>
-					<th>我提交的(<span>{{taskdatasource.length}}</span>条)</th>
+					<th>我提交的 (<span>{{taskdatasource.length}}条</span>)</th>
 					<th>
 						<a class="taskdata" ng-click="prevPage($event)"><span class="glyphicon glyphicon-triangle-left"></span></a>
 						<a class="taskdata" ng-click="nextPage($event)"><span class="glyphicon glyphicon-triangle-right"></span></a>
@@ -34,7 +34,7 @@
 		<div class="news">
 			<table class="table">
 				<tr>
-					<th>新闻 | 通告</th>
+					<th>新闻 <span>| 通告</span></th>
 					<th>
 						<a class="newsdata" ng-click="prevPage($event)"><span class="glyphicon glyphicon-triangle-left"></span></a>
 						<a class="newsdata" ng-click="nextPage($event)"><span class="glyphicon glyphicon-triangle-right"></span></a>
@@ -49,33 +49,32 @@
 		<div class="doccenter">
 			<div class="panel panel-default">
 			  <div class="panel-heading">
-			    <h3 class="panel-title">文档中心</h3>
+			    <h3 class="panel-title">标准化中心</h3>
 			  </div>
 			  <div class="panel-body">
-			    <div class="singledoc">
-			    	<p>版本文档</p>
-			    	<ul>
-			    		<li><a href="#">设计版本</a></li>
-			    		<li><a href="#">研发版本</a></li>
-			    		<li><a href="#">实施版本</a></li>
-			    	</ul>
-			    </div>
-			    <div class="singledoc">
-			    	<p>标准文档</p>
-			    	<ul>
-			    		<li><a href="#">业务标准</a></li>
-			    		<li><a href="#">技术标准</a></li>
-			    		<li><a href="#">数据标准</a></li>
-			    	</ul>
-			    </div>
-			    <div class="singledoc">
-			    	<p>模板文档</p>
-			    	<ul>
-			    		<li><a href="#">通知模板</a></li>
-			    		<li><a href="#">验收模板</a></li>
-			    		<li><a href="#"> 报告模板</a></li>
-			    	</ul>
-			    </div>
+			    <ul>
+			    	<li class="singledoc">版本文档
+						<ul>
+				    		<li><img src="./img/setting-01.png" alt=""><a href="#">设计版本</a></li>
+				    		<li><img src="./img/setting-01.png" alt=""><a href="#">研发版本</a></li>
+				    		<li><img src="./img/setting-01.png" alt=""><a href="#">实施版本</a></li>
+				    	</ul>
+			    	</li>
+			    	<li class="singledoc">标准文档
+						<ul>
+				    		<li><img src="./img/setting-01.png" alt=""><a href="#">业务标准</a></li>
+				    		<li><img src="./img/setting-01.png" alt=""><a href="#">技术标准</a></li>
+				    		<li><img src="./img/setting-01.png" alt=""><a href="#">数据标准</a></li>
+				    	</ul>
+			    	</li>
+			    	<li class="singledoc">模板文档
+						<ul>
+				    		<li><img src="./img/setting-01.png" alt=""><a href="#">通知模板</a></li>
+				    		<li><img src="./img/setting-01.png" alt=""><a href="#">验收模板</a></li>
+				    		<li><img src="./img/setting-01.png" alt=""><a href="#"> 报告模板</a></li>
+				    	</ul>
+			    	</li>
+			    </ul>
 			  </div>
 			</div>
 		</div>
@@ -89,6 +88,7 @@
 				  	<li role="presentation" ng-click="changetab($event)"><a class="aprocess">{{chartdatasource[0].project_a.name}}</a></li>
 				  	<li role="presentation" ng-click="changetab($event)"><a class="bprocess">{{chartdatasource[1].project_b.name}}</a></li>
 				  	<li role="presentation" ng-click="changetab($event)"><a class="cprocess">{{chartdatasource[2].project_c.name}}</a></li>
+				  	<div><img src="./img/setting-01.png" alt=""></div>
 				</ul>
 				<div class="tabheader">
 					<p>年度目标</p>
@@ -103,7 +103,11 @@
 				<div class="tabcontent toptabone" ng-show="homerighttab">
 					<table class="table">
 						<tr ng-repeat="goal_data in yearlygoals">
-							<td><h2>{{goal_data.percent}}</h2></td>
+							<td>
+								<div>
+									<h2>{{goal_data.percent}}</h2>
+								</div>
+							</td>
 							<td>
 								<h4>{{goal_data.title}}</h4>
 								<ul><li>{{goal_data.desc[0]}}</li></ul>

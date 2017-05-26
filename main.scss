@@ -3,31 +3,51 @@ html, body {
 	margin: 0;
 }
 
+.container {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.redfont {
+	color: red;
+}
+
 header {
 	background: rgb(75, 76, 77);
 	color: white;
+	height: 200px;
 
 	.pic_logo {
-		margin-left: 15%;
-		margin-top: 20px;
+		img {
+			width: 480px;
+		}
+		margin-top: 26px;
 		display: inline-block;
 	}
 	.userinfo {
 		display: inline-block;
-		margin-top: 20px;
+		margin-top: 65px;
 		float: right;
-		margin-right: 15%;
 		
 		.usersetting {
 			float: right;
+			height: 60px;
+    		padding-top: 6px;
+			p {
+				font-size: 14px;
+				font-weight: bold;
+				color: #fff;
+			}
+			a {
+				font-size: 12px;
+				color: #999 !important;
+				margin-right: 5px;
+			}
 		}
 		img {
 			display: inline-block;
-			border-radius: 50%;
-    		margin-right: 10px;
-		}
-		a {
-			color: white !important;
+    		margin-right: 18px;
+    		width: 60px;
 		}
 	}
 
@@ -40,7 +60,7 @@ header {
 	.pic_navbar {
 		background-color: rgb(217, 217, 217);
 		padding: 0;
-		height: 42px;
+		height: 60px;
 
 		ul.nav.nav-tabs {
 			display: inline-block;
@@ -48,19 +68,55 @@ header {
 			&:after {
 				@include clear_float;
 			}
-			
-			a {
-				color: black;
+
+			li {	
+				width: 100px;
+				text-align: center;
+				a {
+					font-size: 16px;
+					font-weight: bold;
+					color: #666;
+					height: 60px;
+    				line-height: 60px;
+    				padding: 0;
+    				margin: 0;
+    				border-radius: 0;
+				}
+				.homebtn {
+					color: #333;
+				}		
 			}
 		}
-		input {
-			display: inline-block;
-		    float: right;
-		    width: 200px;
-		    margin-top: 4px;
-		    border-radius: 0;
-		    margin-right: 4px;
+		.searchbox {
+			float: right;
+			input{
+				display: inline-block;
+			    float: left;
+			    height: 30px;
+			    width: 260px;
+			    margin-top: 15px;
+			    border-radius: 0;
+			    font-size: 12px;
+    			color: #999;
+
+			    & + a {
+					float: left;
+				    width: 30px;
+				    height: 30px;
+				    margin-top: 15px;
+				    text-align: center;
+				    line-height: 30px;
+				    font-size: 20px;
+				    color: #333;
+				    border: 0;
+
+				    img {
+				    	width: 30px;
+				    }
+			    }
+			}
 		}
+
 	}
 }
 
@@ -179,7 +235,7 @@ header {
 
 footer {
 	background-color: rgb(153, 153, 153);
-	height: 200px;
+	height: 146px;
 	width: 100%;
 	text-align: center;
 
@@ -207,28 +263,127 @@ footer {
 		width: 33.3%;
 		display: inline-block;
 		float: left;
-		margin-top: 20px;
+		margin-top: 8px;
 		>div {
 			background-color: #eeeeee;
 		}
 
+		.worktable, .mytask, .news{
+			th a {
+				width: 30px;
+				height: 20px;
+				vertical-align: middle;
+				span {
+					color: #999;
+				}
+			}
+			tr th, tr td{
+				&:first-child {
+					padding-left: 22px;
+				}
+				&:last-child {
+					padding-right: 22px;
+					text-align: right;
+				}
+			}
+			tr th {
+				height: 50px;
+				vertical-align: middle;
+				font-size: 16px;
+				background-color: #d9d9d9;
+				span {
+					font-size: 14px;
+				}
+			}
+			tr td {
+				border: none;
+				background-color: #e6e6e6;
+			}
+			tr:nth-child(2) {
+				td {
+					padding-top: 22px;
+				}
+			}
+			tr:last-child {
+				td {
+					padding-bottom: 22px;
+				}
+			}
+		}
+
 		.news {
-			table tr:first-child {
-				th:last-child {
-					float: right;
-					margin-right: 14%;
+			th {
+				span {
+					font-size: 16px !important;;
+					color: #999;
+				}
+			}
+			tr td {
+				text-align: left !important;
+				span {
+					font-size: 12px;
+					color: #999;
+				}
+				p {
+					color: #333;
+					font-size: 16px;
+					margin-bottom: 0;
 				}
 			}
 		}
 
 		.doccenter {
+			.panel-heading {
+				height: 50px;
+				padding: 0 22px;
+				font-size: 16px;
+				background-color: #d9d9d9;
+				color: #333;
+				h3 {
+					height: 50px;
+					line-height: 50px;
+					font-weight: bold;
+				}
+			}
+			.panel-body {
+				padding: 22px;
+				background-color: #e6e6e6;
+				>ul {
+					padding-left: 22px;
+					margin-bottom: 0;
+				}
+				>ul >li {
+					color: #333;
+					font-size: 16px;
+					font-weight: bold;
+					border-top: dashed 1px #d9d9d9;
+					padding-top: 20px;
+					&:first-child {
+						border: none;
+						padding-top: 0;
+					}
+				}
+			}
 			.singledoc ul {
+				padding-left: 0;
 				&:after {
 					@include clear_float;
 				}
 				li {
 					float: left;
 					width: 30%;
+					font-size: 14px;
+					font-weight: initial;
+					list-style: none;
+					margin: 30px 0;
+
+					img {
+						width: 18px;
+						margin-right: 5px;
+					}
+					a {
+						color: #333;
+					}
 				}
 			}
 		}
@@ -236,8 +391,8 @@ footer {
 	.rightcontent {
 		width: 66.6%;
 		float: left;
-		margin-top: 20px;
-		padding-left: 10px;
+		margin-top: 8px;
+		padding-left: 8px;
 		ul.nav.nav-tabs li {
 			width: 25%;
 		}
@@ -281,12 +436,21 @@ footer {
 					>td{
 						padding: 3px;
 						&:first-child{
-							color: white;
 							width: 23%;
-							background: url(./img/rhomboid.png) repeat-x center;
-							background-size: contain;
 							text-align: center;
 							vertical-align: middle;
+							div {
+								display: inline-block;
+								padding: 8px 20%;
+								border: 1px solid #666;
+								color: white;
+								background-color: #666;
+								transform: skew(-30deg);
+
+								h2 {
+									transform: skew(30deg);
+								}
+							}
 						}
 
 						h4 {

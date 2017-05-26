@@ -11,29 +11,34 @@
 </head>
 <body ng-app="mainApp">
 	<header>
-		<div class="pic_logo">
-			<img src="./img/pic_logo.png" alt="pic_logo">
-			<h1>智能工厂大项目管理平台</h1>
-		</div>
-		<div class="userinfo">
-			<img src="./img/pic_logo.png" alt="pic_userinfo">
-			<div class="usersetting">
-				<p>李明宇</p>
-				<a href="#">设置</a>
+		<div class="container">
+			<div class="pic_logo">
+				<img src="./img/logo.png" alt="pic_logo">
 			</div>
-		</div>
-		<div class="container pic_navbar">
-			<ul class="nav nav-tabs">
-			  	<li role="presentation"><a href="#/">首页</a></li>
-			  	<li role="presentation"><a href="#/scopemanagement">范围管理</a></li>
-			  	<li role="presentation"><a href="#/changeapplication">计划管理</a></li>
-			  	<li role="presentation"><a href="#/scopemgtproject">问题管理</a></li>
-			  	<li role="presentation"><a href="#/specsreview">风险管理</a></li>
-			  	<li role="presentation"><a href="#/requireapplication">质量管理</a></li>
-			  	<li role="presentation"><a href="#/scope">交付物文档</a></li>
-			  	<li role="presentation"><a href="#/scope">分析报表</a></li>
-			</ul>
-			<input type="text" class="form-control" placeholder="网站内搜索">
+			<div class="userinfo">
+				<img src="./img/unknownavatar-01.png" alt="pic_userinfo">
+				<div class="usersetting">
+					<p>李明宇</p>
+					<a href="#">设置</a>
+					<a href="#">退出</a>
+				</div>
+			</div>
+			<div class="pic_navbar">
+				<ul class="nav nav-tabs">
+				  	<li role="presentation"><a href="#/" class="homebtn">首页</a></li>
+				  	<li role="presentation"><a href="#/scopemanagement">范围管理</a></li>
+				  	<li role="presentation"><a href="#/changeapplication">计划管理</a></li>
+				  	<li role="presentation"><a href="#/scopemgtproject">问题管理</a></li>
+				  	<li role="presentation"><a href="#/specsreview">风险管理</a></li>
+				  	<li role="presentation"><a href="#/requireapplication">质量管理</a></li>
+				  	<li role="presentation"><a href="#/scope">交付物文档</a></li>
+				  	<li role="presentation"><a href="#/scope">分析报表</a></li>
+				</ul>
+				<div class="searchbox">
+					<input type="text" class="form-control" placeholder="网站内搜索">
+					<a href=""><img src="./img/search-01.png" alt=""></span></a>
+				</div>
+			</div>
 		</div>
 	</header>
 	<div ng-view ng-controller="homeCtrl"></div>
