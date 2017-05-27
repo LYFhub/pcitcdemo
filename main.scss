@@ -527,6 +527,7 @@ footer {
 		}
 		.dateandevent {
 			margin-bottom: 8px;
+			height: 450px;
 			>p {
 				position: relative;
 			    top: -435px;
@@ -568,12 +569,40 @@ footer {
     					}
 					}
 				}
+				.fc-view-container {
+					.fc-head .fc-row.fc-widget-header {
+						table {
+							th {
+								height: 46px;
+								vertical-align: middle;
+							}
+						}
+					}
+					.fc-body .fc-widget-content .fc-row.fc-week.fc-widget-content.fc-rigid {
+						height: 56px !important;
+
+						.fc-content-skeleton {
+							thead .fc-day-top {
+								width: 30px;
+							}
+							tbody .fc-event-container {
+								a {
+									width: 80%;
+									border-radius: 0;
+									position: relative;
+    								top: -20px;
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 		div.drawtimeline {
 		    background: rgb(242, 242, 242);
 		    margin: 5px;
 		    padding: 10px 10px 0 10px;
+		    font-size: 12px;
 
 			>div:after {
 				@include clear_float;
@@ -599,6 +628,7 @@ footer {
 					margin-left: 5px;
 					padding-left: 5px;
 					border-left: solid 1px black;
+					color: #999;
 				}
 				span {
 					color: rgb(191, 34, 51);
@@ -606,6 +636,7 @@ footer {
 			}
 			.sandetime {
 				border-top: solid 1px black;
+				color: #000;
 				.starttime {
 					display: inline-block;
 				}
@@ -635,7 +666,7 @@ footer {
 					color: white;
 					margin: 0;
 					padding: 0;
-					font-size: 20px;
+					font-size: 14px;
 					text-align: center;
 				}
 				table.table > thead > tr > th {

@@ -99,6 +99,9 @@ function drawChart(data) {
         title: {
             text: '成本'
         },
+        textStyle: {
+            fontSize: 12
+        },
         legend: [{
             orient: 'vertical',
             left: 'left',

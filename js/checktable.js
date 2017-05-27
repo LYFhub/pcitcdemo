@@ -2,75 +2,75 @@ $(document).ready(function(){
 
     var data = [
 	    {
-	        "name":       "Tiger Nixon",
-	        "position":   "System Architect",
-	        "salary":     "$3,120",
+	        "name":       "智能供应链提升",
+	        "position":   "李明宇",
+	        "salary":     "85%",
 	        "start_date": "2011/04/25",
-	        "office":     "Edinburgh",
+	        "office":     "85%",
 	        "extn":       "5421"
 	    },
 	    {
-	        "name":       "Garrett Winters",
-	        "position":   "Director",
-	        "salary":     "$5,300",
+	        "name":       "低温热核算优化",
+	        "position":   "任延静",
+	        "salary":     "85%",
 	        "start_date": "2011/07/25",
-	        "office":     "Edinburgh",
+	        "office":     "85%",
 	        "extn":       "8422"
 	    },
 	    {
-	        "name":       "Garrett Winters",
-	        "position":   "Director",
-	        "salary":     "$5,300",
+	        "name":       "智能供应链提升",
+	        "position":   "段传涛",
+	        "salary":     "85%",
 	        "start_date": "2011/07/25",
-	        "office":     "Edinburgh",
+	        "office":     "85%",
 	        "extn":       "8422"
 	    },
 	    {
-	        "name":       "Garrett Winters",
-	        "position":   "Director",
-	        "salary":     "$5,300",
+	        "name":       "标准化",
+	        "position":   "李明宇",
+	        "salary":     "85%",
 	        "start_date": "2011/07/25",
-	        "office":     "Edinburgh",
+	        "office":     "85%",
 	        "extn":       "8422"
 	    },
 	    {
-	        "name":       "Garrett Winters",
-	        "position":   "Director",
-	        "salary":     "$5,300",
+	        "name":       "智能供应链提升",
+	        "position":   "段传涛",
+	        "salary":     "85%",
 	        "start_date": "2011/07/25",
-	        "office":     "Edinburgh",
+	        "office":     "85%",
 	        "extn":       "8422"
 	    },
 	    {
-	        "name":       "Garrett Winters",
-	        "position":   "Director",
-	        "salary":     "$5,300",
+	        "name":       "智能供应链提升",
+	        "position":   "段传涛",
+	        "salary":     "85%",
 	        "start_date": "2011/07/25",
-	        "office":     "Edinburgh",
+	        "office":     "85%",
 	        "extn":       "8422"
 	    },
 	    {
-	        "name":       "Garrett Winters",
-	        "position":   "Director",
-	        "salary":     "$5,300",
+	        "name":       "智能供应链提升",
+	        "position":   "段传涛",
+	        "salary":     "85%",
 	        "start_date": "2011/07/25",
-	        "office":     "Edinburgh",
+	        "office":     "85%",
 	        "extn":       "8422"
 	    },
 	    {
-	        "name":       "bbb",
-	        "position":   "Director",
-	        "salary":     "$5,300",
+	        "name":       "智能供应链提升",
+	        "position":   "段传涛",
+	        "salary":     "85%",
 	        "start_date": "2011/07/25",
-	        "office":     "Edinburgh",
+	        "office":     "85%",
 	        "extn":       "8422"
 	    },
 	    {
-	        "name":       "bbb",
-	        "position":   "Director",
-	        "salary":     "$5,300",
+	        "name":       "智能供应链提升",
+	        "position":   "段传涛",
+	        "salary":     "85%",
 	        "start_date": "2011/07/25",
-	        "office":     "Edinburgh",
+	        "office":     "85%",
 	        "extn":       "8422"
 	    }
 	];
