@@ -12,6 +12,17 @@ html, body {
 	color: red;
 }
 
+.panel.panel-default {
+	border-radius: 0;
+
+	.panel-heading {
+		border-radius: 0;
+	}
+}
+
+.nav-tabs>li>a {
+	border-radius: 0;
+}
 header {
 	background: rgb(75, 76, 77);
 	color: white;
@@ -268,6 +279,16 @@ footer {
 			background-color: #eeeeee;
 		}
 
+		.worktable {
+			table {
+				margin-bottom: 0;
+			}
+		}
+		.mytask, .news {
+			table {
+				margin-bottom: 8px;
+			}
+		}
 		.worktable, .mytask, .news{
 			th a {
 				width: 30px;
@@ -278,6 +299,8 @@ footer {
 				}
 			}
 			tr th, tr td{
+			    padding-bottom: 10px;
+			    padding-top: 10px;
 				&:first-child {
 					padding-left: 22px;
 				}
@@ -301,12 +324,12 @@ footer {
 			}
 			tr:nth-child(2) {
 				td {
-					padding-top: 22px;
+					padding-top: 32px;
 				}
 			}
 			tr:last-child {
 				td {
-					padding-bottom: 22px;
+					padding-bottom: 32px;
 				}
 			}
 		}
@@ -365,7 +388,7 @@ footer {
 				}
 			}
 			.singledoc ul {
-				padding-left: 0;
+				margin-left: -55px;
 				&:after {
 					@include clear_float;
 				}
@@ -375,7 +398,7 @@ footer {
 					font-size: 14px;
 					font-weight: initial;
 					list-style: none;
-					margin: 30px 0;
+					margin: 20px 0;
 
 					img {
 						width: 18px;
@@ -398,7 +421,7 @@ footer {
 		}
 
 		.topcontent {
-			margin-bottom: 20px;
+			margin-bottom: 8px;
 
 			ul.nav.nav-tabs {
 				background: rgb(187, 187, 187);
@@ -415,14 +438,17 @@ footer {
 				>p {
 					display: inline-block;
 				    padding-left: 20px;
-				    font-size: 20px;
-				    margin: 7px 0;
+				    font-size: 18px;
+				    margin: 10px 0;
+				    color: #333;
+				    font-weight: bold;
 				}
 				>.btn-group {
 					float: right;
-					margin-top: 20px;
-					ul.dropdown-menu{
-						min-width: 0;
+					margin-top: 7px;
+					select {
+						width: 120px;
+						height: 30px;
 					}
 				}
 			}
@@ -432,27 +458,29 @@ footer {
 			}
 			.toptabone {
 				tr {
-					margin: 5px 0;
 					border: 1px;
+				    margin: 0 0 20px 0;
+				    display: block;
+				    background-color: #f2f2f2;
 				}
 
 				tr {
 					>td{
 						padding: 3px;
 						&:first-child{
-							width: 23%;
-							text-align: center;
-							vertical-align: middle;
+						    width: 28%;
+						    text-align: center;
+						    vertical-align: middle;
+						    background: url(./img/lozenge-01.png) no-repeat;
+						    background-size: contain;
+						    height: 80px;
+						    padding: 0;
 							div {
 								display: inline-block;
 								padding: 8px 20%;
-								border: 1px solid #666;
 								color: white;
-								background-color: #666;
-								transform: skew(-30deg);
 
 								h2 {
-									transform: skew(30deg);
 								}
 							}
 						}
@@ -460,9 +488,16 @@ footer {
 						h4 {
 							height: 29px;
 							margin: 0;
+							font-size: 16px;
+							font-weight: bold;
+							color: #333;
 						}
 						ul {
-							margin: 0;
+							margin: 0 0 0 -20px;
+							li {
+								color: #666;
+								font-size: 14px;
+							}
 						}
 					}
 				}
@@ -491,7 +526,7 @@ footer {
 			}
 		}
 		.dateandevent {
-			margin-bottom: 20px;
+			margin-bottom: 8px;
 			#calendar {
 				background: #eeeeee;
 				max-width: 900px;
