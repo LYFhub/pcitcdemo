@@ -350,7 +350,7 @@ footer {
 				p {
 					color: #333;
 					font-size: 16px;
-					margin-bottom: 0;
+					margin: 5px 0;
 				}
 			}
 		}
@@ -527,6 +527,15 @@ footer {
 		}
 		.dateandevent {
 			margin-bottom: 8px;
+			>p {
+				position: relative;
+			    top: -435px;
+			    font-size: 16px;
+			    font-weight: bold;
+			    left: 22px;
+			    display: inline-block;
+    			margin-bottom: 0;
+			}
 			#calendar {
 				background: #eeeeee;
 				max-width: 900px;
@@ -534,6 +543,30 @@ footer {
 				
 				.fc-toolbar.fc-header-toolbar {
 					margin: 0;
+					height: 50px;
+					.fc-right button {
+						visibility: hidden;
+						span {
+							top: .7em;
+							visibility: visible;
+						}
+						span.fc-icon.fc-icon-left-single-arrow {
+							left: -400px;
+						}
+						span.fc-icon.fc-icon-right-single-arrow {
+							left: -293px;
+						}
+					}
+					.fc-center {
+						position: relative;
+    					left: 40px;
+    					h2 {
+    						height: 50px;
+						    line-height: 50px;
+						    font-size: 16px;
+						    font-weight: bold;
+    					}
+					}
 				}
 			}
 		}
