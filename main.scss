@@ -11,6 +11,9 @@ html, body {
 .redfont {
 	color: red;
 }
+.telnum {
+	font-size: 18px;
+}
 
 .panel.panel-default {
 	border-radius: 0;
@@ -701,12 +704,18 @@ footer {
 
 .container.content {
 	>p {
-		margin-top: 10px;
+		font-size: 14px;
+		margin-top: 14px;
+		color: #999;
+		span {
+			color: #666;
+		}
 	}
 	.uploadfile {
-		font-size: 14px;
-		overflow: hidden; 
-		position: absolute;
+		font-size: 16px;
+	    overflow: hidden;
+	    position: absolute;
+	    font-weight: bold;
 		
 		a {
 			margin:0 10px;
@@ -728,13 +737,22 @@ footer {
 		}
 		div.panel-heading {
 			background-color: rgb(102, 102, 102);
+			border: none;
 			h3 {
 				display: inline-block;
 				color: white;
+				height: 30px;
+				line-height: 30px;
 			}
 			a {
 				float: right;
 				color: white;
+			}
+		}
+		div.panel-body {
+			padding: 20px 32px;
+			>div {
+
 			}
 		}
 		p input {
@@ -742,54 +760,77 @@ footer {
 			padding-left: 10px;
 		}
 		textarea {
-			width: 100%;
+			border-color: #bebebe;
+		    font-size: 14px;
+		    color: #333;
+		    width: 1110px;
+		    height: 150px;
+		    margin-left: 32px;
+		    margin-right: 32px;
 		}
 		textarea, input[type='text'], input[type='date'], select {
 			background-color: rgb(246, 246, 246);
 		}
 		input[type='text'], input[type='date'], select {
-			border: solid 1px #666;
+			border: solid 1px #bebebe;
+			height: 40px;
+			font-size: 16px;
+			padding-left: 5px;
 		}
 
 		.desctitle {
-			font-weight: 700;
-			span, input {
-				font-weight: initial;
-			}
+			font-weight: bold;
+			font-size: 16px;
+			margin-top: 12px;
 		}
-		.requirelist, .changeinfo, .manualreview {
+		.requirelist, .changeinfo, .manualreview, .schemeapproval {
+			width: 1200px;
 			select, input {
-				height: 26px;
-				width: 174px;
+				height: 40px;
+				width: 240px;
+				padding-left: 5px;
 			}
 			.changelabel {
 				width: 120px;
 				text-align: right;
+				font-weight: bold;
+			    font-size: 16px;
+			    color: #333;
 			}
 			.requiretitle {
-				width: 553px;
-				width: -webkit-calc(100% - 175px);
-				width: -moz-calc(100% - 175px);
-				width: calc(100% - 175px);
+				width: 640px;
+				width: -webkit-calc(100% - 160px);
+				width: -moz-calc(100% - 160px);
+				width: calc(100% - 160px);
 			}
 
 			>div {
 				display: inline-block;
-				margin: 5px 0;
+				margin: 12px 0;
+				padding: 0;
 			}
 		}
 
 		.changeinfodiv, .applystatus {
 			>p {
-				font-weight: 700;
+				font-weight: bold;
+				margin-top: 32px;
+				font-size: 16px;
 				span, input {
 					font-weight: initial;
-					background-color: initial;
-					border: none;
+					margin-left: 5px;
 				}
 			}
 			textarea {
 				width: 100%;
+			}
+			.panel-body {
+				p {
+					margin-top: 32px;
+					font-size: 16px;
+					font-weight: bold;
+					
+				}
 			}
 		}
 		.changeinfodiv {
@@ -801,15 +842,28 @@ footer {
 		}
 		input.btn-lg {
 			color: white;
-			width: 200px;
-			margin: 10px 0;
+			width: 160px;
+			height: 40px;
+			line-height: 20px;
+			margin: 64px 0 44px 0;
 			background-color: rgb(102, 102, 102);
 		}
 		div.yandnbtn {
 			text-align: center;
 		}
 		.feasiblestudy {
-
+			.panel-body {
+				padding: 32px;
+				label {
+				    text-align: right;
+				    font-weight: bold;
+				    font-size: 16px;
+				    color: #333;
+				}
+				.topdash {
+					margin-top: 32px !important;
+				}
+			}
 		}
 
 		.requiresearch {
@@ -820,7 +874,10 @@ footer {
 			.col-lg-8.col-md-8.col-sm-8 {
 				margin-left: 0;
 				padding-left: 0;
+				margin-top: 15px;
 				label {
+					font-weight: bold;
+					font-size: 16px;
 					margin-left: 0;
 				}
 				select {
@@ -828,27 +885,75 @@ footer {
 					width: 174px;
 				}
 			}
-			a {
-				display: inline-block;
-				margin-right: 15px;
-				span {
-					color: black;
-				}
-			}
+			
 			.historyinfo {
+				margin-bottom: 25px;
 				textarea {
 					border: none;
+					margin-bottom: 5px;
+				}
+			}
+		}
+		.teamapproval {
+			padding: 12px 0;
+			label {
+			    font-size: 16px;
+			    color: #333;
+			}
+			.radio-inline {
+				padding-right: 20px;
+			}
+			input {
+				margin-right: 100px;
+			}
+		}
+		.attachmentbox {
+			padding: 0 32px;
+			>p {
+				font-size: 16px;
+				margin: 32px 0 22px 0;
+				color: #333;
+				font-weight: bold;
+			}
+			>div {
+				margin: 10px 0;
+				a {
+					display: inline-block;
+					margin-right: 15px;
+					font-weight: bold;
+					span {
+						color: black;
+					}
 				}
 			}
 		}
 		.topdash {
 			border-top: dashed 1px #999999;
-			padding-top: 10px;
-			margin-top: 10px;
+			margin-top: 20px !important;
+			margin-bottom: 0 !important;
 			width: 100%;
+			>p.desctitle {
+				color: #333;
+				margin-top: 32px;
+				font-size: 16px;
+				span {
+					color: #666;
+				}
+				a {
+					color: #074583;
+					font-size: 16px;
+					font-weight: bold;
+				}
+			}
 		}
-
-		.manualreview {
+		
+		.checkbox {
+			input {
+				width: initial;
+				height: initial;
+			}
+		}
+		.manualreview, .schemeapproval {
 			&:after {
 				@include clear_float;
 			}
@@ -874,15 +979,20 @@ footer {
     					height: 40px;
     					th, td {
     						border: 1px solid white;
-    					}
-    					th {
-    						background-color: rgb(170, 170, 170);
-    						color: white;
-    					}
-    					td {
-    						background-color: rgb(220, 220, 220);
+    						a {
+								margin-right: 30px;
+    						}
     					}
     				}
+				}
+				table.table {
+					th {
+						background-color: rgb(170, 170, 170);
+						color: white;
+					}
+					td {
+						background-color: rgb(220, 220, 220);
+					}
 				}
 			}
 		}
@@ -890,14 +1000,18 @@ footer {
 		.reviewresult {
 			.panel-body {
 				>p {
-					font-weight: 700;
+					font-weight: bold;
+				    margin-top: 12px;
+				    font-size: 16px;
 				}
 				label{
 					margin-left: 15px;
 				}
 			}
 			input[type='button'] {
-				margin-left: 15px;
+				margin-left: 32px;
+			    margin-top: 44px;
+			    margin-bottom: 64px;
 			}
 		}
 	}
@@ -1028,6 +1142,12 @@ footer {
     			height: 26px !important;
 			}
 		}
+	}
+}
+
+@media screen and (min-width: 1270px) {
+	.container {
+		width: 1240px !important;
 	}
 }
 

@@ -20,6 +20,9 @@ angular.module('mainApp', ['ngRoute'])
 			.when('/requireapplication', {
 				templateUrl: 'views/requireapplication.html'
 			})
+			.when('/schemeapproval', {
+				templateUrl: 'views/schemeapproval.html'
+			})
 			.otherwise({
 				redirectTo: '/'
 			});
