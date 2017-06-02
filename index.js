@@ -5,8 +5,8 @@ angular.module('mainApp', ['ngRoute'])
 			.when('/', {
 				templateUrl: 'views/main.html'
 			})
-			.when('/scopemanagement', {
-				templateUrl: 'views/scopemanagement.html'
+			.when('/scopemgt', {
+				templateUrl: 'views/scopemgt.html'
 			})
 			.when('/changeapplication', {
 				templateUrl: 'views/changeapplication.html'
