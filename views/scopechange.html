@@ -1,0 +1,155 @@
+<div class="container content">
+	<p>当前位置：范围管理 > <span>范围变更申请表单</span></p>
+	<div class="changerequest">
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+		    <h3 class="panel-title">新建变更申请</h3>
+		  </div>
+		  <div class="panel-body">
+		    <div>
+		    	<div class="requirelist">
+	    			<div class="col-lg-8 col-md-8 col-sm-8">
+	    				<label class="changelabel">变更标题</label>
+	    				<input type="text" name="changenum" class="requiretitle" />
+	    			</div>
+	    			<div class="col-lg-4 col-md-4 col-sm-4">
+						<label class="changelabel">需求状态</label>
+	    				<input class="redfont" type="text" name="projectnum" />
+					</div>
+	    			<div class="col-lg-4 col-md-4 col-sm-4">
+	    				<label class="changelabel">业务主线</label>
+						<select class="">
+							<option value="生产管控一体化">生产管控一体化</option>
+						    <option value="一般">一般</option>
+						    <option value="低">低</option>
+						</select>
+	    			</div>
+	    			<div class="col-lg-8 col-md-8 col-sm-8">
+						<label class="changelabel largetextbox">相关项目</label>
+	    				<input type="text" class="relevantproject">
+	    					
+	    				</input>
+					</div>
+					<div class="radio col-lg-12 col-md-12 col-sm-12">
+				    	<label class="changelabel">变更类型</label>
+						<label class="radio-inline">
+						  <input type="radio" name="scoperadio" id="scopeRadio1" value="option1"> 需求变更
+						</label>
+						<label class="radio-inline">
+						  <input type="radio" name="scoperadio" id="scopeRadio1" value="option1"> 方案变更
+						</label>
+				    </div>
+		    		<div class="col-lg-4 col-md-4 col-sm-4">
+					    <label class="changelabel">相关需求负责人</label>
+					    <input type="text" name="contractnum" />
+		    		</div>
+		    		<div class="col-lg-8 col-md-8 col-sm-8">
+					    <label class="changelabel largetextbox">相关需求规则说明书</label>
+					    <input type="text">
+					    <span class="uploadfile">
+							<input type="file" size="1">
+							<a href="">浏览</a>
+						</span>
+		    		</div>
+		    		<div class="col-lg-4 col-md-4 col-sm-4">
+						<label class="changelabel">变更编号</label>
+	    				<input type="text" name="projectnum" />
+					</div>
+		    		<div class="topdash">
+		    			<p class="desctitle">变更描述</p>
+		    			<textarea name="changedesc" id="" cols="175" rows="8"></textarea>
+		    			<p class="desctitle">成本影响预估</p>
+		    			<textarea name="costestimate" id="" cols="175" rows="8"></textarea>
+		    			<p class="desctitle">计划影响预估</p>
+		    			<textarea name="planestimate" id="" cols="175" rows="8"></textarea>
+		    			<div class="col-lg-4 col-md-4 col-sm-4">
+						    <label class="changelabel">变更提交人</label>
+						    <input type="text" name="contractnum" />
+			    		</div>
+			    		<div class="col-lg-4 col-md-4 col-sm-4">
+						    <label class="changelabel">变更提交日期</label>
+						    <input type="date" name="contractnum" />
+			    		</div>
+		    		</div>		    	
+		    	</div>
+		    </div>
+		  </div>
+		</div>
+		<div class="panel panel-default feasiblestudy">
+		  <div class="panel-heading">
+		    <h3 class="panel-title">可行性研究</h3>
+		  </div>
+		  <div class="panel-body">
+		  	<div>
+		  		<div class="col-lg-4 col-md-4 col-sm-4">
+					<label class="changelabel">可行性研究负责人</label>
+					<input type="text" name="" />
+				</div>
+				<div class="col-lg-8 col-md-8 col-sm-8">
+					<input type="checkbox" name="" />
+					<p>需要方案变更</p>
+				</div>
+		  	</div>
+			<div>
+				<div class="col-lg-4 col-md-4 col-sm-4">
+				    <label class="changelabel">相关方案负责人</label>
+				    <input type="text" name="contractnum" />
+	    		</div>
+	    		<div class="col-lg-8 col-md-8 col-sm-8">
+				    <label class="changelabel largetextbox">相关企业专题建设方案</label>
+				    <input type="text">
+				    <span class="uploadfile">
+						<input type="file" size="1">
+						<a href="">浏览</a>
+					</span>
+	    		</div>
+			</div>
+			<div class="topdash">
+    			<p class="desctitle">可行性研究结论
+					<span class="uploadfile">
+						<input type="file" size="1">
+						<a href="">上传可行性研究报告</a>
+					</span>
+    			</p>
+    			<textarea name="changedesc" id="" cols="175" rows="8"></textarea>
+    		</div>
+		  </div>
+		</div>
+		<div class="panel panel-default requiresearch">
+		  <div class="panel-heading">
+		    <h3 class="panel-title">工作小组变更审批</h3>
+		  </div>
+		  <div class="panel-body">
+			<div class="">
+    			<p class="desctitle">审批意见</p>
+    			<textarea name="changedesc" id="" cols="175" rows="8"></textarea>
+    			<p class="desctitle">审批结论</p>
+				<label class="radio-inline">
+				    <input type="radio" name="resultradio" id="inlineRadio1" value="option1"> 同意
+				</label>
+				<label class="radio-inline">
+				    <input type="radio" name="resultradio" id="inlineRadio2" value="option2"> 拒绝
+				</label>
+			</div>
+    		<div>
+				<input type="button" value="提交" class="btn btn-lg">
+			</div>
+		  </div>
+		</div>
+		<div class="attachmentbox">
+			<p>相关附件</p>
+			<div>
+				<a href="">中国石化智能工厂提升项目成本介绍.docx </a>
+				<span class="glyphicon glyphicon-remove-circle"></span>
+			</div>
+			<div>
+				<a href="">设计生产管控一体化_计划介绍.docx</a>
+				<span class="glyphicon glyphicon-remove-circle"></span>
+			</div>
+			<div>
+				<a href="">中国石化智能工厂提升项目变更可行性研究报告.docx</a>
+				<span class ="glyphicon glyphicon-remove-circle"></span>
+			</div>
+		</div>
+	</div>
+</div>

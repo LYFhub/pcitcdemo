@@ -23,6 +23,9 @@ angular.module('mainApp', ['ngRoute'])
 			.when('/schemeapproval', {
 				templateUrl: 'views/schemeapproval.html'
 			})
+			.when('/scopechange', {
+				templateUrl: 'views/scopechange.html'
+			})
 			.otherwise({
 				redirectTo: '/'
 			});

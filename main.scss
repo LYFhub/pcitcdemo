@@ -740,9 +740,8 @@ footer {
 		}
 	}
 	.uploadfile {
-		font-size: 16px;
-	    overflow: hidden;
-	    position: absolute;
+		font-size: 16px;	    
+		position: absolute;
 	    font-weight: bold;
 		
 		a {
@@ -825,6 +824,9 @@ footer {
 			    font-size: 16px;
 			    color: #333;
 			}
+			.largetextbox {
+				width: 150px;
+			}
 			.requiretitle {
 				width: 640px;
 				width: -webkit-calc(100% - 160px);
@@ -836,6 +838,16 @@ footer {
 				display: inline-block;
 				margin: 12px 0;
 				padding: 0;
+				>.uploadfile {
+					a {
+						position: relative;
+						top: 10px;
+					}
+				}
+			}
+			input[type='radio'] {
+				width: initial;
+				height: initial;
 			}
 		}
 
@@ -882,11 +894,44 @@ footer {
 		.feasiblestudy {
 			.panel-body {
 				padding: 32px;
+				>div:after {
+					@include clear_float;
+				}
+				>div{
+					&:first-child {
+						margin-bottom: 32px;
+					}
+					>div {
+						padding: 0;
+						input[type='checkbox'] {
+							width: 20px;
+							height: 20px;
+							position: relative;
+							top: 5px;
+						}
+						p {
+							display: inline-block;
+							font-size: 16px;
+    						font-weight: bold;
+						}
+						span.uploadfile {
+							height: 40px;
+							a {
+								position: relative;
+								top: 10px;
+							}
+						}
+					}
+				}
 				label {
 				    text-align: right;
 				    font-weight: bold;
 				    font-size: 16px;
 				    color: #333;
+				    width: 130px;
+				}
+				.largetextbox {
+					width: 160px;
 				}
 				.topdash {
 					margin-top: 32px !important;
@@ -971,6 +1016,14 @@ footer {
 					color: #074583;
 					font-size: 16px;
 					font-weight: bold;
+				}
+			}
+			>div.col-lg-4.col-md-4.col-sm-4 {
+				padding: 0;
+				margin: 32px 0;
+				.changelabel {
+					width: initial;
+					text-align: left;
 				}
 			}
 		}
