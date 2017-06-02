@@ -26,8 +26,13 @@ html, body {
 .nav-tabs>li>a {
 	border-radius: 0;
 }
+.homebtnactive {
+	color: #fff;
+	background-color: #211c70;
+	border: none;
+}		
 header {
-	background: rgb(75, 76, 77);
+	background: #fff;
 	color: white;
 	height: 200px;
 
@@ -50,12 +55,15 @@ header {
 			p {
 				font-size: 14px;
 				font-weight: bold;
-				color: #fff;
+				color: #333;
 			}
 			a {
 				font-size: 12px;
-				color: #999 !important;
+				color: #666 !important;
 				margin-right: 5px;
+				&:last-child {
+					color: #93b5f2 !important;
+				}
 			}
 		}
 		img {
@@ -72,7 +80,7 @@ header {
 	}
 
 	.pic_navbar {
-		background-color: rgb(217, 217, 217);
+		background-color: #2f348f;
 		padding: 0;
 		height: 60px;
 
@@ -89,16 +97,18 @@ header {
 				a {
 					font-size: 16px;
 					font-weight: bold;
-					color: #666;
+					color: #d5d6ea;
 					height: 60px;
     				line-height: 60px;
     				padding: 0;
     				margin: 0;
     				border-radius: 0;
+    				&:focus, &:hover{
+    					color: #fff;
+    					background-color: #211c70;
+    					border: none;
+    				}
 				}
-				.homebtn {
-					color: #333;
-				}		
 			}
 		}
 		.searchbox {
@@ -108,10 +118,11 @@ header {
 			    float: left;
 			    height: 30px;
 			    width: 260px;
-			    margin-top: 15px;
+			    margin-top: 17px;
 			    border-radius: 0;
 			    font-size: 12px;
-    			color: #999;
+    			color: #666;
+    			background-color: #d5d6ea;
 
 			    & + a {
 					float: left;
@@ -292,7 +303,10 @@ footer {
 				margin-bottom: 8px;
 			}
 		}
-		.worktable, .mytask, .news{
+		.worktable, .mytask{
+			tr:first-child {
+				border: 1px solid #eee;
+			}
 			th a {
 				width: 30px;
 				height: 20px;
@@ -316,14 +330,14 @@ footer {
 				height: 50px;
 				vertical-align: middle;
 				font-size: 16px;
-				background-color: #d9d9d9;
+				background-color: #fff;
 				span {
 					font-size: 14px;
 				}
 			}
 			tr td {
 				border: none;
-				background-color: #e6e6e6;
+				background-color: rgb(245, 249, 252);
 			}
 			tr:nth-child(2) {
 				td {
@@ -420,7 +434,7 @@ footer {
 		margin-top: 8px;
 		margin-left: 8px;
 		ul.nav.nav-tabs li {
-			width: 23.5%;
+			width: 196px;
 		}
 
 		.topcontent {
@@ -501,6 +515,12 @@ footer {
 								color: #666;
 								font-size: 14px;
 							}
+						}
+					}
+					&:nth-child(even) {
+						>td:first-child{
+							background: url(./img/lozenge-02.png) no-repeat;
+							background-size: contain;
 						}
 					}
 				}
