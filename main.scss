@@ -259,14 +259,15 @@ header {
 
 
 footer {
-	background-color: rgb(153, 153, 153);
+	background-color: #999;
 	height: 146px;
 	width: 100%;
 	text-align: center;
 
 	p {
-		font-size: 20px;
-		color: white;
+		font-size: 18px;
+		font-weight: bold;
+		color: #ebebeb;
 	}
 	&::after, p{
 	    display:inline-block;
@@ -303,7 +304,7 @@ footer {
 				margin-bottom: 8px;
 			}
 		}
-		.worktable, .mytask{
+		.worktable, .mytask, .news{
 			tr:first-child {
 				border: 1px solid #eee;
 			}
@@ -352,7 +353,8 @@ footer {
 		}
 
 		.news {
-			th {
+			tr th {
+				background-color: #fafafa;
 				span {
 					font-size: 16px !important;;
 					color: #999;
@@ -360,6 +362,7 @@ footer {
 			}
 			tr td {
 				text-align: left !important;
+				background-color: #fff;
 				span {
 					font-size: 12px;
 					color: #999;
@@ -370,6 +373,23 @@ footer {
 					margin: 5px 0;
 				}
 			}
+			tr th, tr td{
+				&:first-child {
+					width: 40%;
+					border-left: solid 1px #eee;
+					img {
+						width: 160px;
+						height: 80px;
+					}
+				}
+				&:last-child {
+					width: 60%;
+					border-right: solid 1px #eee;
+				}
+			}
+			tr:last-child {
+				border-bottom: solid 1px #eee;
+			}
 		}
 
 		.doccenter {
@@ -377,17 +397,23 @@ footer {
 				height: 50px;
 				padding: 0 22px;
 				font-size: 16px;
-				background-color: #d9d9d9;
+				background-color: #fafafa;
 				color: #333;
 				h3 {
 					height: 50px;
 					line-height: 50px;
 					font-weight: bold;
+					display: inline-block;
+				}
+				a {
+					float: right;
+					position: relative;
+    				top: 14px;
 				}
 			}
 			.panel-body {
 				padding: 22px;
-				background-color: #e6e6e6;
+				background-color: #fff;
 				>ul {
 					padding-left: 22px;
 					margin-bottom: 0;
@@ -474,6 +500,9 @@ footer {
 				background-color: rgb(230, 230, 230);
 			}
 			.toptabone {
+				tbody {
+					border: 1px solid #eee;
+				}
 				tr {
 					border: 1px;
 				    margin: 0 0 20px 0;
@@ -891,6 +920,12 @@ footer {
 		div.yandnbtn {
 			text-align: center;
 		}
+		.socpeupload {
+			margin: 32px 0;
+			a {
+				margin: 0;
+			}
+		}
 		.feasiblestudy {
 			.panel-body {
 				padding: 32px;
@@ -1185,42 +1220,46 @@ footer {
 }
 
 .spcomponent {
-	height: 26px;
+	height: 40px;
 	>label {
 		position: relative;
-		top: -8px;
+		top: -15px;
 	}
 
 	.ms-taxonomy.ms-taxonomy-height.ms-taxonomy-width {
-		width: 194px;
+		width: 260px;
 		display: inline-block;
 		.ms-taxonomy-control-holder.ms-taxonomy-width {
-			width: 194px;
+			width: 260px;
 			.ms-taxonomy-fieldeditor.ms-taxonomy-fieldeditor-standard {
-				width: 174px !important;
+				width: 240px !important;
 				padding: 0;
-				border: solid 1px #666;
 
 				.ms-taxonomy-writeableregion{
-					height: 24px;
+					height: 40px;
 					padding: 0;
 					border: none;
 					background-color: #f6f6f6;
+					border: solid 1px #bebebe;
+					span.valid-text {
+						position: relative;
+					    top: 8px;
+					    left: 5px;
+					}
 				}
 			}
 		}
 	}
 	table.ms-usereditor {
-		width: 214px;
+		width: 276px;
 		display: inline-block;
 		tbody, tr {
-			width: 214px;
+			width: 276px;
 			div.ms-inputuserfield.ms-inputBox {
-				width: 174px;
+				width: 240px;
 				padding: 0;
-				border: solid 1px #666;
 				background-color: #f6f6f6;
-    			height: 26px !important;
+    			height: 40px !important;
 			}
 		}
 	}
