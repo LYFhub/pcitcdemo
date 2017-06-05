@@ -48,7 +48,7 @@ function drawChart(data) {
 
     // 指定图表的配置项和数据
     var barOption = {
-        color: ['#cccccc', '#999999'],
+        color: ['#d3b56c', '#51769a'],
         title: {
             text: '资源'
         },
@@ -122,7 +122,7 @@ function drawChart(data) {
                 name: pie_series.legendData[1],
                 itemStyle: {
                     normal: {
-                        color: '#999999'
+                        color: '#d3b56c'
                     }
                 }
             }, {
@@ -130,7 +130,7 @@ function drawChart(data) {
                 name: pie_series.legendData[2],
                 itemStyle: {
                     normal: {
-                        color: '#cccccc'
+                        color: '#227191'
                     }
                 }
             }, {
@@ -138,7 +138,7 @@ function drawChart(data) {
                 name: pie_series.legendData[3],
                 itemStyle: {
                     normal: {
-                        color: '#e6e6e6'
+                        color: '#9fb3c1'
                     }
                 }
             }, {
@@ -147,7 +147,7 @@ function drawChart(data) {
             }, ],
             itemStyle: {
                 normal: {
-                    color: '#666666'
+                    color: '#94c8b1'
                 }
             },
             labelLine: {
@@ -171,6 +171,7 @@ function drawChart(data) {
         title: {
             text: '进度'
         },
+        color: ['#ec9856', '#227191'],
         tooltip: {
             trigger: 'axis'
         },

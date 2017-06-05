@@ -16,7 +16,7 @@ $(document).ready(function() {
 			center: 'title',
 			right: 'prev,next'
 		},
-		defaultDate: '2017-05-12',
+		defaultDate: '2017-06-05',
 		navLinks: true, // can click day/week names to navigate views
 		selectable: true,
 		selectHelper: true,

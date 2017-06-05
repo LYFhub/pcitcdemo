@@ -1,233 +1,112 @@
 <div class="container content">
 	<p>当前位置：<span>范围管理</span></p>
-	<div class="requiremanagement">
-		<p>需求管理</p>
-		<ul class="nav nav-tabs">
-		  	<li role="presentation" onclick="changetab(event)"><a class="tabbar1" href="#">需求列表</a></li>
-		  	<li role="presentation" onclick="changetab(event)"><a class="tabbar2" href="#">需求流程信息</a></li>
-		  	<li role="presentation" onclick="changetab(event)"><a class="tabbar3" href="#">需求规格说明文档</a></li>
-		</ul>
-		<div class="selectbar">
-			<div class="btn-group">
-				<label>企业名称:</label>
-				<select ng-model="requireselect_com_name">
-				  <option>全部</option>
-				  <option>中石化</option>
-				  <option>石化盈科</option>
-				</select>
-				<input type="text" value="{{requireselect_com_name}}" ng-model="requireselect_com_name">
-				<label>受理状态:</label>
-				<select ng-model="requireselect_status">
-				  <option>全部</option>
-				  <option>新需求</option>
-				  <option>待调研</option>
-				  <option>被拒绝</option>
-				</select>
-				<input type="text" value="{{requireselect_status}}" ng-model="requireselect_status">
-				<label>创建人:</label>
-				<select ng-model="requireselect_creater">
-				  <option>全部</option>
-				  <option>任延静</option>
-				  <option>曹君</option>
-				  <option>段传涛</option>
-				</select>
-				<input type="text" value="{{requireselect_creater}}" ng-model="requireselect_creater">
-				<label>时间段:</label>
-				<select ng-model="requireselect_time">
-				  <option>近三个月</option>
-				  <option>近六个月</option>
-				  <option>近一年</option>
-				</select>
-				<input type="text" value="{{requireselect_time}}" ng-model="requireselect_time">
-			</div>
-			<div class="newandall">
-				<a href="#">新建</a>
-				<a href="#">查看全部</a>
-			</div>
-		</div>
-		<div class="requiretableitem">
-			<table id="requiretable" class="table">
-				<thead>
-					<tr>
-						<th>企业名称</th>
-						<th>受理状态</th>
-						<th>创建人</th>
-						<th>时间段</th>
-					</tr>
-				</thead>
-				<tbody>
-				</tbody>
+	<div class="scopemgt">
+		<p>常用功能</p>
+		<div class="scopeheader">
+			<table>
+				<tr>
+					<th>需求类</th>
+					<th>方案类</th>
+					<th>变更类</th>
+					<th>版本类</th>
+				</tr>
+				<tr>
+					<td>
+						<ul>
+							<li><img src="" alt="">新建需求申请</li>
+							<li><img src="" alt="">提交需求规格说明书</li>
+						</ul>
+					</td>
+					<td>
+						<img src="" alt="">
+						提交企业专题建设方案
+					</td>
+					<td>
+						<img src="" alt="">
+						新建变更申请
+					</td>
+					<td>
+						<ul>
+							<li>查看设计版本库</li>
+							<li>查看研发版本库</li>
+						</ul>
+					</td>
+				</tr>
 			</table>
 		</div>
-	</div>
-
-	<div class="changemanagement">
-		<p>变更管理</p>
-		<ul class="nav nav-tabs">
-		  	<li role="presentation" onclick="changetab(event)"><a class="tabbar1" href="#">变更流程信息</a></li>
-		  	<li role="presentation" onclick="changetab(event)"><a class="tabbar2" href="#">变更文档库</a></li>
-		</ul>
-		<div class="selectbar">
-			<div class="btn-group">
-				<label>企业名称:</label>
-				<select>
-				  <option>全部</option>
-				  <option>中石化</option>
-				  <option>石化盈科</option>
-				</select>
-				<label>受理状态:</label>
-				<select>
-				  <option>全部</option>
-				  <option>新需求</option>
-				  <option>待调研</option>
-				  <option>被拒绝</option>
-				</select>
-				<label>创建人:</label>
-				<select>
-				  <option>全部</option>
-				  <option>任延静</option>
-				  <option>曹君</option>
-				  <option>段传涛</option>
-				</select>
-				<label>时间段:</label>
-				<select>
-				  <option>近三个月</option>
-				  <option>近六个月</option>
-				  <option>近一年</option>
-				</select>
+		<div class="scopecontent">
+			<ul id="scopeTab" class="nav nav-tabs">
+				<li class="active">
+					<a href=".requirecase" data-toggle="tab">需求情况</a>
+					<!-- 正式时，由于路由不使用angular-router, 可以替换为通过id跳转,改为# -->
+				</li>
+				<li>
+					<a href=".changecase" data-toggle="tab">变更情况</a>
+				</li>
+				<li>
+					<a href=".plancase" data-toggle="tab">方案情况</a>
+				</li>
+			</ul>
+			<div id="scopeTabContent" class="tab-content">
+				<div class="tab-pane fade in active requirecase" id="requirecase">
+					<div class="myrequirelink">
+						<a href="">我提交的需求申请</a>
+						<a href="">所有需求</a>
+					</div>
+					<div class="contentBox">
+						<ul id="requireTabHeader" class="nav nav-tabs">
+							<li>
+								<a href=".product" data-toggle="tab">生产管控一体化</a>
+								<!-- 正式时，由于路由不使用angular-router, 可以替换为通过id跳转,改为# -->
+							</li>
+							<li>
+								<a href=".allprocess" data-toggle="tab">全流程一体化优化</a>
+							</li>
+							<li class="active">
+								<a href=".liftcycle" data-toggle="tab">全生命周期一体化资产管理</a>
+							</li>
+							<li>
+								<a href=".smartmake" data-toggle="tab">智能制造平台</a>
+							</li>
+						</ul>
+						<div id="requireTabContent" class="tab-content">
+							<div class="tab-pane fade in product" id="product">
+								中国石化智能工厂项目A
+							</div>
+							<div class="tab-pane fade in allprocess" id="allprocess">
+								中国石化智能工厂项目B
+							</div>
+							<div class="tab-pane fade in active liftcycle" id="liftcycle">
+								<div class="cyclestart">新建需求</div>
+								<div>
+									<p>待可行性研究的需求<span>(8)</span></p>
+								</div>
+								<div>
+									<p>待审批的需求<span>(10)</span></p>
+								</div>
+								<div>
+									<p>需求调研阶段<span>(10)</span></p>
+								</div>
+								<div>
+									<p>需求规格说明书审核阶段<span>(20)</span></p>
+								</div>
+								<div>
+									<p>需求基线确立<span>(20)</span></p>
+								</div>
+							</div>
+							<div class="tab-pane fade in smartmake" id="smartmake">
+								中国石化智能工厂项目C
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tab-pane fade changecase" id="changecase">
+					
+				</div>
+				<div class="tab-pane fade plancase" id="plancase">
+					
+				</div>
 			</div>
-			<div class="newandall">
-				<a href="#">新建</a>
-				<a href="#">查看全部</a>
-			</div>
-		</div>
-		<div class="changetableitem">
-			<table id="changetable" class="table">
-				<thead>
-					<tr>
-						<th>企业名称</th>
-						<th>受理状态</th>
-						<th>创建人</th>
-						<th>时间段</th>
-					</tr>
-				</thead>
-				<tbody>
-				</tbody>
-			</table>
-		</div>
-	</div>
-
-	<div class="schememanagement">
-		<p>方案管理</p>
-		<ul class="nav nav-tabs">
-		  	<li role="presentation" onclick="changetab(event)"><a class="tabbar1" href="#">方案文档库</a></li>
-		  	<li role="presentation" onclick="changetab(event)"><a class="tabbar2" href="#">方案流程信息</a></li>
-		  	<li role="presentation" onclick="changetab(event)"><a class="tabbar3" href="#">方案检索</a></li>
-		</ul>
-		<div class="selectbar">
-			<div class="btn-group">
-				<label>企业名称:</label>
-				<select>
-				  <option>全部</option>
-				  <option>中石化</option>
-				  <option>石化盈科</option>
-				</select>
-				<label>受理状态:</label>
-				<select>
-				  <option>全部</option>
-				  <option>新需求</option>
-				  <option>待调研</option>
-				  <option>被拒绝</option>
-				</select>
-				<label>创建人:</label>
-				<select>
-				  <option>全部</option>
-				  <option>任延静</option>
-				  <option>曹君</option>
-				  <option>段传涛</option>
-				</select>
-				<label>时间段:</label>
-				<select>
-				  <option>近三个月</option>
-				  <option>近六个月</option>
-				  <option>近一年</option>
-				</select>
-			</div>
-			<div class="newandall">
-				<a href="#">新建</a>
-				<a href="#">查看全部</a>
-			</div>
-		</div>
-		<div class="schemetableitem">
-			<table id="schemetable" class="table">
-				<thead>
-					<tr>
-						<th>企业名称</th>
-						<th>受理状态</th>
-						<th>创建人</th>
-						<th>时间段</th>
-					</tr>
-				</thead>
-				<tbody>
-				</tbody>
-			</table>
-		</div>
-	</div>
-
-	<div class="versionmanagement">
-		<p>版本管理</p>
-		<ul class="nav nav-tabs">
-		  	<li role="presentation" onclick="changetab(event)"><a class="tabbar1" href="#">设计版本库</a></li>
-		  	<li role="presentation" onclick="changetab(event)"><a class="tabbar2" href="#">研发版本库</a></li>
-		  	<li role="presentation" onclick="changetab(event)"><a class="tabbar3" href="#">版本流程信息</a></li>
-		</ul>
-		<div class="selectbar">
-			<div class="btn-group">
-				<label>企业名称:</label>
-				<select>
-				  <option>全部</option>
-				  <option>中石化</option>
-				  <option>石化盈科</option>
-				</select>
-				<label>受理状态:</label>
-				<select>
-				  <option>全部</option>
-				  <option>新需求</option>
-				  <option>待调研</option>
-				  <option>被拒绝</option>
-				</select>
-				<label>创建人:</label>
-				<select>
-				  <option>全部</option>
-				  <option>任延静</option>
-				  <option>曹君</option>
-				  <option>段传涛</option>
-				</select>
-				<label>时间段:</label>
-				<select>
-				  <option>近三个月</option>
-				  <option>近六个月</option>
-				  <option>近一年</option>
-				</select>
-			</div>
-			<div class="newandall">
-				<a href="#">新建</a>
-				<a href="#">查看全部</a>
-			</div>
-		</div>
-		<div class="versiontableitem">
-			<table id="versiontable" class="table">
-				<thead>
-					<tr>
-						<th>企业名称</th>
-						<th>受理状态</th>
-						<th>创建人</th>
-						<th>时间段</th>
-					</tr>
-				</thead>
-				<tbody>
-				</tbody>
-			</table>
 		</div>
 	</div>
 </div>

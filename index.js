@@ -25,9 +25,6 @@ angular.module('mainApp', ['ngRoute'])
 			})
 			.when('/scopechange', {
 				templateUrl: 'views/scopechange.html'
-			})
-			.otherwise({
-				redirectTo: '/'
 			});
 	}])
 	// 主页面controller

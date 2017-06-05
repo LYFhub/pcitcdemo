@@ -25,6 +25,7 @@ html, body {
 
 .nav-tabs>li>a {
 	border-radius: 0;
+	margin-right: 0;
 }
 .homebtnactive {
 	color: #fff;
@@ -590,13 +591,13 @@ footer {
     			margin-bottom: 0;
 			}
 			#calendar {
-				background: #eeeeee;
 				max-width: 900px;
 				margin: 0 auto;
 				
 				.fc-toolbar.fc-header-toolbar {
 					margin: 0;
 					height: 50px;
+					background: #fafafa;
 					.fc-right button {
 						visibility: hidden;
 						span {
@@ -627,6 +628,8 @@ footer {
 							th {
 								height: 46px;
 								vertical-align: middle;
+								color: #333;
+								font-size: 16px;
 							}
 						}
 					}
@@ -636,13 +639,21 @@ footer {
 						.fc-content-skeleton {
 							thead .fc-day-top {
 								width: 30px;
+								a {
+									color: #4d4d4d;
+									font-size: 18px;
+								}
 							}
 							tbody .fc-event-container {
 								a {
-									width: 80%;
+									width: 70%;
 									border-radius: 0;
 									position: relative;
     								top: -20px;
+    								font-size: 12px;
+    								.fc-content {
+    									background-color: #4674c7;
+    								}
 								}
 							}
 						}
@@ -653,7 +664,7 @@ footer {
 		div.drawtimeline {
 		    background: rgb(242, 242, 242);
 		    margin: 5px;
-		    padding: 10px 10px 5px 10px;
+		    padding: 10px 10px 6px 10px;
 		    font-size: 12px;
 
 			>div:after {
@@ -669,31 +680,56 @@ footer {
 					margin-left: 30px;
 				}
 				.timetext {
-					display: inline-block;
-					border: solid 2px #555555;
-					margin-bottom: 0;
-					padding: 2px;
+				    display: inline-block;
+			    	border: solid 2px #999;
+				    margin-bottom: 0;
+				    padding: 2px;
+				    color: #666;
+				    background-color: white;
 				}
 				.timedate {
 					padding-bottom: 20px;
-					margin-bottom: 0;
+					margin-bottom: -20px;
 					margin-left: 5px;
 					padding-left: 5px;
-					border-left: solid 1px black;
-					color: #999;
+					border-left: solid 1px #999;
+					color: #000;
 				}
 				span {
-					color: rgb(191, 34, 51);
+					color: #223485;
+				}
+				.diamond {
+					position: relative;
+				    top: 25px;
+				    left: 5px;
+				    transform: translate(-50%, -50%);
+				    width: 10px;
+				    height: 10px;
+				    text-align: center;
+				    color: white;
+			        &:before {
+			        	content: '';
+					    position: absolute;
+					    top: 0;
+					    right: 0;
+					    bottom: 0;
+					    left: 0;
+					    background-color: white;
+					    z-index: -1;
+					    transform: rotateZ(45deg);
+			        }
 				}
 			}
 			.sandetime {
-				border-top: solid 1px black;
+				border-top: solid 1px #999;
 				color: #000;
 				.starttime {
 					display: inline-block;
+					margin-top: 10px;
 				}
 				.endtime {
 					float: right;
+					margin-top: 10px;
 				}
 			}
 		}
@@ -718,7 +754,7 @@ footer {
 					margin: 0 3px;
 				}
 				p {
-					background: #444;
+					background: #2f3485;
 					color: white;
 					margin: 0;
 					padding: 0;
@@ -728,8 +764,8 @@ footer {
 					line-height: 38px;
 				}
 				table.table > thead > tr > th {
-					background: #888;
-					color: white;
+					background: #d0cebb;
+					color: #666;
 					border: none;
 					height: 38px;
     				text-align: center;
@@ -742,10 +778,24 @@ footer {
 					>thead>tr>th {
 						padding: 0px;
 						width: 25%;
+						height: 40px;
 						vertical-align: middle;
+						text-align: center;
+					}
+					>tbody>tr>td {
+						&:first-child {
+							text-align: left;
+							padding-left: 5px;
+						}
 					}
 					>tbody >tr {
 						background-color: rgb(242, 242, 242);
+						&:nth-child(odd) {
+							color: #333;
+						}
+						&:nth-child(even) {
+							color: #666;
+						}
 					}
 				}
 			}
@@ -753,6 +803,10 @@ footer {
 				text-align: left !important;
 				a {
 					margin: 3px;
+					color: #b3b3b3;
+					&:hover, &.current {
+						color: #4d4d4d;
+					}
 				}
 			}
 		}
@@ -1212,6 +1266,155 @@ footer {
 					}
 					tr:nth-child(even) {
 						float: left;
+					}
+				}
+			}
+		}
+	}
+}
+
+.scopemgt {
+	>p {
+		font-size: 16px;
+		font-weight: bold
+	}
+	.scopeheader {
+		height: 100px;
+		background-color: rgb(235, 234, 213);
+		margin-bottom: 20px;
+		
+		table {
+			width: 100%;
+			height: 100%;
+			tr th, tr td{
+				text-align: center;
+				&:nth-child(1) {
+					width: 30%;
+					border-right: dashed 1px #5e5e5e;
+				}
+				&:nth-child(2) {
+					width: 20%;
+					border-right: dashed 1px #5e5e5e;
+				}
+				&:nth-child(3) {
+					width: 20%;
+					border-right: dashed 1px #5e5e5e;
+				}
+				&:nth-child(4) {
+					width: 30%;
+				}
+			}
+			tr th {
+
+			}
+			ul {
+				list-style-type: none;
+				margin-bottom: 0;
+				&:after {
+					@include clear_float;
+				}
+				li {
+					float: left;
+					margin-right: 15%;
+				}
+			}
+		}
+	}
+	.scopecontent {
+		border: solid 1px #ddd;
+		margin-bottom: 20px;
+
+		ul#scopeTab {
+			background-color: rgb(250, 250, 250);
+			li a {
+				color: rgb(153, 153, 153);
+				&:hover {
+					color: rgb(51, 51, 51);
+					background-color: white;
+				}
+			}
+			li.active {
+				a {
+					color: rgb(51, 51, 51);
+				}
+			}
+		}
+
+		#scopeTabContent {
+			#requirecase {
+				padding: 22px;
+				.myrequirelink {
+					a {
+						display: inline-block;
+						margin: 5px 0 10px 30px;
+					}
+				}
+				#requireTabHeader {
+					background-color: rgb(160, 179, 193);
+					a {
+						color: white;
+						&:hover {
+							background-color: rgb(242, 242, 242);
+							color: black;
+						}
+					}
+					.active {
+						a {
+							background-color: rgb(242, 242, 242);
+							color: black;
+						}
+					}
+				}
+				#requireTabContent {
+					padding: 22px;
+					background-color: rgb(242, 242, 242);
+
+					#liftcycle {
+						&:after {
+							@include clear_float;
+						}
+						.cyclestart {
+							width: 80px;
+							height: 80px;
+							line-height: 80px;
+							border-radius: 50%;
+							background-color: rgb(230, 174, 61);
+							color: white;
+							text-align: center;
+							background-image: none;
+							&:before {
+								content: '';
+							}
+						}
+						>div {
+							float: left;
+							height: 80px;
+							width: 20%;
+							margin: 50px 0 50px 60px;
+							position: relative;
+							background-color: white;
+							background: url(./img/lozenge-02.png) no-repeat;
+							background-size: contain;
+
+							&:before {
+								content: '---------->';
+								position: relative;
+								top: 28px;
+								left: -60px;
+							}
+							&:nth-child(5) {
+								margin-left: 200px;
+							}
+							p {
+								text-align: center;
+								position: absolute;
+								bottom: 0;
+								background-color: rgba(105, 106, 110, .5);
+								margin-bottom: 0;
+								width: 100%;
+							}
+						}
+						
 					}
 				}
 			}
