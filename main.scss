@@ -816,8 +816,9 @@ footer {
 .container.content {
 	>p {
 		font-size: 14px;
-		margin-top: 14px;
-		color: #999;
+    	margin: 14px 0;
+    	color: #999;
+    	font-weight: bold;
 		span {
 			color: #666;
 		}
@@ -1276,7 +1277,9 @@ footer {
 .scopemgt {
 	>p {
 		font-size: 16px;
-		font-weight: bold
+		font-weight: bold;
+		color: #999;
+		margin-top: 8px;
 	}
 	.scopeheader {
 		height: 100px;
@@ -1285,27 +1288,37 @@ footer {
 		
 		table {
 			width: 100%;
-			height: 100%;
+    		height: 64px;
+    		position: relative;
+    		top: 18px;
 			tr th, tr td{
 				text-align: center;
 				&:nth-child(1) {
 					width: 30%;
-					border-right: dashed 1px #5e5e5e;
+					border-right: dashed 1px #bbb;
 				}
 				&:nth-child(2) {
 					width: 20%;
-					border-right: dashed 1px #5e5e5e;
+					border-right: dashed 1px #bbb;
 				}
 				&:nth-child(3) {
 					width: 20%;
-					border-right: dashed 1px #5e5e5e;
+					border-right: dashed 1px #bbb;
 				}
 				&:nth-child(4) {
 					width: 30%;
 				}
 			}
 			tr th {
-
+				color: #333;
+				font-weight: bold;
+				font-size: 16px;
+			}
+			tr td {
+				font-size: 12px;
+				a {
+					color: #666;
+				}
 			}
 			ul {
 				list-style-type: none;
@@ -1328,14 +1341,18 @@ footer {
 			background-color: rgb(250, 250, 250);
 			li a {
 				color: rgb(153, 153, 153);
+				font-weight: bold;
+				font-size: 16px;
+				width: 150px;
+    			text-align: center;
 				&:hover {
-					color: rgb(51, 51, 51);
+					color: #333;
 					background-color: white;
 				}
 			}
 			li.active {
 				a {
-					color: rgb(51, 51, 51);
+					color: #333;
 				}
 			}
 		}
@@ -1345,29 +1362,36 @@ footer {
 				padding: 22px;
 				.myrequirelink {
 					a {
+						font-size: 14px;
+						font-weight: bold;
+						color: #074583;
 						display: inline-block;
-						margin: 5px 0 10px 30px;
+						margin: 0px 0 22px 30px;
 					}
 				}
 				#requireTabHeader {
-					background-color: rgb(160, 179, 193);
+					background-color: #9fb3c1;
 					a {
-						color: white;
+						font-size: 14px;
+						font-weight: bold;
+						color: #fafaff;
+						width: 242px;
+    					text-align: center;
 						&:hover {
-							background-color: rgb(242, 242, 242);
-							color: black;
+							background-color: #f2f2f2;
+							color: #333;
 						}
 					}
 					.active {
 						a {
-							background-color: rgb(242, 242, 242);
-							color: black;
+							background-color: #f2f2f2;
+							color: #333;
 						}
 					}
 				}
 				#requireTabContent {
 					padding: 22px;
-					background-color: rgb(242, 242, 242);
+					background-color: #f2f2f2;
 
 					#liftcycle {
 						&:after {
@@ -1388,8 +1412,8 @@ footer {
 						}
 						>div {
 							float: left;
-							height: 80px;
-							width: 20%;
+							height: 156px;
+							width: 236px;
 							margin: 50px 0 50px 60px;
 							position: relative;
 							background-color: white;
@@ -1412,6 +1436,15 @@ footer {
 								background-color: rgba(105, 106, 110, .5);
 								margin-bottom: 0;
 								width: 100%;
+								height: 38px;
+								line-height: 38px;
+								color: white;
+								font-weight: bold;
+								text-align: left;
+								padding: 0 10px;
+								span {
+									float: right;
+								}
 							}
 						}
 						
