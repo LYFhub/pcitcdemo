@@ -862,6 +862,9 @@ footer {
 		}
 		div.panel-body {
 			padding: 20px 32px;
+			&:after {
+				@include clear_float;
+			}
 			>div {
 
 			}
@@ -887,6 +890,7 @@ footer {
 			height: 40px;
 			font-size: 16px;
 			padding-left: 5px;
+			width: 240px;
 		}
 
 		.desctitle {
@@ -930,8 +934,22 @@ footer {
 				}
 			}
 			input[type='radio'] {
-				width: initial;
-				height: initial;
+				width: auto;
+				height: auto;
+			}
+		}
+		.requirelist {
+			.col-lg-8.col-md-8.col-sm-8,
+			.col-lg-4.col-md-4.col-sm-4 {
+				>div {
+					width: 240px;
+					display: inline-block;
+				}
+				>a {
+					height: 40px;
+    				display: inline-block;
+    				line-height: 40px;
+				}
 			}
 		}
 
@@ -980,6 +998,9 @@ footer {
 			a {
 				margin: 0;
 			}
+			.uploadfile {
+				position: relative;
+			}
 		}
 		.feasiblestudy {
 			.panel-body {
@@ -995,9 +1016,9 @@ footer {
 						padding: 0;
 						input[type='checkbox'] {
 							width: 20px;
-							height: 20px;
-							position: relative;
-							top: 5px;
+    						height: 40px;
+    						position: relative;
+    						margin-top: 0;
 						}
 						p {
 							display: inline-block;
@@ -1011,6 +1032,21 @@ footer {
 								top: 10px;
 							}
 						}
+						>div {
+							width: 240px;
+							display: inline-block;
+							#ctl00_PlaceHolderMain_RelevantSchemePrincipal_OuterTable {
+								width: 240px;
+								#ctl00_PlaceHolderMain_RelevantSchemePrincipal_upLevelDiv {
+									height: 40px !important;
+									width: 240px;
+								}
+							}
+						}
+						>a {
+							height: 40px;
+    						line-height: 40px;
+						}
 					}
 				}
 				label {
@@ -1018,10 +1054,10 @@ footer {
 				    font-weight: bold;
 				    font-size: 16px;
 				    color: #333;
-				    width: 130px;
+				    width: 135px;
 				}
 				.largetextbox {
-					width: 160px;
+					width: 170px;
 				}
 				.topdash {
 					margin-top: 32px !important;
@@ -1115,6 +1151,10 @@ footer {
 					width: initial;
 					text-align: left;
 				}
+				>div {
+					width: 240px;
+					display: inline-block;
+				}
 			}
 		}
 		
@@ -1134,6 +1174,9 @@ footer {
 			}
 			>div {
 				margin: 15px 0;
+				>a , >span {
+
+				}
 			}
 			.col-lg-12.col-md-12.col-sm-12 {
 				input, table {
@@ -1455,6 +1498,11 @@ footer {
 	}
 }
 
+.cleartop {
+	>label {
+		top: 0 !important;
+	}
+}
 .spcomponent {
 	height: 40px;
 	>label {
@@ -1471,7 +1519,7 @@ footer {
 				width: 240px !important;
 				padding: 0;
 
-				.ms-taxonomy-writeableregion{
+				.ms-inputBox{
 					height: 40px;
 					padding: 0;
 					border: none;
