@@ -3,16 +3,16 @@ $(document).ready(function() {
 	$('#calendar').fullCalendar({
 		height: 450,
 		buttonText: {
-	        today: '今天',
-	        month: '月',
-	        week: '周',
-	        day: '日'
-	    },
-	    allDayText: "全天",
-    	locale: initialLocaleCode,
+			today: '今天',
+			month: '月',
+			week: '周',
+			day: '日'
+		},
+		allDayText: "全天",
+		locale: initialLocaleCode,
 
-    	header: {
-    		left: '',
+		header: {
+			left: '',
 			center: 'title',
 			right: 'prev,next'
 		},
@@ -69,7 +69,8 @@ $(document).ready(function() {
 			title: '项目C',
 			url: 'http://baidu.com/',
 			start: '2017-05-28'
-		}]
+		}],
+		eventColor: "#4674c7"
 	});
 
 });
