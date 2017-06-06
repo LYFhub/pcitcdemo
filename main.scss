@@ -1498,16 +1498,25 @@ footer {
 	}
 }
 
-.cleartop {
-	>label {
-		top: 0 !important;
-	}
-}
+// .cleartop {
+// 	>label {
+// 		top: 0 !important;
+// 	}
+// }
 .spcomponent {
 	height: 40px;
+    line-height: 0px;
+    vertical-align: middle;
+    display: inline-table !important;
+	&:after {
+		@include clear_float;
+	}
 	>label {
-		position: relative;
-		top: -15px;
+		display: table-cell;
+    	vertical-align: middle;
+	}
+	>input {
+		margin-left: 3px;
 	}
 
 	.ms-taxonomy.ms-taxonomy-height.ms-taxonomy-width {
@@ -1525,6 +1534,8 @@ footer {
 					border: none;
 					background-color: #f6f6f6;
 					border: solid 1px #bebebe;
+					padding-left: 5px;
+    				margin-left: 3px;
 					span.valid-text {
 						position: relative;
 					    top: 8px;
@@ -1535,15 +1546,22 @@ footer {
 		}
 	}
 	table.ms-usereditor {
-		width: 276px;
+		width: 279px;
 		display: inline-block;
 		tbody, tr {
-			width: 276px;
+			width: 279px;
 			div.ms-inputuserfield.ms-inputBox {
 				width: 240px;
 				padding: 0;
 				background-color: #f6f6f6;
     			height: 40px !important;
+    			padding-left: 5px;
+    			margin-left: 3px;
+    			span {
+    				position: relative;
+					top: 8px;
+					left: 5px;
+    			}
 			}
 		}
 	}
