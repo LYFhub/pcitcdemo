@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test nav</title>
+	<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+	
+	<ul class="nav nav-pills">
+	  <li class="active"><a href="#sdaaf" data-toggle="tab">Home</a></li>
+	  <li><a href="#asfsadf" data-toggle="tab">Profile</a></li>
+	  <li><a href="#asdadsaf" data-toggle="tab">Messages</a></li>  
+	  <!-- 如果a标签的href都相同，则tabs 不会发生切换 -->
+	  <!-- data-toggle="tab" 会阻止a标签的默认行为, 当href为路径时，无法跳转 -->
+	</ul>
+	
+	<ul id="scopeTab" class="nav nav-pills">
+		<li class="active">
+			<a href=".aaaa" >需求情况</a>
+			<!-- 正式时，由于路由不使用angular-router, 可以替换为通过id跳转,改为# -->
+		</li>
+		<li>
+			<a href=".sada">变更情况</a>
+		</li>
+		<li>
+			<a href=".asdf">方案情况</a>
+		</li>
+	</ul>
+</body>
+</html>
