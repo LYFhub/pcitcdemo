@@ -39,14 +39,25 @@ html, body {
     background-color: #f6f6f6;
     line-height: 40px;
     padding-left: 5px;
+    border: 1px solid #bebebe;
 }
 .textbox640 {
-	width: 640px;
 	@extend .textbox;
+	width: 640px;
+	border: none;
 }
 .textbox240 {
-	width: 240px;
 	@extend .textbox;
+	width: 240px;
+	border: none;
+}
+.textbox640_withborder {
+	@extend .textbox;
+	width: 640px;
+}
+.textbox240_withborder {
+	@extend .textbox;
+	width: 240px;
 }
 .backtop {
 	position: fixed;
@@ -875,10 +886,13 @@ footer {
 		font-size: 16px;	    
 		position: absolute;
 	    font-weight: bold;
+	    cursor: pointer;
 		
 		a {
 			margin:0 10px;
 			margin-top: 3px;
+			color: #157efa;
+			cursor: pointer;
 		}
 		input {
 			position: absolute; 
@@ -888,6 +902,7 @@ footer {
 			height: 100%;
 			width: 100% !important;
 			padding-left: 0 !important;
+			cursor: pointer;
 		}
 	}
 	div.changerequest {
@@ -895,11 +910,12 @@ footer {
 			margin-bottom: 0;
 		}
 		div.panel-heading {
-			background-color: rgb(102, 102, 102);
-			border: none;
+			background-color: rgb(250, 250, 250);
+			border-bottom: 1px solid #ddd;
 			h3 {
 				display: inline-block;
-				color: white;
+				color: #333;
+				font-size: 16px;
 				height: 30px;
 				line-height: 30px;
 			}
@@ -940,11 +956,17 @@ footer {
 			padding-left: 5px;
 			width: 240px;
 		}
-
+		.checkbox.col-lg-2.col-md-2.col-sm-2 {
+			.checkbox-inline {
+				height: 40px;
+			    position: relative;
+			    top: 8px;
+			}
+		}
 		.desctitle {
 			font-weight: bold;
 			font-size: 16px;
-			margin-top: 12px;
+			margin-top: 32px;
 		}
 		.requirelist, .changeinfo, .manualreview, .schemeapproval, .plancheck {
 			width: 1200px;
@@ -1036,7 +1058,11 @@ footer {
 			height: 40px;
 			line-height: 20px;
 			margin: 64px 0 44px 0;
-			background-color: rgb(102, 102, 102);
+			background-color: #157efa;
+			border: none;
+			&:hover {
+				background-color: #0a3e7c;
+			}
 		}
 		div.yandnbtn {
 			text-align: center;
@@ -1168,9 +1194,10 @@ footer {
 					display: inline-block;
 					margin-right: 15px;
 					font-weight: bold;
-					span {
-						color: black;
-					}
+				}
+				span {
+					color: black;
+					cursor: pointer;
 				}
 			}
 		}
@@ -1186,11 +1213,6 @@ footer {
 				span {
 					color: #666;
 				}
-				a {
-					color: #074583;
-					font-size: 16px;
-					font-weight: bold;
-				}
 			}
 			>div.col-lg-4.col-md-4.col-sm-4 {
 				padding: 0;
@@ -1204,12 +1226,22 @@ footer {
 					display: inline-block;
 				}
 			}
+			>div.col-lg-6.col-md-6.col-sm-6 {
+				padding: 0;
+				margin: 12px 0;
+			}
+			>div > .uploadfile {
+				a {
+					position: relative;
+					top: 10px;
+				}
+			}
 		}
 		
 		.checkbox {
 			input {
-				width: initial;
-				height: initial;
+				width: auto;
+				height: auto;
 			}
 		}
 		.manualreview, .schemeapproval {
@@ -1560,7 +1592,7 @@ footer {
 	height: 40px;
     line-height: 0px;
     vertical-align: middle;
-    display: inline-table !important;
+    display: inline-table;
 	&:after {
 		@include clear_float;
 	}
