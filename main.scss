@@ -946,7 +946,7 @@ footer {
 			font-size: 16px;
 			margin-top: 12px;
 		}
-		.requirelist, .changeinfo, .manualreview, .schemeapproval {
+		.requirelist, .changeinfo, .manualreview, .schemeapproval, .plancheck {
 			width: 1200px;
 			select, input {
 				height: 40px;
@@ -1274,6 +1274,11 @@ footer {
 				margin-left: 32px;
 			    margin-top: 44px;
 			    margin-bottom: 64px;
+			}
+		}
+		.plancheck {
+			.largetextbox {
+				width: 170px;
 			}
 		}
 	}

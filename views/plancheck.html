@@ -7,7 +7,7 @@
 	<link href="https://cdn.bootcss.com/fullcalendar/3.4.0/fullcalendar.min.css" rel="stylesheet">
 	<link href="https://cdn.bootcss.com/fullcalendar/3.4.0/fullcalendar.print.min.css" rel="stylesheet" media='print'>
 	<link href="https://cdn.bootcss.com/datatables/1.10.15/css/dataTables.bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="../css/main.css">
+	<link rel="stylesheet" href="../main.css">
 </head>
 <body>
 	<header>
@@ -44,51 +44,38 @@
 		</div>
 	</header>
 <div class="container content">
-	<p>当前位置：范围管理 > <span>建设方案审批表单</span></p>
+	<p>当前位置：计划管理 > <span>详细阶段计划审核表单</span></p>
 	<div class="changerequest">
 		<div class="panel panel-default">
 		  <div class="panel-heading">
-		    <h3 class="panel-title">建设方案审批表单</h3>
+		    <h3 class="panel-title">详细阶段计划审核表单</h3>
 		  </div>
 		  <div class="panel-body">
 		    <div>
-		    	<div class="schemeapproval">
-	    			<div class="col-lg-8 col-md-8 col-sm-8">
-						<label class="changelabel">文件标题</label>
-						<a href="" class="textbox640">中国石化智能工厂提升项目需求（燕山）设计生产管控一体化--专题建设方案.pdf
-						</a>
+		    	<div class="plancheck">
+		    		<div class="col-lg-4 col-md-4 col-sm-4">
+						<label class="changelabel">项目经理</label>
+						<span class="textbox240">李明宇</span>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4">
+						<label class="changelabel">项目名称</label>
+						<span class="textbox240">中国石化智能工厂提升项目</span>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4">
+						<label class="changelabel">计划阶段</label>
+						<span class="textbox240">研发阶段</span>
 					</div>
 					<div class="col-lg-4 col-md-4 col-sm-4">
 						<label class="changelabel">业务主线</label>
 						<span class="textbox240">生产管控一体化</span>
 					</div>
-			    	<div class="col-lg-8 col-md-8 col-sm-8">
-					    <label class="changelabel">需求规格说明书</label>
-					    <span class="textbox640">中国石化智能工厂提升项目需求（燕山）设计生产管控一体化--需求规格说明书.pdf</span>
-		    		</div>
-		    		<div class="col-lg-4 col-md-4 col-sm-4">
-						<label class="changelabel">企业</label>
-						<span class="textbox240">燕山</span>
+	    			<div class="col-lg-8 col-md-8 col-sm-8">
+						<label class="changelabel">项目类型</label>
+						<span class="textbox240">产品研发类</span>
 					</div>
-					<div class="col-lg-12 col-md-12 col-sm-12">
-					    <label class="changelabel">可引用版本</label>
-					    <table>
-					    	<tr>
-					    		<td class="textbox640">
-					    			<span>中国石化智能工厂提升项目需求（青岛）设计生产管控一体化--某版本名称</span>
-					    		</td>
-					    	</tr>
-					    	<tr>
-					    		<td>
-					    			<a href="">某设计版本文档集</a>
-					    			<a href="">某研发版本文档集</a>
-					    		</td>
-					    	</tr>
-					    </table>
-					</div>
-		    		<div class="col-lg-4 col-md-4 col-sm-4">
-					    <label class="changelabel">创建人</label>
-					    <span class="textbox240">蒋云</span>
+					<div class="col-lg-4 col-md-4 col-sm-4">
+					    <label class="changelabel">创建者</label>
+					    <span class="textbox240">李明宇</span>
 		    		</div>
 		    		<div class="col-lg-8 col-md-8 col-sm-8">
 					    <label class="changelabel">创建时间</label>
@@ -102,27 +89,46 @@
 					    <label class="changelabel">修改时间</label>
 					    <span class="textbox240">2017-05-17  15:03</span>
 		    		</div>
+			    	<div class="col-lg-12 col-md-12 col-sm-12">
+					    <label class="changelabel">计划文件</label>
+					    <span class="textbox640"><a href="">中国石化智能工厂提升项目(燕山)某计划文件.mmp</a></span>
+		    		</div>
+		    		<div class="col-lg-12 col-md-12 col-sm-12">
+					    <label class="changelabel largetextbox">相关企业专题建设方案</label>
+					    <span class="textbox640"><a href="">中国石化智能工厂提升项目(燕山)某专题建设方案.pdf</a></span>
+		    		</div>
 		    	</div>
 		    </div>
 		</div>
 	</div>
 	<div class="panel panel-default reviewresult">
 		  <div class="panel-heading">
-		    <h3 class="panel-title">大项目管理组审批</h3>
+		    <h3 class="panel-title">大项目执行组审核</h3>
 		  </div>
 		  <div class="panel-body">
-		    <p>审批意见</p>
+		    <p>审核意见</p>
 			<textarea name="changecost" id="" cols="150" rows="5"></textarea>
 			<p>审核结论</p>
 			<label class="radio-inline">
-			    <input type="radio" name="resultradio" id="inlineRadio1" value="option1"> 通过
+			    <input type="radio" name="resultradio" id="inlineRadio1" value="option1"> 同意
 			</label>
 			<label class="radio-inline">
-			    <input type="radio" name="resultradio" id="inlineRadio2" value="option2"> 未通过
+			    <input type="radio" name="resultradio" id="inlineRadio2" value="option2"> 拒绝
 			</label>
 		  </div>
-		  <input type="button" value="提交" class="btn btn-lg">
 		</div>
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+		    <h3 class="panel-title">计划发布</h3>
+		  </div>
+		  <div class="panel-body">
+		    <div class="col-lg-4 col-md-4 col-sm-4">
+			    <label class="changelabel">计划基线发布日期</label>
+			    <input type="date">
+    		</div>
+		  </div>
+		</div>
+	<input type="button" value="提交" class="btn btn-lg">
 </div>
 </div>
 <footer>
