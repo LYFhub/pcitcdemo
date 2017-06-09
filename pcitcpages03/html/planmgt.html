@@ -27,14 +27,14 @@
 		<div class="pic_navbar">
 			<div class="container">
 				<ul class="nav nav-tabs">
-				  	<li role="presentation"><a href="../index.html" class="homebtn">首页</a></li>
+				  	<li role="presentation"><a href="../index.html">首页</a></li>
 				  	<li role="presentation"><a href="./scopemgt.html">范围管理</a></li>
-				  	<li role="presentation"><a href="./changeapplication.html">计划管理</a></li>
+				  	<li role="presentation"><a href="./planmgt.html">计划管理</a></li>
 				  	<li role="presentation"><a href="./scopemgtproject.html">问题管理</a></li>
-				  	<li role="presentation"><a href="./specsreview.html">风险管理</a></li>
-				  	<li role="presentation"><a href="./requireapplication.html">质量管理</a></li>
-				  	<li role="presentation"><a href="./schemeapproval.html">交付物文档</a></li>
-				  	<li role="presentation"><a href="./scopechange.html">分析报表</a></li>
+				  	<li role="presentation"><a href="">风险管理</a></li>
+				  	<li role="presentation"><a href="">质量管理</a></li>
+				  	<li role="presentation"><a href="">交付物文档</a></li>
+				  	<li role="presentation"><a href="">分析报表</a></li>
 				</ul>
 				<div class="searchbox">
 					<input type="text" class="form-control" placeholder="网站内搜索">
@@ -45,62 +45,53 @@
 	</header>
 
 <div class="container content">
-	<p>当前位置：<span>范围管理</span></p>
-	<div class="scopemgt">
+	<p>当前位置：<span>计划管理</span></p>
+	<div class="planmgt">
 		<p>常用功能</p>
-		<div class="scopeheader">
+		<div class="planheader">
 			<table>
 				<tr>
-					<th>需求类</th>
-					<th>方案类</th>
-					<th>变更类</th>
-					<th>版本类</th>
+					<th>计划制定</th>
+					<th>计划执行</th>
+					<th>计划变更</th>
 				</tr>
 				<tr>
 					<td>
-						<ul>
-							<li><img src="" alt=""><a href="">新建需求申请</a></li>
-							<li><img src="" alt=""><a href="">提交需求规格说明书</a></li>
-						</ul>
-					</td>
-					<td>
-						<img src="" alt="">
-						<a href="">提交企业专题建设方案</a>
-					</td>
-					<td>
-						<img src="" alt="">
-						<a href="">新建变更申请</a>
+						<img src="../img/erjiyemian-03.png" alt="">
+						<a href="./plancheck.html">上传工作计划</a>
 					</td>
 					<td>
 						<ul>
-							<li><a href="">查看设计版本库</a></li>
-							<li><a href="">查看研发版本库</a></li>
+							<li><img src="../img/erjiyemian-01.png" alt=""><a href="">查看任务</a></li>
+							<li><img src="../img/erjiyemian-02.png" alt=""><a href="">查看项目</a></li>
+							<li><img src="../img/erjiyemian-02.png" alt=""><a href="./planeditweekreport.html">查看周报</a></li>
 						</ul>
+					</td>
+					<td>
+						<img src="../img/erjiyemian-01.png" alt="">
+						<a href="./planchange.html">新建计划变更申请</a>
 					</td>
 				</tr>
 			</table>
 		</div>
-		<div class="scopecontent">
-			<ul id="scopeTab" class="nav nav-tabs">
+		<div class="plancontent">
+			<ul id="planTab" class="nav nav-tabs">
 				<li class="active">
-					<a href=".requirecase" data-toggle="tab">需求情况</a>
+					<a href=".plancreate" data-toggle="tab">计划制定</a>
 					<!-- 正式时，由于路由不使用angular-router, 可以替换为通过id跳转,改为# -->
 				</li>
 				<li>
-					<a href=".changecase" data-toggle="tab">变更情况</a>
-				</li>
-				<li>
-					<a href=".plancase" data-toggle="tab">方案情况</a>
+					<a href=".planchange" data-toggle="tab">计划变更</a>
 				</li>
 			</ul>
-			<div id="scopeTabContent" class="tab-content">
-				<div class="tab-pane fade in active requirecase" id="requirecase">
+			<div id="planTabContent" class="tab-content">
+				<div class="tab-pane fade in active plancreate" id="plancreate">
 					<div class="myrequirelink">
-						<a href="">我提交的需求申请</a>
-						<a href="">所有需求</a>
+						<a href="">我提交的计划变更</a>
+						<a href="">所有计划变更</a>
 					</div>
 					<div class="contentBox">
-						<ul id="requireTabHeader" class="nav nav-tabs">
+						<ul id="" class="nav nav-tabs requireTabHeader">
 							<li>
 								<a href=".product" data-toggle="tab">生产管控一体化</a>
 								<!-- 正式时，由于路由不使用angular-router, 可以替换为通过id跳转,改为# -->
@@ -115,7 +106,7 @@
 								<a href=".smartmake" data-toggle="tab">智能制造平台</a>
 							</li>
 						</ul>
-						<div id="requireTabContent" class="tab-content">
+						<div id="" class="tab-content requireTabContent">
 							<div class="tab-pane fade in product" id="product">
 								生产管控一体化
 							</div>
@@ -146,11 +137,57 @@
 						</div>
 					</div>
 				</div>
-				<div class="tab-pane fade changecase" id="changecase">
-					
-				</div>
-				<div class="tab-pane fade plancase" id="plancase">
-					
+				<div class="tab-pane fade planchange" id="planchange">
+					<div class="myrequirelink">
+						<a href="">我提交的计划变更</a>
+						<a href="">所有计划变更</a>
+					</div>
+					<div class="contentBox">
+						<ul id="" class="nav nav-tabs requireTabHeader">
+							<li>
+								<a href=".product" data-toggle="tab">生产管控一体化</a>
+								<!-- 正式时，由于路由不使用angular-router, 可以替换为通过id跳转,改为# -->
+							</li>
+							<li>
+								<a href=".allprocess" data-toggle="tab">全流程一体化优化</a>
+							</li>
+							<li class="active">
+								<a href=".liftcycle" data-toggle="tab">全生命周期一体化资产管理</a>
+							</li>
+							<li>
+								<a href=".smartmake" data-toggle="tab">智能制造平台</a>
+							</li>
+						</ul>
+						<div id="" class="tab-content requireTabContent">
+							<div class="tab-pane fade in product" id="product">
+								生产管控一体化
+							</div>
+							<div class="tab-pane fade in allprocess" id="allprocess">
+								全流程一体化优化
+							</div>
+							<div class="tab-pane fade in active liftcycle" id="liftcycle">
+								<div class="cyclestart">新建需求</div>
+								<div>
+									<p>待可行性研究的需求<span>(8)</span></p>
+								</div>
+								<div>
+									<p>待审批的需求<span>(10)</span></p>
+								</div>
+								<div>
+									<p>需求调研阶段<span>(10)</span></p>
+								</div>
+								<div>
+									<p>需求规格说明书审核阶段<span>(20)</span></p>
+								</div>
+								<div>
+									<p>需求基线确立<span>(20)</span></p>
+								</div>
+							</div>
+							<div class="tab-pane fade in smartmake" id="smartmake">
+								智能制造平台
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

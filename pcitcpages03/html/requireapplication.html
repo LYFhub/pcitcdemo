@@ -27,14 +27,14 @@
 		<div class="pic_navbar">
 			<div class="container">
 				<ul class="nav nav-tabs">
-				  	<li role="presentation"><a href="../index.html" class="homebtn">首页</a></li>
+				  	<li role="presentation"><a href="../index.html">首页</a></li>
 				  	<li role="presentation"><a href="./scopemgt.html">范围管理</a></li>
-				  	<li role="presentation"><a href="./changeapplication.html">计划管理</a></li>
+				  	<li role="presentation"><a href="./planmgt.html">计划管理</a></li>
 				  	<li role="presentation"><a href="./scopemgtproject.html">问题管理</a></li>
-				  	<li role="presentation"><a href="./specsreview.html">风险管理</a></li>
-				  	<li role="presentation"><a href="./requireapplication.html">质量管理</a></li>
-				  	<li role="presentation"><a href="./schemeapproval.html">交付物文档</a></li>
-				  	<li role="presentation"><a href="./scopechange.html">分析报表</a></li>
+				  	<li role="presentation"><a href="">风险管理</a></li>
+				  	<li role="presentation"><a href="">质量管理</a></li>
+				  	<li role="presentation"><a href="">交付物文档</a></li>
+				  	<li role="presentation"><a href="">分析报表</a></li>
 				</ul>
 				<div class="searchbox">
 					<input type="text" class="form-control" placeholder="网站内搜索">
@@ -44,11 +44,11 @@
 		</div>
 	</header>
 <div class="container content">
-	<p>当前位置：范围管理 > <span>中国石化智能工厂提升项目需求(燕山)设计生产管控一体化</span></p>
+	<p>当前位置：范围管理 > <span>需求申请表单</span></p>
 	<div class="changerequest">
 		<div class="panel panel-default">
 		  <div class="panel-heading">
-		    <h3 class="panel-title">需求列表</h3>
+		    <h3 class="panel-title">新建需求申请</h3>
 		  </div>
 		  <div class="panel-body">
 		    <div>
@@ -71,7 +71,7 @@
 					</div>
 					<div class="col-lg-4 col-md-4 col-sm-4">
 						<label class="changelabel">需求状态</label>
-	    				<input type="text" name="projectnum" />
+	    				<input class="redfont" type="text" name="projectnum" />
 					</div>
 		    		<div class="col-lg-4 col-md-4 col-sm-4">
 		    			<label class="changelabel">需求来源</label>
@@ -95,11 +95,11 @@
 					</div>
 					<div class="col-lg-4 col-md-4 col-sm-4">
 						<label class="changelabel">企业联系人手机</label>
-				    	<input type="text" name="projectname" />
+				    	<input class="telnum" type="text" name="projectname" />
 					</div>
 			    	<div class="col-lg-4 col-md-4 col-sm-4">
 					    <label class="changelabel">企业联系人电话</label>
-					    <input type="text" name="contractnum" />
+					    <input class="telnum" type="text" name="contractnum" />
 		    		</div>
 		    		<div class="col-lg-4 col-md-4 col-sm-4">
 					    <label class="changelabel">企业联系人邮件</label>
@@ -114,7 +114,7 @@
 					    <input type="date" name="contractnum" />
 		    		</div>
 		    		<div class="topdash">
-		    			<p class="desctitle">需求简述<span>(如需要，可增加补充附件)</span>
+		    			<p class="desctitle">需求描述<span>(如需要，可增加补充附件)</span>
 		    				<span class="uploadfile">
 								<input type="file" size="1">
 								<a href="">上传附件</a>
@@ -137,7 +137,7 @@
 			</div>
 			<div class="topdash">
     			<p class="desctitle">可行性研究结论
-    				<span class="uploadfile">
+					<span class="uploadfile">
 						<input type="file" size="1">
 						<a href="">上传可行性研究报告</a>
 					</span>
@@ -146,47 +146,38 @@
     		</div>
 		  </div>
 		</div>
-		<div class="panel panel-default">
+		<div class="panel panel-default requiresearch">
 		  <div class="panel-heading">
 		    <h3 class="panel-title">工作小组需求审批</h3>
 		  </div>
 		  <div class="panel-body">
-			<div class="teamapproval">
-				<label class="changelabel">审批负责人</label>
-				<input type="text" name="" />
-				<label class="changelabel">审批结果</label>
-				<label class="radio-inline">
-				    <input type="radio" name="resultradio" id="inlineRadio1" value="option1"> 同意
-				</label>
-				<label class="radio-inline">
-				    <input type="radio" name="resultradio" id="inlineRadio2" value="option2"> 拒绝
-				</label>
-			</div>
-			<div class="topdash">
+			<div class="">
     			<p class="desctitle">审批意见</p>
     			<textarea name="changedesc" id="" cols="175" rows="8"></textarea>
-    		</div>
-		  </div>
-		</div>
-		<div class="panel panel-default requiresearch">
-		  <div class="panel-heading">
-		    <h3 class="panel-title">需求调研信息</h3>
-		  </div>
-		  <div class="panel-body">
-			<div class="historyinfo">
-    			<p class="desctitle">历史调研信息</p>
-    			<textarea  id="" cols="175" rows="8"></textarea>
-    			<textarea id="" cols="175" rows="8"></textarea>
-    		</div>
-    		<div>
-    			<p class="desctitle">调研情况记录
-    				<span class="uploadfile">
-						<input type="file" size="1">
-						<a href="">上传附件</a>
-					</span>
-    			</p>
-    			<textarea name="changedesc" id="" cols="175" rows="8"></textarea>
-    		</div>
+    			<p class="desctitle">审批结论</p>
+				<label class="radio-inline">
+				    <input type="radio" name="resultradio" id="inlineRadio1" value="option1"> 同意调研
+				</label>
+				<label class="radio-inline">
+				    <input type="radio" name="resultradio" id="inlineRadio2" value="option2"> 拒绝调研
+				</label>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-4">
+				<label class="changelabel">设计组调研人</label>
+				<select class="">
+					<option value="蒋云">蒋云</option>
+				    <option value="李XX">李XX</option>
+				    <option value="赵XXx">赵XX</option>
+				</select>
+			</div>
+			<div class="col-lg-8 col-md-8 col-sm-8">
+				<label class="changelabel">实施组调研人</label>
+				<select class="">
+					<option value="蒋云">蒋云</option>
+				    <option value="李XX">李XX</option>
+				    <option value="赵XXx">赵XX</option>
+				</select>
+			</div>
     		<div>
 				<input type="button" value="提交" class="btn btn-lg">
 			</div>
@@ -195,16 +186,20 @@
 		<div class="attachmentbox">
 			<p>相关附件</p>
 			<div>
-				<a href="">中国石化智能工厂提升项目需求(燕山)设计生产管控一体化介绍.docx </a><span class="glyphicon glyphicon-remove-circle"></span>
+				<a href="">中国石化智能工厂提升项目需求(燕山)设计生产管控一体化介绍.docx </a>
+				<span class="glyphicon glyphicon-remove-circle"></span>
 			</div>
 			<div>
-				<a href="">设计生产管控一体化_参考文档.docx</a><span class="glyphicon glyphicon-remove-circle"></span>
+				<a href="">设计生产管控一体化_参考文档.docx</a>
+				<span class="glyphicon glyphicon-remove-circle"></span>
 			</div>
 			<div>
-				<a href="">中国石化智能工厂提升10年成果展示.ppt</a><span class="glyphicon glyphicon-remove-circle"></span>
+				<a href="">中国石化智能工厂提升10年成果展示.ppt</a>
+				<span class="glyphicon glyphicon-remove-circle"></span>
 			</div>
 			<div>
-				<a href="">发改委标准可行性研究报告参考.pdf</a><span class="glyphicon glyphicon-remove-circle"></span>
+				<a href="">发改委标准可行性研究报告参考.pdf</a>
+				<span class ="glyphicon glyphicon-remove-circle"></span>
 			</div>
 		</div>
 	</div>

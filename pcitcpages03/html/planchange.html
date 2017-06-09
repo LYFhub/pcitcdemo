@@ -4,9 +4,6 @@
 	<meta charset="UTF-8">
 	<title>石化盈科</title>
 	<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-	<link href="https://cdn.bootcss.com/fullcalendar/3.4.0/fullcalendar.min.css" rel="stylesheet">
-	<link href="https://cdn.bootcss.com/fullcalendar/3.4.0/fullcalendar.print.min.css" rel="stylesheet" media='print'>
-	<link href="https://cdn.bootcss.com/datatables/1.10.15/css/dataTables.bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
@@ -44,11 +41,11 @@
 		</div>
 	</header>
 <div class="container content">
-	<p>当前位置：范围管理 > <span>范围变更申请表单</span></p>
+	<p>当前位置：计划管理 > <span>计划变更申请表单</span></p>
 	<div class="changerequest">
 		<div class="panel panel-default">
 		  <div class="panel-heading">
-		    <h3 class="panel-title">新建变更申请</h3>
+		    <h3 class="panel-title">新建计划变更申请</h3>
 		  </div>
 		  <div class="panel-body">
 		    <div>
@@ -58,7 +55,7 @@
 	    				<input type="text" name="changenum" class="requiretitle" />
 	    			</div>
 	    			<div class="col-lg-4 col-md-4 col-sm-4">
-						<label class="changelabel">需求状态</label>
+						<label class="changelabel">变更状态</label>
 	    				<input class="redfont" type="text" name="projectnum" />
 					</div>
 	    			<div class="col-lg-4 col-md-4 col-sm-4">
@@ -72,34 +69,26 @@
 	    			<div class="col-lg-8 col-md-8 col-sm-8">
 						<label class="changelabel largetextbox">相关项目</label>
 	    				<input type="text" class="relevantproject">
-	    					
 	    				</input>
 					</div>
-					<div class="radio col-lg-12 col-md-12 col-sm-12">
-				    	<label class="changelabel">变更类型</label>
-						<label class="radio-inline">
-						  <input type="radio" name="scoperadio" id="scopeRadio1" value="option1"> 需求变更
-						</label>
-						<label class="radio-inline">
-						  <input type="radio" name="scoperadio" id="scopeRadio1" value="option1"> 方案变更
-						</label>
-				    </div>
-		    		<div class="col-lg-4 col-md-4 col-sm-4">
-					    <label class="changelabel">相关需求负责人</label>
-					    <input type="text" name="contractnum" />
+					<div class="col-lg-4 col-md-4 col-sm-4">
+					    <label class="changelabel">变更编号</label>
+					    <input type="text" name="changenum" />
 		    		</div>
-		    		<div class="col-lg-8 col-md-8 col-sm-8">
-					    <label class="changelabel largetextbox">相关需求规则说明书</label>
+					<div class="checkbox col-lg-2 col-md-2 col-sm-2">
+				    	<label class="changelabel largetextbox">由范围变更引起</label>
+						<label class="checkbox-inline">
+						  <input type="checkbox" id="inlineCheckbox1" value="option1">
+						</label>				    
+					</div>
+		    		<div class="col-lg-6 col-md-6 col-sm-6">
+					    <label class="changelabel largetextbox">相关范围变更</label>
 					    <input type="text">
 					    <span class="uploadfile">
-							<input type="file" size="1" defaultValue="C:/ZLYF/zproject">
+							<input type="file" size="1">
 							<a href="">浏览</a>
 						</span>
 		    		</div>
-		    		<div class="col-lg-4 col-md-4 col-sm-4">
-						<label class="changelabel">变更编号</label>
-	    				<input type="text" name="projectnum" />
-					</div>
 		    		<div class="topdash">
 		    			<p class="desctitle">变更描述</p>
 		    			<textarea name="changedesc" id="" cols="175" rows="8"></textarea>
@@ -107,57 +96,71 @@
 		    			<textarea name="costestimate" id="" cols="175" rows="8"></textarea>
 		    			<p class="desctitle">计划影响预估</p>
 		    			<textarea name="planestimate" id="" cols="175" rows="8"></textarea>
-		    			<div class="col-lg-4 col-md-4 col-sm-4">
+		    			<div class="col-lg-6 col-md-6 col-sm-6">
 						    <label class="changelabel">变更提交人</label>
-						    <input type="text" name="contractnum" />
+						    <input type="text" />
 			    		</div>
-			    		<div class="col-lg-4 col-md-4 col-sm-4">
-						    <label class="changelabel">变更提交日期</label>
-						    <input type="date" name="contractnum" />
+			    		<div class="col-lg-6 col-md-6 col-sm-6">
+						    <label class="changelabel largetextbox">变更提交日期</label>
+						    <input type="date"/>
+			    		</div>
+			    		<div class="col-lg-6 col-md-6 col-sm-6">
+						    <label class="changelabel">现有计划基线</label>
+						    <span class="textbox240_withborder"><a href="">中国石化智能工厂某计划基线</a></span>
+			    		</div>
+			    		<div class="col-lg-6 col-md-6 col-sm-6">
+						    <label class="changelabel largetextbox">拟变更后计划文件</label>
+						    <input type="text">
+						    <span class="uploadfile">
+								<input type="file" size="1">
+								<a href="">上传附件</a>
+							</span>
 			    		</div>
 		    		</div>		    	
 		    	</div>
 		    </div>
 		  </div>
 		</div>
-		<div class="panel panel-default feasiblestudy">
+		<div class="panel panel-default requiresearch">
 		  <div class="panel-heading">
-		    <h3 class="panel-title">可行性研究</h3>
+		    <h3 class="panel-title">业务组变更审批</h3>
 		  </div>
 		  <div class="panel-body">
-		  	<div>
-		  		<div class="col-lg-4 col-md-4 col-sm-4">
-					<label class="changelabel">可行性研究负责人</label>
-					<input type="text" name="" />
-				</div>
-				<div class="col-lg-8 col-md-8 col-sm-8">
-					<input type="checkbox" name="" />
-					<p>需要方案变更</p>
-				</div>
-		  	</div>
-			<div>
-				<div class="col-lg-4 col-md-4 col-sm-4">
-				    <label class="changelabel">相关方案负责人</label>
-				    <input type="text" name="contractnum" />
-	    		</div>
-	    		<div class="col-lg-8 col-md-8 col-sm-8">
-				    <label class="changelabel largetextbox">相关企业专题建设方案</label>
-				    <input type="text">
-				    <span class="uploadfile">
-						<input type="file" size="1">
-						<a href="">浏览</a>
-					</span>
-	    		</div>
-			</div>
-			<div class="topdash">
-    			<p class="desctitle">可行性研究结论
-					<span class="uploadfile">
-						<input type="file" size="1">
-						<a href="">上传可行性研究报告</a>
-					</span>
-    			</p>
+			<div class="">
+    			<p class="desctitle">业务组审批意见</p>
     			<textarea name="changedesc" id="" cols="175" rows="8"></textarea>
-    		</div>
+    			<p class="desctitle">业务组审批结论</p>
+				<label class="radio-inline">
+				    <input type="radio" name="resultradio" id="inlineRadio1" value="option1"> 同意
+				</label>
+				<label class="radio-inline">
+				    <input type="radio" name="resultradio" id="inlineRadio2" value="option2"> 拒绝
+				</label>
+				<label class="radio-inline">
+				    <input type="radio" name="resultradio" id="inlineRadio2" value="option2"> 提交大项目执行组审批
+				</label>
+			</div>
+		  </div>
+		</div>
+		<div class="panel panel-default requiresearch">
+		  <div class="panel-heading">
+		    <h3 class="panel-title">大项目执行组变更审批</h3>
+		  </div>
+		  <div class="panel-body">
+			<div class="">
+    			<p class="desctitle">大项目执行组审批意见</p>
+    			<textarea name="changedesc" id="" cols="175" rows="8"></textarea>
+    			<p class="desctitle">大项目执行组审批结论</p>
+				<label class="radio-inline">
+				    <input type="radio" name="resultradio" id="inlineRadio1" value="option1"> 同意
+				</label>
+				<label class="radio-inline">
+				    <input type="radio" name="resultradio" id="inlineRadio2" value="option2"> 拒绝
+				</label>
+				<label class="radio-inline">
+				    <input type="radio" name="resultradio" id="inlineRadio2" value="option2"> 提交工作小组审批
+				</label>
+			</div>
 		  </div>
 		</div>
 		<div class="panel panel-default requiresearch">
@@ -166,9 +169,9 @@
 		  </div>
 		  <div class="panel-body">
 			<div class="">
-    			<p class="desctitle">审批意见</p>
+    			<p class="desctitle">工作小组变更审批意见</p>
     			<textarea name="changedesc" id="" cols="175" rows="8"></textarea>
-    			<p class="desctitle">审批结论</p>
+    			<p class="desctitle">工作小组审批结论</p>
 				<label class="radio-inline">
 				    <input type="radio" name="resultradio" id="inlineRadio1" value="option1"> 同意
 				</label>
@@ -176,45 +179,37 @@
 				    <input type="radio" name="resultradio" id="inlineRadio2" value="option2"> 拒绝
 				</label>
 			</div>
-			<div class="socpeupload">
-				<span class="uploadfile">
-					<input type="file" size="1">
-					<a href="">上传文件</a>
-				</span>
-			</div>
-    		<div>
-				<input type="button" value="提交" class="btn btn-lg">
-			</div>
 		  </div>
+		</div>
+		<div class="panel panel-default requiresearch">
+		  <div class="panel-heading">
+		    <h3 class="panel-title">计划变更发布</h3>
+		  </div>
+		  <div class="panel-body">
+			<div class="col-lg-6 col-md-6 col-sm-6">
+			    <label class="changelabel">计划变更发布日期</label>
+			    <input type="date">
+    		</div>
+		  </div>
+		</div>
+		<div>
+			<input type="button" value="提交" class="btn btn-lg">
 		</div>
 		<div class="attachmentbox">
 			<p>相关附件</p>
 			<div>
-				<a href="">中国石化智能工厂提升项目成本介绍.docx </a>
+				<a href="">中国石化某拟变更后计划文件.mmp </a>
 				<span class="glyphicon glyphicon-remove-circle"></span>
 			</div>
-			<div>
-				<a href="">设计生产管控一体化_计划介绍.docx</a>
-				<span class="glyphicon glyphicon-remove-circle"></span>
-			</div>
-			<div>
-				<a href="">中国石化智能工厂提升项目变更可行性研究报告.docx</a>
-				<span class ="glyphicon glyphicon-remove-circle"></span>
-			</div>
+			
 		</div>
 	</div>
+</div>
 </div>
 <footer>
 		<p>石化盈科信息技术有限责任公司版权所有</p>
 	</footer>
-
-	<script src="https://cdn.bootcss.com/moment.js/2.18.1/moment.min.js"></script>
 	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script src="https://cdn.bootcss.com/echarts/3.5.4/echarts.min.js"></script>
-	<script src="https://cdn.bootcss.com/fullcalendar/3.4.0/fullcalendar.min.js"></script>
-	<script src="https://cdn.bootcss.com/datatables/1.10.15/js/jquery.dataTables.min.js"></script>
-	<script src="../js/main.js"></script>
-	<script src="../index.js"></script>
 </body>
 </html>
