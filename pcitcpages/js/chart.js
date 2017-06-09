@@ -1,9 +1,74 @@
 // 声明函数
-function drawChart(data) {
+function drawChart(num) {
     // 基于准备好的dom，初始化echarts实例
-    var barChart = echarts.init($('.barchart')[0]);
-    var pieChart = echarts.init($('.piechart')[0]);
-    var lineChart = echarts.init($('.linechart')[0]);
+    var barChart = echarts.init($('.barchart')[num]);
+    var pieChart = echarts.init($('.piechart')[num]);
+    var lineChart = echarts.init($('.linechart')[num]);
+
+    var data = {
+        "piedata": [{
+            "name": "料",
+            "percent": 0.4
+        }, {
+            "name": "工",
+            "percent": 0.3
+        }, {
+            "name": "费",
+            "percent": 0.2
+        }, {
+            "name": "剩余",
+            "percent": 0.1
+        }, {
+            "name": "工料费总量",
+            "value": 666666.00
+        }],
+        "linedata": [{
+            "name": "第一周",
+            "plan": 35,
+            "actual": 35
+        }, {
+            "name": "第二周",
+            "plan": 35,
+            "actual": 30
+        }, {
+            "name": "第三周",
+            "plan": 30,
+            "actual": 20
+        }, {
+            "name": "第四周",
+            "plan": 30,
+            "actual": 20
+        }, {
+            "name": "第五周",
+            "plan": 25,
+            "actual": 20
+        }, {
+            "name": "第六周",
+            "plan": 25,
+            "actual": 20
+        }],
+        "bardata": [{
+            "name": "人物角色1",
+            "plan": 60,
+            "actual": 150
+        }, {
+            "name": "人物角色2",
+            "plan": 200,
+            "actual": 200
+        }, {
+            "name": "人物角色3",
+            "plan": 310,
+            "actual": 350
+        }, {
+            "name": "人物角色4",
+            "plan": 160,
+            "actual": 100
+        }, {
+            "name": "人物角色5",
+            "plan": 240,
+            "actual": 250
+        }]
+    };
 
     console.log('配置chart数据:', data);
 

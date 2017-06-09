@@ -155,8 +155,11 @@
 // 	});
 
 $(document).ready(function () {
-	$('header .pic_navbar .nav-tabs li').click(function (e) {
+	$('header .pic_navbar .nav-tabs li').click(function (event) {
+		event.stopPropagation();
 		$('header .pic_navbar .nav-tabs li').removeClass('active');
-		$(this).addClass('active');
+		$(event.currentTarget).addClass('active');
+		// 现在加不上，是因为每个页面都有自己的nav，点击添加之后立刻跳转到了新页面
 	});
+	drawChart();
 });

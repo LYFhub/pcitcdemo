@@ -11,7 +11,7 @@
 					</th>
 				</tr>
 				<tr ng-repeat="work in workdata">
-					<td>{{work.title}}</td>
+					<td><a href="">{{work.title}}</a></td>
 					<td>{{work.status}}</td>
 				</tr>
 			</table>
@@ -26,7 +26,7 @@
 					</th>
 				</tr>
 				<tr ng-repeat="task in taskdata">
-					<td>{{task.title}}</td>
+					<td><a href="">{{task.title}}</a></td>
 					<td>{{task.status}}</td>
 				</tr>
 			</table>
@@ -42,7 +42,7 @@
 				</tr>
 				<tr ng-repeat="news in newsdata">
 					<td><img ng-src="{{news.imgurl}}" alt=""></td>
-					<td><p>{{news.title}}</p><span>{{news.time}}</span></td>
+					<td><p><a href="">{{news.title}}</a></p><span>{{news.time}}</span></td>
 				</tr>
 			</table>
 		</div>
@@ -111,15 +111,15 @@
 							</td>
 							<td>
 								<h4>{{goal_data.title}}</h4>
-								<ul><li>{{goal_data.desc[0]}}</li></ul>
+								<ul><li><a href="">{{goal_data.desc[0]}}</a></li></ul>
 							</td>
 							<td>
 								<h4></h4>
-								<ul><li>{{goal_data.desc[1]}}</li></ul>
+								<ul><li><a href="">{{goal_data.desc[1]}}</a></li></ul>
 							</td>
 							<td>
 								<h4></h4>
-								<ul><li>{{goal_data.desc[2]}}</li></ul>
+								<ul><li><a href="">{{goal_data.desc[2]}}</a></li></ul>
 							</td>
 						</tr>
 					</table>
