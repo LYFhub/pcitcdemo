@@ -154,12 +154,15 @@
 // 		});
 // 	});
 
-$(document).ready(function () {
-	$('header .pic_navbar .nav-tabs li').click(function (event) {
+$(document).ready(function() {
+	$('header .pic_navbar .nav-tabs li').click(function(event) {
 		event.stopPropagation();
 		$('header .pic_navbar .nav-tabs li').removeClass('active');
 		$(event.currentTarget).addClass('active');
 		// 现在加不上，是因为每个页面都有自己的nav，点击添加之后立刻跳转到了新页面
 	});
 	drawChart();
+});
+$(".inputdatepicker").datetimepicker({
+	format: 'yyyy-mm-dd'
 });

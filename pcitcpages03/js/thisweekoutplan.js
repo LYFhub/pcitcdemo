@@ -47,6 +47,20 @@ function addtr(btnobject) {
     var table = $(btnobject).parent().prev();
     var tr = $("<tr>" +
         "<td  onclick='tdclick(this)'>" + "</td>" +
+        "<td  onclick='tdclick(this)' class='inputdatepicker'>" + "</td>" +
+        "<td  onclick='tdclick(this)' class='inputdatepicker'>" + "</td>" +
+        "<td  onclick='tdclick(this)'>" + "</td>" +
+        "<td  onclick='tdclick(this)'>" + "</td>" +
+        "<td  onclick='deletetr(this)'><span class='glyphicon glyphicon-trash' aria-hidden='true'></span></td></tr>");
+    table.append(tr);
+}
+
+function addissuetr(btnobject) {
+    var table = $(btnobject).parent().prev();
+    var tr = $("<tr>" +
+        "<td  onclick='tdclick(this)'>" + "</td>" +
+        "<td  onclick='tdclick(this)'>" + "</td>" +
+        "<td  onclick='tdclick(this)'>" + "</td>" +
         "<td  onclick='tdclick(this)'>" + "</td>" +
         "<td  onclick='tdclick(this)'>" + "</td>" +
         "<td  onclick='tdclick(this)'>" + "</td>" +
