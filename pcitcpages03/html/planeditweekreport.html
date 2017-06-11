@@ -137,70 +137,24 @@
 						</tr>
 					</table>
 					<p>计划外工作项</p>
-					<table class="table table-striped table-bordered table-hover" contenteditable="true">
-						<tr>
-							<th>任务名称</th>
-							<th>实际开始时间</th>
-							<th>实际完成时间</th>
-							<th>已完成%</th>
-							<th>责任人</th>
-						</tr>
-						<tr>
-							<td>
-								<span contenteditable="false">更改</span>
-								<span contenteditable="false">删除</span>
-								<p>某工程完成第二期质量模块业务流程设计报告修订</p>
-							</td>
-							<td>2017-05-29</td>
-							<td>2017-06-01</td>
-							<td>100%</td>
-							<td>李明宇</td>
-						</tr>
-						<tr>
-							<td>
-								<span contenteditable="false">更改</span>
-								<span contenteditable="false">删除</span>
-								<p>某工程完成第二期质量模块业务流程设计报告修订</p>
-							</td>
-							<td>2017-05-29</td>
-							<td>2017-06-01</td>
-							<td>100%</td>
-							<td>李明宇</td>
-						</tr>
-						<tr>
-							<td>
-								<span contenteditable="false">更改</span>
-								<span contenteditable="false">删除</span>
-								<p>某工程完成第二期质量模块业务流程设计报告修订</p>
-							</td>
-							<td>2017-05-29</td>
-							<td>2017-06-01</td>
-							<td>100%</td>
-							<td>李明宇</td>
-						</tr>
-						<tr>
-							<td>
-								<span contenteditable="false">更改</span>
-								<span contenteditable="false">删除</span>
-								<p>某工程完成第二期质量模块业务流程设计报告修订</p>
-							</td>
-							<td>2017-05-29</td>
-							<td>2017-06-01</td>
-							<td>100%</td>
-							<td>李明宇</td>
-						</tr>
-						<tr>
-							<td>
-								<span contenteditable="false">更改</span>
-								<span contenteditable="false">删除</span>
-								<p>某工程完成第二期质量模块业务流程设计报告修订</p>
-							</td>
-							<td>2017-05-29</td>
-							<td>2017-06-01</td>
-							<td>100%</td>
-							<td>李明宇</td>
-						</tr>
+					<table id="thisweekoutplan" class="table table-striped table-bordered table-hover">
+						<thead>
+							<tr>
+								<th>name</th>
+								<th>position</th>
+								<th>salary</th>
+								<th>office</th>
+								<th>extn</th>
+							</tr>
+						</thead>
+						<tbody></tbody>
+						
 					</table>
+					<div class="newrowbtn">
+						<button type="button" class="btn btn-default" aria-label="Left Align">
+  							<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+						</button>
+					</div>
 				</div>
 				<div class="tab-pane fade" id="nextweekplan">
 					<table class="table table-striped table-bordered">
@@ -411,7 +365,9 @@
 	<script src="https://cdn.bootcss.com/echarts/3.5.4/echarts.min.js"></script>
 	<script src="https://cdn.bootcss.com/fullcalendar/3.4.0/fullcalendar.min.js"></script>
 	<script src="https://cdn.bootcss.com/datatables/1.10.15/js/jquery.dataTables.min.js"></script>
-	<script src="../js/main.js"></script>
+	<script src="../js/lib/prettify.js"></script>
+	<script src="../js/lib/jquery.tabledit.js"></script>
+	<script src="../js/thisweekoutplan.js"></script>
 	<script src="../index.js"></script>
 </body>
 </html>

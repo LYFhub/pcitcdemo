@@ -572,7 +572,7 @@ footer {
 						    width: 28%;
 						    text-align: center;
 						    vertical-align: middle;
-						    background: url(./img/lozenge-01.png) no-repeat;
+						    background: url(../img/lozenge-01.png) no-repeat;
 						    background-size: contain;
 						    height: 80px;
 						    padding: 0;
@@ -586,7 +586,7 @@ footer {
 							}
 						}
 
-						h4 {
+						h4 a {
 							height: 29px;
 							margin: 0;
 							font-size: 16px;
@@ -606,7 +606,7 @@ footer {
 					}
 					&:nth-child(even) {
 						>td:first-child{
-							background: url(./img/lozenge-02.png) no-repeat;
+							background: url(../img/lozenge-02.png) no-repeat;
 							background-size: contain;
 						}
 					}
@@ -1550,7 +1550,7 @@ footer {
 							margin: 50px 0 50px 60px;
 							position: relative;
 							background-color: white;
-							background: url(./img/lozenge-02.png) no-repeat;
+							background: url(../img/lozenge-02.png) no-repeat;
 							background-size: contain;
 
 							&:before {
@@ -1646,22 +1646,14 @@ footer {
 				text-align: center;
 			}
 			tr {
-				span {
-					display: none;
-				}
-				p {
-					display: inline-block;
-					font-weight: initial;
-					font-size: 14px;
-					margin-bottom: 0;
-				}
-				&:hover {
-					span {
-						display: inline-block;
-						margin: 0 5px;
-						color: red;
-					}	
-				}
+			}
+		}
+		.newrowbtn {
+			&:after {
+				@include clear_float;
+			}
+			button {
+				float: right;
 			}
 		}
 	}
