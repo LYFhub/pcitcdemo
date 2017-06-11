@@ -1646,6 +1646,14 @@ footer {
 				text-align: center;
 			}
 			tr {
+				td {
+					input {
+						width: 100% !important;
+					}
+					&:last-child {
+						text-align: center;
+					}
+				}
 			}
 		}
 		.newrowbtn {
@@ -1653,7 +1661,13 @@ footer {
 				@include clear_float;
 			}
 			button {
-				float: right;
+				margin-right: 10px;
+				float: left;
+				&:first-child {
+					float: right;
+					margin-right: 0;
+				}
+				
 			}
 		}
 	}
