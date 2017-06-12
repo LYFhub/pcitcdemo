@@ -64,6 +64,16 @@ html, body {
 	bottom: 150px;
 	right: 50px;
 }
+.inputdatepicker {
+	background-color: #f6f6f6;
+}
+
+label span {
+	color: red;
+	position: relative;
+	top: 3px;
+	left: -2px;
+}
 header {
 	background: #fff;
 	color: white;
@@ -907,6 +917,10 @@ footer {
 		}
 	}
 	div.changerequest {
+		.inputdatepicker {
+			width: 240px;
+			height: 40px;
+		}
 		div.panel.panel-default {
 			margin-bottom: 0;
 		}

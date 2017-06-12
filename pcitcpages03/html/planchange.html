@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>石化盈科</title>
 	<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="../js/lib/bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.min.css">
 	<link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
@@ -24,14 +25,14 @@
 		<div class="pic_navbar">
 			<div class="container">
 				<ul class="nav nav-tabs">
-				  	<li role="presentation"><a href="../index.html" class="homebtn">首页</a></li>
+				  	<li role="presentation"><a href="../index.html">首页</a></li>
 				  	<li role="presentation"><a href="./scopemgt.html">范围管理</a></li>
-				  	<li role="presentation"><a href="./changeapplication.html">计划管理</a></li>
+				  	<li role="presentation"><a href="./planmgt.html">计划管理</a></li>
 				  	<li role="presentation"><a href="./scopemgtproject.html">问题管理</a></li>
-				  	<li role="presentation"><a href="./specsreview.html">风险管理</a></li>
-				  	<li role="presentation"><a href="./requireapplication.html">质量管理</a></li>
-				  	<li role="presentation"><a href="./schemeapproval.html">交付物文档</a></li>
-				  	<li role="presentation"><a href="./scopechange.html">分析报表</a></li>
+				  	<li role="presentation"><a href="">风险管理</a></li>
+				  	<li role="presentation"><a href="">质量管理</a></li>
+				  	<li role="presentation"><a href="">交付物文档</a></li>
+				  	<li role="presentation"><a href="">分析报表</a></li>
 				</ul>
 				<div class="searchbox">
 					<input type="text" class="form-control" placeholder="网站内搜索">
@@ -102,7 +103,7 @@
 			    		</div>
 			    		<div class="col-lg-6 col-md-6 col-sm-6">
 						    <label class="changelabel largetextbox">变更提交日期</label>
-						    <input type="date"/>
+						    <input class="inputdatepicker" />
 			    		</div>
 			    		<div class="col-lg-6 col-md-6 col-sm-6">
 						    <label class="changelabel">现有计划基线</label>
@@ -188,7 +189,7 @@
 		  <div class="panel-body">
 			<div class="col-lg-6 col-md-6 col-sm-6">
 			    <label class="changelabel">计划变更发布日期</label>
-			    <input type="date">
+			    <input class="inputdatepicker">
     		</div>
 		  </div>
 		</div>
@@ -211,5 +212,8 @@
 	</footer>
 	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="../js/lib/bootstrap-datetimepicker-master/js/bootstrap-datetimepicker.min.js"></script>
+	<script src="../js/lib/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+	<script src="../index.js"></script>
 </body>
 </html>

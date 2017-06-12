@@ -7,6 +7,7 @@
 	<link href="https://cdn.bootcss.com/fullcalendar/3.4.0/fullcalendar.min.css" rel="stylesheet">
 	<link href="https://cdn.bootcss.com/fullcalendar/3.4.0/fullcalendar.print.min.css" rel="stylesheet" media='print'>
 	<link href="https://cdn.bootcss.com/datatables/1.10.15/css/dataTables.bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="../js/lib/bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.min.css">
 	<link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
@@ -54,11 +55,11 @@
 		    <div>
 		    	<div class="requirelist">
 	    			<div class="col-lg-8 col-md-8 col-sm-8">
-	    				<label class="changelabel">需求标题</label>
+	    				<label class="changelabel"><span>*</span>需求标题</label>
 	    				<input type="text" name="changenum" class="requiretitle" />
 	    			</div>
 	    			<div class="col-lg-4 col-md-4 col-sm-4">
-	    				<label class="changelabel">业务主线</label>
+	    				<label class="changelabel"><span>*</span>业务主线</label>
 						<select class="">
 							<option value="生产管控一体化">生产管控一体化</option>
 						    <option value="一般">一般</option>
@@ -66,7 +67,7 @@
 						</select>
 	    			</div>
 	    			<div class="col-lg-4 col-md-4 col-sm-4">
-						<label class="changelabel">需求编号</label>
+						<label class="changelabel"><span>*</span>需求编号</label>
 	    				<input type="text" name="projectnum" />
 					</div>
 					<div class="col-lg-4 col-md-4 col-sm-4">
@@ -82,7 +83,7 @@
 						</select>
 		    		</div>
 		    		<div class="col-lg-4 col-md-4 col-sm-4">
-		    			<label class="changelabel">企业名称</label>
+		    			<label class="changelabel"><span>*</span>企业名称</label>
 				    	<select class="checksize">
 						  <option value="燕山">燕山</option>
 						  <option value="唐山">唐山</option>
@@ -90,11 +91,11 @@
 						</select>
 		    		</div>
 		    		<div class="col-lg-4 col-md-4 col-sm-4">
-						<label class="changelabel">企业联系人</label>
+						<label class="changelabel"><span>*</span>企业联系人</label>
 	    				<input type="text" name="projectnum" />
 					</div>
 					<div class="col-lg-4 col-md-4 col-sm-4">
-						<label class="changelabel">企业联系人手机</label>
+						<label class="changelabel"><span>*</span>企业联系人手机</label>
 				    	<input type="text" name="projectname" />
 					</div>
 			    	<div class="col-lg-4 col-md-4 col-sm-4">
@@ -106,12 +107,12 @@
 					    <input type="text" name="contractnum" />
 		    		</div>
 		    		<div class="col-lg-4 col-md-4 col-sm-4">
-					    <label class="changelabel">需求提交人</label>
+					    <label class="changelabel"><span>*</span>需求提交人</label>
 					    <input type="text" name="contractnum" />
 		    		</div>
 		    		<div class="col-lg-4 col-md-4 col-sm-4">
 					    <label class="changelabel">需求提交日期</label>
-					    <input type="date" name="contractnum" />
+					    <input class="inputdatepicker" name="contractnum" />
 		    		</div>
 		    		<div class="topdash">
 		    			<p class="desctitle">需求简述<span>(如需要，可增加补充附件)</span>
@@ -219,7 +220,8 @@
 	<script src="https://cdn.bootcss.com/echarts/3.5.4/echarts.min.js"></script>
 	<script src="https://cdn.bootcss.com/fullcalendar/3.4.0/fullcalendar.min.js"></script>
 	<script src="https://cdn.bootcss.com/datatables/1.10.15/js/jquery.dataTables.min.js"></script>
-	<script src="../js/main.js"></script>
+	<script src="../js/lib/bootstrap-datetimepicker-master/js/bootstrap-datetimepicker.min.js"></script>
+	<script src="../js/lib/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
 	<script src="../index.js"></script>
 </body>
 </html>
