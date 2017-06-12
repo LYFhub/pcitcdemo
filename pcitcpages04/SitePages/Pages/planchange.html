@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>石化盈科</title>
+	<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="../../StyleLibrary/JS/Common/bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.min.css">
+	<link rel="stylesheet" href="../../StyleLibrary/CSS/main.css">
+</head>
+<body>
+	<header>
+		<div class="container">
+			<div class="pic_logo">
+				<img src="../../StyleLibrary/Images/logo.png" alt="pic_logo">
+			</div>
+			<div class="userinfo">
+				<img src="../../StyleLibrary/Images/avatar-01.png" alt="pic_userinfo">
+				<div class="usersetting">
+					<p>李明宇</p>
+					<a href="#">设置</a>
+					<a href="#">退出</a>
+				</div>
+			</div>
+		</div>
+		<div class="pic_navbar">
+			<div class="container">
+				<ul class="nav nav-tabs">
+				  	<li role="presentation"><a href="./index.html">首页</a></li>
+				  	<li role="presentation"><a href="./scopemgt.html">范围管理</a></li>
+				  	<li role="presentation"><a href="./planmgt.html">计划管理</a></li>
+				  	<li role="presentation"><a href="./scopemgtproject.html">问题管理</a></li>
+				  	<li role="presentation"><a href="">风险管理</a></li>
+				  	<li role="presentation"><a href="">质量管理</a></li>
+				  	<li role="presentation"><a href="">交付物文档</a></li>
+				  	<li role="presentation"><a href="">分析报表</a></li>
+				</ul>
+				<div class="searchbox">
+					<input type="text" class="form-control" placeholder="网站内搜索">
+					<a href=""><img src="../../StyleLibrary/Images/search-01.png" alt=""></span></a>
+				</div>
+			</div>
+		</div>
+	</header>
+<div class="container content">
+	<p>当前位置：计划管理 > <span>计划变更申请表单</span></p>
+	<div class="changerequest">
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+		    <h3 class="panel-title">新建计划变更申请</h3>
+		  </div>
+		  <div class="panel-body">
+		    <div>
+		    	<div class="requirelist">
+	    			<div class="col-lg-8 col-md-8 col-sm-8">
+	    				<label class="changelabel">变更标题</label>
+	    				<input type="text" name="changenum" class="requiretitle" />
+	    			</div>
+	    			<div class="col-lg-4 col-md-4 col-sm-4">
+						<label class="changelabel">变更状态</label>
+	    				<input class="redfont" type="text" name="projectnum" />
+					</div>
+	    			<div class="col-lg-4 col-md-4 col-sm-4">
+	    				<label class="changelabel">业务主线</label>
+						<select class="">
+							<option value="生产管控一体化">生产管控一体化</option>
+						    <option value="一般">一般</option>
+						    <option value="低">低</option>
+						</select>
+	    			</div>
+	    			<div class="col-lg-8 col-md-8 col-sm-8">
+						<label class="changelabel largetextbox">相关项目</label>
+	    				<input type="text" class="relevantproject">
+	    				</input>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4">
+					    <label class="changelabel">变更编号</label>
+					    <input type="text" name="changenum" />
+		    		</div>
+					<div class="checkbox col-lg-2 col-md-2 col-sm-2">
+				    	<label class="changelabel largetextbox">由范围变更引起</label>
+						<label class="checkbox-inline">
+						  <input type="checkbox" id="inlineCheckbox1" value="option1">
+						</label>				    
+					</div>
+		    		<div class="col-lg-6 col-md-6 col-sm-6">
+					    <label class="changelabel largetextbox">相关范围变更</label>
+					    <input type="text">
+					    <span class="uploadfile">
+							<input type="file" size="1">
+							<a href="">浏览</a>
+						</span>
+		    		</div>
+		    		<div class="topdash">
+		    			<p class="desctitle">变更描述</p>
+		    			<textarea name="changedesc" id="" cols="175" rows="8"></textarea>
+		    			<p class="desctitle">成本影响预估</p>
+		    			<textarea name="costestimate" id="" cols="175" rows="8"></textarea>
+		    			<p class="desctitle">计划影响预估</p>
+		    			<textarea name="planestimate" id="" cols="175" rows="8"></textarea>
+		    			<div class="col-lg-6 col-md-6 col-sm-6">
+						    <label class="changelabel">变更提交人</label>
+						    <input type="text" />
+			    		</div>
+			    		<div class="col-lg-6 col-md-6 col-sm-6">
+						    <label class="changelabel largetextbox">变更提交日期</label>
+						    <input class="inputdatepicker" />
+			    		</div>
+			    		<div class="col-lg-6 col-md-6 col-sm-6">
+						    <label class="changelabel">现有计划基线</label>
+						    <span class="textbox240_withborder"><a href="">中国石化智能工厂某计划基线</a></span>
+			    		</div>
+			    		<div class="col-lg-6 col-md-6 col-sm-6">
+						    <label class="changelabel largetextbox">拟变更后计划文件</label>
+						    <input type="text">
+						    <span class="uploadfile">
+								<input type="file" size="1">
+								<a href="">上传附件</a>
+							</span>
+			    		</div>
+		    		</div>		    	
+		    	</div>
+		    </div>
+		  </div>
+		</div>
+		<div class="panel panel-default requiresearch">
+		  <div class="panel-heading">
+		    <h3 class="panel-title">业务组变更审批</h3>
+		  </div>
+		  <div class="panel-body">
+			<div class="">
+    			<p class="desctitle">业务组审批意见</p>
+    			<textarea name="changedesc" id="" cols="175" rows="8"></textarea>
+    			<p class="desctitle">业务组审批结论</p>
+				<label class="radio-inline">
+				    <input type="radio" name="resultradio" id="inlineRadio1" value="option1"> 同意
+				</label>
+				<label class="radio-inline">
+				    <input type="radio" name="resultradio" id="inlineRadio2" value="option2"> 拒绝
+				</label>
+				<label class="radio-inline">
+				    <input type="radio" name="resultradio" id="inlineRadio2" value="option2"> 提交大项目执行组审批
+				</label>
+			</div>
+		  </div>
+		</div>
+		<div class="panel panel-default requiresearch">
+		  <div class="panel-heading">
+		    <h3 class="panel-title">大项目执行组变更审批</h3>
+		  </div>
+		  <div class="panel-body">
+			<div class="">
+    			<p class="desctitle">大项目执行组审批意见</p>
+    			<textarea name="changedesc" id="" cols="175" rows="8"></textarea>
+    			<p class="desctitle">大项目执行组审批结论</p>
+				<label class="radio-inline">
+				    <input type="radio" name="resultradio" id="inlineRadio1" value="option1"> 同意
+				</label>
+				<label class="radio-inline">
+				    <input type="radio" name="resultradio" id="inlineRadio2" value="option2"> 拒绝
+				</label>
+				<label class="radio-inline">
+				    <input type="radio" name="resultradio" id="inlineRadio2" value="option2"> 提交工作小组审批
+				</label>
+			</div>
+		  </div>
+		</div>
+		<div class="panel panel-default requiresearch">
+		  <div class="panel-heading">
+		    <h3 class="panel-title">工作小组变更审批</h3>
+		  </div>
+		  <div class="panel-body">
+			<div class="">
+    			<p class="desctitle">工作小组变更审批意见</p>
+    			<textarea name="changedesc" id="" cols="175" rows="8"></textarea>
+    			<p class="desctitle">工作小组审批结论</p>
+				<label class="radio-inline">
+				    <input type="radio" name="resultradio" id="inlineRadio1" value="option1"> 同意
+				</label>
+				<label class="radio-inline">
+				    <input type="radio" name="resultradio" id="inlineRadio2" value="option2"> 拒绝
+				</label>
+			</div>
+		  </div>
+		</div>
+		<div class="panel panel-default requiresearch">
+		  <div class="panel-heading">
+		    <h3 class="panel-title">计划变更发布</h3>
+		  </div>
+		  <div class="panel-body">
+			<div class="col-lg-6 col-md-6 col-sm-6">
+			    <label class="changelabel">计划变更发布日期</label>
+			    <input class="inputdatepicker">
+    		</div>
+		  </div>
+		</div>
+		<div>
+			<input type="button" value="提交" class="btn btn-lg">
+		</div>
+		<div class="attachmentbox">
+			<p>相关附件</p>
+			<div>
+				<a href="">中国石化某拟变更后计划文件.mmp </a>
+				<span class="glyphicon glyphicon-remove-circle"></span>
+			</div>
+			
+		</div>
+	</div>
+</div>
+</div>
+<footer>
+		<p>石化盈科信息技术有限责任公司版权所有</p>
+	</footer>
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="../../StyleLibrary/JS/Common/bootstrap-datetimepicker-master/js/bootstrap-datetimepicker.min.js"></script>
+	<script src="../../StyleLibrary/JS/Common/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+	<script src="../../StyleLibrary/JS/Common/index.js"></script>
+</body>
+</html>

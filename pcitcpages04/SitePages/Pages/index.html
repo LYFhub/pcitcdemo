@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>石化盈科</title>
+	<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdn.bootcss.com/fullcalendar/3.4.0/fullcalendar.min.css" rel="stylesheet">
+	<link href="https://cdn.bootcss.com/fullcalendar/3.4.0/fullcalendar.print.min.css" rel="stylesheet" media='print'>
+	<link href="https://cdn.bootcss.com/datatables/1.10.15/css/dataTables.bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="../../StyleLibrary/CSS/main.css">
+</head>
+<body>
+	<header>
+		<div class="container">
+			<div class="pic_logo">
+				<img src="../../StyleLibrary/Images/logo.png" alt="pic_logo">
+			</div>
+			<div class="userinfo">
+				<img src="../../StyleLibrary/Images/avatar-01.png" alt="pic_userinfo">
+				<div class="usersetting">
+					<p>李明宇</p>
+					<a href="#">设置</a>
+					<a href="#">退出</a>
+				</div>
+			</div>
+		</div>
+		<div class="pic_navbar">
+			<div class="container">
+				<ul class="nav nav-tabs">
+				  	<li role="presentation"><a href="#">首页</a></li>
+				  	<li role="presentation"><a href="./scopemgt.html">范围管理</a></li>
+				  	<li role="presentation"><a href="./planmgt.html">计划管理</a></li>
+				  	<li role="presentation"><a href="./scopemgtproject.html">问题管理</a></li>
+				  	<li role="presentation"><a href="">风险管理</a></li>
+				  	<li role="presentation"><a href="">质量管理</a></li>
+				  	<li role="presentation"><a href="">交付物文档</a></li>
+				  	<li role="presentation"><a href="">分析报表</a></li>
+				</ul>
+				<div class="searchbox">
+					<input type="text" class="form-control" placeholder="网站内搜索">
+					<a href=""><img src="../../StyleLibrary/Images/search-01.png" alt=""></span></a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="container content">
+	<div class="leftcontent">
+		<div class="worktable">
+			<!-- Table -->
+			<table class="table">
+				<tr>
+					<th>待办事项 (<span>8条</span>)</th>
+					<th>
+						<a class="workdata" onclick="prevPage(event)"><span class="glyphicon glyphicon-triangle-left"></span></a>
+						<a class="workdata" onclick="nextPage(event)"><span class="glyphicon glyphicon-triangle-right"></span></a>
+					</th>
+				</tr>
+				<tr class="redfont">
+					<td><a href="">石化盈科项目A启动工作1</a></td>
+					<td>待审批</td>
+				</tr>
+				<tr class="redfont">
+					<td><a href="">石化盈科项目A启动工作2</a></td>
+					<td>待审批</td>
+				</tr>
+				<tr>
+					<td><a href="">石化盈科项目A启动工作3</a></td>
+					<td>已审批</td>
+				</tr>
+				<tr>
+					<td><a href="">石化盈科项目A启动工作4</a></td>
+					<td>已审批</td>
+				</tr>
+				<tr>
+					<td><a href="">石化盈科项目A启动工作5</a></td>
+					<td>已审批</td>
+				</tr>
+			</table>
+		</div>
+		<div class="mytask">
+			<table class="table">
+				<tr>
+					<th>我提交的 (<span>8条</span>)</th>
+					<th>
+						<a class="taskdata" onclick="prevPage(event)"><span class="glyphicon glyphicon-triangle-left"></span></a>
+						<a class="taskdata" onclick="nextPage(event)"><span class="glyphicon glyphicon-triangle-right"></span></a>
+					</th>
+				</tr>
+				<tr class="redfont">
+					<td><a href="">石化盈科项目A启动工作1</a></td>
+					<td>待审批</td>
+				</tr>
+				<tr class="redfont">
+					<td><a href="">石化盈科项目A启动工作2</a></td>
+					<td>待审批</td>
+				</tr>
+				<tr>
+					<td><a href="">石化盈科项目A启动工作3</a></td>
+					<td>已完成</td>
+				</tr>
+				<tr>
+					<td><a href="">石化盈科项目A启动工作4</a></td>
+					<td>已完成</td>
+				</tr>
+				<tr>
+					<td><a href="">石化盈科项目A启动工作5</a></td>
+					<td>已完成</td>
+				</tr>
+			</table>
+		</div>
+		<div class="news">
+			<table class="table">
+				<tr>
+					<th>新闻 <span>| 通告</span></th>
+					<th>
+						<a class="newsdata" onclick="prevPage(event)"><span class="glyphicon glyphicon-triangle-left"></span></a>
+						<a class="newsdata" onclick="nextPage(event)"><span class="glyphicon glyphicon-triangle-right"></span></a>
+					</th>
+				</tr>
+				<tr>
+					<td><img src="../../StyleLibrary/Images/newspic-01.png" alt=""></td>
+					<td>
+						<p><a href="">石化盈科助力中国石化信息化企业成功完成大项目</a></p>
+						<span>2017-04-29</span>
+					</td>
+				</tr>
+				<tr>
+					<td><img src="../../StyleLibrary/Images/newspic-02.png" alt=""></td>
+					<td>
+						<p><a href="">石化盈科助力中国石化信息化企业成功完成大项目</a></p>
+						<span>2017-05-30</span>
+					</td>
+				</tr>
+				<tr>
+					<td><img src="../../StyleLibrary/Images/newspic-03.png" alt=""></td>
+					<td>
+						<p><a href="">石化盈科助力中国石化信息化企业成功完成大项目</a></p>
+						<span>2017-06-18</span>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="doccenter">
+			<div class="panel panel-default">
+			  <div class="panel-heading">
+			    <h3 class="panel-title">标准化中心</h3>
+			    <a>全部文档</a>
+			  </div>
+			  <div class="panel-body">
+			    <ul>
+			    	<li class="singledoc">版本文档
+						<ul>
+				    		<li><img src="../../StyleLibrary/Images/biaozhunhuazhongxin-01.png" alt=""><a href="#">设计版本</a></li>
+				    		<li><img src="../../StyleLibrary/Images/biaozhunhuazhongxin-02.png" alt=""><a href="#">研发版本</a></li>
+				    		<li><img src="../../StyleLibrary/Images/biaozhunhuazhongxin-03.png" alt=""><a href="#">实施版本</a></li>
+				    	</ul>
+			    	</li>
+			    	<li class="singledoc">标准文档
+						<ul>
+				    		<li><img src="../../StyleLibrary/Images/biaozhunhuazhongxin-04.png" alt=""><a href="#">业务标准</a></li>
+				    		<li><img src="../../StyleLibrary/Images/biaozhunhuazhongxin-05.png" alt=""><a href="#">技术标准</a></li>
+				    		<li><img src="../../StyleLibrary/Images/biaozhunhuazhongxin-06.png" alt=""><a href="#">数据标准</a></li>
+				    	</ul>
+			    	</li>
+			    	<li class="singledoc">模板文档
+						<ul>
+				    		<li><img src="../../StyleLibrary/Images/biaozhunhuazhongxin-07.png" alt=""><a href="#">通知模板</a></li>
+				    		<li><img src="../../StyleLibrary/Images/biaozhunhuazhongxin-08.png" alt=""><a href="#">验收模板</a></li>
+				    		<li><img src="../../StyleLibrary/Images/biaozhunhuazhongxin-09.png" alt=""><a href="#"> 报告模板</a></li>
+				    	</ul>
+			    	</li>
+			    </ul>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<div class="rightcontent">
+		<div class="topcontent">
+			<div>
+				<ul class="nav nav-tabs">
+				  	<li role="presentation" onclick="changetab(event)"><a class="allplan">
+				  	智能工厂总体计划</a></li>
+				  	<li role="presentation" onclick="changetab(event)"><a class="aprocess">项目A</a></li>
+				  	<li role="presentation" onclick="changetab(event)"><a class="bprocess">项目B</a></li>
+				  	<li role="presentation" onclick="changetab(event)"><a class="cprocess">项目C</a></li>
+				  	<div><a href=""><img src="../../StyleLibrary/Images/setting-01.png" alt=""></a></div>
+				</ul>
+				<div class="tabheader">
+					<p>年度目标</p>
+					<div class="btn-group">
+						<select class="">
+						  <option value="2017">2017</option>
+						  <option value="2016">2016</option>
+						  <option value="2015">2015</option>
+						</select>
+					</div>
+				</div>
+				<div class="tabcontent toptabone">
+					<table class="">
+						<tr>
+							<td>
+								<div>
+									<h2>50%</h2>
+								</div>
+							</td>
+							<td>
+								<h4><a href="">学术软著类</a></h4>
+								<ul><li><a href="">关于完成世界能源的学术论文30篇</a></li></ul>
+							</td>
+							<td>
+								<h4></h4>
+								<ul><li><a href="">关于完成世界能源的学术论文30篇</a></li></ul>
+							</td>
+							<td>
+								<h4></h4>
+								<ul><li><a href="">关于完成世界能源的学术论文30篇</a></li></ul>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div>
+									<h2>68%</h2>
+								</div>
+							</td>
+							<td>
+								<h4><a href="">国家课题类</a></h4>
+								<ul><li><a href="">关于完成世界能源的学术论文30篇</a></li></ul>
+							</td>
+							<td>
+								<h4></h4>
+								<ul><li><a href="">关于完成世界能源的学术论文30篇</a></li></ul>
+							</td>
+							<td>
+								<h4></h4>
+								<ul><li><a href="">关于完成世界能源的学术论文30篇</a></li></ul>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div>
+									<h2>80%</h2>
+								</div>
+							</td>
+							<td>
+								<h4><a href="">中石化内部</a></h4>
+								<ul><li><a href="">关于完成世界能源的学术论文30篇</a></li></ul>
+							</td>
+							<td>
+								<h4></h4>
+								<ul><li><a href="">关于完成世界能源的学术论文30篇</a></li></ul>
+							</td>
+							<td>
+								<h4></h4>
+								<ul><li><a href="">关于完成世界能源的学术论文30篇</a></li></ul>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div>
+									<h2>55%</h2>
+								</div>
+							</td>
+							<td>
+								<h4><a href="">外部市场类</a></h4>
+								<ul><li><a href="">关于完成世界能源的学术论文30篇</a></li></ul>
+							</td>
+							<td>
+								<h4></h4>
+								<ul><li><a href="">关于完成世界能源的学术论文30篇</a></li></ul>
+							</td>
+							<td>
+								<h4></h4>
+								<ul><li><a href="">关于完成世界能源的学术论文30篇</a></li></ul>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div>
+									<h2>50%</h2>
+								</div>
+							</td>
+							<td>
+								<h4><a href="">产品研发类</a></h4>
+								<ul><li><a href="">关于完成世界能源的学术论文30篇</a></li></ul>
+							</td>
+							<td>
+								<h4></h4>
+								<ul><li><a href="">关于完成世界能源的学术论文30篇</a></li></ul>
+							</td>
+							<td>
+								<h4></h4>
+								<ul><li><a href="">关于完成世界能源的学术论文30篇</a></li></ul>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="tabcontent toptabtwo">
+					<div class="chartbox">
+						<div class="piechart"></div>
+						<div class="barchart"></div>
+						<div class="linechart"></div>
+					</div>
+					<p>项目A关键路径</p>
+					<div class="drawtimeline">
+						<div>
+							<div class="timeinfo">
+								<p class="timetext"><span>里程碑</span>-项目A实施阶段1.0上线</p>
+								<p class="timedate">2017-4-25</p>
+								<div class="diamond"></div>
+							</div>
+							<div class="timeinfo">
+								<p class="timetext"><span>里程碑</span>-项目A实施阶段2.0上线</p>
+								<p class="timedate">2017-5-30</p>
+								<div class="diamond"></div>
+							</div>
+							<div class="timeinfo">
+								<p class="timetext"><span>里程碑</span>-项目A实施阶段3.0上线</p>
+								<p class="timedate">2017-6-25</p>
+								<div class="diamond"></div>
+							</div>
+							<div class="timeinfo">
+								<p class="timetext"><span>里程碑</span>-项目A实施阶段4.0上线</p>
+								<p class="timedate">2017-7-25</p>
+								<div class="diamond"></div>
+							</div>
+						</div>
+						<div class="sandetime">
+							<div class="starttime">
+								<p>开始</p>
+								<p>2017-4-20</p>
+							</div>
+							<div class="endtime">
+								<p>结束</p>
+								<p>2017-9-20</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tabcontent toptabthree">
+					<div class="chartbox">
+						<div class="barchart"></div>
+						<div class="piechart"></div>
+						<div class="linechart"></div>
+					</div>
+					<p>项目B关键路径</p>
+					<div class="drawtimeline">
+						<div>
+							<div class="timeinfo">
+								<p class="timetext"><span>里程碑</span>-项目B实施阶段1.0上线</p>
+								<p class="timedate">2017-3-25</p>
+								<div class="diamond"></div>
+							</div>
+							<div class="timeinfo">
+								<p class="timetext"><span>里程碑</span>-项目B实施阶段2.0上线</p>
+								<p class="timedate">2017-4-30</p>
+								<div class="diamond"></div>
+							</div>
+							<div class="timeinfo">
+								<p class="timetext"><span>里程碑</span>-项目B实施阶段3.0上线</p>
+								<p class="timedate">2017-7-25</p>
+								<div class="diamond"></div>
+							</div>
+							<div class="timeinfo">
+								<p class="timetext"><span>里程碑</span>-项目B实施阶段4.0上线</p>
+								<p class="timedate">2017-8-25</p>
+								<div class="diamond"></div>
+							</div>
+						</div>
+						<div class="sandetime">
+							<div class="starttime">
+								<p>开始</p>
+								<p>2017-4-20</p>
+							</div>
+							<div class="endtime">
+								<p>结束</p>
+								<p>2017-9-20</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tabcontent toptabfour">
+					<div class="chartbox">
+						<div class="barchart"></div>
+						<div class="linechart"></div>
+						<div class="piechart"></div>
+					</div>
+					<p>项目C关键路径</p>
+					<div class="drawtimeline">
+						<div>
+							<div class="timeinfo">
+								<p class="timetext"><span>里程碑</span>-项目C实施阶段1.0上线</p>
+								<p class="timedate">2017-5-25</p>
+								<div class="diamond"></div>
+							</div>
+							<div class="timeinfo">
+								<p class="timetext"><span>里程碑</span>-项目C实施阶段2.0上线</p>
+								<p class="timedate">2017-6-30</p>
+								<div class="diamond"></div>
+							</div>
+							<div class="timeinfo">
+								<p class="timetext"><span>里程碑</span>-项目C实施阶段3.0上线</p>
+								<p class="timedate">2017-7-70</p>
+								<div class="diamond"></div>
+							</div>
+							<div class="timeinfo">
+								<p class="timetext"><span>里程碑</span>-项目C实施阶段4.0上线</p>
+								<p class="timedate">2017-8-29</p>
+								<div class="diamond"></div>
+							</div>
+						</div>
+						<div class="sandetime">
+							<div class="starttime">
+								<p>开始</p>
+								<p>2017-4-20</p>
+							</div>
+							<div class="endtime">
+								<p>结束</p>
+								<p>2017-9-20</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="dateandevent">
+			<div id='calendar'></div>
+			<p>我的日程</p>
+		</div>
+		<div class="projectcheck">
+			<p>项目考核</p>
+			<div class="checktableitem">
+				<p>项目设计</p>
+				<table id="checktableleft" class="table">
+					<thead>
+						<tr>
+							<th>项目组</th>
+							<th>项目经理</th>
+							<th>计划完成率</th>
+							<th>成本进度比</th>
+						</tr>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
+			</div>
+			<div class="checktableitem">
+				<p>项目设计</p>
+				<table id="checktablecenter" class="table">
+					<thead>
+						<tr>
+							<th>项目组</th>
+							<th>项目经理</th>
+							<th>计划完成率</th>
+							<th>成本进度比</th>
+						</tr>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
+			</div>
+			<div class="checktableitem">
+				<p>项目设计</p>
+				<table id="checktableright" class="table">
+					<thead>
+						<tr>
+							<th>项目组</th>
+							<th>项目经理</th>
+							<th>计划完成率</th>
+							<th>成本进度比</th>
+						</tr>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+<footer>
+	<p>石化盈科信息技术有限责任公司版权所有</p>
+</footer>
+
+<script src="https://cdn.bootcss.com/moment.js/2.18.1/moment.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdn.bootcss.com/echarts/3.5.4/echarts.min.js"></script>
+<script src="https://cdn.bootcss.com/fullcalendar/3.4.0/fullcalendar.min.js"></script>
+<script src="https://cdn.bootcss.com/datatables/1.10.15/js/jquery.dataTables.min.js"></script>
+<script src="../../StyleLibrary/JS/chart.js"></script>
+<script src="../../StyleLibrary/JS/Common/index.js"></script>
+<script src="../../StyleLibrary/JS/calendar.js"></script>
+<script src="../../StyleLibrary/JS/locale-all.js"></script>
+<script src="../../StyleLibrary/JS/checktable.js"></script>
+</body>
+</html>
