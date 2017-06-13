@@ -74,6 +74,13 @@ label span {
 	top: 3px;
 	left: -2px;
 }
+
+.dataTables_filter {
+	input {
+		position: relative;
+		top: -33px;
+	}
+}
 header {
 	background: #fff;
 	color: white;
@@ -1113,6 +1120,8 @@ footer {
 							display: inline-block;
 							font-size: 16px;
     						font-weight: bold;
+    						position: relative;
+    						top: -15px;
 						}
 						span.uploadfile {
 							height: 40px;
@@ -1233,8 +1242,7 @@ footer {
 				padding: 0;
 				margin: 32px 0;
 				.changelabel {
-					width: initial;
-					text-align: left;
+					text-align: right;
 				}
 				>div {
 					width: 240px;
@@ -1686,26 +1694,55 @@ footer {
 		}
 	}
 }
+footer {
+	background-color: #ebebeb;
+	height: 146px;
+	width: 100%;
+	text-align: center;
 
+	p {
+		font-size: 18px;
+		font-weight: bold;
+		color: #999;
+	}
+	&::after, p{
+	    display:inline-block;
+	    vertical-align:middle;
+	}
+	&::after{
+	    content:'';
+	    height:100%;
+	}
+
+}
 .spcomponent {
 	height: 40px;
-    line-height: 0px;
-    vertical-align: middle;
-    display: inline-table;
 	&:after {
 		@include clear_float;
 	}
 	>label {
-		display: table-cell;
-    	vertical-align: middle;
+		position: absolute;
+    	top: 9px;
 	}
 	>input {
 		margin-left: 3px;
+		position: relative;
+    	left: 120px;
+	}
+	&::after, >label{
+	    display:inline-block;
+	    vertical-align:middle;
+	}
+	&::after{
+	    content:'';
+	    height:100%;
 	}
 
 	.ms-taxonomy.ms-taxonomy-height.ms-taxonomy-width {
 		width: 260px;
-		display: inline-block;
+    	display: inline-block;
+    	position: relative;
+    	left: 120px;
 		.ms-taxonomy-control-holder.ms-taxonomy-width {
 			width: 260px;
 			.ms-taxonomy-fieldeditor.ms-taxonomy-fieldeditor-standard {
@@ -1732,6 +1769,8 @@ footer {
 	table.ms-usereditor {
 		width: 279px;
 		display: inline-block;
+		position: relative;
+    	left: 120px;
 		tbody, tr {
 			width: 279px;
 			div.ms-inputuserfield.ms-inputBox {
