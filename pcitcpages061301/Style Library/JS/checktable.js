@@ -11,7 +11,14 @@ $(document).ready(function() {
 		"salary": "85%",
 		"start_date": "2011/04/25",
 		"office": "85%",
-		"extn": "5421"
+		"extn": "5421",
+		"source": "中石化信息部",
+		"company": "燕山",
+		"companypeople": "王海波",
+		"designpeople": "王芳",
+		"excutepeople": "李晨",
+		"requirepeople": "郑小凡",
+		"relatedrequire": "中国石化智能工厂提升项目需求"
 	}, {
 		"num": "20170602011",
 		"title": "中国石化智能工厂提升项目需求(总部)设计设备全生命周期管理1",
@@ -23,7 +30,14 @@ $(document).ready(function() {
 		"salary": "85%",
 		"start_date": "2011/07/25",
 		"office": "85%",
-		"extn": "8422"
+		"extn": "8422",
+		"source": "中石化信息部",
+		"company": "燕山",
+		"companypeople": "王海波",
+		"designpeople": "王芳",
+		"excutepeople": "李晨",
+		"requirepeople": "郑小凡",
+		"relatedrequire": "中国石化智能工厂提升项目需求"
 	}, {
 		"num": "20170602002",
 		"title": "中国石化智能工厂提升项目需求(镇海)设计设备全生命周期管理1",
@@ -35,7 +49,14 @@ $(document).ready(function() {
 		"salary": "85%",
 		"start_date": "2011/07/25",
 		"office": "85%",
-		"extn": "8422"
+		"extn": "8422",
+		"source": "中石化信息部",
+		"company": "燕山",
+		"companypeople": "王海波",
+		"designpeople": "王芳",
+		"excutepeople": "李晨",
+		"requirepeople": "郑小凡",
+		"relatedrequire": "中国石化智能工厂提升项目需求"
 	}, {
 		"num": "20170602002",
 		"title": "中国石化智能工厂提升项目需求(镇海)设计设备全生命周期管理1",
@@ -47,7 +68,14 @@ $(document).ready(function() {
 		"salary": "85%",
 		"start_date": "2011/07/25",
 		"office": "85%",
-		"extn": "8422"
+		"extn": "8422",
+		"source": "中石化信息部",
+		"company": "燕山",
+		"companypeople": "王海波",
+		"designpeople": "王芳",
+		"excutepeople": "李晨",
+		"requirepeople": "郑小凡",
+		"relatedrequire": "中国石化智能工厂提升项目需求"
 	}, {
 		"num": "20170602002",
 		"title": "中国石化智能工厂提升项目需求(镇海)设计设备全生命周期管理1",
@@ -59,7 +87,14 @@ $(document).ready(function() {
 		"salary": "85%",
 		"start_date": "2011/07/25",
 		"office": "85%",
-		"extn": "8422"
+		"extn": "8422",
+		"source": "中石化信息部",
+		"company": "燕山",
+		"companypeople": "王海波",
+		"designpeople": "王芳",
+		"excutepeople": "李晨",
+		"requirepeople": "郑小凡",
+		"relatedrequire": "中国石化智能工厂提升项目需求"
 	}, {
 		"num": "20170602002",
 		"title": "中国石化智能工厂提升项目需求(镇海)设计设备全生命周期管理1",
@@ -71,7 +106,14 @@ $(document).ready(function() {
 		"salary": "85%",
 		"start_date": "2011/07/25",
 		"office": "85%",
-		"extn": "8422"
+		"extn": "8422",
+		"source": "中石化信息部",
+		"company": "燕山",
+		"companypeople": "王海波",
+		"designpeople": "王芳",
+		"excutepeople": "李晨",
+		"requirepeople": "郑小凡",
+		"relatedrequire": "中国石化智能工厂提升项目需求"
 	}, {
 		"num": "20170602002",
 		"title": "中国石化智能工厂提升项目需求(镇海)设计设备全生命周期管理1",
@@ -83,7 +125,14 @@ $(document).ready(function() {
 		"salary": "85%",
 		"start_date": "2011/07/25",
 		"office": "85%",
-		"extn": "8422"
+		"extn": "8422",
+		"source": "中石化信息部",
+		"company": "燕山",
+		"companypeople": "王海波",
+		"designpeople": "王芳",
+		"excutepeople": "李晨",
+		"requirepeople": "郑小凡",
+		"relatedrequire": "中国石化智能工厂提升项目需求"
 	}, {
 		"num": "20170602002",
 		"title": "中国石化智能工厂提升项目需求(镇海)设计设备全生命周期管理1",
@@ -95,7 +144,14 @@ $(document).ready(function() {
 		"salary": "85%",
 		"start_date": "2011/07/25",
 		"office": "85%",
-		"extn": "8422"
+		"extn": "8422",
+		"source": "中石化信息部",
+		"company": "燕山",
+		"companypeople": "王海波",
+		"designpeople": "王芳",
+		"excutepeople": "李晨",
+		"requirepeople": "郑小凡",
+		"relatedrequire": "中国石化智能工厂提升项目需求"
 	}, {
 		"num": "20170602002",
 		"title": "中国石化智能工厂提升项目需求(镇海)设计设备全生命周期管理1",
@@ -107,7 +163,14 @@ $(document).ready(function() {
 		"salary": "85%",
 		"start_date": "2011/07/25",
 		"office": "85%",
-		"extn": "8422"
+		"extn": "8422",
+		"source": "中石化信息部",
+		"company": "燕山",
+		"companypeople": "王海波",
+		"designpeople": "王芳",
+		"excutepeople": "李晨",
+		"requirepeople": "郑小凡",
+		"relatedrequire": "中国石化智能工厂提升项目需求"
 	}];
 
 	// 首页
@@ -249,6 +312,171 @@ $(document).ready(function() {
 			data: 'result'
 		}, {
 			data: 'status'
+		}, {
+			data: 'start_date'
+		}]
+	});
+
+	$('#feasibilityrequiretable').dataTable({
+		bInfo: false, // 去掉左下角的每页显示多少行的信息
+		iDisplayLength: 6, // 控制每页显示的行数
+		bFilter: true, // 过滤
+		bLengthChange: false, // 去掉可以更改显示行数的dropdown list
+		bSort: false, // 去掉排序功能和按钮
+		data: data, // 从data数组中获取数据
+		oLanguage: {
+			sProcessing: "正在加载中......",
+			sEmptyTable: "表中无数据存在！",
+			sZeroRecords: "没有检索到数据",
+			sSearchPlaceholder: "视图内搜索",
+			sSearch: "",
+			oPaginate: {
+				sPrevious: '<',
+				sNext: '>'
+			}
+		},
+		columns: [{
+			data: 'num'
+		}, {
+			data: 'title'
+		}, {
+			data: 'status'
+		}, {
+			data: 'requirepeople'
+		}, {
+			data: 'start_date'
+		}]
+	});
+
+	$('#approvalrequiretable').dataTable({
+		bInfo: false, // 去掉左下角的每页显示多少行的信息
+		iDisplayLength: 6, // 控制每页显示的行数
+		bFilter: true, // 过滤
+		bLengthChange: false, // 去掉可以更改显示行数的dropdown list
+		bSort: false, // 去掉排序功能和按钮
+		data: data, // 从data数组中获取数据
+		oLanguage: {
+			sProcessing: "正在加载中......",
+			sEmptyTable: "表中无数据存在！",
+			sZeroRecords: "没有检索到数据",
+			sSearchPlaceholder: "视图内搜索",
+			sSearch: "",
+			oPaginate: {
+				sPrevious: '<',
+				sNext: '>'
+			}
+		},
+		columns: [{
+			data: 'num'
+		}, {
+			data: 'title'
+		}, {
+			data: 'source'
+		}, {
+			data: 'company'
+		}, {
+			data: 'status'
+		}, {
+			data: 'start_date'
+		}]
+	});
+
+	$('#needresearchrequiretable').dataTable({
+		bInfo: false, // 去掉左下角的每页显示多少行的信息
+		iDisplayLength: 6, // 控制每页显示的行数
+		bFilter: true, // 过滤
+		bLengthChange: false, // 去掉可以更改显示行数的dropdown list
+		bSort: false, // 去掉排序功能和按钮
+		data: data, // 从data数组中获取数据
+		oLanguage: {
+			sProcessing: "正在加载中......",
+			sEmptyTable: "表中无数据存在！",
+			sZeroRecords: "没有检索到数据",
+			sSearchPlaceholder: "视图内搜索",
+			sSearch: "",
+			oPaginate: {
+				sPrevious: '<',
+				sNext: '>'
+			}
+		},
+		columns: [{
+			data: 'num'
+		}, {
+			data: 'title'
+		}, {
+			data: 'company'
+		}, {
+			data: 'companypeople'
+		}, {
+			data: 'designpeople'
+		}, {
+			data: 'excutepeople'
+		}, {
+			data: 'requirepeople'
+		}, {
+			data: 'start_date'
+		}]
+	});
+
+	$('#specsrequiretable').dataTable({
+		bInfo: false, // 去掉左下角的每页显示多少行的信息
+		iDisplayLength: 6, // 控制每页显示的行数
+		bFilter: true, // 过滤
+		bLengthChange: false, // 去掉可以更改显示行数的dropdown list
+		bSort: false, // 去掉排序功能和按钮
+		data: data, // 从data数组中获取数据
+		oLanguage: {
+			sProcessing: "正在加载中......",
+			sEmptyTable: "表中无数据存在！",
+			sZeroRecords: "没有检索到数据",
+			sSearchPlaceholder: "视图内搜索",
+			sSearch: "",
+			oPaginate: {
+				sPrevious: '<',
+				sNext: '>'
+			}
+		},
+		columns: [{
+			data: 'title'
+		}, {
+			data: 'relatedrequire'
+		}, {
+			data: 'requirepeople'
+		}, {
+			data: 'start_date'
+		}]
+	});
+
+	$('#surerequiretable').dataTable({
+		bInfo: false, // 去掉左下角的每页显示多少行的信息
+		iDisplayLength: 6, // 控制每页显示的行数
+		bFilter: true, // 过滤
+		bLengthChange: false, // 去掉可以更改显示行数的dropdown list
+		bSort: false, // 去掉排序功能和按钮
+		data: data, // 从data数组中获取数据
+		oLanguage: {
+			sProcessing: "正在加载中......",
+			sEmptyTable: "表中无数据存在！",
+			sZeroRecords: "没有检索到数据",
+			sSearchPlaceholder: "视图内搜索",
+			sSearch: "",
+			oPaginate: {
+				sPrevious: '<',
+				sNext: '>'
+			}
+		},
+		columns: [{
+			data: 'num'
+		}, {
+			data: 'title'
+		}, {
+			data: 'source'
+		}, {
+			data: 'company'
+		}, {
+			data: 'status'
+		}, {
+			data: 'requirepeople'
 		}, {
 			data: 'start_date'
 		}]

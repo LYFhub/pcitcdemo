@@ -56,21 +56,21 @@
 					<a href="#feasibilityrequire" data-toggle="tab">待可行性研究的需求</a>
 				</li>
 				<li>
-					<a href="#approvaltable" data-toggle="tab">待审批的需求</a>
+					<a href="#approvalrequire" data-toggle="tab">待审批的需求</a>
 				</li>
 				<li>
-					<a href="#needresearch" data-toggle="tab">需要调研的需求</a>
+					<a href="#needresearchrequire" data-toggle="tab">需要调研的需求</a>
 				</li>
 				<li>
-					<a href="#" data-toggle="tab">需求规格说明书审核阶段的需求</a>
+					<a href="#specsrequire" data-toggle="tab">需求规格说明书审核阶段的需求</a>
 				</li>
 				<li>
-					<a href="#smartmake" data-toggle="tab">确立需求基线的需求</a>
+					<a href="#surerequire" data-toggle="tab">确立需求基线的需求</a>
 				</li>
 			</ul>
 			<div id="" class="tab-content requireboxContent">
 				<div class="tab-pane fade in active" id="mysubmitrequire">
-					<div class="mysubmit">
+					<div class="requiretablebox">
 						<table id="mysubmittable" class="table table-hover">
 							<thead>
 								<tr>
@@ -88,14 +88,49 @@
 					</div>
 				</div>
 				<div class="tab-pane fade in" id="allrequire">
-					<div class="allrequire">
+					<div class="requiretablebox">
 						<table id="allrequiretable" class="table table-hover">
 							<thead>
 								<tr>
 									<th>需求编号</th>
 									<th>需求标题</th>
 									<th>业务主线</th>
-									<th>工作小组审批结论</th>
+									<th>需求状态</th>
+									<th>需求提交人</th>
+									<th>提交日期</th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="tab-pane fade in" id="feasibilityrequire">
+					<div class="requiretablebox">
+						<table id="feasibilityrequiretable" class="table table-hover">
+							<thead>
+								<tr>
+									<th>需求编号</th>
+									<th>需求标题</th>
+									<th>需求状态</th>
+									<th>需求提交人</th>
+									<th>提交日期</th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="tab-pane fade in" id="approvalrequire">
+					<div class="requiretablebox">
+						<table id="approvalrequiretable" class="table table-hover">
+							<thead>
+								<tr>
+									<th>需求编号</th>
+									<th>需求标题</th>
+									<th>需求来源</th>
+									<th>企业</th>
 									<th>需求状态</th>
 									<th>提交日期</th>
 								</tr>
@@ -105,16 +140,18 @@
 						</table>
 					</div>
 				</div>
-				<div class="tab-pane fade in liftcycle" id="liftcycle">
-					<div class="mysubmit">
-						<table id="mysubmittable" class="table table-hover">
+				<div class="tab-pane fade in" id="needresearchrequire">
+					<div class="requiretablebox">
+						<table id="needresearchrequiretable" class="table table-hover">
 							<thead>
 								<tr>
 									<th>需求编号</th>
 									<th>需求标题</th>
-									<th>业务主线</th>
-									<th>工作小组审批结论</th>
-									<th>需求状态</th>
+									<th>企业</th>
+									<th>企业联系人</th>
+									<th>设计组调研人</th>
+									<th>实施组调研人</th>
+									<th>需求提交人</th>
 									<th>提交日期</th>
 								</tr>
 							</thead>
@@ -123,16 +160,33 @@
 						</table>
 					</div>
 				</div>
-				<div class="tab-pane fade in smartmake" id="smartmake">
-					<div class="mysubmit">
-						<table id="mysubmittable" class="table table-hover">
+				<div class="tab-pane fade in" id="specsrequire">
+					<div class="requiretablebox">
+						<table id="specsrequiretable" class="table table-hover">
+							<thead>
+								<tr>
+									<th>需求规格说明书文档标题</th>
+									<th>相关需求</th>
+									<th>需求提交人</th>
+									<th>提交日期</th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="tab-pane fade in" id="surerequire">
+					<div class="requiretablebox">
+						<table id="surerequiretable" class="table table-hover">
 							<thead>
 								<tr>
 									<th>需求编号</th>
 									<th>需求标题</th>
-									<th>业务主线</th>
-									<th>工作小组审批结论</th>
+									<th>需求来源</th>
+									<th>企业</th>
 									<th>需求状态</th>
+									<th>需求提交人</th>
 									<th>提交日期</th>
 								</tr>
 							</thead>

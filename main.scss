@@ -68,8 +68,8 @@ html, body {
 	background-color: #f6f6f6;
 }
 
-label span {
-	color: red;
+span.redstar {
+	color: red !important;
 	position: relative;
 	top: 3px;
 	left: -2px;
@@ -81,6 +81,10 @@ label span {
 		top: -33px;
 	}
 }
+.largetextbox {
+	width: 160px !important;
+}
+
 header {
 	background: #fff;
 	color: white;
@@ -589,7 +593,7 @@ footer {
 						    width: 28%;
 						    text-align: center;
 						    vertical-align: middle;
-						    background: url(../../StyleLibrary/Images/lozenge-01.png) no-repeat;
+						    background: url(../../Style%20Library/Images/lozenge-01.png) no-repeat;
 						    background-size: contain;
 						    height: 80px;
 						    padding: 0;
@@ -623,7 +627,7 @@ footer {
 					}
 					&:nth-child(even) {
 						>td:first-child{
-							background: url(../../StyleLibrary/Images/lozenge-02.png) no-repeat;
+							background: url(../../Style%20Library/Images/lozenge-02.png) no-repeat;
 							background-size: contain;
 						}
 					}
@@ -998,14 +1002,11 @@ footer {
 				padding-left: 5px;
 			}
 			.changelabel {
-				width: 120px;
+				width: 130px;
 				text-align: right;
 				font-weight: bold;
 			    font-size: 16px;
 			    color: #333;
-			}
-			.largetextbox {
-				width: 150px;
 			}
 			.requiretitle {
 				width: 640px;
@@ -1120,8 +1121,6 @@ footer {
 							display: inline-block;
 							font-size: 16px;
     						font-weight: bold;
-    						position: relative;
-    						top: -15px;
 						}
 						span.uploadfile {
 							height: 40px;
@@ -1152,10 +1151,16 @@ footer {
 				    font-weight: bold;
 				    font-size: 16px;
 				    color: #333;
-				    width: 135px;
+				    width: 150px;
+				}
+				input[type="text"] {
+					width: 230px;
 				}
 				.largetextbox {
-					width: 170px;
+					width: 170px !important;
+				}
+				.spcomponent >input {
+					left: 150px;
 				}
 				.topdash {
 					margin-top: 32px !important;
@@ -1572,7 +1577,7 @@ footer {
 							margin: 50px 0 50px 60px;
 							position: relative;
 							background-color: white;
-							background: url(../../StyleLibrary/Images/lozenge-02.png) no-repeat;
+							background: url(../../Style%20Library/Images/lozenge-02.png) no-repeat;
 							background-size: contain;
 
 							&:before {
@@ -1694,6 +1699,33 @@ footer {
 		}
 	}
 }
+.requirebox {
+	.requireboxHeader {
+		background-color: #fafafa;
+		li {
+			a {
+				color: #999;
+			}
+			&.active {
+				a {
+					color: #333;
+				}
+			}
+		}
+	}
+	.requireboxContent {
+		.requiretablebox {
+			table {
+				width: 100% !important;
+			}
+			.dataTables_paginate {
+				a {
+					margin: 0 3px;
+				}
+			}
+		}
+	}
+}
 footer {
 	background-color: #ebebeb;
 	height: 146px;
@@ -1727,7 +1759,7 @@ footer {
 	>input {
 		margin-left: 3px;
 		position: relative;
-    	left: 120px;
+    	left: 130px;
 	}
 	&::after, >label{
 	    display:inline-block;
@@ -1742,7 +1774,7 @@ footer {
 		width: 260px;
     	display: inline-block;
     	position: relative;
-    	left: 120px;
+    	left: 130px;
 		.ms-taxonomy-control-holder.ms-taxonomy-width {
 			width: 260px;
 			.ms-taxonomy-fieldeditor.ms-taxonomy-fieldeditor-standard {
@@ -1770,7 +1802,7 @@ footer {
 		width: 279px;
 		display: inline-block;
 		position: relative;
-    	left: 120px;
+    	left: 130px;
 		tbody, tr {
 			width: 279px;
 			div.ms-inputuserfield.ms-inputBox {
@@ -1780,15 +1812,14 @@ footer {
     			height: 40px !important;
     			padding-left: 5px;
     			margin-left: 3px;
-    			span {
-    				position: relative;
-					top: 8px;
-					left: 5px;
-    			}
+				display: table-cell;
+				vertical-align: middle;
 			}
 		}
 	}
 }
+
+
 
 @media screen and (min-width: 1270px) {
 	.container {
