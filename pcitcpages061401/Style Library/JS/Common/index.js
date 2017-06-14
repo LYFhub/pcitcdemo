@@ -5,7 +5,7 @@ $(document).ready(function() {
 		$(event.currentTarget).addClass('active');
 		// 现在加不上，是因为每个页面都有自己的nav，点击添加之后立刻跳转到了新页面
 	});
-	drawChart();
+	drawChart(0);
 });
 
 // 初始化datepicker
