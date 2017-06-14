@@ -5,17 +5,21 @@ $(document).ready(function() {
 		$(event.currentTarget).addClass('active');
 		// 现在加不上，是因为每个页面都有自己的nav，点击添加之后立刻跳转到了新页面
 	});
-	drawChart(0);
+	if ($('.barchart').length != 0 && $('.piechart').length != 0 && $('.linechart').length != 0) {
+		drawChart(0);
+	}
 });
 
 // 初始化datepicker
-$(".inputdatepicker").datetimepicker({
-	language: "zh-CN",
-	autoclose: true, //选中之后自动隐藏日期选择框
-	todayBtn: true, //今日按钮
-	todayHighlight: true,
-	format: "yyyy-mm-dd hh:ii", //日期格式
-});
+if ($(".inputdatepicker").datetimepicker) {
+	$(".inputdatepicker").datetimepicker({
+		language: "zh-CN",
+		autoclose: true, //选中之后自动隐藏日期选择框
+		todayBtn: true, //今日按钮
+		todayHighlight: true,
+		format: "yyyy-mm-dd hh:ii", //日期格式
+	});
+}
 
 // 当点击某一个tab时，判断出当前点击tab的序号，然后将对应序号的tab content 设置为显示，其他的隐藏
 function changetab(event) {
