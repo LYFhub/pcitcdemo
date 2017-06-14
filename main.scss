@@ -85,6 +85,18 @@ span.redstar {
 	width: 160px !important;
 }
 
+#s4-titlerow {
+	display: none !important;
+}
+
+#contentRow {
+	padding-top: 0;
+	#contentBox {
+		margin: 0;
+		min-width: 0;
+	}
+}
+
 header {
 	background: #fff;
 	color: white;
@@ -1518,7 +1530,7 @@ footer {
 		}
 
 		#scopeTabContent, #planTabContent {
-			#scoperequire , #scopechange, #scopeplan, #plancreate, #planchange{
+			#scoperequiretab , #scopechangetab, #scopeplantab, #plancreatetab, #planchangetab{
 				padding: 22px;
 				.myrequirelink {
 					a {
@@ -1553,9 +1565,27 @@ footer {
 					padding: 22px;
 					background-color: #f2f2f2;
 
-					#liftcycle, #product, #allprocess, #smartmake {
+					#requireliftcycletab, #requireproducttab, #requireallprocesstab, #requiresmartmaketab,
+					#scopeliftcycletab, #scopeproducttab, #scopeallprocesstab, #scopesmartmaketab,
+					#planliftcycletab, #planproducttab, #planallprocesstab, #plansmartmaketab,
+					#createliftcycletab, #createproducttab, #createallprocesstab, #createsmartmaketab,
+					#changeliftcycletab, #changeproducttab, #changeallprocesstab, #changesmartmaketab{
 						&:after {
 							@include clear_float;
+						}
+						>a {
+							display: inline-block;
+							&:first-child >div{
+								background-image: none;
+								width: 80px;
+								height: 156px;
+								&:before {
+									content: "";
+								}
+							}
+							&:nth-child(5) div{
+								margin-left: 200px;
+							}
 						}
 						.cyclestart {
 							width: 80px;
@@ -1570,7 +1600,7 @@ footer {
 								content: '';
 							}
 						}
-						>div {
+						a >div {
 							float: left;
 							height: 156px;
 							width: 236px;
@@ -1585,9 +1615,6 @@ footer {
 								position: relative;
 								top: 28px;
 								left: -60px;
-							}
-							&:nth-child(5) {
-								margin-left: 200px;
 							}
 							p {
 								text-align: center;
@@ -1777,6 +1804,10 @@ footer {
     	left: 130px;
 		.ms-taxonomy-control-holder.ms-taxonomy-width {
 			width: 260px;
+			img.ms-taxonomy-browser-button {
+				position: relative;
+    			top: 9px;
+			}
 			.ms-taxonomy-fieldeditor.ms-taxonomy-fieldeditor-standard {
 				width: 240px !important;
 				padding: 0;
@@ -1805,6 +1836,10 @@ footer {
     	left: 130px;
 		tbody, tr {
 			width: 279px;
+			td > a {
+				position: relative;
+				top: 9px;
+			}
 			div.ms-inputuserfield.ms-inputBox {
 				width: 240px;
 				padding: 0;
