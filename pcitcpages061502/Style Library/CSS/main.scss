@@ -1,4 +1,11 @@
-@import './scss/mixin';
+@mixin clear_float {
+	content: "";
+	display: block;
+	clear: both;
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
 html, body {
 	margin: 0;
 }
@@ -1755,7 +1762,7 @@ footer {
 					}
 					select {
 						height: 26px;
-						width: 100px;
+						width: 100px !important;
 						border-width: 2px;
     					border-style: inset;
     					border-color: initial;
