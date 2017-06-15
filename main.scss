@@ -1509,7 +1509,7 @@ footer {
 		border: solid 1px #ddd;
 		margin-bottom: 20px;
 
-		ul#scopeTab, ul#planTab{
+		ul.scopeTab, ul.planTab{
 			background-color: rgb(250, 250, 250);
 			li a {
 				color: rgb(153, 153, 153);
@@ -1529,8 +1529,8 @@ footer {
 			}
 		}
 
-		#scopeTabContent, #planTabContent {
-			#scoperequiretab , #scopechangetab, #scopeplantab, #plancreatetab, #planchangetab{
+		.scopeTabContent, .planTabContent {
+			>div.tab-pane{
 				padding: 22px;
 				.myrequirelink {
 					a {
@@ -1565,11 +1565,7 @@ footer {
 					padding: 22px;
 					background-color: #f2f2f2;
 
-					#requireliftcycletab, #requireproducttab, #requireallprocesstab, #requiresmartmaketab,
-					#scopeliftcycletab, #scopeproducttab, #scopeallprocesstab, #scopesmartmaketab,
-					#planliftcycletab, #planproducttab, #planallprocesstab, #plansmartmaketab,
-					#createliftcycletab, #createproducttab, #createallprocesstab, #createsmartmaketab,
-					#changeliftcycletab, #changeproducttab, #changeallprocesstab, #changesmartmaketab{
+					>div.tab-pane{
 						&:after {
 							@include clear_float;
 						}
