@@ -1612,12 +1612,13 @@ footer {
 						.cyclestart {
 							width: 80px;
 							height: 80px;
-							line-height: 80px;
 							border-radius: 50%;
 							background-color: rgb(230, 174, 61);
 							color: white;
 							text-align: center;
 							background-image: none;
+							display: table-cell;
+    						vertical-align: middle;
 							&:before {
 								content: '';
 							}
@@ -1722,20 +1723,21 @@ footer {
 		    		font-size: 16px;
 		    	}
 			}
-			.reportname {
-				background-color: #9fb3c1;
-    			text-align: center;
-				p, span{
-					display: inline-block;
-					font-size: 16px;
-					font-weight: bold;
-					padding-top: 10px;
-				}
+		}
+		.reportname {
+			text-align: center;
+			p, span{
+				display: inline-block;
+				font-size: 22px;
+				font-weight: bold;
+				padding-top: 10px;
 			}
-		} 
+		}
 	}
-	#thisweektask, #nextweekplan, #planissue, #planrisk {
-		padding: 32px;
+	#thisweektask, #nextweekplan, #planissue, #planrisk, 
+	#historyreport, #allhistoryreport, #historyreportdesign, 
+	#historyreportdev, #historyreportexec{
+		padding: 22px;
 		p {
 			font-size: 16px;
 			font-weight: bold;
@@ -1747,18 +1749,24 @@ footer {
 				background-color: #999;
 				color: #333;
 				text-align: center;
+				height: 45px;
+				vertical-align: middle;
 			}
 			tr {
 				td {
+					height: 40px;
+					vertical-align: middle;
 					input,select {
-						width: 100% !important;
+						width: 100%;
 						background-color: inherit;
 						&:focus {
 							background-color: white;
 						}
-					}
-					&:last-child {
-						text-align: center;
+						&.planlgtext {
+							&:focus {
+								width: 500px;
+							}
+						}
 					}
 					select {
 						height: 26px;
@@ -1768,6 +1776,16 @@ footer {
     					border-color: initial;
     					border-image: initial;
 					}
+					a {
+						display: inline-block;
+						color: #333;
+					}
+					&:last-child {
+						a {
+							width: 22%;
+						}
+					}
+					
 				}
 			}
 		}
@@ -1785,6 +1803,14 @@ footer {
 					background-color: #0a3e7c;
 				}
 			}
+		}
+	}
+	#allhistoryreport {
+		h4 {
+			font-weight: bold;
+		}
+		p {
+			font-weight: normal;
 		}
 	}
 }
