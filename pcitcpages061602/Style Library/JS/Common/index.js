@@ -1,13 +1,15 @@
 $(document).ready(function() {
-	$('header .pic_navbar .nav-tabs li').click(function(event) {
-		event.stopPropagation();
-		$('header .pic_navbar .nav-tabs li').removeClass('active');
-		$(event.currentTarget).addClass('active');
-		// 现在加不上，是因为每个页面都有自己的nav，点击添加之后立刻跳转到了新页面
-	});
 	if ($('.barchart').length != 0 && $('.piechart').length != 0 && $('.linechart').length != 0) {
 		drawChart(0);
 	}
+});
+
+// 添加header中的每个li添加active效果
+$('header .pic_navbar .nav-tabs li').click(function(event) {
+	event.stopPropagation();
+	$('header .pic_navbar .nav-tabs li').removeClass('active');
+	$(event.currentTarget).addClass('active');
+	// 现在没效果，是因为每个页面都有自己的nav，点击添加之后立刻跳转到了新页面
 });
 
 // 初始化datepicker
@@ -30,6 +32,8 @@ function changetab(event) {
 	// 取得所有的tab 和 tab content
 	var allTabsHeader = $('.topcontent ul.nav-tabs li a');
 	var allTabContent = $('.topcontent div.tabcontent');
+	$('.rightcontent .topcontent .nav-tabs li a').removeClass('active');
+	$(event.target).addClass('active');  // 添加active效果
 
 	for (var i = 0, j = allTabsHeader.length; i < j; i++) {
 		if (event.target.className === allTabsHeader[i].className) {
