@@ -131,7 +131,6 @@ span.redstar {
 header {
 	background: #fff;
 	color: white;
-	height: 200px;
 
 	.pic_logo {
 		img {
@@ -419,8 +418,11 @@ footer {
 			}
 		}
 		.worktable, .mytask, .news{
-			tr:first-child {
+			thead {
 				border: 1px solid #eee;
+				th {
+					border-width: 1px;
+				}
 			}
 			th a {
 				width: 30px;
@@ -464,7 +466,6 @@ footer {
 			}
 			tr:nth-child(2) {
 				td {
-					padding-top: 32px;
 				}
 			}
 			tr:last-child {
@@ -2013,11 +2014,7 @@ footer {
   background: #f2f2f2 !important;
   margin: 5px;
 }
-.content .leftcontent .worktable tr:first-child,
-.content .leftcontent .mytask tr:first-child,
-.content .leftcontent .news tr:first-child {
-  border: 1px solid #eee;
-}
+
 .content .leftcontent .worktable th a,
 .content .leftcontent .mytask th a,
 .content .leftcontent .news th a {
@@ -2087,9 +2084,9 @@ footer {
 .content .leftcontent .news tr td a {
 	color: #333;
 }
-.content .leftcontent .worktable tr:nth-child(2) td,
-.content .leftcontent .mytask tr:nth-child(2) td,
-.content .leftcontent .news tr:nth-child(2) td {
+.content .leftcontent .worktable tr:first-child td,
+.content .leftcontent .mytask tr:first-child td,
+.content .leftcontent .news tr:first-child td {
   padding-top: 32px;
 }
 .content .leftcontent .worktable tr:last-child td,
@@ -2201,7 +2198,7 @@ footer {
 		width: 98%;
 	}
 	header .pic_navbar ul.nav.navbar-nav li {
-		width: 80px;
+		width: 82px;
 	}
 	header .pic_navbar .searchbox input {
 		width: 150px;
