@@ -75,10 +75,25 @@ html, body {
 	@extend .textbox;
 	width: 240px;
 }
-.backtop {
+.backtotop {
 	position: fixed;
 	bottom: 150px;
-	right: 50px;
+	right: 1%;
+	font-size: 20px;
+	z-index: 99;
+	display: none;
+    a {
+    	display: inline-block;
+    	width: 100%;
+    	height: 100%;
+		background: url(../../Style%20Library/Images/backtotop.png) 0 0 no-repeat;
+	    width: 34px;
+	    height: 34px;
+    	&:hover {
+    		color: #2f348f;
+    		background-position: -34px 0px;
+    	}
+    }
 }
 .inputdatepicker {
 	background-color: #f6f6f6;
@@ -165,8 +180,18 @@ header {
 		background-color: #2f348f;
 		padding: 0;
 		height: 60px;
+		.navbar.navbar-default {
+			border: none;
+			margin-bottom: 0;
+			background-color: #2f348f;
 
-		ul.nav.nav-tabs {
+			.collapse.navbar-collapse {
+				padding: 0;
+				float: left;
+			}
+		}
+
+		ul.nav.navbar-nav {
 			display: inline-block;
     		border: 0;
 			&:after {
@@ -2143,7 +2168,23 @@ footer {
 		width: 33%;
 	}
 	.content .rightcontent {
-		width: 66.3%;
+		width: 66%;
+		ul.nav.nav-tabs li {
+			width: 23%;
+		}
+	}
+}
+@media screen and (max-width: 1200px) {
+	header .pic_navbar ul.nav.navbar-nav li {
+		width: 90px;
+	}
+	header .pic_navbar .searchbox input {
+		width: 220px;
+		& + a {
+			position: absolute;
+			right: 0;
+			left: auto;
+		}
 	}
 }
 
@@ -2153,5 +2194,16 @@ footer {
 	}
 	.checktableitem {
 		margin: 5px;
+	}
+}
+@media screen and (max-width: 992px) {
+	.container {
+		width: 98%;
+	}
+	header .pic_navbar ul.nav.navbar-nav li {
+		width: 80px;
+	}
+	header .pic_navbar .searchbox input {
+		width: 150px;
 	}
 }

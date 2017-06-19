@@ -58,3 +58,13 @@ function nextPage(event) {
 function prevPage(event) {
 	alert('上一页');
 }
+
+// 添加“回到顶部”按钮
+$(window).scroll(function() {
+    var a = $(this).scrollTop();  //现在滚动条距离顶端的距离
+    if (a >= 300) {
+    	$(".backtotop").fadeIn();
+    } else {
+    	$(".backtotop").fadeOut();
+    }
+});
