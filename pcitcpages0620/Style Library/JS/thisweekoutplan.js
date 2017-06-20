@@ -45,13 +45,13 @@ $(document).ready(function() {
 
 function addtr(btnobject) {
     // var table = $(btnobject).parent().prev();
-    var table = $(btnobject).next();
+    var tbody = $(btnobject).next().children("tbody");
     var tr = $("<tr>" +
         "<td>" + "<input type='text'/>" + "</td>" +
         "<td>" + "<input class='inputdatepicker'/>" + "</td>" +
         "<td>" + "<input class='inputdatepicker'/>" + "</td>" +
         "<td>" + "<input type='text'/>" + "</td>");
-    table.append(tr);
+    tbody.append(tr);
 
     if ($(".inputdatepicker").datetimepicker) {
         $(".inputdatepicker").datetimepicker({
@@ -65,7 +65,7 @@ function addtr(btnobject) {
 }
 
 function addissuetr(btnobject) {
-    var table = $(btnobject).next();
+    var tbody = $(btnobject).next().children("tbody");
     var tr = $("<tr>" +
         "<td>" + "<input type='text'/>" + "</td>" +
         "<td>" + "<input type='text'/>" + "</td>" +
@@ -74,7 +74,7 @@ function addissuetr(btnobject) {
         "<td>" + "<input class='inputdatepicker'/>" + "</td>" +
         "<td>" + "<input class='inputdatepicker'/>" + "</td>" +
         "<td>" + "<input type='text'/>" + "</td>");
-    table.append(tr);
+    tbody.append(tr);
 
     if ($(".inputdatepicker").datetimepicker) {
         $(".inputdatepicker").datetimepicker({

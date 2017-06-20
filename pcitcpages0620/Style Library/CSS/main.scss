@@ -533,14 +533,6 @@ footer {
 					font-weight: bold;
 					display: inline-block;
 				}
-				a {
-					float: right;
-					position: relative;
-    				top: 14px;
-    				&:hover {
-    					cursor: pointer;
-    				}
-				}
 			}
 			.panel-body {
 				padding: 22px;
@@ -664,7 +656,13 @@ footer {
 								padding: 8px 20%;
 								color: white;
 
-								h2 {
+								input {
+									font-size: 30px;
+									border: none;
+    								width: 80px;
+								    height: 30px;
+								    text-align: center;
+								    background-color: rgba(210, 180, 108, 1);
 								}
 							}
 						}
@@ -683,9 +681,6 @@ footer {
 							li {
 								color: #666;
 								font-size: 14px;
-								a {
-									color: #666;
-								}
 							}
 						}
 					}
@@ -693,6 +688,9 @@ footer {
 						>td:first-child{
 							background: url(../../Style%20Library/Images/lozenge-02.png) no-repeat;
 							background-size: contain;
+							input {
+								background-color: rgba(77, 75, 140, 1);
+							}
 						}
 					}
 				}
@@ -1059,7 +1057,6 @@ footer {
 			margin-top: 32px;
 		}
 		.requirelist, .changeinfo, .manualreview, .schemeapproval, .plancheck {
-			width: 1200px;
 			select, input {
 				height: 40px;
 				width: 240px;
@@ -1302,7 +1299,6 @@ footer {
 			border-top: dashed 1px #999999;
 			margin-top: 20px !important;
 			margin-bottom: 0 !important;
-			width: 100%;
 			>p.desctitle {
 				color: #333;
 				margin-top: 32px;
@@ -1609,7 +1605,6 @@ footer {
 						font-size: 14px;
 						font-weight: bold;
 						color: #fafaff;
-						width: 242px;
     					text-align: center;
 						&:hover {
 							background-color: #f2f2f2;
@@ -1621,6 +1616,11 @@ footer {
 							background-color: #f2f2f2;
 							color: #333;
 						}
+					}
+				}
+				.editReportTabHeader {
+					li {
+						width: 25%;
 					}
 				}
 				.requireTabContent {
@@ -1704,6 +1704,33 @@ footer {
 							height: 45px;
 						    padding: 5px;
 						    vertical-align: middle;
+						}
+					}
+				}
+			}
+			#plancreatetab, #planchangetab,
+			#scoperequiretab, #scopechangetab, #scopeplantab {
+				.contentBox {
+					position: relative;
+					overflow: hidden;
+					button {
+						position: absolute;
+						height: 42px;
+						border: none;
+						z-index: 99;
+						top: -1px;
+					}
+					>button {
+						&:first-child {}
+					}
+					>.requireTabHeader {
+						width: 1700px;
+						position: absolute;
+						li a {
+							width: 235px;
+						}
+						& + button {
+							right: 0;
 						}
 					}
 				}
@@ -2142,9 +2169,6 @@ footer {
 }
 .redfont a {
 	color: red !important;
-}
-.content .rightcontent .topcontent .toptabone tr>td ul li a {
-	color: #666;
 }
 .content .rightcontent ul.nav.nav-tabs li:hover,
 .content .leftcontent .doccenter .panel-heading a:hover {

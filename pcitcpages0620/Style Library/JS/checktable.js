@@ -195,8 +195,6 @@ $(document).ready(function() {
 			data: 'position'
 		}, {
 			data: 'salary'
-		}, {
-			data: 'office'
 		}]
 	});
 	$('#checktablecenter').dataTable({
@@ -220,8 +218,6 @@ $(document).ready(function() {
 			data: 'position'
 		}, {
 			data: 'salary'
-		}, {
-			data: 'office'
 		}]
 	});
 	$('#checktableright').dataTable({
@@ -245,8 +241,6 @@ $(document).ready(function() {
 			data: 'position'
 		}, {
 			data: 'salary'
-		}, {
-			data: 'office'
 		}]
 	});
 

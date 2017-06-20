@@ -59,6 +59,28 @@ function prevPage(event) {
 	alert('上一页');
 }
 
+function goleft(btn) {
+	console.log("right more");
+	var ulleft = parseInt($(event.target).next().css("left"));
+	if (ulleft > -470) {
+		$(event.target).next().animate({ left: "-=470px" }, 300);
+	} else {
+		console.log("右边没有更多tab");
+		return ;
+	}
+}
+
+function goright(btn) {
+	console.log("left more");
+	var ulleft = parseInt($(event.target).prev().css("left"));
+	if (ulleft >= -470 && ulleft < 0) {
+		$(event.target).prev().animate({ left: "+=470px" }, 300);
+	} else {
+		console.log("左边没有更多tab");
+		return ;
+	}
+}
+
 // 添加“回到顶部”按钮
 $(window).scroll(function() {
     var a = $(this).scrollTop();  //现在滚动条距离顶端的距离
