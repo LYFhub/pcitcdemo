@@ -50,7 +50,8 @@ function addtr(btnobject) {
         "<td>" + "<input type='text'/>" + "</td>" +
         "<td>" + "<input class='inputdatepicker'/>" + "</td>" +
         "<td>" + "<input class='inputdatepicker'/>" + "</td>" +
-        "<td>" + "<input type='text'/>" + "</td>");
+        "<td>" + "<input type='text'/>" + "</td>" + 
+        "<td>" + "<button type='button' class='btn btn-default'><span class='glyphicon glyphicon-edit'></span></button>" + "</td>");
     tbody.append(tr);
 
     if ($(".inputdatepicker").datetimepicker) {
@@ -73,7 +74,8 @@ function addissuetr(btnobject) {
         "<td>" + "<select><option></option><option>完成</option><option>未完成</option></select>" + "</td>" +
         "<td>" + "<input class='inputdatepicker'/>" + "</td>" +
         "<td>" + "<input class='inputdatepicker'/>" + "</td>" +
-        "<td>" + "<input type='text'/>" + "</td>");
+        "<td>" + "<input type='text'/>" + "</td>" + 
+        "<td>" + "<button type='button' class='btn btn-default'><span class='glyphicon glyphicon-edit'></span></button>" + "</td>");
     tbody.append(tr);
 
     if ($(".inputdatepicker").datetimepicker) {
