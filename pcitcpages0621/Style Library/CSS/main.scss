@@ -120,6 +120,10 @@ span.redstar {
 	display: none !important;
 }
 
+#s4-bodyContainer {
+	margin: 0 auto;
+}
+
 #contentRow {
 	padding-top: 0;
 	#contentBox {
@@ -2024,6 +2028,69 @@ footer {
 		}
 	}
 }
+.ms-webpart-zone.ms-fullWidth {
+	table {
+		#scriptWPQ2 {
+			.ms-csrlistview-controldiv {
+				background-color: #fafafa;
+				padding-bottom: 0;
+				>span {
+					font-size: 16px;
+				    padding: 10px 0;
+				    a {
+				    	font-weight: 600;
+				    	&:hover, &.ms-pivotControl-surfacedOpt-selected {
+				    		color: black;
+				    		font-size: 16px;
+				    		font-weight: 600;
+				    	}
+				    }
+				    .ms-core-menu-box.ms-core-defaultFont.ms-shadow {
+				    	a {
+				    		font-weight: normal;
+				    		font-size: 14px;
+				    		text-decoration: none;
+				    	}
+				    }
+				}
+				.ms-InlineSearch-Outline-Baseline {
+					height: 32px;
+					overflow: hidden;
+					.ms-InlineSearch-SearchBox-Baseline {
+						height: 32px;
+					}
+					.ms-inlineSearch-searchImgSpanBase {
+						margin: 0 0 4px 0;
+					}
+				}
+			}
+			.ms-listviewtable {
+				margin: 32px 0;
+				font-size: 14px;
+				thead {
+					th {
+						height: 40px;
+						vertical-align: middle;
+						div {
+							color: rgb(198, 156, 109);
+							a {
+								color: rgb(198, 156, 109);
+								font-weight: bold;
+							}
+						}
+					}
+				}
+				tbody {
+					td {
+						height: 40px;
+						padding-left: 5px;
+						padding-right: 15px;
+					}
+				}
+			}
+		}
+	}
+}
 
 .toptabtwo, .toptabthree, .toptabfour {
 	display: none;
@@ -2196,6 +2263,10 @@ footer {
 	.container {
 		width: 1240px !important;
 	}
+	#s4-bodyContainer {
+		width: 1240px !important;
+		margin: 0 auto;
+	}
 }
 
 @media screen and (max-width: 1270px) {
@@ -2224,6 +2295,10 @@ footer {
 			left: auto;
 		}
 	}
+	#s4-bodyContainer {
+		width: 1170px !important;
+		margin: 0 auto;
+	}
 }
 
 @media screen and (max-width: 960px) {
@@ -2237,6 +2312,10 @@ footer {
 @media screen and (max-width: 992px) {
 	.container {
 		width: 98%;
+	}
+	#s4-bodyContainer {
+		width: 970px !important;
+		margin: 0 auto;
 	}
 	header .pic_navbar ul.nav.navbar-nav li {
 		width: 82px;
