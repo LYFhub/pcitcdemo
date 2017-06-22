@@ -3,10 +3,52 @@
 <head>
 	<meta charset="UTF-8">
 	<title>石化盈科</title>
-	<link href="../../Style Library/CSS/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet">
-	<link href="../../Style Library/CSS/dataTables.bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="../../Style Library/JS/Common/bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.min.css">
-	<link rel="stylesheet" href="../../Style Library/CSS/main.css">
+	<style>
+		.container {
+			width: 1200px;
+			margin: 0 auto;
+		}
+		table {
+			width: 100%;
+			border-collapse:collapse;
+		}
+		.reportname {
+			display: inline-block;
+		    font-size: 22px;
+		    font-weight: bold;
+		    padding-top: 10px;
+			width: 100%;
+		}
+		.reportname p {
+			text-align: center;
+		}
+		.historycontent >div >p{
+			font-size: 16px;
+		    font-weight: bold;
+		    display: inline-block;
+		}
+		.historycontent >div table th{
+			background-color: #999;
+		    color: #333;
+		    text-align: center;
+		    height: 29px;
+		    vertical-align: middle;
+		    padding: 8px;
+		    border: 1px solid #eee;
+		}
+		.historycontent >div table td{
+			height: 40px;
+    		vertical-align: middle;
+    		text-align: center;
+    		border: 1px solid #eee;
+		}
+		.historycontent >div table tr:nth-child(even) {
+			background-color: rgba(248, 248, 248, 1);
+		}
+		.historycontent >div table tr:nth-child(odd) {
+			background-color: rgba(254, 254, 254, 1);
+		}
+	</style>
 </head>
 <body>
 	<div class="container content">
@@ -17,7 +59,7 @@
 						<p>智能工厂大项目部设计组工作周报(20170609)</span>
 					</div>
 					<div class="tab-pane fade in active" id="historyreportdesign">
-						<div class="" id="historydesigncontent">
+						<div class="historycontent" id="historydesigncontent">
 							<div class="hisdesthisweek">
 								<p>本周完成工作：计划内工作项</p>
 								<table id="" class="table table-striped table-bordered">
@@ -35,6 +77,28 @@
 										</tr>
 									</thead>
 									<tbody>
+										<tr>
+											<td>asfaf</td>
+											<td>asdfaf</td>
+											<td>asfsaf</td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+										</tr>
+										<tr>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+										</tr>
 										<tr>
 											<td></td>
 											<td></td>
@@ -261,12 +325,5 @@
 			</div>
 		</div>
 	</div>
-	<script src="../../Style Library/JS/Common/jquery.min.js"></script>
-	<script src="../../Style Library/CSS/bootstrap-3.3.7/js/bootstrap.min.js"></script>
-	<script src="../../Style Library/JS/Common/jquery.dataTables.min.js"></script>
-	<script src="../../Style Library/JS/thisweekoutplan.js"></script>
-	<script src="../../Style Library/JS/Common/bootstrap-datetimepicker-master/js/bootstrap-datetimepicker.min.js"></script>
-	<script src="../../Style Library/JS/Common/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
-	<script src="../../Style Library/JS/Common/index.js"></script>
 </body>
 </html>
