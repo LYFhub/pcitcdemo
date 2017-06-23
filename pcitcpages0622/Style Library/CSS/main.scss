@@ -691,12 +691,13 @@ footer {
 							div {
 								display: inline-block;
 								padding: 8px 20%;
+								height: 100%;
 
 								input {
 									font-size: 30px;
 									border: none;
     								width: 80px;
-								    height: 30px;
+								    height: 100%;
 								    text-align: center;
 									color: white;
 								    background-color: rgba(210, 180, 108, 1);
@@ -922,8 +923,6 @@ footer {
 		}
 		div.projectcheck {
 			background-color: rgb(230,230,230);
-			padding-left: 22px;
-			padding-right: 22px;
 			margin-bottom: 8px;
 			&:after {
 				@include clear_float;
@@ -937,7 +936,7 @@ footer {
 			div.checktableitem {
 				font-size: 12px;
 				float: left;
-				width: 258px;
+				width: 33%;
 				&:nth-child(3) {
 					margin: 0 3px;
 				}
@@ -965,15 +964,23 @@ footer {
 					>tbody>tr>td,
 					>thead>tr>th {
 						padding: 0px;
-						width: 25%;
+						width: 33%;
 						height: 40px;
 						vertical-align: middle;
 						text-align: center;
 					}
 					>tbody>tr>td {
 						&:first-child {
+							width: 90px;
 							text-align: left;
 							padding-left: 5px;
+						    white-space: nowrap;
+							overflow: hidden;
+						    text-overflow: ellipsis;
+						    display: block;
+						    vertical-align: middle;
+						    height: 40px;
+						    line-height: 40px;
 						}
 					}
 					>tbody >tr {
