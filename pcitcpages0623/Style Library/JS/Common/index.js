@@ -2,6 +2,16 @@ $(document).ready(function() {
 	if ($('.barchart').length != 0 && $('.piechart').length != 0 && $('.linechart').length != 0) {
 		drawChart(0);
 	}
+
+	// 根据url判断所属的菜单，然后添加active效果
+	console.log(location);
+	if (location.href.toLowerCase().indexOf("index")) {
+
+	} else if (location.href.toLowerCase().indexOf("scope")) {
+
+	} else if (location.href.toLowerCase().indexOf("plan")) {
+
+	}
 });
 
 // 添加header中的每个li添加active效果

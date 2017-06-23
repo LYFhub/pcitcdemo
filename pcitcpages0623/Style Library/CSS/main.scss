@@ -147,13 +147,15 @@ header {
 		display: inline-block;
 		margin-top: 65px;
 		float: right;
-		width: 140px;
+		width: auto;
 		&:after {
 			@include clear_float;
 		}
 		
+		>div {
+			float: right;	
+		}
 		.username {
-			float: left;
 			margin: 8px 0;
 			position: relative;
 			a {
@@ -177,7 +179,6 @@ header {
 			height: 20px;
 			width: 60px;
     		position: relative;
-    		float: left;
     		&:after {
     			@include clear_float;
     		}
@@ -666,6 +667,9 @@ footer {
 			}
 			.toptabone {
 				padding: 0 22px;
+				>table {
+					width: 100%;
+				}
 				tbody {
 					border: 1px solid #eee;
 				}
@@ -679,7 +683,7 @@ footer {
 				tr {
 					>td{
 						padding: 3px;
-						width: 180px;
+						width: 190px;
 						&:first-child{
 						    width: 210px;
 						    text-align: center;
@@ -940,6 +944,11 @@ footer {
 				&:nth-child(3) {
 					margin: 0 3px;
 				}
+				.dataTables_wrapper {
+					background-color: #f2f2f2;
+				    position: relative;
+				    height: 302px;
+				}
 				p {
 					background: #2f3485;
 					color: white;
@@ -968,6 +977,8 @@ footer {
 						height: 40px;
 						vertical-align: middle;
 						text-align: center;
+						border-bottom: 1px solid #ddd;
+						border-top: none;
 					}
 					>tbody>tr>td {
 						&:first-child {
@@ -996,6 +1007,10 @@ footer {
 			}
 			.paging_simple_numbers {
 				text-align: left !important;
+				position: absolute;
+			    bottom: 0;
+			    width: 100%;
+			    background: #e6e6e6;
 				a {
 					margin: 3px;
 					color: #b3b3b3;
