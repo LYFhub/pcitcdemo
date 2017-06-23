@@ -98,7 +98,7 @@ function shownextdiv(event) {
 }
 
 $('body').click(function(event) {
-	$('.userinfo >div >div').css({"display": "none"});
+	$('.userinfo >div >div >div').css({"display": "none"});
 });
 
 // 添加“回到顶部”按钮
