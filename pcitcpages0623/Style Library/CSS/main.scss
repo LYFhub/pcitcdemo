@@ -131,8 +131,17 @@ span.redstar {
 		min-width: 0;
 	}
 }
+.nowraptd {
+	white-space: pre;
+}
+.width150td {
+	width: 150px;
+}
 button {
 	min-width: 10px;
+}
+.ms-dlgTitleBtns {
+	margin-right: 0;
 }
 header {
 	background: #fff;
@@ -446,6 +455,24 @@ footer {
 		.worktable, .mytask {
 			height: 295px;
 			background-color: #f5f9fc;
+			>table {
+				table-layout: fixed;
+				tr {
+					th, td {
+						&:first-child {
+							width: 60%;
+						}
+						&:last-child {
+							width: 40%;
+						}
+					}
+					td {
+						overflow: hidden;
+    					white-space: nowrap;
+    					text-overflow: ellipsis;
+					}
+				}
+			}
 		}
 
 		.worktable {
@@ -516,7 +543,6 @@ footer {
 		}
 
 		.news {
-			height: 398px;
 		    background-color: #fff;
 		    border: 1px solid #eee;
 			tr th {
@@ -1785,6 +1811,10 @@ footer {
 							height: 45px;
 						    padding: 5px;
 						    vertical-align: middle;
+						    text-align: center;
+						}
+						td input {
+							text-align: center;
 						}
 					}
 				}
