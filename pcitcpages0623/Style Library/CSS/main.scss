@@ -131,7 +131,9 @@ span.redstar {
 		min-width: 0;
 	}
 }
-
+button {
+	min-width: 10px;
+}
 header {
 	background: #fff;
 	color: white;
@@ -218,10 +220,10 @@ header {
 			border: none;
 			margin-bottom: 0;
 			background-color: #2f348f;
-
+			height: 60px;
 			.collapse.navbar-collapse {
 				padding: 0;
-				float: left;
+    			float: left;
 			}
 		}
 
@@ -439,7 +441,6 @@ footer {
 		float: left;
 		margin-top: 8px;
 		>div {
-			background-color: #eeeeee;
 		}
 
 		.worktable, .mytask {
@@ -558,6 +559,9 @@ footer {
 		}
 
 		.doccenter {
+			>div {
+				border-color: #eee;
+			}
 			.panel-heading {
 				height: 50px;
 				padding: 0 22px;
@@ -629,6 +633,7 @@ footer {
 			ul.nav.nav-tabs {
 				background: rgb(187, 187, 187);
 				border: none;
+				position: relative;
 				a {
 					color: black;
 					text-align: center;
@@ -637,6 +642,10 @@ footer {
 					&:hover, &.active {
 						background-color: #e6e6e6;
 					}
+				}
+				>div {
+					position: absolute;
+					right: 0;
 				}
 				img {
 					width: 40px;
@@ -970,6 +979,10 @@ footer {
 				table.table {
 					margin: 0 !important;
 					width: 100% !important;
+					border-collapse: collapse !important;
+					tr {
+						border-bottom: 1px solid #ddd;
+					}
 					>tbody>tr>td,
 					>thead>tr>th {
 						padding: 0px;
@@ -977,7 +990,6 @@ footer {
 						height: 40px;
 						vertical-align: middle;
 						text-align: center;
-						border-bottom: 1px solid #ddd;
 						border-top: none;
 					}
 					>tbody>tr>td {
@@ -1393,7 +1405,7 @@ footer {
 			>div > .uploadfile {
 				a {
 					position: relative;
-					top: 10px;
+					// top: 10px;
 				}
 			}
 		}
@@ -1788,6 +1800,10 @@ footer {
 						border: none;
 						z-index: 99;
 						top: -1px;
+						background: rgb(159, 179, 193);
+						&:hover {
+							background: rgb(242, 242, 242);
+						}
 					}
 					>button {
 						&:first-child {}
@@ -2138,7 +2154,7 @@ footer {
 						vertical-align: middle;
 						div {
 							color: rgb(198, 156, 109);
-							a {
+							>a, >span {
 								color: rgb(198, 156, 109);
 								font-weight: bold;
 							}
@@ -2259,8 +2275,7 @@ footer {
   background-color: #f5f9fc;
 }
 .content .leftcontent .worktable tr td a,
-.content .leftcontent .mytask tr td a,
-.content .leftcontent .news tr td a {
+.content .leftcontent .mytask tr td a {
 	color: #333;
 }
 .content .leftcontent .worktable tr:first-child td,
@@ -2300,11 +2315,6 @@ footer {
 .content .leftcontent .news tr td:first-child {
   width: 40%;
 }
-.content .leftcontent .news tr th:first-child img,
-.content .leftcontent .news tr td:first-child img {
-  width: 160px;
-  height: 80px;
-}
 .content .leftcontent .news tr th:last-child,
 .content .leftcontent .news tr td:last-child {
   width: 60%;
@@ -2330,25 +2340,47 @@ footer {
 	}
 	#s4-bodyContainer {
 		width: 1240px !important;
-		margin: 0 auto;
 	}
 }
 
 @media screen and (max-width: 1270px) {
-	.barchart, .piechart, .linechart, .checktableitem{
+	#s4-bodyContainer {
+		width: 1170px !important;
+	}	
+	.barchart, .piechart, .linechart {
 		width: 48% !important;
+	}
+	.checktableitem {
+		width: 49% !important;
 	}
 	.content .leftcontent {
 		width: 33%;
+		.news tr td:first-child img {
+			width: 100%;
+			height: auto;
+			min-width: 98px;
+		}
 	}
 	.content .rightcontent {
 		width: 66%;
 		ul.nav.nav-tabs li {
-			width: 23%;
+			width: 23.4%;
+		}
+		.topcontent .toptabone tr>td:first-child {
+			height: auto;
+		}
+		.dateandevent #calendar .fc-toolbar.fc-header-toolbar .fc-right button span.fc-icon.fc-icon-left-single-arrow{
+			left: -400px;
+		}
+		.dateandevent #calendar .fc-toolbar.fc-header-toolbar .fc-right button span.fc-icon.fc-icon-right-single-arrow{
+			left: -291px;
 		}
 	}
 }
 @media screen and (max-width: 1200px) {
+	#s4-bodyContainer {
+		width: 970px !important;
+	}
 	header .pic_navbar ul.nav.navbar-nav li {
 		width: 90px;
 	}
@@ -2360,18 +2392,39 @@ footer {
 			left: auto;
 		}
 	}
-	#s4-bodyContainer {
-		width: 1170px !important;
-		margin: 0 auto;
+	.content .rightcontent {
+		.topcontent {
+			.toptabone tr>td ul li {
+				width: 140px;
+			}
+		}
+		.dateandevent #calendar .fc-toolbar.fc-header-toolbar .fc-right button span.fc-icon.fc-icon-left-single-arrow{
+			left: -425px;
+		}
+		.dateandevent #calendar .fc-toolbar.fc-header-toolbar .fc-right button span.fc-icon.fc-icon-right-single-arrow{
+			left: -237px;
+		}
 	}
-}
 
-@media screen and (max-width: 960px) {
-	.barchart, .piechart, .linechart, .checktableitem{
-		width: 98% !important;
-	}
-	.checktableitem {
-		margin: 5px;
+	.content .leftcontent {
+		.doccenter .singledoc ul li {
+			a {
+				width: 40px;
+	    		display: inline-block;
+			}
+			img {
+				padding-bottom: 20px;
+			}
+		}
+		.news {
+			height: auto;
+			tr td p {
+				width: 160px;
+				overflow: hidden;
+			    white-space: nowrap;
+			    text-overflow: ellipsis;
+			}
+		}
 	}
 }
 @media screen and (max-width: 992px) {
@@ -2379,13 +2432,91 @@ footer {
 		width: 98%;
 	}
 	#s4-bodyContainer {
-		width: 970px !important;
-		margin: 0 auto;
+		width: 98% !important;
+	}
+	
+	.content .leftcontent {
+		width: 100%;
+		float: none;
+		> div {
+			width: 48%;
+		    float: left;
+		    margin: 0 1%;
+		    background-color: white;
+		    .panel.panel-default {
+		    	margin-bottom: 0;
+		    	border-color: #eee;
+		    }
+		}
+		.doccenter .singledoc ul li {
+			margin: 6px 0;
+		}
+		.news {
+			height: 390px;
+		}
+	}
+	.content .rightcontent {
+		width: 98%;
+		margin: 0 1%;
 	}
 	header .pic_navbar ul.nav.navbar-nav li {
 		width: 82px;
 	}
 	header .pic_navbar .searchbox input {
 		width: 150px;
+	}
+}
+
+
+@media screen and (max-width: 960px) {
+	.barchart, .piechart, .linechart {
+		width: 98% !important;
+	}
+	.checktableitem {
+		width: 48% !important;
+	}
+}
+@media only screen and (min-width: 768px)and (max-width: 840px) {
+	header .pic_navbar .searchbox {
+		width: 10%;
+		input {
+			width: 100%;
+		}
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	header .pic_navbar .searchbox input {
+		width: 150px;
+	}
+	header {
+		.pic_navbar {
+			position: relative;
+			.navbar-default .navbar-toggle {
+				background-color: white;
+				position: absolute;
+				left: 10px;
+				top: 5px;
+				min-width: 44px;
+			}
+			.collapse.navbar-collapse {
+				padding: 0;
+			    position: absolute;
+			    z-index: 999;
+			    left: 20px;
+			    width: 150px;
+			    top: 51px;
+			    border-top: none;
+			    >.nav.navbar-nav {
+			    	background: #2f348f;
+				    border: none;
+				    margin: 0;
+				    width: 100%;
+				    li {
+				    	width: 100%;
+				    }
+			    }
+			}
+		}
 	}
 }
