@@ -7,6 +7,9 @@
 	visibility: hidden;
 }
 html, body {
+	font-family: Helvetica, Tahoma, Arial, "Microsoft YaHei";
+}
+html, body {
 	margin: 0;
 }
 
@@ -550,6 +553,10 @@ footer {
 				span {
 					font-size: 16px !important;
 					color: #999;
+					cursor: pointer;
+					&.active, &:hover {
+						color: #333;
+					}
 				}
 				a {
 					span {
@@ -582,11 +589,19 @@ footer {
 					width: 60%;
 				}
 			}
+			tr:first-child {
+				td {
+					padding-top: 52px;
+				}
+			}
 		}
 
 		.doccenter {
 			>div {
 				border-color: #eee;
+			}
+			.panel {
+				box-shadow: none;
 			}
 			.panel-heading {
 				height: 50px;
@@ -604,6 +619,7 @@ footer {
 			.panel-body {
 				padding: 22px;
 				background-color: #fff;
+				padding-bottom: 26px;
 				>ul {
 					padding-left: 22px;
 					margin-bottom: 0;
@@ -655,6 +671,7 @@ footer {
 
 		.topcontent {
 			margin-bottom: 8px;
+			height: 590px;
 
 			ul.nav.nav-tabs {
 				background: rgb(187, 187, 187);
@@ -683,13 +700,13 @@ footer {
 					display: inline-block;
 				    padding-left: 20px;
 				    font-size: 18px;
-				    margin: 9px 0;
+				    margin: 12px 0;
 				    color: #333;
 				    font-weight: bold;
 				}
 				>.btn-group {
 					float: right;
-					margin-top: 7px;
+					margin-top: 10px;
 					select {
 						width: 120px;
 						height: 30px;
@@ -806,10 +823,10 @@ footer {
 		}
 		.dateandevent {
 			margin-bottom: 8px;
-			height: 450px;
+			height: 437px;
 			>p {
 				position: relative;
-			    top: -435px;
+			    top: -423px;
 			    font-size: 16px;
 			    font-weight: bold;
 			    left: 22px;
@@ -824,6 +841,8 @@ footer {
 					margin: 0;
 					height: 50px;
 					background: #fafafa;
+					border: 1px solid #eee;
+    				border-bottom: none;
 					.fc-right button {
 						visibility: hidden;
 						span {
@@ -849,6 +868,9 @@ footer {
 					}
 				}
 				.fc-view-container {
+					>div >table {
+						height: 387px;
+					}
 					.fc-head .fc-row.fc-widget-header {
 						table {
 							th {
@@ -885,6 +907,9 @@ footer {
 							}
 						}
 					}
+					.fc-scroller.fc-day-grid-container {
+						height: auto !important;
+					}
 				}
 			}
 		}
@@ -893,6 +918,7 @@ footer {
 		    margin: 5px;
 		    padding: 10px;
 		    font-size: 12px;
+		    padding-bottom: 5px;
 
 			>div:after {
 				@include clear_float;
@@ -971,6 +997,7 @@ footer {
 				padding: 10px 20px;
 			    font-size: 20px;
 			    margin: 0;
+			    height: 50px;
 			}
 			div.checktableitem {
 				font-size: 12px;
@@ -1784,7 +1811,7 @@ footer {
 							img {
 								display: block;
     							margin: 0 auto;
-    							width: 100px;
+    							width: 80px;
     							height: 80px;
 							}		
 							p {
@@ -2210,6 +2237,7 @@ footer {
 
 .toptabtwo, .toptabthree, .toptabfour {
 	display: none;
+	height: 100%;
 }
 .toptabtwo .chartbox:after,
 .toptabthree .chartbox:after,
@@ -2314,9 +2342,8 @@ footer {
 	color: #333;
 }
 .content .leftcontent .worktable tr:first-child td,
-.content .leftcontent .mytask tr:first-child td,
-.content .leftcontent .news tr:first-child td {
-  padding-top: 32px;
+.content .leftcontent .mytask tr:first-child td {
+  	padding-top: 32px;
 }
 .content .leftcontent .worktable tr:last-child td,
 .content .leftcontent .mytask tr:last-child td,
