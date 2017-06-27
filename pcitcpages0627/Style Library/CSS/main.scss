@@ -1805,6 +1805,7 @@ footer {
 								position: relative;
 								top: -30px;
 								>div{
+									margin-left: 0;
 									&:before {
 										content: "";
 										background: none;
@@ -1864,13 +1865,21 @@ footer {
 						}
 						
 					}
-					>div[id^="req"], >div[id^="change"], >div[id^="create"] {
+					>div[id^="req"], >div[id^="change"] {
 						a:first-child {
 							top: -40px;
 						}
 						a div p {
 							line-height: 20px;
 							&:last-child {
+							}
+						}
+					}
+					>div[id^="pln"], >div[id^="createpln"] {
+						a div {
+							margin-left: 100px;
+							&:before {
+								left: -60px;
 							}
 						}
 					}
