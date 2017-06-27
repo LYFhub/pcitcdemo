@@ -1790,6 +1790,7 @@ footer {
 						}
 					}
 					>div.tab-pane{
+						text-align: center;
 						&:after {
 							@include clear_float;
 						}
@@ -1817,6 +1818,9 @@ footer {
 							border-radius: 10px;
 							border: 1px dashed #0070C4;
 							padding-bottom: 10px;
+							text-align: initial;
+							text-align: -webkit-auto;
+    						
 							&:hover {
 								background-color: #e2e2e2;
 								p {
