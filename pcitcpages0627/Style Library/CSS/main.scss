@@ -146,6 +146,9 @@ button {
 .ms-dlgTitleBtns {
 	margin-right: 0;
 }
+#ms-notdlgautosize {
+	height: 500px;
+}
 header {
 	background: #fff;
 	color: white;
@@ -548,6 +551,7 @@ footer {
 		.news {
 		    background-color: #fff;
 		    border: 1px solid #eee;
+		    height: 437px;
 			tr th {
 				background-color: #fafafa;
 				span {
@@ -589,9 +593,11 @@ footer {
 					width: 60%;
 				}
 			}
-			tr:first-child {
-				td {
-					padding-top: 52px;
+			tr {
+				&:first-child {
+					td {
+						padding-top: 52px;
+					}
 				}
 			}
 		}
@@ -833,17 +839,27 @@ footer {
 			    display: inline-block;
     			margin-bottom: 0;
 			}
-			#calendar {
+			.ms-webpart-zone.ms-fullWidth { // new
 				max-width: 900px;
 				margin: 0 auto;
+				>div.ms-webpart-cell-vertical {
+					margin-bottom: 0;
+				}
 				
-				.fc-toolbar.fc-header-toolbar {
+				.ms-webpart-chrome-title { // new
 					margin: 0;
-					height: 50px;
+					height: 52px;
 					background: #fafafa;
 					border: 1px solid #eee;
-    				border-bottom: none;
-					.fc-right button {
+					.ms-webpart-titleText {
+						display: inline-block;
+						margin-left: 22px;
+						> a {
+							font-size: 16px;
+							font-weight: bold;
+						}
+					}
+					.fc-right button { // old
 						visibility: hidden;
 						span {
 							top: .7em;
@@ -856,7 +872,7 @@ footer {
 							left: -315px;
 						}
 					}
-					.fc-center {
+					.fc-center { // old
 						position: relative;
     					left: 40px;
     					h2 {
@@ -867,7 +883,67 @@ footer {
     					}
 					}
 				}
-				.fc-view-container {
+				.noindex.ms-wpContentDivSpace {
+					height: 385px !important;
+					border: 1px solid #eee;
+					border-top: none;
+					overflow: visible !important;
+					.ms-acal-header {
+						position: absolute;
+					    top: -40px;
+					    left: 39.5%;
+					    >table {
+					    	table-layout: fixed;
+    						width: 168px;
+    						tr {
+    							position: relative;
+    							td:nth-child(1) {
+									position: absolute;
+								    left: 0;
+								    text-align: center;
+								    top: -2px;
+    							}
+    							td:nth-child(2) {
+									position: absolute;
+								    right: 0;
+								    top: -2px;
+    							}
+    							td:nth-child(3) {
+								    width: 120px;
+								    text-align: center;
+								    span {
+								    	font-size: 16px;
+										font-weight: bold;
+								    }
+    							}
+    						}
+					    }
+					}
+				}
+				.ms-acal-rootdiv { // new
+					margin-left: -10px;
+					margin-right: 5px;
+					.ms-acal-month {
+						.ms-acal-summary-dayrow {
+							th {
+								visibility: hidden;
+								border: none;
+							}
+							>td {
+							}
+							td div {
+								float: right;
+							}
+						}
+						.ms-acal-summary-itemrow {
+							td div {
+								height: 40px;
+							}
+						}
+					}
+				}
+				
+				.fc-view-container {// old
 					>div >table {
 						height: 387px;
 					}
@@ -918,7 +994,7 @@ footer {
 		    margin: 5px;
 		    padding: 10px;
 		    font-size: 12px;
-		    padding-bottom: 5px;
+		    padding-bottom: 1px;
 
 			>div:after {
 				@include clear_float;
@@ -1194,7 +1270,10 @@ footer {
 			font-weight: bold;
 			font-size: 16px;
 			margin-top: 32px;
+			position: relative;
 			.downloadfile {
+				position: absolute;
+				right: 32px;
 				a {
 					color: #157efa;
 					cursor: pointer;
@@ -1256,6 +1335,9 @@ footer {
     				display: inline-block;
     				line-height: 40px;
 				}
+			}
+			.largetextbox {
+				width: 170px !important;
 			}
 		}
 
@@ -2207,6 +2289,7 @@ footer {
 			td > a {
 				position: relative;
 				top: 9px;
+				z-index: 99;
 			}
 			div.ms-inputuserfield.ms-inputBox {
 				width: 245px;
@@ -2398,7 +2481,10 @@ footer {
 .content .leftcontent .worktable tr:last-child td,
 .content .leftcontent .mytask tr:last-child td,
 .content .leftcontent .news tr:last-child td {
-  padding-bottom: 32px;
+  	padding-bottom: 32px;
+}
+.content .leftcontent .news tr:nth-child(3) td {
+	padding-bottom: 32px;
 }
 .content .leftcontent .news tr th {
   background-color: #fafafa;
@@ -2444,6 +2530,24 @@ footer {
 .content .rightcontent ul.nav.nav-tabs li:hover,
 .content .leftcontent .doccenter .panel-heading a:hover {
 	cursor: pointer;
+}
+.container.content div.changerequest .requirelist {
+	.plnchglist {
+		label.largetextbox {
+			width: 225px !important;
+		}
+		select {
+			width: 535px !important;
+		}
+	}
+	.reqchglist {
+		label.largetextbox {
+			width: 210px !important;
+		}
+		select {
+			width: 550px !important;
+		}
+	}
 }
 
 @media screen and (min-width: 1270px) {
