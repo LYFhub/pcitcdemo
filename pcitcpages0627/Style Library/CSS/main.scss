@@ -906,11 +906,29 @@ footer {
 								    left: 0;
 								    text-align: center;
 								    top: -2px;
+								    // >a {
+								    // 	background: url(../../Style%20Library/Images/arrow_left01.png);
+								    // 	display: inline-block;
+    								// 	height: 24px;
+    								// 	width: 24px;
+								    // 	img {
+								    // 		display: none;
+								    // 	}
+								    // }
     							}
     							td:nth-child(2) {
 									position: absolute;
 								    right: 0;
 								    top: -2px;
+								    // >a {
+								    // 	background: url(../../Style%20Library/Images/arrow_right01.png);
+								    // 	display: inline-block;
+    								// 	height: 24px;
+    								// 	width: 24px;
+								    // 	img {
+								    // 		display: none;
+								    // 	}
+								    // }
     							}
     							td:nth-child(3) {
 								    width: 120px;
@@ -1253,10 +1271,17 @@ footer {
 			border-color: #bebebe;
 		    font-size: 14px;
 		    color: #333;
-		    width: 1110px;
-		    height: 150px;
-		    margin-left: 32px;
-		    margin-right: 32px;
+		    width: 100%;
+		    min-height: 150px;
+		    height: auto;
+		    & + span {
+		    	position: relative;
+			    top: -25px;
+			    width: 100%;
+			    float: right;
+			    text-align: right;
+			    margin-right: 20px;
+		    }
 		}
 		textarea, input[type='text'], input[type='date'], select {
 			background-color: rgb(246, 246, 246);
@@ -1470,6 +1495,9 @@ footer {
 				}
 				.largetextbox {
 					width: 170px !important;
+				}
+				.marleft25 {
+					margin-left: 25px;
 				}
 				.spcomponent >input {
 					left: 150px;
@@ -1894,7 +1922,7 @@ footer {
 							text-decoration: none;
 							&:first-child {
 								position: relative;
-								top: -30px;
+								top: -20px;
 								>div{
 									margin-left: 0;
 									&:before {
@@ -1929,8 +1957,8 @@ footer {
 								content: '';
 								display: inline-block;
 								position: relative;
-								left: -20px;
-								top: 90px;
+								left: -22px;
+								top: 70px;
 								width: 20px;
 								height: 30px;
 								background: url(../../Style%20Library/Images/rightarrow.png);
@@ -1947,8 +1975,8 @@ footer {
 							    font-weight: bold;
 							    text-align: center;
 							    padding: 0 10px;
-							    height: 40px;
-							    line-height: 40px;
+							    height: 20px;
+							    line-height: 20px;
 							    &:last-child {
 							    	line-height: 20px;
 							    }
@@ -1960,7 +1988,18 @@ footer {
 						a:first-child {
 							top: -40px;
 						}
+						a div {
+							&:before {
+								top: 90px;
+							}
+						}
 						a div p {
+							margin-bottom: 0;
+						    color: #666;
+						    font-weight: bold;
+						    text-align: center;
+						    padding: 0 10px;
+						    height: 40px;
 							line-height: 20px;
 							&:last-child {
 							}

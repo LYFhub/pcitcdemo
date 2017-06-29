@@ -2,7 +2,16 @@ $(document).ready(function() {
 	if ($('.barchart').length != 0 && $('.piechart').length != 0 && $('.linechart').length != 0) {
 		drawChart(0);
 	}
-	if (location.href.toLowerCase().indexOf("index") > 0) {
+	// if (location.href.toLowerCase().indexOf("index") > 0) {
+	// 	$('header .pic_navbar .navbar-nav li').removeClass('active');
+	// 	$('.homepage').addClass("active");
+	// } else {
+	// 	$('header .pic_navbar .navbar-nav li').removeClass('active');
+	// 	$('.' + localStorage.getItem("clickitem")).addClass('active');
+	// }
+
+});
+if (location.href.toLowerCase().indexOf("index") > 0) {
 		$('header .pic_navbar .navbar-nav li').removeClass('active');
 		$('.homepage').addClass("active");
 	} else {
@@ -10,14 +19,15 @@ $(document).ready(function() {
 		$('.' + localStorage.getItem("clickitem")).addClass('active');
 	}
 
-});
-
 // 通过localstorage保存点击的菜单信息，然后添加active效果
-$('header .pic_navbar .navbar-nav li').click(function(event) {
-	event.stopPropagation();
-	$('header .pic_navbar .navbar-nav li').removeClass('active');
-	localStorage.setItem("clickitem", event.currentTarget.className);
-});
+function addActive(event) {
+	//$('header .pic_navbar .navbar-nav li').click(function(event) {
+		event.stopPropagation();
+		$('header .pic_navbar .navbar-nav li').removeClass('active');
+		localStorage.setItem("clickitem", event.currentTarget.className);
+	//});
+}
+
 
 // 初始化datepicker
 if ($(".inputdatepicker").datetimepicker) {
