@@ -2,24 +2,21 @@ $(document).ready(function() {
 	if ($('.barchart').length != 0 && $('.piechart').length != 0 && $('.linechart').length != 0) {
 		drawChart(0);
 	}
-
-	// 根据url判断所属的菜单，然后添加active效果
-	console.log(location);
-	if (location.href.toLowerCase().indexOf("index")) {
-
-	} else if (location.href.toLowerCase().indexOf("scope")) {
-
-	} else if (location.href.toLowerCase().indexOf("plan")) {
-
+	if (location.href.toLowerCase().indexOf("index") > 0) {
+		$('header .pic_navbar .navbar-nav li').removeClass('active');
+		$('.homepage').addClass("active");
+	} else {
+		$('header .pic_navbar .navbar-nav li').removeClass('active');
+		$('.' + localStorage.getItem("clickitem")).addClass('active');
 	}
+
 });
 
-// 添加header中的每个li添加active效果
-$('header .pic_navbar .nav-tabs li').click(function(event) {
+// 通过localstorage保存点击的菜单信息，然后添加active效果
+$('header .pic_navbar .navbar-nav li').click(function(event) {
 	event.stopPropagation();
-	$('header .pic_navbar .nav-tabs li').removeClass('active');
-	$(event.currentTarget).addClass('active');
-	// 现在没效果，是因为每个页面都有自己的nav，点击添加之后立刻跳转到了新页面
+	$('header .pic_navbar .navbar-nav li').removeClass('active');
+	localStorage.setItem("clickitem", event.currentTarget.className);
 });
 
 // 初始化datepicker
@@ -43,20 +40,20 @@ function changetab(event) {
 	var allTabsHeader = $('.topcontent ul.nav-tabs li a');
 	var allTabContent = $('.topcontent div.tabcontent');
 	$('.rightcontent .topcontent .nav-tabs li a').removeClass('active');
-	$(event.target).addClass('active');  // 添加active效果
+	$(event.target).addClass('active'); // 添加active效果
 
 	for (var i = 0, j = allTabsHeader.length; i < j; i++) {
 		if (event.target.className === allTabsHeader[i].className) {
 			for (k = 0, num = allTabContent.length; k < num; k++) {
 				$(allTabContent[k]).css('display', 'none');
 			}
-			$(allTabContent[i]).css('display', 'block');  // 先显示，然后再画图，否则尺寸会有问题
+			$(allTabContent[i]).css('display', 'block'); // 先显示，然后再画图，否则尺寸会有问题
 			if (i == 0) {
 				drawChart(i);
 			} else {
-				drawChart(i - 1); 
+				drawChart(i - 1);
 			}
-			
+
 		}
 	}
 }
@@ -73,10 +70,12 @@ function goleft(btn) {
 	console.log("right more");
 	var ulleft = parseInt($(event.target).next().css("left"));
 	if (ulleft > -470) {
-		$(event.target).next().animate({ left: "-=470px" }, 300);
+		$(event.target).next().animate({
+			left: "-=470px"
+		}, 300);
 	} else {
 		console.log("右边没有更多tab");
-		return ;
+		return;
 	}
 }
 
@@ -84,29 +83,35 @@ function goright(btn) {
 	console.log("left more");
 	var ulleft = parseInt($(event.target).prev().css("left"));
 	if (ulleft >= -470 && ulleft < 0) {
-		$(event.target).prev().animate({ left: "+=470px" }, 300);
+		$(event.target).prev().animate({
+			left: "+=470px"
+		}, 300);
 	} else {
 		console.log("左边没有更多tab");
-		return ;
+		return;
 	}
 }
 
 function shownextdiv(event) {
 	event.stopPropagation();
 	console.log("show next div");
-	$(event.target).nextAll("div").css({"display": "block"});
+	$(event.target).nextAll("div").css({
+		"display": "block"
+	});
 }
 
 $('body').click(function(event) {
-	$('.userinfo >div >div >div').css({"display": "none"});
+	$('.userinfo >div >div >div').css({
+		"display": "none"
+	});
 });
 
 // 添加“回到顶部”按钮
 $(window).scroll(function() {
-    var a = $(this).scrollTop();  //现在滚动条距离顶端的距离
-    if (a >= 300) {
-    	$(".backtotop").fadeIn();
-    } else {
-    	$(".backtotop").fadeOut();
-    }
+	var a = $(this).scrollTop(); //现在滚动条距离顶端的距离
+	if (a >= 300) {
+		$(".backtotop").fadeIn();
+	} else {
+		$(".backtotop").fadeOut();
+	}
 });
