@@ -1203,10 +1203,14 @@ footer {
 		}
 	}
 	.uploadfile {
-		font-size: 16px;	    
 		position: relative;
+		display: inline-block;
+		overflow: hidden;
+
+		font-size: 16px;
 	    font-weight: bold;
 	    cursor: pointer;
+	    top: 6px;
 		
 		a {
 			margin:0 10px;
@@ -1215,15 +1219,19 @@ footer {
 			cursor: pointer;
 		}
 		input {
-			position: absolute; 
-			z-index: 100;
+			position: absolute;
+			display: inline;
+			font-size: 200px;
+			right: 0;
 			opacity: 0;
-			filter: alpha(opacity=0); 
-			height: 100%;
-			width: 100% !important;
+			-ms-filter: 'alpha(opacity=0)';
+			z-index: 100;
+			
+			width: auto !important;
+			height: 30px !important;
 			padding-left: 0 !important;
 			cursor: pointer;
-			display: initial;
+
 		}
 	}
 	div.changerequest {
@@ -1345,12 +1353,6 @@ footer {
 				display: inline-block;
 				margin: 12px 0;
 				padding: 0;
-				>.uploadfile {
-					a {
-						position: relative;
-						top: 10px;
-					}
-				}
 			}
 			input[type='radio'] {
 				width: auto;
@@ -1424,9 +1426,6 @@ footer {
 			a {
 				margin: 0;
 			}
-			.uploadfile {
-				position: relative;
-			}
 		}
 		.feasiblestudy {
 			.panel-body {
@@ -1451,13 +1450,6 @@ footer {
 							display: inline-block;
 							font-size: 16px;
     						font-weight: bold;
-						}
-						span.uploadfile {
-							height: 40px;
-							a {
-								position: relative;
-								top: 10px;
-							}
 						}
 						>div {
 							width: 240px;
@@ -1597,12 +1589,6 @@ footer {
 			>div.col-lg-6.col-md-6.col-sm-6 {
 				padding: 0;
 				margin: 12px 0;
-			}
-			>div > .uploadfile {
-				a {
-					position: relative;
-					// top: 10px;
-				}
 			}
 		}
 		
@@ -2336,8 +2322,10 @@ footer {
 			width: 280px;
 			td > a {
 				position: relative;
-				top: 9px;
 				z-index: 99;
+				display: inline-block;
+   			    height: 40px;
+    			line-height: 40px;
 			}
 			div.ms-inputuserfield.ms-inputBox {
 				width: 245px;
