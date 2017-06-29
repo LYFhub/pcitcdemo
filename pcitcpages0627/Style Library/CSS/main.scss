@@ -194,7 +194,7 @@ header {
 		}
 		.usersetting {
 			height: 20px;
-			width: 60px;
+			width: auto;
     		position: relative;
     		&:after {
     			@include clear_float;
@@ -829,7 +829,8 @@ footer {
 		}
 		.dateandevent {
 			margin-bottom: 8px;
-			height: 437px;
+			min-height: 437px;
+			height: auto;
 			>p {
 				position: relative;
 			    top: -423px;
@@ -853,7 +854,9 @@ footer {
 					border: 1px solid #eee;
 					.ms-webpart-titleText {
 						display: inline-block;
-						margin-left: 22px;
+						margin: 0 22px;
+					    height: 50px;
+					    line-height: 50px;
 						> a {
 							font-size: 16px;
 							font-weight: bold;
@@ -884,13 +887,14 @@ footer {
 					}
 				}
 				.noindex.ms-wpContentDivSpace {
-					height: 385px !important;
+					min-height: 385px;
+					height: auto !important;
 					border: 1px solid #eee;
 					border-top: none;
 					overflow: visible !important;
 					.ms-acal-header {
 						position: absolute;
-					    top: -40px;
+					    top: -44px;
 					    left: 39.5%;
 					    >table {
 					    	table-layout: fixed;
@@ -939,6 +943,11 @@ footer {
 							td div {
 								height: 40px;
 							}
+						}
+						.ms-acal-month-top {
+							text-align: center;
+						    font-size: 16px;
+						    font-weight: bold;
 						}
 					}
 				}
