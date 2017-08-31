@@ -1,0 +1,152 @@
+@mixin clear_float {
+	content: "";
+	display: block;
+	clear: both;
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+.searchcondition {
+	>div {
+		display: inline-block;
+	    margin: 12px 0;
+	    padding: 0;
+	    margin-right: 19px;
+	    label {
+	    	text-align: right;
+	    }
+	}
+
+	.employeeid, .employeeskill {
+		label {
+			width: 160px;
+		}
+	}
+	
+	.radiogroup {
+		margin-top: 20px;
+		label {
+			height: 40px;
+			line-height: 40px;
+
+			input {
+				top: 10px;
+			}
+		}
+	}
+}
+.container.content div.changerequest {
+	.employeeskill {
+		input {
+			width: 857px;
+		}
+	}
+}
+.searchlist {
+	list-style: none;
+	padding-left: 0;
+	&:after {
+		@include clear_float;
+	}
+
+	>li {
+		border-bottom: 1px dashed #999;
+		margin-bottom: 10px;
+		&:after {
+			@include clear_float;
+		}
+	}
+	
+	.leftlist {
+		float: left;
+		min-width: 50px;
+
+		h4 {
+			margin-top: 0;
+			a {
+				color: #333;
+			}
+		}
+	}
+	.rightlist {
+		float: left;
+
+		.infoitem {
+			display: inline-block;
+			min-width: 210px;
+			margin-bottom: 5px;	
+
+			label {
+				color: #666;
+			}
+		}
+	}
+}
+.peopleinfo {
+	&:after {
+		@include clear_float;
+	}
+	.leftinfo {
+		float: left;
+		width: 33.3%;
+
+		.infoheader {
+			&:after {
+				@include clear_float;
+			}
+			>img {
+				float: left;
+			}
+			>div {
+				float: left;
+				h3 {
+					display: inline-block;
+				}
+			}
+		}
+		.infodetail {
+			ul {
+				list-style: none;
+				padding-left: 0;
+
+				li {
+					label {
+						width: 80px;
+						text-align: right;
+					}
+				}
+			}
+		}
+		button {
+			display: block;
+		}
+	}
+	.rightinfo {
+		float: left;
+		width: 66.6%;
+
+		.rightinfoheader {
+			label + span {
+				margin-right: 20px;				
+			}
+			>a {
+				float: right;
+			}
+		}
+	}
+}
+.infodescbox {
+	>p {
+		background: #666;
+		text-align: center;
+		color: white;
+		height: 30px;
+		line-height: 30px;
+		margin-bottom: 0;
+	}
+	>div {
+		min-height: 150px;
+		border: 1px #666 solid;
+		margin-bottom: 10px;
+	}
+}
