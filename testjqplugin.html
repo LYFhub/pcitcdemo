@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test plugin</title>
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+		function(a) {
+		    a.fn.videoUI = function(b) {
+		        var c = a.extend({
+		            autoHide: !1,
+		            autoPlay: !1
+		        }, b);
+		        a(this).each(function() {
+		            function b(a, b) {
+		                for (var c = a + ""; c.length < b; )
+		                    c = "0" + c;
+		                return c
+		            }
+		            var d = currentTime = timer = seekx = seekPos = buffered = timerBuffer = 0
+		              , e = this
+		              , f = a('<div class="container-fluid video-control fade in"><a href="#" class="btn-icon btn-play col-md-1"><i class="icon icon-playback-play"></i></a><div class="progress col-md-10"><div class="progress-bar no-value" role="progressbar" aria-valuenow="0" data-step="1" aria-valuemin="0" aria-valuemax="0" style="width: 0%;"></div><span class="current"></span><span class="duration"></span></div><a href="#" class="btn-icon btn-fullscreen col-md-1 text-right"><i class="icon icon-fullscreen-enter"></i></a></div>')
+		              , g = a('<div class="video-modal modal fade dark"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button></div><div class="modal-body"><div class="video-player"></div></div></div></div></div>');
+		            a(e).parent().is(".thumbnail") && (thumbnail = a(e).parent(),
+		            0 == thumbnail.next(".modal").length && (thumbnail.after(g),
+		            a(e).after("<div class='video-control'><a href='#' class='btn-play'><i class='icon icon-playback-play'></i></a></div>"),
+		            modal_video = a(e).clone(),
+		            thumbnail.next(".modal").find(".video-player").append(modal_video),
+		            e = modal_video[0],
+		            thumbnail.children(".video-control").bind("click", function() {
+		                thumbnail.next(".modal").modal("show")
+		            }),
+		            thumbnail.next(".modal").on("hide.bs.modal", function(b) {
+		                e.paused || a(e).click(),
+		                thumbnail.children("video")[0].currentTime = e.currentTime
+		            }))),
+		            a(e).after(f),
+		            f.children(".btn-play").bind("click", function() {
+		                return e.paused ? (e.play(),
+		                f.children(".progress").removeClass("progress-striped active")) : (e.pause(),
+		                f.children(".progress").addClass("progress-striped active")),
+		                a(this).children("i").toggleClass("icon-playback-play").toggleClass("icon-playback-pause"),
+		                !1
+		            }),
+		            a(e).bind("click", function() {
+		                f.children(".btn-play").click()
+		            }),
+		            f.children(".progress").bind("mousedown", function(b) {
+		                seekPos = b.pageX - a(this).offset().left,
+		                percentage = 100 * seekPos / a(this).width(),
+		                percentage > 100 && (percentage = 100),
+		                percentage < 0 && (percentage = 0),
+		                e.currentTime = d * percentage / 100
+		            }),
+		            f.children(".btn-fullscreen").bind("click", function() {
+		                e.requestFullScreen ? e.requestFullScreen() : e.webkitRequestFullScreen ? e.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT) : e.mozRequestFullScreen ? e.mozRequestFullScreen() : alert("Full Screen Mode is not supported")
+		            }),
+		            a(e).on("loadedmetadata", function() {
+		                d = e.duration,
+		                f.children(".progress").children(".duration").text(b(Math.floor(d / 60), 2) + ":" + b(Math.floor(d % 60), 2))
+		            }),
+		            a(e).on("timeupdate", function() {
+		                currentTime = e.currentTime,
+		                f.children(".progress").children(".current").text(b(Math.floor(currentTime / 60), 2) + ":" + b(Math.floor(currentTime % 60), 2))
+		            }),
+		            a(e).on("play", function() {
+		                timer = setInterval(function() {
+		                    currentTime = e.currentTime;
+		                    var a = 100 * currentTime / d;
+		                    progressBar = f.children(".progress").children(".progress-bar"),
+		                    progressBar.css("width", a + "%")
+		                }, 100)
+		            }),
+		            a(e).on("ended", function() {
+		                f.children(".btn-play").children("i").toggleClass("icon-playback-play").toggleClass("icon-playback-pause")
+		            }),
+		            a(e).data("autoplay") && (c.autoPlay = !0),
+		            a(e).data("autohide") && (c.autoHide = !0),
+		            c.autoPlay && f.children(".btn-play").click(),
+		            c.autoHide && (a(e).parents(".video-player").mouseleave(function(a) {
+		                f.is(".in") ? f.removeClass("in") : a.stopPropagation()
+		            }),
+		            a(e).parents(".video-player").mouseover(function(a) {
+		                f.is(".in") ? a.stopPropagation() : f.addClass("in")
+		            }))
+		        })
+		    }
+		}(jQuery);
+		$(".videobox video").videoUI();
+	</script>
+</head>
+<body>
+	<div class="videobox">
+		<video src="http://www.mgtv.com/b/158358/1761125.html"></video>
+	</div>
+</body>
+</html>

@@ -89,36 +89,56 @@
 	.leftinfo {
 		float: left;
 		width: 33.3%;
+		padding-right: 32px;
 
 		.infoheader {
+			width: 260px;
+    		margin: 0 auto;
 			&:after {
 				@include clear_float;
 			}
 			>img {
 				float: left;
+				width: 100px;
+				margin: 5px;
 			}
 			>div {
 				float: left;
+				width: 140px;
+				height: 100px;
+				margin: 5px;
+				padding-top: 8px;
 				h3 {
 					display: inline-block;
+					margin-right: 10px;
+					width: 60px;
+				}
+				p {
+					display: inline-block;
+					margin-right: 10px;
+					width: 60px;
 				}
 			}
 		}
 		.infodetail {
+			width: 260px;
+    		margin: 0 auto;
 			ul {
 				list-style: none;
 				padding-left: 0;
 
 				li {
 					label {
-						width: 80px;
+						width: 100px;
 						text-align: right;
+						margin: 5px 5px 5px 10px;
 					}
 				}
 			}
 		}
-		button {
+		input[type='button'] {
 			display: block;
+			margin: 10px auto !important;
 		}
 	}
 	.rightinfo {
@@ -133,7 +153,14 @@
 				float: right;
 			}
 		}
+		table {
+			text-align: center;
+			th {
+				text-align: center;
+			}
+		}
 	}
+
 }
 .infodescbox {
 	>p {
@@ -148,5 +175,19 @@
 		min-height: 150px;
 		border: 1px #666 solid;
 		margin-bottom: 10px;
+	}
+}
+
+.peopleassignrecord {
+	.panel-body >div {
+		>span {
+			margin-right: 20px;
+		}
+	}
+	table {
+		text-align: center;
+		th {
+			text-align: center;
+		}
 	}
 }
