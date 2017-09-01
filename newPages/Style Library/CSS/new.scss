@@ -6,6 +6,12 @@
 	width: 0;
 	visibility: hidden;
 }
+.front-star {
+	&:before {
+		content: "*";
+
+	}
+}
 .searchcondition {
 	>div {
 		display: inline-block;
@@ -188,6 +194,38 @@
 		text-align: center;
 		th {
 			text-align: center;
+		}
+	}
+}
+
+.newpeople {
+	.panel-body {
+		>div {
+			&:after {
+				@include clear_float;
+			}
+		}
+		span.uploadfile {
+			position: relative;
+			top: 16px;
+		}
+	}
+	.topdash {
+		float: left;
+		width: 100%;
+	}
+}
+
+.fourtextbox {
+	&:after {
+		@include clear_float;
+	}
+	>div {
+		float: left;
+		width: 48%;
+		margin: 10px 1%;
+		>p {
+			display: inline-block;
 		}
 	}
 }

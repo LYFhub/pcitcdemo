@@ -2,9 +2,216 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>人员查询</title>
+	<link href="../../Style Library/CSS/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../../Style Library/CSS/fullcalendar.min.css" rel="stylesheet">
+	<link href="../../Style Library/CSS/fullcalendar.print.min.css" rel="stylesheet" media='print'>
+	<link href="../../Style Library/CSS/dataTables.bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="../../Style Library/JS/Common/bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.min.css">
+	<link rel="stylesheet" href="../../Style Library/CSS/main.css">
+	<link rel="stylesheet" href="../../Style Library/CSS/new.css">
 </head>
 <body>
-	search people
+	
+<div class="container content">
+	<div class="changerequest">
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+		    <h3 class="panel-title">人员查询条件</h3>
+		  </div>
+		  <div class="panel-body">
+		    <div>
+		    	<div class="searchcondition">
+		    		<div class="employeeid">
+						<label class="changelabel">姓名、登录用户名或工号</label>
+	    				<input type="text" name="projectnum" />
+					</div>
+					<div class="employeetype">
+						<label class="changelabel">员工类型</label>
+	    				<select class="">
+							<option value="xx">xx</option>
+						    <option value="xxx">xxx</option>
+						    <option value="xxxx">xxxx</option>
+						</select>
+					</div>
+		    		<div class="employeelevel">
+	    				<label class="changelabel">职位</label>
+						<select class="">
+							<option value="xx">xx</option>
+						    <option value="xxx">xxx</option>
+						    <option value="xxxx">xxxx</option>
+						</select>
+	    			</div>
+
+	    			<div class="employeeskill">
+	    				<label class="changelabel">专业与技能</label>
+	    				<input type="text" name="changenum" class="requiretitle" />
+	    			</div>
+	    			
+		    		<div class="topdash">
+		    			<div class="radiogroup">
+		    				<label class="radio-inline">
+							    <input type="radio" name="resultradio" id="inlineRadio1" value="option1"> 马上可用
+							</label>
+							<label class="radio-inline">
+							    <input type="radio" name="resultradio" id="inlineRadio2" value="option2"> 一周内可用
+							</label>
+							<label class="radio-inline">
+							    <input type="radio" name="resultradio" id="inlineRadio1" value="option1"> 二周内可用
+							</label>
+							<label class="radio-inline">
+							    <input type="radio" name="resultradio" id="inlineRadio2" value="option2"> 一个月内可用
+							</label>
+							<label class="radio-inline">
+							    <input type="radio" name="resultradio" id="inlineRadio1" value="option1"> 在此期间可用
+							    <input type="text" class="inputdatepicker"> -- <input type="text" class="inputdatepicker">
+							</label>
+		    			</div>
+						<div>
+							<input type="button" value="查询" class="btn btn-lg">
+						</div>
+		    		</div>		    	
+		    	</div>
+		    </div>
+		  </div>
+		</div>
+		<div class="panel panel-default searchresult">
+		  	<div class="panel-heading">
+		    	<h3 class="panel-title">人员查询结果</h3>
+		  	</div>
+		  	<div class="panel-body">
+		    	<ul class="searchlist">
+		    		<li>
+		    			<div class="leftlist">
+		    				<h4><a href="">张三</a></h4>
+		    				<p>男</p>
+		    			</div>
+		    			<div class="rightlist">
+		    				<div>
+		    					<div class="infoitem">
+		    						<label for="">用户名：</label><span>zhang.san</span>
+		    					</div>
+		    					<div class="infoitem">
+		    						<label for="">工号：</label><span>00000001</span>
+		    					</div>
+		    					<div class="infoitem">
+		    						<label for="">联系电话：</label><span>13600000000</span>
+		    					</div>
+		    					<div class="infoitem">
+		    						<label for="">电子邮件：</label><span>zhang.san@pcitc.com</span>
+		    					</div>
+		    				</div>
+		    				<div>
+		    					<div class="infoitem">
+		    						<label for="">员工类型：</label><span>石化盈科员工</span>
+		    					</div>
+		    					<div class="infoitem">
+		    						<label for="">所在公司：</label><span>石化盈科</span>
+		    					</div>
+		    					<div class="infoitem">
+		    						<label for="">所属部门：</label><span>智能制造部</span>
+		    					</div>
+		    					<div class="infoitem">
+		    						<label for="">职位名称：</label><span>开发人员</span>
+		    					</div>
+		    					<div class="infoitem">
+		    						<label for="">职级：</label><span>L5</span>
+		    					</div>
+		    				</div>
+		    			</div>
+		    		</li>
+		    		<li>
+		    			<div class="leftlist">
+		    				<h4><a href="">张三</a></h4>
+		    				<p>男</p>
+		    			</div>
+		    			<div class="rightlist">
+		    				<div>
+		    					<div class="infoitem">
+		    						<label for="">用户名：</label><span>zhang.san</span>
+		    					</div>
+		    					<div class="infoitem">
+		    						<label for="">工号：</label><span>00000001</span>
+		    					</div>
+		    					<div class="infoitem">
+		    						<label for="">联系电话：</label><span>13600000000</span>
+		    					</div>
+		    					<div class="infoitem">
+		    						<label for="">电子邮件：</label><span>zhang.san@pcitc.com</span>
+		    					</div>
+		    				</div>
+		    				<div>
+		    					<div class="infoitem">
+		    						<label for="">员工类型：</label><span>石化盈科员工</span>
+		    					</div>
+		    					<div class="infoitem">
+		    						<label for="">所在公司：</label><span>石化盈科</span>
+		    					</div>
+		    					<div class="infoitem">
+		    						<label for="">所属部门：</label><span>智能制造部</span>
+		    					</div>
+		    					<div class="infoitem">
+		    						<label for="">职位名称：</label><span>开发人员</span>
+		    					</div>
+		    					<div class="infoitem">
+		    						<label for="">职级：</label><span>L5</span>
+		    					</div>
+		    				</div>
+		    			</div>
+		    		</li>
+		    		<li>
+		    			<div class="leftlist">
+		    				<h4><a href="">张三</a></h4>
+		    				<p>男</p>
+		    			</div>
+		    			<div class="rightlist">
+		    				<div>
+		    					<div class="infoitem">
+		    						<label for="">用户名：</label><span>zhang.san</span>
+		    					</div>
+		    					<div class="infoitem">
+		    						<label for="">工号：</label><span>00000001</span>
+		    					</div>
+		    					<div class="infoitem">
+		    						<label for="">联系电话：</label><span>13600000000</span>
+		    					</div>
+		    					<div class="infoitem">
+		    						<label for="">电子邮件：</label><span>zhang.san@pcitc.com</span>
+		    					</div>
+		    				</div>
+		    				<div>
+		    					<div class="infoitem">
+		    						<label for="">员工类型：</label><span>石化盈科员工</span>
+		    					</div>
+		    					<div class="infoitem">
+		    						<label for="">所在公司：</label><span>石化盈科</span>
+		    					</div>
+		    					<div class="infoitem">
+		    						<label for="">所属部门：</label><span>智能制造部</span>
+		    					</div>
+		    					<div class="infoitem">
+		    						<label for="">职位名称：</label><span>开发人员</span>
+		    					</div>
+		    					<div class="infoitem">
+		    						<label for="">职级：</label><span>L5</span>
+		    					</div>
+		    				</div>
+		    			</div>
+		    		</li>
+		    	</ul>
+		  	</div>
+		</div>
+	</div>
+</div>
+
+	<script src="../../Style Library/JS/Common/moment.min.js"></script>
+	<script src="../../Style Library/JS/Common/jquery.min.js"></script>
+	<script src="../../Style Library/CSS/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+	<script src="../../Style Library/JS/Common/echarts.min.js"></script>
+	<script src="../../Style Library/JS/Common/fullcalendar.min.js"></script>
+	<script src="../../Style Library/JS/Common/jquery.dataTables.min.js"></script>
+	<script src="../../Style Library/JS/Common/bootstrap-datetimepicker-master/js/bootstrap-datetimepicker.min.js"></script>
+	<script src="../../Style Library/JS/Common/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+	<script src="../../Style Library/JS/Common/index.js"></script>
 </body>
 </html>
