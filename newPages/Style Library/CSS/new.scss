@@ -204,6 +204,19 @@
 			&:after {
 				@include clear_float;
 			}
+			>div {
+				margin: 10px 0;
+				label {
+					width: 110px;
+					text-align: right;
+				}
+			}
+			div.col-lg-12.col-md-12.col-sm-12,
+			div.col-lg-8.col-md-8.col-sm-8 {
+				input {
+					width: calc(100% - 122px);
+				}
+			}
 		}
 		span.uploadfile {
 			position: relative;
@@ -213,6 +226,13 @@
 	.topdash {
 		float: left;
 		width: 100%;
+		padding: 0 15px;
+		>div.col-lg-4 {
+			width: 391px;
+		}
+		div input.btn.btn-lg {
+			margin-left: 10px;
+		}
 	}
 }
 
@@ -226,6 +246,91 @@
 		margin: 10px 1%;
 		>p {
 			display: inline-block;
+		}
+	}
+}
+
+.resourcematch {
+	.panel-body {
+		>p {
+			display: inline-block;
+			& + button {
+				border: none;
+			}
+		}
+		>table {
+			text-align: center;
+			th{
+				text-align: center;
+				&:nth-child(5) {
+					width: 110px;
+				}
+				&:nth-child(6) {
+					width: 60px;
+				}
+			}
+			td {
+				button {
+					border: none;
+				}
+			}
+		}
+
+		>div {
+			input + span.uploadfile {
+				top: 16px;
+			}
+		}
+	}
+}
+
+.resourceinit {
+	.panel-body {
+		input.btn.btn-lg.btn-warning {
+			background: #ec971f;
+			&:hover {
+				background: #f0ad4e;
+			}
+		}
+		.topdash {
+			input.btn.btn-lg {
+				margin: 32px 0;
+			}
+		}
+	}
+}
+
+.resourcefinal {
+	.panel-body {
+		>a {
+			margin: 10px 0;
+			display: inline-block;
+		}
+		>div {
+			&:after {
+				@include clear_float;
+			}
+			div.col-lg-4.col-md-4.col-sm-4 {
+				padding-left: 0;
+				padding-right: 0;
+			}
+			p {
+				margin-top: 10px;
+			}
+		}
+		
+	}
+}
+.resourceconfig {
+	.panel-body {
+		>div {
+			&:after {
+				@include clear_float;
+			}
+			div.col-lg-4.col-md-4.col-sm-4 {
+				padding-left: 0;
+				padding-right: 0;
+			}
 		}
 	}
 }
