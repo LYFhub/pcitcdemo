@@ -12,6 +12,20 @@
 
 	}
 }
+.radiogroup {
+	&:after {
+		@include clear_float;
+	}
+}
+table.aligncenter {
+	text-align: center;
+	th {
+		text-align: center;
+	}
+}
+.hidebox {
+	visibility: hidden !important;
+}
 .searchcondition {
 	>div {
 		display: inline-block;
@@ -333,5 +347,99 @@
 				padding-right: 0;
 			}
 		}
+	}
+}
+
+.assigncondition {
+	&:after {
+		@include clear_float;
+	}
+	>div {
+	    margin: 12px 0;
+	    padding: 0;
+	    margin-left: 83px;
+	}
+	div.col-lg-12.col-md-12.col-sm-12 {
+		float: none;
+		margin-left: 0;
+	}
+	div.btngroup {
+		margin-left: 0;
+	}
+}
+
+.assignresult {
+	table {
+		td {
+			a {
+				display: inline-block;
+    			width: 60px;
+    			text-decoration: none;
+    			color: #333;
+    			&:hover {
+    				color: #337ab7;
+    			}
+    			img {
+    				margin-right: 5px;
+    			}
+			}
+		}
+	}
+}
+
+.assigninfo {
+	&:after {
+		@include clear_float;
+	}
+	& + .inputgroup {
+		margin-top: 15px;
+	}
+	.leftinfo {
+		float: left;
+		width: 40%;
+		border-right: 1px dashed #555;
+	}
+	.rightinfo {
+		float: right;
+		width: 60%;
+	}
+	ul {
+		list-style: none;
+		li {
+			label {
+				margin-right: 15px;
+				width: 120px;
+				text-align: right;
+			}
+		}
+	}
+}
+
+.undoassign, .extendassign, .earlyrelease, .extendassignanalysis{
+	.handlereason {
+		&:after {
+			@include clear_float;
+		}
+		.leftreason {
+			width: 50%;
+			float: left;
+			textarea {
+				width: 90% !important;
+				height: 122px !important;
+				min-height: 1px !important;
+			}
+		}
+		.centerreason, .rightreason {
+			width: 25%;
+			float: left;
+			p + input {
+				margin-bottom: 10px;
+			}
+		}
+	}
+}
+.extendassignanalysis {
+	.handlereason {
+		margin-top: 10px;
 	}
 }

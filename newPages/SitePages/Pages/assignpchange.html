@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>人员分配变更申请表单</title>
+	<link href="../../Style Library/CSS/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../../Style Library/CSS/fullcalendar.min.css" rel="stylesheet">
+	<link href="../../Style Library/CSS/fullcalendar.print.min.css" rel="stylesheet" media='print'>
+	<link href="../../Style Library/CSS/dataTables.bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="../../Style Library/JS/Common/bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.min.css">
+	<link rel="stylesheet" href="../../Style Library/CSS/main.css">
+	<link rel="stylesheet" href="../../Style Library/CSS/new.css">
+</head>
+<body>
+	
+<div class="container content">
+	<div class="changerequest">
+		<div class="panel panel-default">
+		    <div class="panel-heading">
+		        <h3 class="panel-title">人员分配基本信息</h3>
+		    </div>
+		    <div class="panel-body">
+		        <div class="assigninfo">
+					<div class="leftinfo">
+						<div class="infodetail">
+							<ul>
+								<li><label for="">分配编号</label><span>ASM-YYYYMMDD-###</span></li>
+								<li><label for="">人员姓名</label><span>张XX</span></li>
+								<li><label for="">人员登录用户名</label><span>张XX</span></li>
+								<li><label for="">人员工号</label><span>00000001</span></li>
+								<li><label for="">分配状态</label><span>正常</span></li>
+								<li><label for="">分配类型</label><span>常规</span></li>
+							</ul>
+						</div>
+					</div>
+					<div class="rightinfo">
+						<div class="infodetail">
+							<ul>
+								<li><label for="">分配子项目</label><span>中石化内部_提升项目_设计阶段_炼化生产一体化优化</span></li>
+								<li><label for="">分配子项目经理</label><span>赵XX</span></li>
+								<li><label for="">分配开始日期</label><span>YYYY-MM-DD</span></li>
+								<li><label for="">分配结束日期</label><span>YYYY-MM-DD</span></li>
+								<li><label for="">备注</label><span></span></li>
+							</ul>
+						</div>
+					</div>
+		        </div>
+		        <div class="inputgroup">
+		        	<div class="col-lg-5 col-md-6 col-sm-6">
+						<label class="changelabel">人员分配变更申请编号</label>
+	    				<input type="text" name="changenum" />
+					</div>
+					<div class="col-lg-5 col-md-6 col-sm-6">
+						<label class="changelabel">人员分配变更申请状态</label>
+	    				<input type="text" name="changestatus" />
+					</div>
+		        </div>
+		    </div>
+		</div>
+		<div class="panel panel-default undoassign">
+		  	<div class="panel-heading">
+		    	<h3 class="panel-title">撤销分配申请</h3>
+		  	</div>
+		  	<div class="panel-body">
+		  		<div class="handlereason">
+		  			<div class="leftreason">
+		  				<p><span class="redstar">*</span>撤销分配原因</p>
+						<textarea name="" id="" cols="30" rows="6"></textarea>
+		  			</div>
+		  			<div class="centerreason">
+	  					<p class="hidebox"><span class="redstar"></span>撤销</p>
+						<input type="text" name="changestatus" class="hidebox"/>
+						<p><span class="redstar">*</span>申请人</p>
+						<input type="text" name="changestatus" />
+		  			</div>
+	  				<div class="rightreason">
+	  					<p class="hidebox"><span class="redstar">*</span>申请人</p>
+						<input type="text" name="changestatus" class="hidebox"/>
+						<p><span class="redstar">*</span>申请提交日期</p>
+						<input type="text" name="changestatus" class="inputdatepicker"/>
+	  				</div>
+		  		</div>
+		  		<input type="button" value="提交" class="btn btn-lg">
+		  	</div>
+		</div>
+		<div class="panel panel-default extendassign">
+		  	<div class="panel-heading">
+		    	<h3 class="panel-title">延长分配申请</h3>
+		  	</div>
+		  	<div class="panel-body">
+		  		<div class="handlereason">
+		  			<div class="leftreason">
+		  				<p><span class="redstar">*</span>延长分配原因</p>
+						<textarea name="" id="" cols="30" rows="6"></textarea>
+		  			</div>
+		  			<div class="centerreason">
+	  					<p><span class="redstar">*</span>延长分配至</p>
+						<input type="text" name="changestatus" class="inputdatepicker"/>
+						<p><span class="redstar">*</span>申请人</p>
+						<input type="text" name="changestatus" />
+		  			</div>
+	  				<div class="rightreason">
+	  					<p class="hidebox"><span class="redstar">*</span>申请人</p>
+						<input type="text" name="changestatus" class="hidebox"/>
+						<p><span class="redstar">*</span>申请提交日期</p>
+						<input type="text" name="changestatus" class="inputdatepicker"/>
+	  				</div>
+		  		</div>
+		  		<input type="button" value="提交" class="btn btn-lg">
+		  	</div>
+		</div>
+		<div class="panel panel-default earlyrelease">
+		  	<div class="panel-heading">
+		    	<h3 class="panel-title">提前释放申请</h3>
+		  	</div>
+		  	<div class="panel-body">
+		  		<div class="handlereason">
+		  			<div class="leftreason">
+		  				<p><span class="redstar">*</span>提前释放原因</p>
+						<textarea name="" id="" cols="30" rows="6"></textarea>
+		  			</div>
+		  			<div class="centerreason">
+	  					<p><span class="redstar">*</span>在此日期释放</p>
+						<input type="text" name="changestatus" class="inputdatepicker"/>
+						<p><span class="redstar">*</span>申请人</p>
+						<input type="text" name="changestatus" />
+		  			</div>
+	  				<div class="rightreason">
+	  					<p class="hidebox"><span class="redstar">*</span>申请人</p>
+						<input type="text" name="changestatus" class="hidebox"/>
+						<p><span class="redstar">*</span>申请提交日期</p>
+						<input type="text" name="changestatus" class="inputdatepicker"/>
+	  				</div>
+		  		</div>
+		  		<input type="button" value="提交" class="btn btn-lg">
+		  	</div>
+		</div>
+		<div class="panel panel-default extendassignanalysis">
+		  	<div class="panel-heading">
+		    	<h3 class="panel-title">延长分配评估</h3>
+		  	</div>
+		  	<div class="panel-body">
+		  		<div>
+		  			<label class="changelabel">
+	    				<span class="redstar">*</span>
+						评估结论
+					</label>
+					<select class="">
+						<option value="xx">xx</option>
+					    <option value="xxx">xxx</option>
+					    <option value="xxxx">xxxx</option>
+					</select>
+		  		</div>    			
+		  		<div class="handlereason">
+		  			<div class="leftreason">
+		  				<p><span class="redstar">*</span>评估意见</p>
+						<textarea name="" id="" cols="30" rows="6"></textarea>
+		  			</div>
+		  		</div>
+		  		<input type="button" value="提交" class="btn btn-lg">
+		  	</div>
+		</div>
+	</div>
+</div>
+
+	<script src="../../Style Library/JS/Common/moment.min.js"></script>
+	<script src="../../Style Library/JS/Common/jquery.min.js"></script>
+	<script src="../../Style Library/CSS/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+	<script src="../../Style Library/JS/Common/echarts.min.js"></script>
+	<script src="../../Style Library/JS/Common/fullcalendar.min.js"></script>
+	<script src="../../Style Library/JS/Common/jquery.dataTables.min.js"></script>
+	<script src="../../Style Library/JS/Common/bootstrap-datetimepicker-master/js/bootstrap-datetimepicker.min.js"></script>
+	<script src="../../Style Library/JS/Common/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+	<script src="../../Style Library/JS/Common/index.js"></script>
+</body>
+</html>
