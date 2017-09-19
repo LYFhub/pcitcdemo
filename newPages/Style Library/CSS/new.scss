@@ -26,6 +26,9 @@ table.aligncenter {
 .hidebox {
 	visibility: hidden !important;
 }
+.container.content div.changerequest div.panel.panel-default:last-child {
+	border-top: 1px solid #ddd;
+}
 .searchcondition {
 	>div {
 		display: inline-block;
@@ -441,5 +444,71 @@ table.aligncenter {
 .extendassignanalysis {
 	.handlereason {
 		margin-top: 10px;
+	}
+}
+
+.loanedapplication .loanedinfo, 
+.loanedapproval .panel-body,
+.releasepeople .releaseinfo,
+.releaseapproval .panel-body {
+	div.leftbox {
+		width: 420px;
+	}
+	div.rightbox {
+		width: 350px;
+	}
+	>div {
+		margin: 6px 0;
+		label {
+			width: 140px;
+			text-align: right;
+			margin-right: 5px;
+		}
+
+		&:last-child {
+			width: 100%;
+			float: left;
+		}
+		&.col-lg-12.col-md-12.col-sm-12 {
+			position: relative;
+			>label {
+				position: absolute;
+				top: 0;
+				& + textarea {
+					width: 80%;
+					position: relative;
+					left: 148px;
+					height: 122px;
+					min-height: 20px;
+				}
+			}
+		}
+	}
+}
+
+.loanedapplication {
+	.loanedinfo {
+		&:after {
+			@include clear_float;
+		}
+	}
+}
+.loanedapproval, .releaseapproval {
+	.panel-body {
+		&:after {
+			@include clear_float;
+		}
+		
+	}
+}
+.releasepeople .releaseinfo {
+	.checkboxgroup.leftbox {
+		width: 100%;
+		float: left;
+		label {
+			width: 170px;
+    		position: relative;
+    		left: 150px;
+		}
 	}
 }
