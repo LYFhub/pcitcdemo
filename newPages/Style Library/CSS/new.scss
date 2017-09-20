@@ -26,6 +26,20 @@ table.aligncenter {
 .hidebox {
 	visibility: hidden !important;
 }
+div.model {
+	z-index: 1505;
+}
+.masklayer {
+	position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0.85;
+    background-color: #999;
+    z-index: 1504;
+    display: none;
+}
 .container.content div.changerequest div.panel.panel-default:last-child {
 	border-top: 1px solid #ddd;
 }
@@ -115,7 +129,7 @@ table.aligncenter {
 		padding-right: 32px;
 
 		.infoheader {
-			width: 260px;
+			width: 300px;
     		margin: 0 auto;
 			&:after {
 				@include clear_float;
@@ -127,24 +141,28 @@ table.aligncenter {
 			}
 			>div {
 				float: left;
-				width: 140px;
-				height: 100px;
+				width: 180px;
+				height: auto;
 				margin: 5px;
 				padding-top: 8px;
 				h3 {
 					display: inline-block;
 					margin-right: 10px;
-					width: 60px;
+					width: 100px;
 				}
 				p {
 					display: inline-block;
-					margin-right: 10px;
+					margin-right: 0px;
 					width: 60px;
+					&:first-child {
+						width: 100px;
+						margin-right: 10px;
+					}
 				}
 			}
 		}
 		.infodetail {
-			width: 260px;
+			width: 300px;
     		margin: 0 auto;
 			ul {
 				list-style: none;
@@ -230,8 +248,20 @@ table.aligncenter {
 			}
 			div.col-lg-12.col-md-12.col-sm-12,
 			div.col-lg-8.col-md-8.col-sm-8 {
-				input {
-					width: calc(100% - 122px);
+				input, select {
+					width: calc(100% - 120px);
+				}
+			}
+			.spcomponent .ms-taxonomy.ms-taxonomy-height.ms-taxonomy-width,
+			.spcomponent table.ms-usereditor,
+			.spcomponent > input {
+				left: 110px;
+			}
+			.spcomponent table.ms-usereditor >tbody {
+				>tr:first-child {
+					>td:last-child {
+						padding-left: 3px !important;
+					}
 				}
 			}
 		}
@@ -244,8 +274,18 @@ table.aligncenter {
 		float: left;
 		width: 100%;
 		padding: 0 15px;
+		padding-top: 20px;
 		>div.col-lg-4 {
 			width: 391px;
+			margin: 10px 0 !important;
+			.btn.dropdown-toggle.btn-default {
+				border-radius: 0;
+				height: 40px;
+			}
+		}
+		div.fourtextbox,
+		div.fourtextbox + div {
+			float: left;
 		}
 		div input.btn.btn-lg {
 			margin-left: 10px;
@@ -439,6 +479,13 @@ table.aligncenter {
 				margin-bottom: 10px;
 			}
 		}
+		.spcomponent table.ms-usereditor {
+			left: 0;
+			margin-left: 0;
+			table .ms-inputuserfield.ms-inputBox {
+				line-height: 38px !important;
+			}
+		}
 	}
 }
 .extendassignanalysis {
@@ -509,6 +556,9 @@ table.aligncenter {
 			width: 170px;
     		position: relative;
     		left: 150px;
+		}
+		input {
+			margin: 0;
 		}
 	}
 }
