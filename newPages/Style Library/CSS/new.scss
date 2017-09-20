@@ -30,7 +30,8 @@ div.model {
 	z-index: 1505;
 }
 .masklayer {
-	position: absolute;
+	position: fixed;
+	_position: absolute;
     top: 0px;
     left: 0px;
     width: 100%;
@@ -138,6 +139,8 @@ div.model {
 				float: left;
 				width: 100px;
 				margin: 5px;
+				display: inline-block;
+    			border-radius: 50%;
 			}
 			>div {
 				float: left;
@@ -537,6 +540,25 @@ div.model {
 	.loanedinfo {
 		&:after {
 			@include clear_float;
+		}
+		.spcomponent {
+			.ms-taxonomy.ms-taxonomy-height.ms-taxonomy-width {
+				left: 145px;
+			}
+			.ms-taxonomy.ms-taxonomy-height.ms-taxonomy-width  .ms-inputBox {
+				width: 240px;
+			}
+			table.ms-usereditor {
+				left: 145px;
+				margin-left: 3px;
+				>tbody {
+					>tr:first-child {
+						>td:last-child {
+							padding-left: 4px !important;
+						}
+					}
+				}
+			}
 		}
 	}
 }
