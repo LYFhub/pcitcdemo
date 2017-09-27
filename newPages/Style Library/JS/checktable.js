@@ -18,7 +18,9 @@ $(document).ready(function() {
 		"designpeople": "王芳",
 		"excutepeople": "李晨",
 		"requirepeople": "郑小凡",
-		"relatedrequire": "中国石化智能工厂提升项目需求"
+		"relatedrequire": "中国石化智能工厂提升项目需求",
+		"workplan": "【工作计划发布】 石化盈科项目A计划发布",
+		"workstatus": "待审批"
 	}, {
 		"num": "20170602011",
 		"title": "中国石化智能工厂提升项目需求(总部)设计设备全生命周期管理1",
@@ -37,7 +39,9 @@ $(document).ready(function() {
 		"designpeople": "王芳",
 		"excutepeople": "李晨",
 		"requirepeople": "郑小凡",
-		"relatedrequire": "中国石化智能工厂提升项目需求"
+		"relatedrequire": "中国石化智能工厂提升项目需求",
+		"workplan": "【工作计划发布】 石化盈科项目A计划发布",
+		"workstatus": "待审批"
 	}, {
 		"num": "20170602002",
 		"title": "中国石化智能工厂提升项目需求(镇海)设计设备全生命周期管理1",
@@ -56,7 +60,9 @@ $(document).ready(function() {
 		"designpeople": "王芳",
 		"excutepeople": "李晨",
 		"requirepeople": "郑小凡",
-		"relatedrequire": "中国石化智能工厂提升项目需求"
+		"relatedrequire": "中国石化智能工厂提升项目需求",
+		"workplan": "【工作计划发布】 石化盈科项目A计划发布",
+		"workstatus": "待审批"
 	}, {
 		"num": "20170602002",
 		"title": "中国石化智能工厂提升项目需求(镇海)设计设备全生命周期管理1",
@@ -75,7 +81,9 @@ $(document).ready(function() {
 		"designpeople": "王芳",
 		"excutepeople": "李晨",
 		"requirepeople": "郑小凡",
-		"relatedrequire": "中国石化智能工厂提升项目需求"
+		"relatedrequire": "中国石化智能工厂提升项目需求",
+		"workplan": "【工作计划发布】 石化盈科项目A计划发布",
+		"workstatus": "待审批"
 	}, {
 		"num": "20170602002",
 		"title": "中国石化智能工厂提升项目需求(镇海)设计设备全生命周期管理1",
@@ -94,7 +102,9 @@ $(document).ready(function() {
 		"designpeople": "王芳",
 		"excutepeople": "李晨",
 		"requirepeople": "郑小凡",
-		"relatedrequire": "中国石化智能工厂提升项目需求"
+		"relatedrequire": "中国石化智能工厂提升项目需求",
+		"workplan": "【工作计划发布】 石化盈科项目A计划发布",
+		"workstatus": "待审批"
 	}, {
 		"num": "20170602002",
 		"title": "中国石化智能工厂提升项目需求(镇海)设计设备全生命周期管理1",
@@ -113,7 +123,9 @@ $(document).ready(function() {
 		"designpeople": "王芳",
 		"excutepeople": "李晨",
 		"requirepeople": "郑小凡",
-		"relatedrequire": "中国石化智能工厂提升项目需求"
+		"relatedrequire": "中国石化智能工厂提升项目需求",
+		"workplan": "【工作计划发布】 石化盈科项目A计划发布",
+		"workstatus": "待审批"
 	}, {
 		"num": "20170602002",
 		"title": "中国石化智能工厂提升项目需求(镇海)设计设备全生命周期管理1",
@@ -132,7 +144,9 @@ $(document).ready(function() {
 		"designpeople": "王芳",
 		"excutepeople": "李晨",
 		"requirepeople": "郑小凡",
-		"relatedrequire": "中国石化智能工厂提升项目需求"
+		"relatedrequire": "中国石化智能工厂提升项目需求",
+		"workplan": "【工作计划发布】 石化盈科项目A计划发布",
+		"workstatus": "待审批"
 	}, {
 		"num": "20170602002",
 		"title": "中国石化智能工厂提升项目需求(镇海)设计设备全生命周期管理1",
@@ -151,7 +165,9 @@ $(document).ready(function() {
 		"designpeople": "王芳",
 		"excutepeople": "李晨",
 		"requirepeople": "郑小凡",
-		"relatedrequire": "中国石化智能工厂提升项目需求"
+		"relatedrequire": "中国石化智能工厂提升项目需求",
+		"workplan": "【工作计划发布】 石化盈科项目A计划发布",
+		"workstatus": "待审批"
 	}, {
 		"num": "20170602002",
 		"title": "中国石化智能工厂提升项目需求(镇海)设计设备全生命周期管理1",
@@ -170,7 +186,9 @@ $(document).ready(function() {
 		"designpeople": "王芳",
 		"excutepeople": "李晨",
 		"requirepeople": "郑小凡",
-		"relatedrequire": "中国石化智能工厂提升项目需求"
+		"relatedrequire": "中国石化智能工厂提升项目需求",
+		"workplan": "【工作计划发布】 石化盈科项目A计划发布",
+		"workstatus": "待审批"
 	}];
 
 	// 首页
@@ -241,6 +259,50 @@ $(document).ready(function() {
 			data: 'position'
 		}, {
 			data: 'salary'
+		}]
+	});
+
+	// For new pages
+	$('#backlogtable').dataTable({
+		bInfo: false, // 去掉左下角的每页显示多少行的信息
+		iDisplayLength: 6, // 控制每页显示的行数
+		bFilter: false, // 去掉过滤
+		bLengthChange: false, // 去掉可以更改显示行数的dropdown list
+		bSort: false, // 去掉排序功能和按钮
+		data: data, // 从data数组中获取数据
+		oLanguage: {
+			sProcessing: "正在加载中......",
+			sEmptyTable: "表中无数据存在！",
+			oPaginate: {
+				sPrevious: '<',
+				sNext: '>'
+			}
+		},
+		columns: [{
+			data: 'workplan'
+		}, {
+			data: 'workstatus'
+		}]
+	});
+	$('#submittable').dataTable({
+		bInfo: false, // 去掉左下角的每页显示多少行的信息
+		iDisplayLength: 6, // 控制每页显示的行数
+		bFilter: false, // 去掉过滤
+		bLengthChange: false, // 去掉可以更改显示行数的dropdown list
+		bSort: false, // 去掉排序功能和按钮
+		data: data, // 从data数组中获取数据
+		oLanguage: {
+			sProcessing: "正在加载中......",
+			sEmptyTable: "表中无数据存在！",
+			oPaginate: {
+				sPrevious: '<',
+				sNext: '>'
+			}
+		},
+		columns: [{
+			data: 'workplan'
+		}, {
+			data: 'workstatus'
 		}]
 	});
 
