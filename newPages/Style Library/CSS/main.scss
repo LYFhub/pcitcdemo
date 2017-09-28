@@ -228,13 +228,13 @@ header {
 	}
 
 	.pic_navbar {
-		background-color: #2f348f;
+		//background-color: #2f348f;
 		padding: 0;
 		height: 60px;
 		.navbar.navbar-default {
 			border: none;
 			margin-bottom: 0;
-			background-color: #2f348f;
+			//background-color: #2f348f;
 			height: 60px;
 			.collapse.navbar-collapse {
 				padding: 0;
@@ -263,7 +263,7 @@ header {
     				border-radius: 0;
     				&:focus, &:hover{
     					color: #fff;
-    					background-color: #211c70;
+    					//background-color: #211c70;
     					border: none;
     				}
 				}

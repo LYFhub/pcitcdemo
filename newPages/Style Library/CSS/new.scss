@@ -795,7 +795,7 @@ table tr.darkgreytr {
 .lightblue {
 	background: rgba(222, 235, 247, 1);
 }
-.peoplemgt, .projectmanager {
+.peoplemgt, .projectmanager, .requiremgt {
 	.peopleheader {
 		height: 85px;
 	    background-color: #ebead5;
@@ -1014,6 +1014,29 @@ table tr.darkgreytr {
 		}
 	}
 }
+.requiremgt {
+	.peopleheader ul {
+		padding-left: 95px;
+		li {
+		    margin-right: 80px;
+		}
+	}
+	.peoplecontent {
+		ul.peopleTab li {
+			width: 50%;
+		}
+		.peopleTabContent {
+			>div >a >div {
+				width: 110px;
+				margin-left: 20px;
+				&:before {
+					left: -22px;
+				}
+			}
+		}
+	}
+}
+
 header {
 	position: relative;
 	z-index: 2;
@@ -1051,9 +1074,16 @@ header {
 			&:after {
 				@include clear_float;
 			}
+
+			.navbar-nav> .open >a, 
+			.navbar-nav> .open >a:focus, 
+			.navbar-nav> .open >a:hover {
+				background: transparent;
+			}
 			ul.nav.navbar-nav {
-				li {
+				>li {
 					width: 140px;
+					cursor: pointer;
 					img {
 						height: 20px;
 						margin-right: 5px;
@@ -1067,18 +1097,91 @@ header {
 						line-height: 50px;
 						padding: 0 !important;
 						&:hover, &:focus {
-							background-color: transparent;
+							background-color: none;
 						}
 					}
 					&.active, &:hover, &:focus {
 						a {
 							background-color: transparent;
+							color: #949494;
+						}
+					}
+
+					
+					&:before {
+						content: "";
+						padding: 1px 12px;
+						margin-right: 5px;
+						position: relative;
+						top: -1px;
+						background-image: url(../../Style%20Library/Images/headernav.png);
+						background-position: 0px 0px;
+					}
+					&:hover {
+						&:before {
+							background-position: 0px 20px;
+						}
+					}
+
+					&:first-child {
+						&:before {
+							padding: 1px 12px;
+    						background-position: 0px 0px;
+						}
+						&:hover, &.active {
+							&:before {
+								background-position: 0px 20px;
+							}
+						}
+					}
+					&:nth-child(2) {
+						&:before {
+							padding: 2px 12px;
+    						background-position: -25px 0px;
+						}
+						&:hover, &.active {
+							&:before {
+								background-position: -25px 20px;
+							}
+						}
+					}
+					&:nth-child(3) {
+						&:before {
+							padding: 2px 12px;
+    						background-position: -50px 0px;
+						}
+						&:hover, &.active {
+							&:before {
+								background-position: -50px 20px;
+							}
+						}
+					}
+					&:nth-child(4) {
+						&:before {
+							padding: 2px 13px;
+    						background-position: -72px 0px;
+						}
+						&:hover, &.active {
+							&:before {
+								background-position: -72px 20px;
+							}
+						}
+					}
+					&:last-child {
+						&:before {
+							padding: 2px 12px;
+    						background-position: -100px 0px;
+						}
+						&:hover, &.active {
+							&:before {
+								background-position: -100px 20px;
+							}
 						}
 					}
 				}
 				li.doccenter.dropdown {
 					.dropdown-menu {
-						background-color: #eee;
+						background: rgba(175, 197, 219, .9);
 						min-width: 100px;
     					margin-left: 10px;
     					padding-top: 0;
@@ -1089,7 +1192,6 @@ header {
 							height: 30px;
 							width: 140px;
 							padding: 0 5px;
-							border-top: 1px solid #666;
 							&:first-child {
 								border-top: none;
 							}
@@ -1100,7 +1202,7 @@ header {
 								height: 30px;
 								line-height: 30px;
 								font-weight: normal;
-								color: black;
+								color: white;
 							}
 
 						}
@@ -1110,7 +1212,7 @@ header {
 								font-weight: bold;
 							}
 							&:hover {
-								background-color: #eee;
+								background: rgba(175, 197, 219, .9);
 							}
 						}
 					}
@@ -1153,6 +1255,13 @@ header {
 			a {
 				color: white;
 			}
+			.o365spo.contextMenuPopup {
+				color: white;
+				background: rgba(175, 197, 219, 0.9);
+				a {
+					color: white;
+				}
+			}
 		}
 		.usersetting {
 			>a {
@@ -1172,6 +1281,13 @@ header {
     				&:first-child {
     					margin-right: 5px;
     				}
+				}
+			}
+			.o365spo.contextMenuPopup {
+				color: white;
+				background: rgba(175, 197, 219, 0.9);
+				a {
+					color: white;
 				}
 			}
 		}
@@ -1196,11 +1312,12 @@ footer.newfooter {
 		}
 	}
 }
-header + .content {
-	background: url(../../Style%20Library/Images/bodybg.png);
+header + .content,
+header + div {
 	min-height: 400px;
 	z-index: 1;
 	padding-bottom: 20px;
+	background-image: url(../../Style%20Library/Images/bodybg.png);
 	.pcitcbanner {
 		margin-top: 20px;
 		ol.carousel-indicators {
@@ -1368,7 +1485,7 @@ header + .content {
 		    		color: #555;
 		    		border: none;
 		    		border-right: 1px solid #999;
-		    		padding: 0px 15px;
+		    		padding: 0px 15px !important;
 		    		margin: 0 2px;
 		    		&:hover {
 		    			background-color: inherit;
