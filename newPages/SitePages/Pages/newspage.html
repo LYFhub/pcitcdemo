@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>新闻页面</title>
+	<link href="../../Style Library/CSS/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../../Style Library/CSS/fullcalendar.min.css" rel="stylesheet">
+	<link href="../../Style Library/CSS/fullcalendar.print.min.css" rel="stylesheet" media='print'>
+	<link href="../../Style Library/CSS/dataTables.bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="../../Style Library/JS/Common/bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.min.css">
+	<link rel="stylesheet" href="../../Style Library/CSS/main.css">
+	<link rel="stylesheet" href="../../Style Library/CSS/new.css">
+</head>
+<body>
+	<header class="">
+		<div class="container">
+			<div class="pic_logo">
+				<img src="../../Style Library/Images/logo2.png" alt="pic_logo">
+				<div>
+					<h3>大项目交付协作平台</h3>
+					<p>中科炼化</p>
+				</div>
+			</div>
+			<div class="userinfo">
+				<div class="userpic">
+					<img src="../../Style Library/Images/header_people.png" alt="pic_userinfo">
+				</div>
+				<div>
+					<div class="username">
+						<a onclick="shownextdiv(event)">李明宇</a>
+					</div>
+					<div class="usersetting">
+						<a onclick="shownextdiv(event)">
+							网站设置
+						</a>
+						<div>
+							<p>2017-09-22</p>
+							<p>星期五</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="pic_navbar">
+			<nav class=" container navbar navbar-default" role="navigation">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse"
+							data-target="#pcitc-navbar-collapse">
+						<span class="sr-only">切换导航</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse" id="pcitc-navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li onclick="addActive(event)" class="homepage" role="presentation">
+							<a href="./index.html">首页</a>
+						</li>
+					  	<li onclick="addActive(event)" class="requirepage" role="presentation">
+						  	<a href="./reqmgt.html">需求管理</a>
+						</li>
+					  	<li onclick="addActive(event)" class="planpage" role="presentation">
+						  	<a href="./planmgt.html">计划管理</a>
+						</li>
+					  	<li onclick="addActive(event)" class="resourcepage" role="presentation">
+						  	<a href="">资源管理</a>
+						</li>
+					  	<li class="doccenter dropdown" role="presentation">
+						  	<a id="drop6" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">文档中心<span class="caret"></span></a>
+						  	<ul id="menu3" class="dropdown-menu" aria-labelledby="drop6">
+						  		<li class="dropdown-header"><a>标准文档</a></li>
+					            <li><a href="#">业务标准</a></li>
+					            <li><a href="#">技术标准</a></li>
+					            <li><a href="#">数据标准</a></li>
+					            <li class="dropdown-header"><a>模板文档</a></li>
+					            <li><a href="#">通知模板</a></li>
+					            <li><a href="#">验收模板</a></li>
+					            <li><a href="#">报告模板</a></li>
+        					</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="searchbox">
+					<input type="text" class="form-control" placeholder="网站内搜索">
+					<a href=""><img src="../../Style Library/Images/search-01.png" alt=""></span></a>
+				</div>
+			</nav>
+		</div>
+	</header>
+<div class="content">
+	<div class="container content">
+		<p>当前位置：<span>新闻中心</span> > <span>项目动态</span></p>
+		<div class="newspage">
+			<div class="newsheader">
+				<h3>九江石化智能制造推进会首套给予分子炼油的实时优化(RTO)系统项目签约仪式在中控举行</h3>
+				<div class="newinfo">
+					<p class="col-lg-4 col-md-4 col-sm-4 col-xs-12">时间: <span>2017-09-28</span></p>
+					<p class="col-lg-4 col-md-4 col-sm-4 col-xs-12">来源：<span>中科炼化保障组</span></p>
+					<p class="col-lg-4 col-md-4 col-sm-4 col-xs-12">作者：王双</p>
+				</div>
+			</div>
+			<div class="newscontent">
+				<div class="newsimg">
+					<img src="../../Style Library/Images/banner.jpg" alt="banner1">
+					<p>项目实施现场</p>
+				</div>
+				<div class="newtext">
+					<p>中国石化新闻网讯 今年以来，九江石化着眼“两化”深入融合和效益提升，加快推进APC（先进控制系统）建设和深化应用，RTO（实时优化）试点工作，并取得阶段性成果。截止7月底，该公司列入2017年建设及维护的19套装置APC系统已有6套实现上线运行；在1套常减压进行的RTO试点工作也已完成硬件部署和模型搭建，进入系统稳定性及模型精度对比考察及完善阶段。</p>
+					<p>APC/RTO系统建设是九江石化打造核心竞争力，实现原油到操作参数一体化优化集成，推进企业进一步提升经济效益的重要手段。按照“以深化应用为主线，完善提升现有系统架构”的基本思路，九江石化统筹规划“十三五”APC/RTO建设线路图，确立了2至3年内在所有主装置实施APC，推进企业从“集中管理新模式”迈向“智能管控模式”的阶段目标和实施步骤。</p>
+					<p>从去年以来，该公司会同石化盈科和浙江中控等单位，围绕APC现有系统维护和新建项目以及RTO试点建设方案，有序开展相关方案设计、现场测试、数据收集、模型建立、修正及调试、模型投用及比对考察等系列工作，并利用2017年大检修完成了12套装置APC/RTO硬件安装和甩头施工，以及相关重要仪表、在线分析仪、控制回路的完善整改。</p>
+					<p>为确保APC/RTO项目的顺利实施，该公司还建立APC模型维护横向专业团队，对已建成APC系统的运行定期组织评估考核，开展APC运行劳动竞赛，强化APC系统的运行监控、运行维护，通过梳理和解决影响APC系统运行的问题，以及做好参数整定、控制优化等措施，保证了已上线的APC系统长期稳定、优化运行。</p>
+					<p>APC系统的实施对装置的运行产生了显著的优化效果。先进控制系统连续投用后，实现了产品质量的自动调节，装置运行的平稳性大幅提升，平均自控率提升了24.49%，并减轻了操作人员的劳动强度。同时，在满足工艺的要求下，有效降低了装置的能消。其中，2号催化分馏APC投用后，粗汽油干点平稳性明显提高，标准方差降低43.2%。2号气分装置主要被控目标参数操作平稳性明显提高，仅在丙烯产品回收率和降低装置能耗方面，年创直接经济效益370万元以上。</p>
+					<p>APC/RTO系统建设是九江石化打造核心竞争p力，实现原油到操作参数一体化优化集成，推进企业进一步提升经济效益的重要手段。按照“以深化应用为主线，完善提升现有系统架构”的基本思路，九江石化统筹规划“十三五”APC/RTO建设线路图，确立了2至3年内在所有主装置实施APC，推进企业从“集中管理新模式”迈向“智能管控模式”的阶段目标和实施步骤。</p>
+					<p>从去年以来，该公司会同石化盈科和浙江中控等单位，围绕APC现有系统维护和新建项目以及RTO试点建设方案，有序开展相关方案设计、现场测试、数据收集、模型建立、修正及调试、模型投用及比对考察等系列工作，并利用2017年大检修完成了12套装置APC/RTO硬件安装和甩头施工，以及相关重要仪表、在线分析仪、控制回路的完善整改。</p>
+					<p>为确保APC/RTO项目的顺利实施，该公司还建立APC模型维护横向专业团队，对已建成APC系统的运行定期组织评估考核，开展APC运行劳动竞赛，强化APC系统的运行监控、运行维护，通过梳理和解决影响APC系统运行的问题，以及做好参数整定、控制优化等措施，保证了已上线的APC系统长期稳定、优化运行。</p>
+					<p>APC系统的实施对装置的运行产生了显著的优化效果。先进控制系统连续投用后，实现了产品质量的自动调节，装置运行的平稳性大幅提升，平均自控率提升了24.49%，并减轻了操作人员的劳动强度。同时，在满足工艺的要求下，有效降低了装置的能消。其中，2号催化分馏APC投用后，粗汽油干点平稳性明显提高，标准方差降低43.2%。2号气分装置主要被控目标参数操作平稳性明显提高，仅在丙烯产品回收率和降低装置能耗方面，年创直接经济效益370万元以上。</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+	<footer class="newfooter">
+		<div>
+			<p>版权所有@石化盈科信息技术有限责任公司</p>
+			<p>管理员邮箱：xxxxx@pcitc.com</p>
+			<p>管理员电话：010-xxxxxxxx</p>
+		</div>
+	</footer>
+
+	<script src="../../Style Library/JS/Common/moment.min.js"></script>
+	<script src="../../Style Library/JS/Common/jquery.min.js"></script>
+	<script src="../../Style Library/CSS/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+	<script src="../../Style Library/JS/Common/echarts.min.js"></script>
+	<script src="../../Style Library/JS/Common/fullcalendar.min.js"></script>
+	<script src="../../Style Library/JS/Common/jquery.dataTables.min.js"></script>
+	<script src="../../Style Library/JS/Common/bootstrap-datetimepicker-master/js/bootstrap-datetimepicker.min.js"></script>
+	<script src="../../Style Library/JS/Common/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+	<script src="../../Style Library/JS/Common/index.js"></script>
+</body>
+</html>
