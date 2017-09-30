@@ -1261,6 +1261,9 @@ header {
 			margin-bottom: 0;
 			a {
 				color: white;
+				&:hover {
+					color: #949494;
+				}
 			}
 			.o365spo.contextMenuPopup {
 				color: white;
@@ -1276,6 +1279,9 @@ header {
 		.usersetting {
 			>a {
 				color: white !important;
+				&:hover {
+					color: #949494 !important;
+				}
 			}
 			a {
 				color: white;
@@ -1455,8 +1461,26 @@ header + div {
     	margin-left: 10px;
     	font-size: 18px;
 	}
+	.yellowtitle + div {
+		height: 300px;
+	    overflow-y: auto;
+	    overflow-x: hidden;
+	    width: 540px;
+	    table {
+	    	tr td {
+	    		a {
+	    			color: #333;
+	    			&:visited, &:hover {
+	    				color: #999;
+	    				text-decoration: none;
+	    			}
+	    		}
+	    	}
+	    }
+	}
 	.dataTables_wrapper {
 		position: relative;
+		overflow: hidden;
 	}
 	table {
 		width: 100% !important;
@@ -1464,16 +1488,24 @@ header + div {
 			display: none;
 		}
 		tbody {
+			tr {
+				td:first-child {
+					width: 75%;
+				}
+			}
 			td {
 				border: none;
+				display: inline-block;
+				a {
+					width: 100%;
+					display: inline-block;
+					white-space: nowrap;
+	    			overflow: hidden;
+	    			text-overflow: ellipsis;
+				}
 			}
 		}
 		& + .dataTables_paginate.paging_simple_numbers {
-			position: absolute;
-		    top: 20px;
-		    right: 20px;
-		    width: 200px;
-		    float: right;
 		    a {
 		    	padding: 0 5px;
 		    	color: black;
@@ -1599,20 +1631,20 @@ header + div {
 		}
 	}
 }
-.ms-webpart-zone.ms-fullWidth table #scriptWPQ2 .ms-csrlistview-controldiv {
-	background-color: transparent;
-}
 .ms-webpart-zone.ms-fullWidth {
 	display: block;
 	.ms-webpart-cell-vertical {
 		display: block;
-		.ms-webpart-chrome-vertical {
+		#MSOZoneCell_WebPartWPQ2.s4-wpcell-plain {
 			display: block;
 			>div {
 				width: 1240px;
 			    height: 500px;
 			    overflow: auto;
 			}
+		}
+		#WebPartWPQ2 {
+			width: 1240px;
 		}
 	}
 	.ms-webpart-zone.ms-fullWidth table #scriptWPQ2 .ms-csrlistview-controldiv {

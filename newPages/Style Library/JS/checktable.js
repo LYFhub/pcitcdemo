@@ -19,7 +19,7 @@ $(document).ready(function() {
 		"excutepeople": "李晨",
 		"requirepeople": "郑小凡",
 		"relatedrequire": "中国石化智能工厂提升项目需求",
-		"workplan": "【工作计划发布】 石化盈科项目A计划发布",
+		"workplan": {text:"【工作计划发布】 石化盈科项目A计划发布石化盈科项目A计划发布石化盈科项目A计划发布",url:"#"},
 		"workstatus": "待审批"
 	}, {
 		"num": "20170602011",
@@ -40,7 +40,7 @@ $(document).ready(function() {
 		"excutepeople": "李晨",
 		"requirepeople": "郑小凡",
 		"relatedrequire": "中国石化智能工厂提升项目需求",
-		"workplan": "【工作计划发布】 石化盈科项目A计划发布",
+		"workplan":  {text:"【工作计划发布】 石化盈科项目A计划发布",url:"#1"},
 		"workstatus": "待审批"
 	}, {
 		"num": "20170602002",
@@ -61,7 +61,7 @@ $(document).ready(function() {
 		"excutepeople": "李晨",
 		"requirepeople": "郑小凡",
 		"relatedrequire": "中国石化智能工厂提升项目需求",
-		"workplan": "【工作计划发布】 石化盈科项目A计划发布",
+		"workplan": {text:"【工作计划发布】 石化盈科项目A计划发布",url:"#2"},
 		"workstatus": "待审批"
 	}, {
 		"num": "20170602002",
@@ -82,7 +82,7 @@ $(document).ready(function() {
 		"excutepeople": "李晨",
 		"requirepeople": "郑小凡",
 		"relatedrequire": "中国石化智能工厂提升项目需求",
-		"workplan": "【工作计划发布】 石化盈科项目A计划发布",
+		"workplan": {text:"【工作计划发布】 石化盈科项目A计划发布",url:"#3"},
 		"workstatus": "待审批"
 	}, {
 		"num": "20170602002",
@@ -103,7 +103,7 @@ $(document).ready(function() {
 		"excutepeople": "李晨",
 		"requirepeople": "郑小凡",
 		"relatedrequire": "中国石化智能工厂提升项目需求",
-		"workplan": "【工作计划发布】 石化盈科项目A计划发布",
+		"workplan": {text:"【工作计划发布】 石化盈科项目A计划发布",url:"#4"},
 		"workstatus": "待审批"
 	}, {
 		"num": "20170602002",
@@ -124,7 +124,7 @@ $(document).ready(function() {
 		"excutepeople": "李晨",
 		"requirepeople": "郑小凡",
 		"relatedrequire": "中国石化智能工厂提升项目需求",
-		"workplan": "【工作计划发布】 石化盈科项目A计划发布",
+		"workplan": {text:"【工作计划发布】 石化盈科项目A计划发布",url:"#5"},
 		"workstatus": "待审批"
 	}, {
 		"num": "20170602002",
@@ -145,7 +145,7 @@ $(document).ready(function() {
 		"excutepeople": "李晨",
 		"requirepeople": "郑小凡",
 		"relatedrequire": "中国石化智能工厂提升项目需求",
-		"workplan": "【工作计划发布】 石化盈科项目A计划发布",
+		"workplan":  {text:"【工作计划发布】 石化盈科项目A计划发布",url:"#6"},
 		"workstatus": "待审批"
 	}, {
 		"num": "20170602002",
@@ -166,7 +166,7 @@ $(document).ready(function() {
 		"excutepeople": "李晨",
 		"requirepeople": "郑小凡",
 		"relatedrequire": "中国石化智能工厂提升项目需求",
-		"workplan": "【工作计划发布】 石化盈科项目A计划发布",
+		"workplan":  {text:"【工作计划发布】 石化盈科项目A计划发布",url:"#7"},
 		"workstatus": "待审批"
 	}, {
 		"num": "20170602002",
@@ -187,7 +187,7 @@ $(document).ready(function() {
 		"excutepeople": "李晨",
 		"requirepeople": "郑小凡",
 		"relatedrequire": "中国石化智能工厂提升项目需求",
-		"workplan": "【工作计划发布】 石化盈科项目A计划发布",
+		"workplan": {text:"【工作计划发布】 石化盈科项目A计划发布",url:"#8"},
 		"workstatus": "待审批"
 	}];
 
@@ -278,10 +278,23 @@ $(document).ready(function() {
 				sNext: '>'
 			}
 		},
+		// ajax: {// 动态获取数据
+  //           "url": "/Function/GetMenuData",
+  //           "dataSrc": "list",//这里是后台返回的数据对象
+  //           "data": function (d) {//d 是原始的发送给服务器的数据，默认很长。
+  //               var param = {};//因为服务端排序，可以新建一个参数对象
+  //               param.start = d.start;//开始的序号
+  //               param.length = d.length;//要取的数据的条数
+  //               return param;//自定义需要传递的参数。
+  //           }
+  //       }
 		columns: [{
-			data: 'workplan'
+			"data": 'workplan',
+			"render": function (data, type, full, callback) {
+                        return ('<a class="" href="'+ data.url +'" >'+ data.text +'</a>');
+                    }
 		}, {
-			data: 'workstatus'
+			"data": 'workstatus'
 		}]
 	});
 	$('#submittable').dataTable({
@@ -300,7 +313,10 @@ $(document).ready(function() {
 			}
 		},
 		columns: [{
-			data: 'workplan'
+			"data": 'workplan',
+			"render": function (data, type, full, callback) {
+                        return ('<a class="" href="'+ data.url +'" >'+ data.text +'</a>');
+                    }
 		}, {
 			data: 'workstatus'
 		}]
