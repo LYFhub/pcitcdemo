@@ -1643,8 +1643,22 @@ header + div {
 			    overflow: auto;
 			}
 		}
-		#WebPartWPQ2 {
+		#WebPartWPQ2, #WebPartWPQ3 {
 			width: 1240px;
+		}
+		#WebPartWPQ3 {
+			.jsgrid-control-editbox + div + label + div {
+				width: 100% !important;
+				>div:first-child {
+				}
+			}
+			.outer-scroll-bar {
+				position: relative;
+				>div:last-child {
+					position: absolute;
+					right: 0;
+				}
+			}
 		}
 	}
 	.ms-webpart-zone.ms-fullWidth table #scriptWPQ2 .ms-csrlistview-controldiv {
