@@ -52,8 +52,24 @@ table tr.darkgreytr {
 	color: white;
 }
 .container.content div.changerequest div.panel.panel-default:last-child {
-	border-top: 1px solid #ddd;
+	//border-top: 1px solid #ddd;
 }
+.panel-default {
+	border: 1px solid #ccc !important;
+	.panel-heading {
+		border-top: none !important;
+	}
+	.panel-body {
+		border: none;
+	}
+}
+.panel {
+	box-shadow: none;
+}
+.topdash {
+	width: 100%;
+}
+
 .searchcondition {
 	>div {
 		display: inline-block;
@@ -100,11 +116,59 @@ table tr.darkgreytr {
 		}
 	}
 }
+.searchresult {
+	.datagrid-wrap.panel-body {
+		border: none;
+	}
+	.datagrid-view {
+		height: auto !important;
+    	width: auto !important;
+		border: 1px solid #ccc;
+    	border-bottom: none;
+		.datagrid-view1 {
+			display: none;
+		}
+		.datagrid-view2 {
+			position: relative;
+			.datagrid-header {
+				height: 35px !important;
+				table {
+					height: 35px !important;
+					td {
+						border-style: solid;
+					}
+				}
+			}
+			.datagrid-body {
+				height: auto !important;
+				table {
+					td {
+						border-style: solid;
+					}
+				}
+				.datagrid-row {
+					height: 35px !important;
+				}
+			}
+		}
+	}
+	.pagination {
+		border: 1px solid #ccc;
+    	border-radius: 0;
+    	border-width: 0 1px 1px 1px !important;
+		input, select {
+			height: 20px !important;
+		}
+	}
+}
 .container.content div.changerequest {
 	.employeeskill {
 		input {
 			width: 586px;
 		}
+	}
+	input.btn-lg {
+		font-size: 16px;
 	}
 }
 .searchlist {
@@ -384,6 +448,7 @@ table tr.darkgreytr {
 		}
 		div input.btn.btn-lg {
 			margin-left: 10px;
+			font-size: 16px;
 		}
 	}
 }
@@ -1016,9 +1081,9 @@ table tr.darkgreytr {
 }
 .requiremgt {
 	.peopleheader ul {
-		padding-left: 95px;
+		padding-left: 150px;
 		li {
-		    margin-right: 80px;
+		    margin-right: 150px;
 		}
 	}
 	.peoplecontent {
@@ -1034,6 +1099,11 @@ table tr.darkgreytr {
 				}
 			}
 		}
+	}
+}
+.requiremgt, .peoplemgt {
+	.peopleTabContent {
+		background-color: #fff;
 	}
 }
 
@@ -1343,7 +1413,7 @@ body {
 
 header + .content,
 header + div {
-	min-height: 400px;
+	min-height: 500px;
 	z-index: 1;
 	padding-bottom: 20px;
 	background-image: url(../../Style%20Library/Images/bodybg.png);
@@ -1666,5 +1736,46 @@ header + div {
 	}
 	table#Hero-WPQ2 {
 		display: none;
+	}
+}
+
+.viewreport {
+	background-color: white;
+	.panel-body {
+		div.col-lg-12 {
+			margin: 5px 0;
+		}
+		label {
+			width: 110px;
+		    text-align: right;
+		    font-size: 16px;
+		    color: #333;
+		    margin-right: 15px;
+		}
+		select {
+			width: 600px !important;
+		}
+		input.btn {
+			margin: 30px 0 30px 30px !important;
+		}
+		table {
+			th, td {
+				text-align: center;
+				font-size: 16px;
+				height: 40px;
+				border: 1px solid #666;
+				a {
+					color: #666;
+					text-decoration: underline;
+					&:hover {
+						color: #333;
+					}
+				}
+			}
+			th {
+				background-color: #666;
+				color: white;
+			}
+		}
 	}
 }
