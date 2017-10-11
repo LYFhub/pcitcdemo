@@ -54,6 +54,10 @@ table tr.darkgreytr {
 .container.content div.changerequest div.panel.panel-default:last-child {
 	//border-top: 1px solid #ddd;
 }
+.container.content textarea {
+	height: 120px !important;
+	min-height: 100px !important;
+}
 .panel-default {
 	border: 1px solid #ccc !important;
 	.panel-heading {
@@ -431,6 +435,9 @@ table tr.darkgreytr {
 		float: left;
 		width: 100%;
 		padding-top: 20px;
+		label {
+			margin-bottom: 0;
+		}
 		>div.col-lg-4 {
 			margin: 10px 0 !important;
 			padding: 0 15px !important;
@@ -440,6 +447,9 @@ table tr.darkgreytr {
 			}
 			>div {
 				height: 40px;
+			}
+			>select {
+				font-size: inherit;
 			}
 		}
 		div.fourtextbox,
@@ -474,6 +484,7 @@ table tr.darkgreytr {
 		margin: 10px 1%;
 		>p {
 			display: inline-block;
+			font-weight: bold;
 		}
 	}
 }
@@ -754,6 +765,7 @@ table tr.darkgreytr {
 				>label {
 					& + textarea {
 						left: 118px;
+						width: 632px;
 					}
 				}
 			}
@@ -1560,7 +1572,7 @@ header + div {
 		tbody {
 			tr {
 				td:first-child {
-					width: 75%;
+					width: 70%;
 				}
 			}
 			td {
