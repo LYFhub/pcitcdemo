@@ -162,6 +162,7 @@ table tr.darkgreytr {
     	border-width: 0 1px 1px 1px !important;
 		input, select {
 			height: 20px !important;
+			font-size: inherit !important;
 		}
 	}
 }
@@ -1093,9 +1094,9 @@ table tr.darkgreytr {
 }
 .requiremgt {
 	.peopleheader ul {
-		padding-left: 150px;
+		padding-left: 75px;
 		li {
-		    margin-right: 150px;
+		    margin-right: 70px;
 		}
 	}
 	.peoplecontent {
@@ -1457,6 +1458,7 @@ header + div {
 		}
 		.carousel-inner {
 			.item {
+				height: 500px;
 				img {
 					min-height: 450px;
 					height: 500px;
@@ -1790,4 +1792,40 @@ header + div {
 			}
 		}
 	}
+}
+
+// align text of table in search people result page
+.datagrid-cell-c2-Name, td[field="Name"]{width:120px !important}
+.datagrid-cell-c2-EmployeeType, td[field="EmployeeType"]{width:120px !important}
+.datagrid-cell-c2-Company, td[field="Company"]{width:175px !important}
+.datagrid-cell-c2-Department, td[field="Department"]{width:190px !important}
+.datagrid-cell-c2-Position, td[field="Position"]{width:250px !important}
+.datagrid-cell-c2-Level, td[field="Level"]{width:100px !important}
+.datagrid-cell-c2-AvailableDate, td[AvailableDate="Name"]{width:150px !important}
+
+// hidden up and down arrow of sp component(search people)
+.ms-usereditor > tbody > tr > td > table > tbody > tr > td > div {
+	overflow: hidden !important;
+}
+
+.container.content .requiresearch .panel-body > div >.uploadfile {
+	color: white;
+    width: 180px;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 10px;
+    background-color: #157efa;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: normal;
+    top: 26px;
+    &:hover {
+    	background-color: #0a3e7c;
+    }
+    input {
+    	height: 40px !important;
+    }
+    a {
+    	color: white;
+    }
 }
