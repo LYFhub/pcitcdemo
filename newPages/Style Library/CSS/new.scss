@@ -716,6 +716,11 @@ table tr.darkgreytr {
 	.handlereason {
 		margin-top: 10px;
 	}
+	table {
+		th, td {
+			text-align: center;
+		}
+	}
 }
 
 .loanedapplication .loanedinfo, 
@@ -898,7 +903,7 @@ table tr.darkgreytr {
 .lightblue {
 	background: rgba(222, 235, 247, 1);
 }
-.peoplemgt, .projectmanager, .requiremgt {
+.peoplemgt, .projectmanager, .requiremgt, .newplanmgt, .execplandetail{
 	.peopleheader {
 		height: 85px;
 	    background-color: #ebead5;
@@ -1139,7 +1144,183 @@ table tr.darkgreytr {
 		}
 	}
 }
-.requiremgt, .peoplemgt, .projectmanager {
+.newplanmgt {
+	.peopleheader {
+		ul {
+			padding-left: 120px;
+			li {
+	    		margin-right: 120px;
+			}
+		}
+	}
+	.peoplecontent {
+		ul.peopleTab li {
+			width: 33%;
+			&:last-child {
+				width: 34%;
+			}
+		}
+		.peopleTabContent {
+			#newplantab, #changeplantab {
+				>a:first-child {
+					top: 0;
+				}
+			}
+			#execplantab {
+				padding: 50px 20px;
+				.abovemanager {
+					&:after {
+						@include clear_float;
+					}
+					.workassist {
+						height: 486.75px;
+					}
+					>div {
+						float: left;
+						width: 49%;
+						margin: 0.5%;
+						background-color: #eee;
+						>p {
+							font-size: 16px;
+							font-weight: bold;
+							margin: 40px 0 30px 0;
+						}
+						.execcontent {
+							padding: 5px;
+							&:after {
+								@include clear_float;
+							}
+							>div {
+								float: left;
+								width: 31%;
+								margin: 1.16%;
+								background-color: #999;
+								a {
+									display: block;
+									height: 179px;
+    								padding-top: 40px;
+									&:hover {
+										text-decoration: none;
+									}
+									img {
+
+									}
+									p {
+										color: white;
+										margin-top: 25px;
+										font-size: 16px;
+									}
+								}
+							}
+						}
+					}
+				}
+				.undermanager {
+					&:after {
+						@include clear_float;
+					}
+					.workassist, .editprojectreport {
+						>p {
+							margin-bottom: 56px;
+						}
+					}
+					.workassist, .changeplan {
+						height: 687.59px;
+					}
+
+					>div {
+						float: left;
+						width: 32.3%;
+						margin: 0.5%;
+						background-color: #eee;
+						>p {
+							font-size: 16px;
+							font-weight: bold;
+							margin: 40px 0 30px 0;
+						}
+						.projectselector {
+							margin-top: -15px;
+							margin-bottom: 10px;
+							label {
+								font-size: 16px;
+								font-weight: normal;
+							}
+							select {
+								height: 30px;
+								width: 80%;
+							}
+						}
+						
+						.execcontent {
+							padding: 5px;
+							&:after {
+								@include clear_float;
+							}
+							>div {
+								float: left;
+								width: 48%;
+								margin: 1%;
+								background-color: #999;
+								a {
+									display: block;
+									height: 179px;
+    								padding-top: 40px;
+									&:hover {
+										text-decoration: none;
+									}
+									img {
+
+									}
+									p {
+										color: white;
+										margin-top: 25px;
+										font-size: 16px;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.execplandetail {
+	.peoplecontent {
+		ul.peopleTab li {
+			width: 33%;
+			&:last-child {
+				width: 34%;
+			}
+		}
+	}
+	.peopleTabContent {
+		padding: 20px;
+		>div {
+			>p {
+				font-size: 16px;
+				font-weight: bold;
+				text-align: left;
+				margin-top: 30px;
+			}
+			table {
+				th, td {
+					height: 40px;
+				}
+				th {
+					background-color: #666;
+					color: white;
+					text-align: center;
+					font-weight: normal;
+				}
+				& + p {
+					margin-top: 50px;
+				}
+			}
+		}
+	}
+}
+.requiremgt, .peoplemgt, .projectmanager, .newplanmgt, .execplandetail{
 	.peopleTabContent {
 		background-color: #fff;
 	}
@@ -2064,6 +2245,157 @@ header + div {
 					div.ms-inputBox {
 						text-align: left;
 						width: 140px;
+					}
+				}
+			}
+		}
+	}
+	#candidateOverlay {
+		table {
+			tr {
+				td:last-child {
+					position: relative;
+    				vertical-align: middle;
+    				label {
+    					margin-right: 10px;
+    					& + span {
+    						position: absolute;
+    						top: 20px;
+    						right: 5px;
+    					}
+    				}
+				}
+			}
+		}
+	}
+}
+
+.createplan, .childproject {
+	.projectinfo {
+		&:after {
+			@include clear_float;
+		}
+		>div {
+			border-top: 1px solid #999;
+			border-right: 1px solid #999;
+			padding: 0;
+			height: 30px;
+			&:last-child {
+				border-bottom: 1px solid #999;
+				height: 60px;
+				width: 99.99%;
+				>label {
+					height: 100%;
+					line-height: 60px;
+					position: relative;
+					top: -23px;
+				}
+			}
+			>label {
+				border-right: 1px solid #999;
+				width: 140px;
+				background-color: #666;
+				color: white;
+				font-weight: normal;
+			}
+			>p {
+				width: calc(99% - 140px);
+			}
+			>p, >label {
+				display: inline-block;
+				height: 30px;
+				margin: 0;
+				text-align: center;
+				line-height: 30px;
+			}
+			>textarea {
+				height: 100% !important;
+				min-height: 0 !important;
+				width: calc(99% - 135px) !important;
+				border: none;
+				&:focus {
+					border: none;
+				}
+				&:disabled {
+					background-color: white !important;
+					color: #333 !important;
+				}
+			}
+		}
+	}
+}
+.extendinfo {
+	.panel-body {
+		>div {
+			margin-bottom: 10px;
+			label {
+				width: 60px;
+				text-align: right;
+				margin-right: 5px;
+			}
+			input.btn {
+				margin: 20px 0 0 18px !important;
+			}
+		}
+	}
+}
+.editdetailplan, .approvaldetailplan {
+	.panel-body {
+		padding-left: 50px !important;
+		img {
+			margin-right: 15px;
+			position: relative;
+			top: -2px;
+		}
+		>p {
+			margin: 20px 0 0 0;
+		}
+		>a {
+			margin-right: 50px;
+			color: #333;
+			text-decoration: underline;
+			&:hover {
+				color: black;
+			}
+		}
+		input.btn {
+			margin: 20px 20px 0 0 !important;
+		}
+	}
+}
+.childprojectplan {
+	.projectplancontent {
+		border: solid 1px #ddd;
+    	margin-bottom: 20px;
+    	.planapprovaltab {
+			background-color: #fafafa;
+			li {
+				width: 20%;
+				a {
+					color: #999;
+					text-align: center;
+				}
+			}
+			li.active a {
+				color: #333;
+			}
+		}
+		.planapprovaltabcontent {
+			padding: 20px;
+			#milestonetab {
+				table {
+					th,td {
+						text-align: center;
+						vertical-align: middle;
+					}
+					th {
+						height: 45px;
+						background-color: #666;
+						color: white;
+						font-weight: normal;
+					}
+					td {
+						height: 40px;
 					}
 				}
 			}
