@@ -496,6 +496,7 @@ table tr.darkgreytr {
 	.panel-body {
 		>p {
 			display: inline-block;
+			font-weight: bold;
 			& + button {
 				border: none;
 			}
@@ -522,6 +523,9 @@ table tr.darkgreytr {
 		}
 
 		>div {
+			>p {
+				font-weight: bold;
+			}
 			input + span.uploadfile {
 				top: 16px;
 			}
@@ -531,6 +535,9 @@ table tr.darkgreytr {
 
 .resourceinit {
 	.panel-body {
+		>div >p {
+			font-weight: bold;
+		}
 		input.btn.btn-lg.btn-warning {
 			background: #ec971f;
 			&:hover {
@@ -559,8 +566,9 @@ table tr.darkgreytr {
 				padding-left: 0;
 				padding-right: 0;
 			}
-			p {
+			>p {
 				margin-top: 10px;
+				font-weight: bold;
 			}
 		}
 		
@@ -678,6 +686,9 @@ table tr.darkgreytr {
 		&:after {
 			@include clear_float;
 		}
+		>div > p {
+			font-weight: bold;
+		}
 		.leftreason {
 			width: 50%;
 			float: left;
@@ -711,7 +722,7 @@ table tr.darkgreytr {
 }
 .extendassignanalysis {
 	.changelabel {
-		font-weight: normal;
+		font-weight: bold;
 	}
 	.handlereason {
 		margin-top: 10px;
@@ -772,6 +783,7 @@ table tr.darkgreytr {
     			width: 160px;
     			text-align: center;
     			margin-top: 10px;
+    			font-weight: bold;
     			&:hover {
     				color: black;
     			}
@@ -1780,7 +1792,7 @@ header + div {
 		tbody {
 			tr {
 				td:first-child {
-					width: 70%;
+					width: 90%;
 				}
 			}
 			td {
@@ -1923,13 +1935,16 @@ header + div {
 }
 .ms-webpart-zone.ms-fullWidth {
 	display: block;
+	width: 1240px;
+    height: 530px;
+    overflow: auto;
 	.ms-webpart-cell-vertical {
 		display: block;
 		#MSOZoneCell_WebPartWPQ2.s4-wpcell-plain {
 			display: block;
 			>div {
 				width: 1240px;
-			    height: 500px;
+			    height: 530px;
 			    overflow: auto;
 			}
 		}
@@ -2044,6 +2059,30 @@ header + div {
 	}
 	.feasiblestudy .panel-body > div > div input[type='checkbox'] {
 		width: 15px;
+	}
+	.feasiblestudy .panel-body > div.col-lg-12.col-md-12.col-sm-12 .changelabel {
+		width: auto !important;
+	}
+	.requiresearch .panel-body {
+		> div.col-lg-12.col-md-12.col-sm-12 {
+			padding: 0;
+			label {
+				margin-left: 0;
+			}
+		}
+		> div.col-lg-4.col-md-4.col-sm-4.spcomponent {
+			>input, table.ms-usereditor {
+				left: 105px;
+			}
+		}
+	}
+	.feasiblestudy, .requiresearch {
+		.desctitle {
+			margin-top: 10px;
+		}
+	}
+	.feasiblestudy .panel-body > div:first-child {
+		margin-bottom: 5px !important;
 	}
 }
 
