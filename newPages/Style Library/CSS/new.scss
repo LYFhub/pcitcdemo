@@ -6,6 +6,9 @@
 	width: 0;
 	visibility: hidden;
 }
+#s4-bodyContainer {
+	padding-bottom: 0;
+}
 .front-star {
 	&:before {
 		content: "*";
@@ -47,7 +50,11 @@ div.model {
     z-index: 1504;
     display: none;
 }
-
+table {
+	th {
+		vertical-align: middle !important;
+	}
+}
 table tr.darkgreytr {
 	background: #999 !important;
 	color: white;
@@ -610,7 +617,7 @@ table tr.darkgreytr {
 	span.textbox.combo {
 	    border-radius: 0;
 	    border: 1px solid #bebebe;
-	    width: 600px !important;
+	    width: 632.66px !important;
 	    background-color: white;
 	    span, a{
 	    	height: 40px !important;
@@ -1136,9 +1143,9 @@ table tr.darkgreytr {
 }
 .requiremgt {
 	.peopleheader ul {
-		padding-left: 75px;
+		padding-left: 45px;
 		li {
-		    margin-right: 70px;
+		    margin-right: 40px;
 		}
 	}
 	.peoplecontent {
@@ -1156,6 +1163,37 @@ table tr.darkgreytr {
 		}
 	}
 }
+.planmgt {
+	#thisweektask,
+	#nextweekplan,
+	#planissue,
+	#planrisk {
+		table {
+			th, td {
+				&:first-child {
+					text-align: left;
+				}
+			}
+		}
+	}
+	#planissue,
+	#planrisk {
+		table {
+			th, td {
+				&:nth-child(2) {
+					text-align: left;
+				}
+			}
+		}
+	}
+	#viewhistoryreport {
+		div.col-lg-12 {
+			select {
+			}
+		}
+	}
+}
+
 .newplanmgt {
 	.peopleheader {
 		ul {
@@ -1173,6 +1211,7 @@ table tr.darkgreytr {
 			}
 		}
 		.peopleTabContent {
+
 			#newplantab, #changeplantab {
 				>a:first-child {
 					top: 0;
@@ -1215,7 +1254,9 @@ table tr.darkgreytr {
 										text-decoration: none;
 									}
 									img {
-
+										display: inline-block;
+										height: 60px;
+										width: auto;
 									}
 									p {
 										color: white;
@@ -1237,7 +1278,7 @@ table tr.darkgreytr {
 						}
 					}
 					.workassist, .changeplan {
-						height: 687.59px;
+						height: 501.06px;
 					}
 
 					>div {
@@ -1257,9 +1298,27 @@ table tr.darkgreytr {
 								font-size: 16px;
 								font-weight: normal;
 							}
-							select {
+							>select, >span.textbox.combo {
 								height: 30px;
-								width: 80%;
+								line-height: 30px;
+								width: 80% !important;
+								border-radius: 0;
+								>span {
+									height: 30px;
+								}
+								input.textbox-text.validatebox-text {
+									width: calc(100% - 18px) !important;
+								    border-radius: 0;
+								    height: 30px !important;
+								    border-top: none;
+								    border-left: none;
+								    vertical-align: middle;
+								    position: relative;
+    								top: -3px;
+								}
+								a {
+									height: 30px !important;
+								}
 							}
 						}
 						
@@ -1281,7 +1340,9 @@ table tr.darkgreytr {
 										text-decoration: none;
 									}
 									img {
-
+										display: inline-block;
+										height: 60px;
+										width: auto;
 									}
 									p {
 										color: white;
@@ -1300,10 +1361,7 @@ table tr.darkgreytr {
 .execplandetail {
 	.peoplecontent {
 		ul.peopleTab li {
-			width: 33%;
-			&:last-child {
-				width: 34%;
-			}
+			width: 180px;
 		}
 	}
 	.peopleTabContent {
@@ -1327,6 +1385,17 @@ table tr.darkgreytr {
 				}
 				& + p {
 					margin-top: 50px;
+				}
+			}
+		}
+		#execmyissue {
+			table {
+				th, td {
+					&:first-child, 
+					&:nth-child(2), 
+					&:nth-child(3) {
+						text-align: left;
+					}
 				}
 			}
 		}
@@ -1646,7 +1715,6 @@ header + .content,
 header + div {
 	min-height: 500px;
 	z-index: 1;
-	padding-bottom: 20px;
 	background-image: url(../../Style%20Library/Images/bodybg.png);
 	//position: relative;
 	//top: 172px;
@@ -1817,6 +1885,55 @@ header + div {
 		    }
 		}
 	}
+	.mysubmit {
+		.quickapp, .abovequickapp, .underquickapp {
+			padding: 5px;
+		    position: relative;
+		    left: -10px;
+		    width: 100%;
+		    padding-top: 20px;
+			&:after {
+				@include clear_float;
+			}
+			>div {
+				float: left;
+				width: 23%;
+				margin: 1%;
+				background-color: #999;
+				a {
+					display: block;
+				    height: 125px;
+				    padding-top: 15px;
+				    text-align: center;
+					&:hover {
+						text-decoration: none;
+					}
+					img {
+						display: inline-block;
+						height: 60px;
+						width: auto;
+					}
+					p {
+						color: white;
+						margin-top: 15px;
+						font-size: 16px;
+					}
+				}
+			}
+		}
+		.abovequickapp {
+			>div {
+				width: 48%;
+				margin: 1%
+			}
+		}
+		.underquickapp {
+			>div {
+				width: 31%;
+				margin: 1%
+			}
+		}
+	}
 }
 
 .proprocess {
@@ -1901,6 +2018,8 @@ header + div {
 }
 
 .newspage {
+	background-color: white;
+	padding: 0 10px 10px 10px;
 	.newsheader {
 		text-align: center;
 		h3 {
@@ -2024,15 +2143,33 @@ header + div {
 }
 
 // align text of table in search people result page
-.datagrid-cell-c2-Name, td[field="Name"]{width:120px !important}
-.datagrid-cell-c2-EmployeeType, td[field="EmployeeType"]{width:120px !important}
-.datagrid-cell-c2-Company, td[field="Company"]{width:173px !important}
-.datagrid-cell-c2-Department, td[field="Department"]{width:190px !important}
-.datagrid-cell-c2-Position, td[field="Position"]{width:250px !important}
-.datagrid-cell-c2-Level, td[field="Level"]{width:100px !important}
-.datagrid-cell-c2-AvailableDate, td[AvailableDate="Name"]{width:150px !important}
+.datagrid-cell-c2-Name, td[field="Name"]{width:120px !important;}
+.datagrid-cell-c2-EmployeeType, td[field="EmployeeType"]{width:120px !important;}
+.datagrid-cell-c2-Company, td[field="Company"]{width:173px !important;}
+.datagrid-cell-c2-Department, td[field="Department"]{width:190px !important;}
+.datagrid-cell-c2-Position, td[field="Position"]{width:250px !important;}
+.datagrid-cell-c2-Level, td[field="Level"]{width:100px !important;}
+.datagrid-cell-c2-AvailableDate, td[AvailableDate="Name"]{width:150px !important;}
 
 // optimize easyui dropdown style of ProjectMemberRequest page
+.changerequest {
+	.datagrid-view .datagrid-view2 {
+		.datagrid-header, .datagrid-body {
+			td[field="Title"] { width:358px !important; }
+			td[field="Id"] { width:160px !important; }
+			td[field="Manager"] { width:114px !important; }
+			td > div {
+				width: 100% !important;
+			}
+		}
+		.datagrid-cell {
+			font-size: 14px;
+			span {
+				font-size: 14px;
+			}
+		}
+	}
+}
 
 
 // change form fontSize to 14px 
@@ -2083,6 +2220,29 @@ header + div {
 	}
 	.feasiblestudy .panel-body > div:first-child {
 		margin-bottom: 5px !important;
+	}
+	#viewhistoryreport {
+		.col-lg-12 {
+			span {
+				input, a {
+					height: 40px !important;
+					line-height: 40px !important;
+				}
+			}
+		}
+		
+	}
+	#tempTaskOverlay {
+		.ms-usereditor {
+			>tbody >tr >td {
+				&:first-child {
+					width: 100% !important;
+				}
+				&:last-child {
+					position: absolute;
+				}
+			}
+		}
 	}
 }
 
@@ -2143,6 +2303,15 @@ header + div {
 				}
 				>div {
 					margin: 5px 0;
+					span {
+						border-radius: 0;
+						input {
+							border-radius: 0;
+						}
+						a {
+							height: 40px !important;
+						}
+					}
 				}
 			}
 			label {
