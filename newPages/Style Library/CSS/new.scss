@@ -50,10 +50,18 @@ div.model {
     z-index: 1504;
     display: none;
 }
+.bootstrap-select.dropup .dropdown-menu.inner {
+	max-height: 280px !important;
+}
 table {
 	th {
 		vertical-align: middle !important;
 	}
+}
+table.table.table-bordered >thead >tr >th,
+table.table.table-bordered >tbody >tr >td{
+	min-width: 100px;
+	word-break: break-all;
 }
 table tr.darkgreytr {
 	background: #999 !important;
@@ -73,6 +81,7 @@ table tr.darkgreytr {
 	}
 	.panel-body {
 		border: none;
+		overflow: visible;
 	}
 }
 .panel {
@@ -109,6 +118,16 @@ table tr.darkgreytr {
 					height: 40px;
 					border-radius: 0;
 				}
+			}
+		}
+	}
+	.employeelevel {
+		.dropdown-menu.inner {
+			max-height: 245px !important;
+		}
+		.bootstrap-select.dropup {
+			.dropdown-menu.inner {
+				max-height: 135px !important;
 			}
 		}
 	}
@@ -376,6 +395,7 @@ table tr.darkgreytr {
 
 .newpeople {
 	.panel-body {
+		overflow: visible;
 		>div {
 			&:after {
 				@include clear_float;
@@ -459,6 +479,9 @@ table tr.darkgreytr {
 			}
 			>select {
 				font-size: inherit;
+			}
+			.bootstrap-select.dropup .dropdown-menu.inner {
+				max-height: 280px !important;
 			}
 		}
 		div.fourtextbox,
@@ -1045,7 +1068,6 @@ table tr.darkgreytr {
 
 				>a {
 					width: 200px;
-					background: rgba(242,242,242,1);
 					display: inline-block;
 					margin-left: -5px;
 					div {
@@ -1143,9 +1165,9 @@ table tr.darkgreytr {
 }
 .requiremgt {
 	.peopleheader ul {
-		padding-left: 45px;
+		padding-left: 35px;
 		li {
-		    margin-right: 40px;
+		    margin-right: 25px;
 		}
 	}
 	.peoplecontent {
@@ -1188,7 +1210,55 @@ table tr.darkgreytr {
 	}
 	#viewhistoryreport {
 		div.col-lg-12 {
-			select {
+			&:first-child {
+				select {
+					// clear default select arrow style
+					appearance: none;
+				    -moz-appearance: none;
+				    -webkit-appearance: none;
+				    // set arrow picture
+				    background: url(http://spapp/sites/sppwa/Style%20Library/images/combo_arrow.png) no-repeat scroll right center transparent;
+				    padding-right: 20px;
+				}
+				// clear default select arrow style for ie
+				select::-ms-expand { display: none; }
+			}
+			&:nth-child(2) {
+				span.textbox.combo {
+					border-left: none;
+					input.textbox-text.validatebox-text {
+						border-right: none;
+    					border-top: none;
+					}
+					span {
+						a.textbox-icon {
+							background-color: transparent;
+							opacity: 1;
+						}
+					}
+				}
+			}
+		}
+	}
+	#editthisweekreport {
+		div.col-lg-12 {
+			&:first-child {
+				span.textbox.combo {
+					border-left: none;
+					input.textbox-text.validatebox-text {
+						border-right: none;
+    					border-top: none;
+					}
+					span {
+						a.textbox-icon {
+							background-color: transparent;
+							opacity: 1;
+							&:focus {
+								color: white;
+							}
+						}
+					}
+				}
 			}
 		}
 	}
@@ -1278,7 +1348,7 @@ table tr.darkgreytr {
 						}
 					}
 					.workassist, .changeplan {
-						height: 501.06px;
+						height: 687.59px;
 					}
 
 					>div {
@@ -1905,8 +1975,9 @@ header + div {
 				    height: 125px;
 				    padding-top: 15px;
 				    text-align: center;
-					&:hover {
+					&:visited, &:hover, &:active {
 						text-decoration: none;
+						color: #999;
 					}
 					img {
 						display: inline-block;
@@ -2096,10 +2167,10 @@ header + div {
 .viewreport {
 	background-color: white;
 	.textbox.combo {
-		width: 600px !important;
+		width: 632px !important;
     	border-radius: 0;
     	input.textbox-text {
-			width: 580px !important;
+			width: 612px !important;
 			border-radius: 0;
     	}
 	}
@@ -2115,7 +2186,7 @@ header + div {
 		    margin-right: 15px;
 		}
 		select {
-			width: 600px !important;
+			width: 632px !important;
 		}
 		input.btn {
 			margin: 30px 0 30px 30px !important;
@@ -2152,7 +2223,7 @@ header + div {
 .datagrid-cell-c2-AvailableDate, td[AvailableDate="Name"]{width:150px !important;}
 
 // optimize easyui dropdown style of ProjectMemberRequest page
-.changerequest {
+//.changerequest {
 	.datagrid-view .datagrid-view2 {
 		.datagrid-header, .datagrid-body {
 			td[field="Title"] { width:358px !important; }
@@ -2169,7 +2240,7 @@ header + div {
 			}
 		}
 	}
-}
+//}
 
 
 // change form fontSize to 14px 
@@ -2200,6 +2271,22 @@ header + div {
 	.feasiblestudy .panel-body > div.col-lg-12.col-md-12.col-sm-12 .changelabel {
 		width: auto !important;
 	}
+	.requirelist {
+		>div {
+			>span, >input {
+				white-space: nowrap;
+	    		overflow: hidden;
+	    		text-overflow: ellipsis;
+			}
+		}
+	}
+	div[class^="col-lg"] {
+		>input, >select, >span {
+			white-space: nowrap;
+    		overflow: hidden;
+    		text-overflow: ellipsis;
+		}
+	}
 	.requiresearch .panel-body {
 		> div.col-lg-12.col-md-12.col-sm-12 {
 			padding: 0;
@@ -2211,6 +2298,9 @@ header + div {
 			>input, table.ms-usereditor {
 				left: 105px;
 			}
+		}
+		.spcomponent .ms-taxonomy.ms-taxonomy-height.ms-taxonomy-width {
+			left: 60px;
 		}
 	}
 	.feasiblestudy, .requiresearch {
@@ -2233,7 +2323,11 @@ header + div {
 		
 	}
 	#tempTaskOverlay {
+		td >span {
+			display: inline-block;
+		}
 		.ms-usereditor {
+			width: 180px !important;
 			>tbody >tr >td {
 				&:first-child {
 					width: 100% !important;
@@ -2251,6 +2345,7 @@ header + div {
 // hidden up and down arrow of sp component(search people)
 .ms-usereditor > tbody > tr > td > table > tbody > tr > td > div {
 	overflow: hidden !important;
+	text-align: left;
 }
 
 .container.content .requiresearch .panel-body > div >.uploadfile {
@@ -2320,7 +2415,7 @@ header + div {
 				margin-right: 5px;
 			}
 			select {
-				width: 600px;
+				width: 632px;
 			}
 			.checkboxgroup {
 				display: inline-block;
