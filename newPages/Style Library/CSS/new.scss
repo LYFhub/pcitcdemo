@@ -1210,19 +1210,17 @@ table tr.darkgreytr {
 	}
 	#viewhistoryreport {
 		div.col-lg-12 {
-			&:first-child {
-				select {
-					// clear default select arrow style
-					appearance: none;
-				    -moz-appearance: none;
-				    -webkit-appearance: none;
-				    // set arrow picture
-				    background: url(http://spapp/sites/sppwa/Style%20Library/images/combo_arrow.png) no-repeat scroll right center transparent;
-				    padding-right: 20px;
-				}
-				// clear default select arrow style for ie
-				select::-ms-expand { display: none; }
+			select {
+				// clear default select arrow style
+				appearance: none;
+			    -moz-appearance: none;
+			    -webkit-appearance: none;
+			    // set arrow picture
+			    background: url(http://spapp/sites/sppwa/Style%20Library/images/combo_arrow.png) no-repeat scroll right center transparent;
+			    padding-right: 20px;
 			}
+			// clear default select arrow style for ie
+			select::-ms-expand { display: none; }
 			&:nth-child(2) {
 				span.textbox.combo {
 					border-left: none;
@@ -1774,8 +1772,10 @@ footer.newfooter {
 	}
 }
 body {
+	overflow-y: auto;
 	#s4-workspace {
-		overflow: auto;
+		overflow: unset;
+		height: auto !important;
 		z-index: 3;
 		background-image: url(../../Style%20Library/Images/bodybg.png);
 	}
@@ -2334,6 +2334,7 @@ header + div {
 				}
 				&:last-child {
 					position: absolute;
+					top: 67px;
 				}
 			}
 		}
@@ -2343,9 +2344,11 @@ header + div {
 
 
 // hidden up and down arrow of sp component(search people)
-.ms-usereditor > tbody > tr > td > table > tbody > tr > td > div {
+table.ms-usereditor > tbody > tr > td > table > tbody > tr > td > div {
 	overflow: hidden !important;
 	text-align: left;
+	line-height: 36px !important;
+	padding-left: 5px;
 }
 
 .container.content .requiresearch .panel-body > div >.uploadfile {
@@ -2685,7 +2688,11 @@ header + div {
 		}
 		.planapprovaltabcontent {
 			padding: 20px;
-			#milestonetab {
+			#milestonetab,
+			#costbudgettab,
+			#procurementtab,
+			#internalactivitytab,
+			#externalactivitytab {
 				table {
 					th,td {
 						text-align: center;
