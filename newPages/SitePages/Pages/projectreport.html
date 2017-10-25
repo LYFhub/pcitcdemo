@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>石化盈科</title>
+	<title>子项目级周报</title>
 	<style>
 		body {
 			margin: 0;
@@ -17,18 +17,36 @@
 			border-collapse:collapse;
 		}
 		.reportname {
+			color: red;
 			display: inline-block;
 		    padding-top: 10px;
 			width: 100%;
-			background-color: #ccc;
 		}
 		.reportname p {
-			font-size: 22px;
+			font-size: 30px;
+		    font-weight: bold;
+			text-align: center;
+			margin-bottom: 0;
+			margin-top: 10px;
+		}
+		.reportname h2 {
+			margin-top: 10px;
+			margin-bottom: 3px;
+			font-size: 36px;
 		    font-weight: bold;
 			text-align: center;
 		}
+		.reportname .reportdate {
+			font-size: 20px;
+		}
+		.reportname h2 + div {
+			height: 3px;
+			background-color: red;
+			width: 100%;
+		}
 		.reportname .reportinfo {
-			margin: 10px 21px;
+			color: black;
+			margin: 10px 0;
 		}
 		.reportinfo >div {
 			display: inline-block;
@@ -40,10 +58,7 @@
 			float: right;
 		}
 		.reportcontent {
-			padding-left: 20px;
-    		padding-right: 20px;
     		padding-bottom: 20px;
-    		border: 1px solid #ccc;
 		}
 		.reportcontent >div >p{
 			font-size: 16px;
@@ -67,7 +82,7 @@
     		border: 1px solid #666;
 		}
 		h4 {
-			margin-bottom: 10px;
+			margin: 10px 0;
 		}
 		table th:first-child, table td:first-child {
 			text-align: left !important;
@@ -78,15 +93,50 @@
 		.risk table td:nth-child(2) {
 			text-align: left !important;
 		}
-		table th:last-child {
-            width: 100px;
+		table.table.table-bordered >thead >tr >th,
+		table.table.table-bordered >tbody >tr >td{
+			min-width: 90px;
+			word-break: break-all;
+		}
+        .processbar {
+        	display: inline-block;
+        	width: calc(100% - 105px);
+        }
+        .allprocess {
+        	display: inline-block;
+        	height: 25px;
+        	width: 100%;
+        	background-color: rgba(184, 186, 213, 1);
+        }
+        .currentprocess {
+        	color: white;
+        	text-align: center;
+        	display: inline-block;
+        	height: 25px;
+        	width: 30%;
+        	background-color: rgba(47, 52, 143, 1);
+        }
+        .processtitle {
+        	font-size: 14px;
+        	width: 100px;
+        	display: inline-block;
+        	text-align: right;
+        }
+        span.processtitle + div {
+        	margin: 5px 0;
+        }
+        .reportname + p {
+        	margin: 0;
         }
 	</style>
 </head>
 <body>
 	<div class="container content">
 		<div class="reportname">
-			<p>中科炼化子项目级工作周报（<span>2017-09-24</span>）</p>
+			<p>中科炼化智能工厂建设</p>
+			<h2>子项目级周报</h2>
+			<div></div>
+			<p class="reportdate">2017年09月18日-2017年09月24日</p>
 			<div class="reportinfo">
 				<div><label for="">子项目编号：</label><span>XXXXXXXXX-01</span></div>
 				<div class="projectname"><label for="">子项目名称：</label><span>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</span></div>
@@ -94,8 +144,22 @@
 			</div>
 		</div>
 		<div class="reportcontent" id="">
+			<h4 class="">1. 计划管理</h4>
+			<h4>1.1 计划和成本进度总览</h4>
+			<span class="processtitle">计划进度</span>
+			<div class="processbar">
+				<div class="allprocess">
+					<div class="currentprocess">30%</div>
+				</div>
+			</div>
+			<span class="processtitle">人工成本进度</span>
+			<div class="processbar">
+				<div class="allprocess">
+					<div class="currentprocess">30%</div>
+				</div>
+			</div>
 			<div class="thisweekin">
-				<h4>本周完成工作：计划内工作项</h4>
+				<h4>1.2 本周完成工作：计划内工作项</h4>
 				<table id="" class="table table-striped table-bordered">
 					<thead>
 						<tr>
@@ -131,7 +195,7 @@
 				</table>
 			</div>
 			<div class="thisweekout">
-				<h4>本周完成工作：计划外工作项</h4>
+				<h4>1.3 本周完成工作：计划外工作项</h4>
 				<table id="" class="table table-striped table-bordered">
 					<thead>
 						<tr>
@@ -158,7 +222,7 @@
 				</table>
 			</div>
 			<div class="nextweekin">
-				<h4>下周工作安排：计划内工作项</h4>
+				<h4> 1.4 下周工作安排：计划内工作项</h4>
 				<table id="" class="table table-striped table-bordered">
 					<thead>
 						<tr>
@@ -188,7 +252,7 @@
 				</table>
 			</div>
 			<div class="nextweekout">
-				<h4>下周工作安排：计划外工作项</h4>
+				<h4>1.5 下周工作安排：计划外工作项</h4>
 				<table id="" class="table table-striped table-bordered">
 					<thead>
 						<tr>
@@ -215,7 +279,7 @@
 				</table>
 			</div>
 			<div class="issue">
-				<h4>问题</h4>
+				<h4>2. 问题管理</h4>
 				<table id="" class="table table-striped table-bordered">
 					<thead>
 						<tr>
@@ -251,7 +315,7 @@
 				</table>
 			</div>
 			<div class="risk">
-				<h4>风险</h4>
+				<h4>3. 风险管理</h4>
 				<table id="" class="table table-striped table-bordered">
 					<thead>
 						<tr>

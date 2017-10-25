@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>石化盈科</title>
+	<title>大项目执行组周报</title>
 	<style>
 		body {
 			margin: 0;
@@ -17,17 +17,36 @@
 			border-collapse:collapse;
 		}
 		.reportname {
+			color: red;
 			display: inline-block;
+		    padding-top: 10px;
 			width: 100%;
-			background-color: #ccc;
 		}
 		.reportname p {
-			font-size: 22px;
+			font-size: 30px;
+		    font-weight: bold;
+			text-align: center;
+			margin-bottom: 0;
+			margin-top: 10px;
+		}
+		.reportname h2 {
+			margin-top: 10px;
+			margin-bottom: 3px;
+			font-size: 36px;
 		    font-weight: bold;
 			text-align: center;
 		}
+		.reportname .reportdate {
+			font-size: 20px;
+		}
+		.reportname h2 + div {
+			height: 3px;
+			background-color: red;
+			width: 100%;
+		}
 		.reportname .reportinfo {
-			margin: 10px 21px;
+			color: black;
+			margin: 10px 0;
 		}
 		.reportinfo >div {
 			display: inline-block;
@@ -39,10 +58,7 @@
 			float: right;
 		}
 		.reportcontent {
-			padding-left: 20px;
-    		padding-right: 20px;
     		padding-bottom: 20px;
-    		border: 1px solid #ccc;
 		}
 		.reportcontent >div >p{
 			font-size: 16px;
@@ -66,15 +82,8 @@
     		border: 1px solid #666;
 		}
 		h4 {
-			margin-bottom: 10px;
+			margin: 10px 0;
 		}
-		/*.reportcontent >div table tr:nth-child(even) {
-			background-color: rgba(248, 248, 248, 1);
-		}
-		.reportcontent >div table tr:nth-child(odd) {
-			background-color: rgba(254, 254, 254, 1);
-		}*/
-		
 		table th:first-child, table td:first-child {
 			text-align: left !important;
 		}
@@ -84,38 +93,445 @@
 		.risk table td:nth-child(2) {
 			text-align: left !important;
 		}
+		table.table.table-bordered >thead >tr >th,
+		table.table.table-bordered >tbody >tr >td{
+			min-width: 90px;
+			word-break: break-all;
+		}
+        .processbar {
+        	display: inline-block;
+        	width: calc(100% - 105px);
+        }
+        .allprocess {
+        	display: inline-block;
+        	height: 25px;
+        	width: 100%;
+        	background-color: rgba(184, 186, 213, 1);
+        }
+        .currentprocess {
+        	color: white;
+        	text-align: center;
+        	display: inline-block;
+        	height: 25px;
+        	width: 30%;
+        	background-color: rgba(47, 52, 143, 1);
+        }
+        .processtitle {
+        	font-size: 14px;
+        	width: 100px;
+        	display: inline-block;
+        	text-align: right;
+        }
+        span.processtitle + div {
+        	margin: 5px 0;
+        }
+        td .processbar {
+        	width: 100%;
+        }
+        td .allprocess {
+        	text-align: left;
+        }
+        td.noleftpadding {
+        	padding: 0;
+        }
+        td.noleftpadding >div:first-child {
+        	border-bottom: 1px solid #666;
+        }
+        td.noleftpadding >div {
+        	height: 25px;
+        }
+        .processtd {
+        	width: 500px;
+        }
+        .teamname {
+        	height: 40px;
+        	text-align: center;
+        	line-height: 40px;
+        	background-color: #eee;
+        	font-weight: bold;
+        	margin: 10px 0;
+        }
+        .teamname + h4 {
+        	margin-top: 0;
+        }
+        .reportname + p {
+        	margin: 0;
+        }
 	</style>
 </head>
 <body>
 	<div class="container content">
 		<div class="reportname">
-			<p>中科炼化大项目执行组工作周报（<span>2017-09-24</span>）</p>
+			<p>中科炼化智能工厂建设</p>
+			<h2>大项目执行组周报</h2>
+			<div></div>
+			<p class="reportdate">2017年09月18日-2017年09月24日</p>
 		</div>
 		<div class="reportcontent" id="">
-			<div class="plan">
-				<h4>计划进度</h4>
-				<table id="" class="table table-striped table-bordered">
+			<div class="requiremgt">
+				<h4>1. 需求管理</h4>
+				<h4>1.1 需求管理总览</h4>
+				<table id="" class="overview table table-striped table-bordered">
 					<thead>
 						<tr>
-							<th>子项目/里程碑名称</th>
-							<th>基线开始时间</th>
-							<th>基线完成时间</th>
-							<th>距基线完成时间剩余天数</th>
-							<th>完成百分比</th>
-							<th>责任人</th>
+							<th>数据项</th>
+							<th>本周提交</th>
+							<th>待评估</th>
+							<th>待投资渠道建议</th>
+							<th>待投资渠道确定</th>
+							<th>待评审</th>
+							<th>需求调研/需求规格说明书修订阶段</th>
+							<th>待审核需求规格说明书</th>
+							<th>待确认需求规格说明书</th>
+							<th>需求基线确立</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
-							<td>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
-							<td>2017-05-10</td>
-							<td>2017-05-11</td>
-							<td>10</td>
-							<td>80</td>
-							<td>XXX</td>
+							<td>需求新增</td>
+							<td>2</td>
+							<td>2</td>
+							<td>3</td>
+							<td>3</td>
+							<td>0</td>
+							<td>1</td>
+							<td>1</td>
+							<td>2</td>
+							<td>5</td>
+						</tr>
+						<tr>
+							<td>需求变更</td>
+							<td>2</td>
+							<td>2</td>
+							<td>3</td>
+							<td>3</td>
+							<td>0</td>
+							<td>1</td>
+							<td>1</td>
+							<td>2</td>
+							<td>5</td>
+						</tr>
+					</tbody>
+				</table>
+				<h4>1.2 本周提交的需求新增明细</h4>
+				<table id="" class="requirenew table table-striped table-bordered">
+					<thead>
+						<tr>
+							<th>需求标题</th>
+							<th>需求状态</th>
+							<th>需求来源</th>
+							<th>企业名称</th>
+							<th>需求提交人</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>XXXXXXXXXXXXXXXXXXXXXXXXX</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
 						</tr>
 						<tr>
 							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+				<h4>1.3 本周提交的需求变更明细</h4>
+				<table id="" class="requirechange table table-striped table-bordered">
+					<thead>
+						<tr>
+							<th>变更标题</th>
+							<th>变更状态</th>
+							<th>变更来源</th>
+							<th>企业名称</th>
+							<th>变更提交人</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>XXXXXXXXXXXXXXXXXXXXXXXXX</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+				<h4>1.4 本周确立的需求基线明细</h4>
+				<table id="" class="requireconfim table table-striped table-bordered">
+					<thead>
+						<tr>
+							<th>需求规格说明书标题</th>
+							<th>相关需求/变更</th>
+							<th>工作小组审核意见</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>XXXXXXXXXXXXXXXXXXXXXXXXX</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="planmgt">
+				<h4>2. 计划管理</h4>
+				<div class="teamname">设计组</div>
+				<h4>2.1 计划和成本进度总览</h4>
+				<table id="" class="designoverview table table-striped table-bordered">
+					<thead>
+						<tr>
+							<th>子项目名称</th>
+							<th>子项目经理</th>
+							<th>进度类别</th>
+							<th>进度百分比</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>中国中车供应链管理电子采购平台项目1</td>
+							<td>于超</td>
+							<td class="noleftpadding">
+								<div>计划进度</div>
+								<div>人工成本进度</div>
+							</td>
+							<td class="noleftpadding processtd">
+								<div class="processbar">
+									<div class="allprocess">
+										<div class="currentprocess">30%</div>
+									</div>
+								</div>
+								<div class="processbar">
+									<div class="allprocess">
+										<div class="currentprocess">30%</div>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>中国中车供应链管理电子采购平台项目2</td>
+							<td>向瑞</td>
+							<td class="noleftpadding">
+								<div>计划进度</div>
+								<div>人工成本进度</div>
+							</td>
+							<td class="noleftpadding processtd">
+								<div class="processbar">
+									<div class="allprocess">
+										<div class="currentprocess">30%</div>
+									</div>
+								</div>
+								<div class="processbar">
+									<div class="allprocess">
+										<div class="currentprocess">30%</div>
+									</div>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<h4>2.2 计划进度明细</h4>
+				<table id="" class="designplanprocessdetail table table-striped table-bordered">
+					<thead>
+						<tr>
+							<th>子项目/里程碑名称</th>
+							<th>计划开始时间</th>
+							<th>计划完成时间</th>
+							<th>距计划完成时间剩余天数</th>
+							<th>完成百分比</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>XXXXXXXXXXXXXXXXXXXXXXXXX</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="teamname">技术支持组</div>
+				<h4>2.3 计划和成本进度总览</h4>
+				<table id="" class="skilloverview table table-striped table-bordered">
+					<thead>
+						<tr>
+							<th>子项目名称</th>
+							<th>子项目经理</th>
+							<th>进度类别</th>
+							<th>进度百分比</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>中国中车供应链管理电子采购平台项目1</td>
+							<td>于超</td>
+							<td class="noleftpadding">
+								<div>计划进度</div>
+								<div>人工成本进度</div>
+							</td>
+							<td class="noleftpadding processtd">
+								<div class="processbar">
+									<div class="allprocess">
+										<div class="currentprocess">30%</div>
+									</div>
+								</div>
+								<div class="processbar">
+									<div class="allprocess">
+										<div class="currentprocess">30%</div>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>中国中车供应链管理电子采购平台项目2</td>
+							<td>向瑞</td>
+							<td class="noleftpadding">
+								<div>计划进度</div>
+								<div>人工成本进度</div>
+							</td>
+							<td class="noleftpadding processtd">
+								<div class="processbar">
+									<div class="allprocess">
+										<div class="currentprocess">30%</div>
+									</div>
+								</div>
+								<div class="processbar">
+									<div class="allprocess">
+										<div class="currentprocess">30%</div>
+									</div>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<h4>2.4 计划进度明细</h4>
+				<table id="" class="skillplanprocessdetail table table-striped table-bordered">
+					<thead>
+						<tr>
+							<th>子项目/里程碑名称</th>
+							<th>计划开始时间</th>
+							<th>计划完成时间</th>
+							<th>距计划完成时间剩余天数</th>
+							<th>完成百分比</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>XXXXXXXXXXXXXXXXXXXXXXXXX</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="teamname">实施组</div>
+				<h4>2.5 计划和成本进度总览</h4>
+				<table id="" class="execoverview table table-striped table-bordered">
+					<thead>
+						<tr>
+							<th>子项目名称</th>
+							<th>子项目经理</th>
+							<th>进度类别</th>
+							<th>进度百分比</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>中国中车供应链管理电子采购平台项目1</td>
+							<td>于超</td>
+							<td class="noleftpadding">
+								<div>计划进度</div>
+								<div>人工成本进度</div>
+							</td>
+							<td class="noleftpadding processtd">
+								<div class="processbar">
+									<div class="allprocess">
+										<div class="currentprocess">30%</div>
+									</div>
+								</div>
+								<div class="processbar">
+									<div class="allprocess">
+										<div class="currentprocess">30%</div>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>中国中车供应链管理电子采购平台项目2</td>
+							<td>向瑞</td>
+							<td class="noleftpadding">
+								<div>计划进度</div>
+								<div>人工成本进度</div>
+							</td>
+							<td class="noleftpadding processtd">
+								<div class="processbar">
+									<div class="allprocess">
+										<div class="currentprocess">30%</div>
+									</div>
+								</div>
+								<div class="processbar">
+									<div class="allprocess">
+										<div class="currentprocess">30%</div>
+									</div>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<h4>2.6 计划进度明细</h4>
+				<table id="" class="execplanprocessdetail table table-striped table-bordered">
+					<thead>
+						<tr>
+							<th>子项目/里程碑名称</th>
+							<th>计划开始时间</th>
+							<th>计划完成时间</th>
+							<th>距计划完成时间剩余天数</th>
+							<th>完成百分比</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>XXXXXXXXXXXXXXXXXXXXXXXXX</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
 							<td></td>
 							<td></td>
 							<td></td>
@@ -125,8 +541,9 @@
 					</tbody>
 				</table>
 			</div>
+
 			<div class="issue">
-				<h4>问题</h4>
+				<h4>3. 问题管理</h4>
 				<table id="" class="table table-striped table-bordered">
 					<thead>
 						<tr>
@@ -165,7 +582,7 @@
 				</table>
 			</div>
 			<div class="risk">
-				<h4>风险</h4>
+				<h4>4. 风险管理</h4>
 				<table id="" class="table table-striped table-bordered">
 					<thead>
 						<tr>
@@ -196,6 +613,77 @@
 							<td></td>
 							<td></td>
 							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="resourcemgt">
+				<h4>5. 资源管理</h4>
+				<h4>5.1 资源池总览</h4>
+				<table id="" class="resourceoverview table table-striped table-bordered">
+					<thead>
+						<tr>
+							<th>资源池现有人员总数</th>
+							<th>本周新增人员</th>
+							<th>本周已释放人员</th>
+							<th>已分配人员</th>
+							<th>分配至设计组人员</th>
+							<th>分配至技术支持组人员</th>
+							<th>分配至实施组人员</th>
+							<th>闲置人员</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+				<h4>5.2 人员申请总览</h4>
+				<table id="" class="peopleoverview table table-striped table-bordered">
+					<thead>
+						<tr>
+							<th>本周提交申请</th>
+							<th>待人员匹配</th>
+							<th>待人员初步确认</th>
+							<th>待人员最终确认</th>
+							<th>待账号与权限配置</th>
+							<th>完成人员申请</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
 							<td></td>
 							<td></td>
 							<td></td>
