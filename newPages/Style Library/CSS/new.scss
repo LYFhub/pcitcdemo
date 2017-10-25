@@ -2382,7 +2382,7 @@ table.ms-usereditor > tbody > tr > td > table > tbody > tr > td > div {
 			color: #999;
 		    font-weight: bold;
 		    font-size: 16px;
-		    width: 180px;
+		    width: 200px;
 		    text-align: center;
 		}
 		li.active {
@@ -2420,6 +2420,9 @@ table.ms-usereditor > tbody > tr > td > table > tbody > tr > td > div {
 			select {
 				width: 632px;
 			}
+			.topdash select {
+				width: 240px;
+			}
 			.checkboxgroup {
 				display: inline-block;
 				label {
@@ -2439,7 +2442,7 @@ table.ms-usereditor > tbody > tr > td > table > tbody > tr > td > div {
     				margin-left: 0;
     			}
 				table {
-					margin-top: 40px;
+					margin-top: 20px;
 					th {
 						background-color: #666;
 						color: white;
@@ -2472,6 +2475,38 @@ table.ms-usereditor > tbody > tr > td > table > tbody > tr > td > div {
 								}
 							}
 						}
+					}
+				}
+				table.recordtable {
+					th {
+						&:last-child,
+						&:nth-child(7) {
+							width: auto;
+						}
+					}
+					tr {
+						&:last-child td{
+							padding: 5px;
+							padding-bottom: 0;
+						}
+					}
+					td {
+						padding: 5px 0;
+						select {
+							width: 140px;
+							height: 30px;
+							max-width: 140px;
+						}
+						textarea {
+							height: 120px !important;
+						}
+					}
+				}
+				div.taskworkrecord {
+					margin-top: 20px;
+					label {
+						width: auto;
+						margin-right: 10px;
 					}
 				}
 			}
@@ -2594,7 +2629,6 @@ table.ms-usereditor > tbody > tr > td > table > tbody > tr > td > div {
 					height: 100%;
 					line-height: 60px;
 					position: relative;
-					top: -23px;
 				}
 			}
 			>label {
@@ -2609,7 +2643,6 @@ table.ms-usereditor > tbody > tr > td > table > tbody > tr > td > div {
 			}
 			>p, >label {
 				display: inline-block;
-				height: 30px;
 				margin: 0;
 				text-align: center;
 				line-height: 30px;
@@ -2641,6 +2674,19 @@ table.ms-usereditor > tbody > tr > td > table > tbody > tr > td > div {
 			}
 			input.btn {
 				margin: 20px 0 0 18px !important;
+			}
+		}
+		.spcomponent {
+			>input,
+			.ms-taxonomy.ms-taxonomy-height.ms-taxonomy-width {
+				left: 66px;
+			}
+			.ms-taxonomy.ms-taxonomy-height.ms-taxonomy-width {
+				.ms-taxonomy-control-holder.ms-taxonomy-width {
+					.ms-taxonomy-fieldeditor.ms-taxonomy-fieldeditor-standard {
+						width: 243px !important;
+					}
+				}
 			}
 		}
 	}

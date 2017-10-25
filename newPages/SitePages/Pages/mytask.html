@@ -19,13 +19,10 @@
 				<div class="">
 					<ul id="" class="myworkTab nav nav-tabs">
 						<li class="active">
-							<a href="#mytasktab" data-toggle="tab">我的任务</a>
+							<a href="#mytasktab" data-toggle="tab">我的任务与工作记录</a>
 						</li>
 						<li>
 							<a href="#myissuetab" data-toggle="tab">我的问题与风险</a>
-						</li>
-						<li>
-							<a href="#myrecordtab" data-toggle="tab">我的工作记录</a>
 						</li>		
 					</ul>
 					<div id="" class="tab-content">
@@ -60,7 +57,7 @@
 				    			</div>
 						    </div>
 						    <div>
-								<input type="button" value="查询" class="btn btn-lg">
+								<input type="button" value="查询任务进度" class="btn btn-lg">
 							</div>
 							<div class="topdash">
 								<table id="" class="table table-bordered">
@@ -144,14 +141,150 @@
 									</tbody>
 								</table>
 								<div>
-									<input type="button" value="保存" class="btn btn-lg">
+									<input type="button" value="保存任务进度" class="btn btn-lg">
+								</div>
+							</div>
+							<div class="topdash">
+								<div class="taskworkrecord">
+									<label class="changelabel">工作记录周期</label>
+									<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+									<select name="" id="">
+										<option value="2017-10-16 - 2017-10-22">2017-10-16 - 2017-10-22</option>
+										<option value="2017-10-23 - 2017-10-29">2017-10-23 - 2017-10-29</option>
+									</select>
+									<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+								</div>
+								<table id="" class="recordtable table table-bordered">
+									<thead>
+										<tr>
+											<th>日期</th>
+											<th>2017.9.4 (周一)</th>
+											<th>2017.9.5 (周二)</th>
+											<th>2017.9.6 (周三)</th>
+											<th>2017.9.7 (周四)</th>
+											<th>2017.9.8 (周五)</th>
+											<th>2017.9.9 (周六)</th>
+											<th>2017.9.10 (周日)</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>上午WBS</td>
+											<td>XXXXXXXXXX-01</td>
+											<td>XXXXXXXXXX-01</td>
+											<td>XXXXXXXXXX-01</td>
+											<td>XXXXXXXXXX-01</td>
+											<td>XXXXXXXXXX-01</td>
+											<td>
+												<select name="" id="">
+													<option value="XXXXXXXXXX-02">XXXXXXXXXX-02</option>
+													<option value="XXXXXXXXXX-03">XXXXXXXXXX-03</option>
+												</select>
+											</td>
+											<td>
+												<select name="" id="">
+													<option value="XXXXXXXXXX-02">XXXXXXXXXX-02</option>
+													<option value="XXXXXXXXXX-03">XXXXXXXXXX-03</option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td>下午WBS</td>
+											<td>XXXXXXXXXX-01</td>
+											<td>XXXXXXXXXX-01</td>
+											<td>XXXXXXXXXX-01</td>
+											<td>XXXXXXXXXX-01</td>
+											<td>XXXXXXXXXX-01</td>
+											<td>
+												<select name="" id="">
+													<option value="XXXXXXXXXX-02">XXXXXXXXXX-02</option>
+													<option value="XXXXXXXXXX-03">XXXXXXXXXX-03</option>
+												</select>
+											</td>
+											<td>
+												<select name="" id="">
+													<option value="XXXXXXXXXX-02">XXXXXXXXXX-02</option>
+													<option value="XXXXXXXXXX-03">XXXXXXXXXX-03</option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td>当日任务</td>
+											<td>
+												<select name="" id="">
+													<option value="XXXXXXXXXXXXXXXXXXXXXXXX">XXXXXXXXXXXXXXXXXXXXXXXX</option>
+													<option value="XXXXXXXXXXXXXXXXXXXXXXXX">XXXXXXXXXXXXXXXXXXXXXXXX</option>
+												</select>
+											</td>
+											<td>
+												<select name="" id="">
+													<option value="XXXXXXXXXXXX">XXXXXXXXXXXX</option>
+													<option value="XXXXXXXXXXXX">XXXXXXXXXXXX</option>
+												</select>
+											</td>
+											<td>
+												<select name="" id="">
+													<option value="XXXXXXXXXXXX">XXXXXXXXXXXX</option>
+													<option value="XXXXXXXXXXXX">XXXXXXXXXXXX</option>
+												</select>
+											</td>
+											<td>
+												<select name="" id="">
+													<option value="XXXXXXXXXXXX">XXXXXXXXXXXX</option>
+													<option value="XXXXXXXXXXXX">XXXXXXXXXXXX</option>
+												</select>
+											</td>
+											<td>
+												<select name="" id="">
+													<option value="XXXXXXXXXXXX">XXXXXXXXXXXX</option>
+													<option value="XXXXXXXXXXXX">XXXXXXXXXXXX</option>
+												</select>
+											</td>
+											<td>
+												<select name="" id="">
+													<option value="XXXXXXXXXXXX">XXXXXXXXXXXX</option>
+													<option value="XXXXXXXXXXXX">XXXXXXXXXXXX</option>
+												</select>
+											</td>
+											<td>
+												<select name="" id="">
+													<option value="XXXXXXXXXXXX">XXXXXXXXXXXX</option>
+													<option value="XXXXXXXXXXXX">XXXXXXXXXXXX</option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td>工作记录</td>
+											<td>
+												<textarea name="" id="" cols="30" rows="10"></textarea>
+											</td>
+											<td>
+												<textarea name="" id="" cols="30" rows="10"></textarea>
+											</td>
+											<td>
+												<textarea name="" id="" cols="30" rows="10"></textarea>
+											</td>
+											<td>
+												<textarea name="" id="" cols="30" rows="10"></textarea>
+											</td>
+											<td>
+												<textarea name="" id="" cols="30" rows="10"></textarea>
+											</td>
+											<td>
+												<textarea name="" id="" cols="30" rows="10"></textarea>
+											</td>
+											<td>
+												<textarea name="" id="" cols="30" rows="10"></textarea>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<div>
+									<input type="button" value="保存工作记录" class="btn btn-lg">
 								</div>
 							</div>
 						</div>
 						<div class="tab-pane fade in" id="myissuetab">
-								
-						</div>
-						<div class="tab-pane fade in" id="myrecordtab">
 								
 						</div>
 						
