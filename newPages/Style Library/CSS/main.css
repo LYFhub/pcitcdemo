@@ -2502,7 +2502,7 @@ footer {
 
             .spcomponent .ms-taxonomy.ms-taxonomy-height.ms-taxonomy-width .ms-taxonomy-control-holder.ms-taxonomy-width img.ms-taxonomy-browser-button {
                 position: relative;
-                top: 9px;
+                top: 10px;
                 right: 10%;
             }
 
@@ -2513,7 +2513,7 @@ footer {
 
                 .spcomponent .ms-taxonomy.ms-taxonomy-height.ms-taxonomy-width .ms-taxonomy-control-holder.ms-taxonomy-width .ms-taxonomy-fieldeditor.ms-taxonomy-fieldeditor-standard .ms-inputBox {
                     height: 40px;
-                    padding: 0;
+                    padding: 11px;
                     border: none;
                     /*background-color: #f6f6f6;*/
                     border: solid 1px #bebebe;
@@ -2523,8 +2523,7 @@ footer {
 
                     .spcomponent .ms-taxonomy.ms-taxonomy-height.ms-taxonomy-width .ms-taxonomy-control-holder.ms-taxonomy-width .ms-taxonomy-fieldeditor.ms-taxonomy-fieldeditor-standard .ms-inputBox span.valid-text {
                         position: relative;
-                        top: 8px;
-                        left: 5px
+                        top: -2px;
                     }
 
     .spcomponent table.ms-usereditor {
@@ -2535,8 +2534,30 @@ footer {
         margin-left: 4px
     }
 
-        .spcomponent table.ms-usereditor tbody, .spcomponent table.ms-usereditor tr {
+        .spcomponent table.ms-usereditor >tbody, .spcomponent table.ms-usereditor >tbody >tr {
             width: 280px
+        }
+        .spcomponent table.ms-usereditor >tbody >tr {
+            position: relative;
+        }
+        .spcomponent table.ms-usereditor >tbody >tr >td[align="center"] {
+            position: absolute;
+            left: 240px;
+            top: 0;
+        }
+        .requiresearch .editorStyle table.ms-usereditor >tbody >tr {
+            position: relative;
+        }
+        .requiresearch .editorStyle table.ms-usereditor >tbody >tr >td[align="center"] {
+            position: absolute;
+            left: 340px;
+            top: 0;
+        }
+        .requiresearch .editorStyle table.ms-usereditor >tbody>tr>td>table>tbody>tr>td>div {
+            width: 240px;
+        }
+        .requiresearch .editorStyle.col-lg-8 table.ms-usereditor >tbody >tr >td[align="center"] {
+            padding-left: 0 !important;
         }
 
             .spcomponent table.ms-usereditor tbody td > a, .spcomponent table.ms-usereditor tr td > a {
@@ -2549,14 +2570,17 @@ footer {
             }
 
             .spcomponent table.ms-usereditor tbody div.ms-inputuserfield.ms-inputBox, .spcomponent table.ms-usereditor tr div.ms-inputuserfield.ms-inputBox {
-                width: 245px;
+                width: 240px;
                 padding: 0;
                 /*background-color: #f6f6f6;*/
                 height: 40px !important;
-                padding-left: 5px;
+                padding-left: 3px;
                 margin-left: 3px;
                 display: table-cell;
                 vertical-align: middle
+            } 
+            .ms-entity-unresolved {
+                vertical-align: middle;
             }
 
 .ms-webpart-zone.ms-fullWidth table #scriptWPQ2 .ms-csrlistview-controldiv {

@@ -67,6 +67,9 @@ table tr.darkgreytr {
 	background: #999 !important;
 	color: white;
 }
+.ms-vb-title {
+	min-width: 100px;
+}
 .container.content div.changerequest div.panel.panel-default:last-child {
 	//border-top: 1px solid #ddd;
 }
@@ -2621,6 +2624,7 @@ table.ms-usereditor > tbody > tr > td > table > tbody > tr > td > div {
 			border-right: 1px solid #999;
 			padding: 0;
 			height: 30px;
+			position: relative;
 			&:last-child {
 				border-bottom: 1px solid #999;
 				height: 60px;
@@ -2637,9 +2641,12 @@ table.ms-usereditor > tbody > tr > td > table > tbody > tr > td > div {
 				background-color: #666;
 				color: white;
 				font-weight: normal;
+				position: absolute;
 			}
 			>p {
 				width: calc(99% - 140px);
+				position: absolute;
+				left: 140px;
 			}
 			>p, >label {
 				display: inline-block;
