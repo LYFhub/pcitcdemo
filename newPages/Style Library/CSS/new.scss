@@ -8,6 +8,11 @@
 }
 #s4-bodyContainer {
 	padding-bottom: 0;
+	#contentRow {
+		input[id^="TeamBuilderButton"] {
+			font-size: 16px;
+		}
+	}
 }
 .front-star {
 	&:before {
@@ -69,6 +74,9 @@ table tr.darkgreytr {
 }
 .ms-vb-title {
 	min-width: 100px;
+}
+.ms-dlgContent {
+	position: fixed;
 }
 .container.content div.changerequest div.panel.panel-default:last-child {
 	//border-top: 1px solid #ddd;
@@ -140,12 +148,16 @@ table tr.darkgreytr {
 		label {
 			height: 40px;
 			line-height: 40px;
+			margin-right: 48px;
 
 			input {
 				top: 10px;
 			}
 			input[type="radio"] +.inputdatepicker {
-				margin-left: 13px;
+				margin-left: 14px;
+			}
+			.inputdatepicker {
+				width: 120px !important;
 			}
 		}
 	}
@@ -317,6 +329,7 @@ table tr.darkgreytr {
 		input[type='button'] {
 			display: block;
 			margin: 10px auto !important;
+			margin-left: 70px !important;
 		}
 	}
 	.rightinfo {
@@ -329,6 +342,14 @@ table tr.darkgreytr {
 			}
 			>a {
 				float: right;
+				color: #333;
+				&:hover {
+					text-decoration: none;
+				}
+				img {
+					width: 15px;
+					margin-bottom: 3px;
+				}
 			}
 		}
 		table {
@@ -350,7 +371,7 @@ table tr.darkgreytr {
 		margin-bottom: 0;
 	}
 	>div {
-		min-height: 150px;
+		min-height: 120px;
 		border: 1px #666 solid;
 		margin-bottom: 10px;
 		padding: 5px;
@@ -380,11 +401,17 @@ table tr.darkgreytr {
 			>th{
 				border-bottom-width: 1px;
 				border-color: #333;
+				min-width: 80px;
 			}
 		}
 		>tbody {
 			>tr >td {
 				border-color: #333;
+				min-width: 80px;
+				vertical-align: middle;
+				a img {
+					width: 15px;
+				}
 			}
 		}
 	}
@@ -1190,22 +1217,10 @@ table tr.darkgreytr {
 }
 .planmgt {
 	#thisweektask,
-	#nextweekplan,
-	#planissue,
-	#planrisk {
+	#nextweekplan {
 		table {
 			th, td {
 				&:first-child {
-					text-align: left;
-				}
-			}
-		}
-	}
-	#planissue,
-	#planrisk {
-		table {
-			th, td {
-				&:nth-child(2) {
 					text-align: left;
 				}
 			}
@@ -1672,10 +1687,16 @@ header {
 			border-radius: 10px;
 			background-color: #eee;
 			margin-top: 10px;
+			font-size: 14px;
+			padding-right: 28px;
 			& + a {
 				left: 230px;
 				margin-top: 8px;
+				img {
+					cursor: pointer;
+				}
 			}
+
 		}
 	}
 	.userinfo {
@@ -2511,6 +2532,9 @@ table.ms-usereditor > tbody > tr > td > table > tbody > tr > td > div {
 						width: auto;
 						margin-right: 10px;
 					}
+					span + select {
+						width: 190px;
+					}
 				}
 			}
 		}
@@ -2647,6 +2671,10 @@ table.ms-usereditor > tbody > tr > td > table > tbody > tr > td > div {
 				width: calc(99% - 140px);
 				position: absolute;
 				left: 140px;
+				white-space: nowrap;
+            	overflow: hidden;
+                text-overflow: ellipsis;
+
 			}
 			>p, >label {
 				display: inline-block;
