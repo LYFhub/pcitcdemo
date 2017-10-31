@@ -203,7 +203,7 @@ table tr.darkgreytr {
     	border-radius: 0;
     	border-width: 0 1px 1px 1px !important;
 		input, select {
-			height: 20px !important;
+			height: 22px !important;
 			font-size: inherit !important;
 		}
 	}
@@ -266,10 +266,11 @@ table tr.darkgreytr {
 	.leftinfo {
 		float: left;
 		width: 33.3%;
-		padding-right: 32px;
+		padding-right: 22px;
+		padding-left: 22px;
 
 		.infoheader {
-			width: 300px;
+			//width: 300px;
     		margin: 0 auto;
 			&:after {
 				@include clear_float;
@@ -311,13 +312,16 @@ table tr.darkgreytr {
 			}
 		}
 		.infodetail {
-			width: 300px;
+			//width: 300px;
     		margin: 0 auto;
 			ul {
 				list-style: none;
 				padding-left: 0;
 
 				li {
+					white-space: nowrap;
+    				text-overflow: ellipsis;
+    				overflow: hidden;
 					label {
 						width: 100px;
 						text-align: right;
@@ -329,7 +333,7 @@ table tr.darkgreytr {
 		input[type='button'] {
 			display: block;
 			margin: 10px auto !important;
-			margin-left: 70px !important;
+			margin-left: 30px !important;
 		}
 	}
 	.rightinfo {
@@ -2240,11 +2244,11 @@ header + div {
 // align text of table in search people result page
 .datagrid-cell-c2-Name, td[field="Name"]{width:120px !important;}
 .datagrid-cell-c2-EmployeeType, td[field="EmployeeType"]{width:120px !important;}
-.datagrid-cell-c2-Company, td[field="Company"]{width:173px !important;}
+.datagrid-cell-c2-Company, td[field="Company"]{width:210px !important;}
 .datagrid-cell-c2-Department, td[field="Department"]{width:190px !important;}
-.datagrid-cell-c2-Position, td[field="Position"]{width:250px !important;}
-.datagrid-cell-c2-Level, td[field="Level"]{width:100px !important;}
-.datagrid-cell-c2-AvailableDate, td[AvailableDate="Name"]{width:150px !important;}
+.datagrid-cell-c2-Position, td[field="Position"]{width:200px !important;}
+.datagrid-cell-c2-Level, td[field="Level"]{width:80px !important;}
+.datagrid-cell-c2-AvailableDate, td[field="AvailableDate"]{width:150px !important;}
 
 // optimize easyui dropdown style of ProjectMemberRequest page
 //.changerequest {
@@ -2674,7 +2678,8 @@ table.ms-usereditor > tbody > tr > td > table > tbody > tr > td > div {
 				white-space: nowrap;
             	overflow: hidden;
                 text-overflow: ellipsis;
-
+				padding-left: 1px;
+				padding-right: 1px;
 			}
 			>p, >label {
 				display: inline-block;
