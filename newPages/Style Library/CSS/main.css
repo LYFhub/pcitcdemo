@@ -2504,6 +2504,7 @@ footer {
                 position: relative;
                 top: 10px;
                 right: 10%;
+                width: 20px;
             }
 
             .spcomponent .ms-taxonomy.ms-taxonomy-height.ms-taxonomy-width .ms-taxonomy-control-holder.ms-taxonomy-width .ms-taxonomy-fieldeditor.ms-taxonomy-fieldeditor-standard {
@@ -2644,7 +2645,14 @@ footer {
     .ms-webpart-zone.ms-fullWidth table #scriptWPQ2 .ms-listviewtable tbody td {
         height: 40px;
         padding-left: 5px;
-        padding-right: 15px
+        padding-right: 15px;
+        max-width: 300px;
+        overflow: hidden;
+        word-wrap: break-word;
+        min-width: 80px;
+    }
+    .ms-webpart-zone.ms-fullWidth table #scriptWPQ2 .ms-listviewtable tbody td.ms-vb-imgFirstCell {
+        min-width: 30px;
     }
 
 .toptabtwo, .toptabthree, .toptabfour {

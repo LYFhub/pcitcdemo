@@ -1314,12 +1314,28 @@ table tr.darkgreytr {
 						@include clear_float;
 					}
 					.workassist {
-						height: 486.75px;
+						width: 33%;
+    					margin: .5%;
+						.execcontent {
+							>div {
+								width: 48%;
+							    margin: 1%;
+							    margin-top: 4px;
+							}
+						}
+					}
+					.planprojectreport {
+						width: 65%;
+						margin: .5%;
+						.execcontent {
+							>div {
+								width: 24%;
+								margin: .5%;
+							}
+						}
 					}
 					>div {
 						float: left;
-						width: 49%;
-						margin: 0.5%;
 						background-color: #eee;
 						>p {
 							font-size: 16px;
@@ -1333,8 +1349,6 @@ table tr.darkgreytr {
 							}
 							>div {
 								float: left;
-								width: 31%;
-								margin: 1.16%;
 								background-color: #999;
 								a {
 									display: block;
@@ -1368,7 +1382,7 @@ table tr.darkgreytr {
 						}
 					}
 					.workassist, .changeplan {
-						height: 687.59px;
+						height: 501.06px;
 					}
 
 					>div {
@@ -1501,8 +1515,14 @@ header {
 	position: relative;
 	z-index: 2;
 	width: 100%;
-	//position: fixed;
-	//left: 0;
+	background: url(../../Style%20Library/Images/headerbg.png);
+	background-size: cover;
+	color: white;
+	>.container {
+		margin-top: 0;
+		background-color: inherit;
+		color: white;
+	}
 	.pic_logo {
     	width: auto;
     	&:after {
@@ -1525,9 +1545,6 @@ header {
     		}
     	}
 	}
-	background: url(../../Style%20Library/Images/headerbg.png);
-	background-size: cover;
-	color: white;
 	.pic_navbar {
 		background-color: rgba(255, 255, 255, 0.5);
 		height: 50px;
@@ -1693,9 +1710,11 @@ header {
 			margin-top: 10px;
 			font-size: 14px;
 			padding-right: 28px;
+			padding-top: 5px\0;
 			& + a {
-				left: 230px;
 				margin-top: 8px;
+				right: 0;
+    			position: absolute;
 				img {
 					cursor: pointer;
 				}
@@ -1801,6 +1820,7 @@ footer.newfooter {
 }
 body {
 	overflow-y: auto;
+	background-image: url(../../Style%20Library/Images/bodybg.png) !important;
 	#s4-workspace {
 		overflow: unset;
 		height: auto !important;
@@ -1818,6 +1838,7 @@ header + div {
 	//top: 172px;
 	.pcitcbanner {
 		margin-top: 20px;
+		height: 500px;
 		ol.carousel-indicators {
 			width: 100%;
 			left: 0;
@@ -2241,24 +2262,61 @@ header + div {
 	}
 }
 
+// for execplan module of planmgt page
+.updateplanselect {
+	.panel-body {
+		overflow: hidden;
+	}
+    .datagrid-view{
+    	.datagrid-view2 {
+    		overflow-x: scroll;
+    		overflow-y: auto;
+    		.datagrid-header, .datagrid-body {
+    			width: 631px !important;
+    		}
+    		.datagrid-body {
+    			height: 156px !important;
+    		}
+    	}
+    }
+}
+
 // align text of table in search people result page
-.datagrid-cell-c2-Name, td[field="Name"]{width:120px !important;}
+.searchresult .datagrid-view .datagrid-view2 {
+	.datagrid-header,.datagrid-body .datagrid-row {
+		td {
+			height: 35px;
+			padding-top: 9px;
+		}
+	}
+}
+.datagrid-cell-c2-Name, td[field="Name"]{width:100px !important;}
 .datagrid-cell-c2-EmployeeType, td[field="EmployeeType"]{width:120px !important;}
-.datagrid-cell-c2-Company, td[field="Company"]{width:210px !important;}
+.datagrid-cell-c2-Company, td[field="Company"]{width:320px !important;}
 .datagrid-cell-c2-Department, td[field="Department"]{width:190px !important;}
-.datagrid-cell-c2-Position, td[field="Position"]{width:200px !important;}
+.datagrid-cell-c2-Position, td[field="Position"]{width:180px !important;}
 .datagrid-cell-c2-Level, td[field="Level"]{width:80px !important;}
-.datagrid-cell-c2-AvailableDate, td[field="AvailableDate"]{width:150px !important;}
+.datagrid-cell-c2-AvailableDate, td[field="AvailableDate"]{width:120px !important;}
 
 // optimize easyui dropdown style of ProjectMemberRequest page
 //.changerequest {
 	.datagrid-view .datagrid-view2 {
 		.datagrid-header, .datagrid-body {
-			td[field="Title"] { width:358px !important; }
-			td[field="Id"] { width:160px !important; }
-			td[field="Manager"] { width:114px !important; }
+			td[field="Title"] { width:350px !important;}
+			td[field="Id"] { width:160px !important;}
+			td[field="Manager"] { width:120px !important;}
+			td {
+				display: inline-block;
+			    height: 25px;
+			    line-height: 25px;
+			    padding-top: 3px;
+			}
 			td > div {
 				width: 100% !important;
+				white-space: nowrap;
+            	overflow: hidden;
+              	text-overflow: ellipsis;
+				
 			}
 		}
 		.datagrid-cell {
@@ -2512,14 +2570,8 @@ table.ms-usereditor > tbody > tr > td > table > tbody > tr > td > div {
 							width: auto;
 						}
 					}
-					tr {
-						&:last-child td{
-							padding: 5px;
-							padding-bottom: 0;
-						}
-					}
 					td {
-						padding: 5px 0;
+						padding: 5px;
 						select {
 							width: 140px;
 							height: 30px;
@@ -2527,6 +2579,9 @@ table.ms-usereditor > tbody > tr > td > table > tbody > tr > td > div {
 						}
 						textarea {
 							height: 120px !important;
+						}
+						.bootstrap-select.btn-group .dropdown-toggle .filter-option {
+							width: 100px;
 						}
 					}
 				}
@@ -2537,7 +2592,7 @@ table.ms-usereditor > tbody > tr > td > table > tbody > tr > td > div {
 						margin-right: 10px;
 					}
 					span + select {
-						width: 190px;
+						width: 194px;
 					}
 				}
 			}

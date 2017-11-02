@@ -2,6 +2,22 @@ $(document).ready(function() {
 	if ($('.barchart').length != 0 && $('.piechart').length != 0 && $('.linechart').length != 0) {
 		drawChart(0);
 	}
+	// when body height < window height, fix footer to page bottom
+	function footerPosition() {
+		if($('body').height() < window.innerHeight) {
+			$('footer').css({
+				"position":"fixed",
+				"bottom":"0"
+			});
+			$('body').height(window.innerHeight);
+		} else {
+			$('footer').css({"position":"relative"});
+			$('body').height('auto');	
+		}
+	}
+	footerPosition();
+	// $(window).resize(footerPosition);
+
 	// if (location.href.toLowerCase().indexOf("index") > 0) {
 	// 	$('header .pic_navbar .navbar-nav li').removeClass('active');
 	// 	$('.homepage').addClass("active");
