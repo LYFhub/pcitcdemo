@@ -84,6 +84,7 @@ table tr.darkgreytr {
 .container.content textarea {
 	height: 120px !important;
 	min-height: 100px !important;
+	resize: none;
 }
 .panel-default {
 	border: 1px solid #ccc !important;
@@ -1382,7 +1383,7 @@ table tr.darkgreytr {
 						}
 					}
 					.workassist, .changeplan {
-						height: 501.06px;
+						height: 541.06px;
 					}
 
 					>div {
@@ -1605,7 +1606,9 @@ header {
 
 					&:first-child {
 						&:before {
-							padding: 1px 12px;
+							padding: 0 12px;
+							padding-top: 1px\0;
+							padding-bottom: 1px\0;
     						background-position: 0px 0px;
 						}
 						&:hover, &.active {
@@ -1616,7 +1619,9 @@ header {
 					}
 					&:nth-child(2) {
 						&:before {
-							padding: 2px 12px;
+							padding: 0 12px;
+							padding-top: 2px\0;
+							padding-bottom: 2px\0;
     						background-position: -25px 0px;
 						}
 						&:hover, &.active {
@@ -1627,7 +1632,9 @@ header {
 					}
 					&:nth-child(3) {
 						&:before {
-							padding: 2px 12px;
+							padding: 0 12px;
+							padding-top: 2px\0;
+							padding-bottom: 2px\0;
     						background-position: -50px 0px;
 						}
 						&:hover, &.active {
@@ -1638,7 +1645,9 @@ header {
 					}
 					&:nth-child(4) {
 						&:before {
-							padding: 2px 13px;
+							padding: 0 13px;
+							padding-top: 2px\0;
+							padding-bottom: 2px\0;
     						background-position: -72px 0px;
 						}
 						&:hover, &.active {
@@ -1649,7 +1658,9 @@ header {
 					}
 					&:last-child {
 						&:before {
-							padding: 2px 12px;
+							padding: 0 12px;
+							padding-top: 2px\0;
+							padding-bottom: 2px\0;
     						background-position: -100px 0px;
 						}
 						&:hover, &.active {
@@ -2275,7 +2286,7 @@ header + div {
     			width: 631px !important;
     		}
     		.datagrid-body {
-    			height: 156px !important;
+    			height: auto !important;
     		}
     	}
     }
@@ -2305,6 +2316,9 @@ header + div {
 			td[field="Title"] { width:350px !important;}
 			td[field="Id"] { width:160px !important;}
 			td[field="Manager"] { width:120px !important;}
+			td[field="AssignedSubProjectName"] { width:350px !important;}
+			td[field="AssignedSubProjectId"] { width:160px !important;}
+			td[field="AssignedSubProjectManager"] { width:120px !important;}
 			td {
 				display: inline-block;
 			    height: 25px;
@@ -2318,6 +2332,8 @@ header + div {
               	text-overflow: ellipsis;
 				
 			}
+		}
+		.datagrid-body {
 		}
 		.datagrid-cell {
 			font-size: 14px;
