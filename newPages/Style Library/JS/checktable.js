@@ -263,40 +263,40 @@ $(document).ready(function() {
 	});
 
 	// For new pages
-	$('#backlogtable').dataTable({
-		bInfo: false, // 去掉左下角的每页显示多少行的信息
-		iDisplayLength: 6, // 控制每页显示的行数
-		bFilter: false, // 去掉过滤
-		bLengthChange: false, // 去掉可以更改显示行数的dropdown list
-		bSort: false, // 去掉排序功能和按钮
-		data: data, // 从data数组中获取数据
-		oLanguage: {
-			sProcessing: "正在加载中......",
-			sEmptyTable: "表中无数据存在！",
-			oPaginate: {
-				sPrevious: '<',
-				sNext: '>'
-			}
-		},
-		// ajax: {// 动态获取数据
-  //           "url": "/Function/GetMenuData",
-  //           "dataSrc": "list",//这里是后台返回的数据对象
-  //           "data": function (d) {//d 是原始的发送给服务器的数据，默认很长。
-  //               var param = {};//因为服务端排序，可以新建一个参数对象
-  //               param.start = d.start;//开始的序号
-  //               param.length = d.length;//要取的数据的条数
-  //               return param;//自定义需要传递的参数。
-  //           }
-  //       }
-		columns: [{
-			"data": 'workplan',
-			"render": function (data, type, full, callback) {
-                        return ('<a class="" href="'+ data.url +'" >'+ data.text +'</a>');
-                    }
-		}, {
-			"data": 'workstatus'
-		}]
-	});
+	// $('#backlogtable').dataTable({
+	// 	bInfo: false, // 去掉左下角的每页显示多少行的信息
+	// 	iDisplayLength: 6, // 控制每页显示的行数
+	// 	bFilter: false, // 去掉过滤
+	// 	bLengthChange: false, // 去掉可以更改显示行数的dropdown list
+	// 	bSort: false, // 去掉排序功能和按钮
+	// 	data: data, // 从data数组中获取数据
+	// 	oLanguage: {
+	// 		sProcessing: "正在加载中......",
+	// 		sEmptyTable: "表中无数据存在！",
+	// 		oPaginate: {
+	// 			sPrevious: '<',
+	// 			sNext: '>'
+	// 		}
+	// 	},
+	// 	// ajax: {// 动态获取数据
+ //  //           "url": "/Function/GetMenuData",
+ //  //           "dataSrc": "list",//这里是后台返回的数据对象
+ //  //           "data": function (d) {//d 是原始的发送给服务器的数据，默认很长。
+ //  //               var param = {};//因为服务端排序，可以新建一个参数对象
+ //  //               param.start = d.start;//开始的序号
+ //  //               param.length = d.length;//要取的数据的条数
+ //  //               return param;//自定义需要传递的参数。
+ //  //           }
+ //  //       }
+	// 	columns: [{
+	// 		"data": 'workplan',
+	// 		"render": function (data, type, full, callback) {
+ //                        return ('<a class="" href="'+ data.url +'" >'+ data.text +'</a>');
+ //                    }
+	// 	}, {
+	// 		"data": 'workstatus'
+	// 	}]
+	// });
 	$('#submittable').dataTable({
 		bInfo: false, // 去掉左下角的每页显示多少行的信息
 		iDisplayLength: 6, // 控制每页显示的行数
