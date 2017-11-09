@@ -2280,10 +2280,14 @@ header + div {
 	.panel-body {
 		overflow: hidden;
 	}
+	.datagrid .panel-body {
+		overflow: auto;
+	}
     .datagrid-view{
+    	overflow: visible;
     	.datagrid-view2 {
-    		overflow-x: scroll;
-    		overflow-y: auto;
+    		width: auto !important;
+    		right: auto;
     		.datagrid-header, .datagrid-body {
     			width: 631px !important;
     		}
@@ -2313,6 +2317,12 @@ header + div {
 
 // optimize easyui dropdown style of ProjectMemberRequest page
 //.changerequest {
+	.datagrid .panel-body {
+		overflow: auto !important;
+		.datagrid-view {
+			overflow: visible;
+		}
+	}
 	.datagrid-view .datagrid-view2 {
 		.datagrid-header, .datagrid-body {
 			td[field="Title"] { width:350px !important;}
@@ -2336,6 +2346,8 @@ header + div {
 			}
 		}
 		.datagrid-body {
+			overflow: hidden;
+			height: auto !important;
 		}
 		.datagrid-cell {
 			font-size: 14px;
@@ -2533,6 +2545,9 @@ table.ms-usereditor > tbody > tr > td > table > tbody > tr > td > div {
 					width: auto;
 					margin-right: 15px;
 					font-weight: normal;
+					input {
+						margin: 0 0 2px 0;
+					}
 				}
 			}
 			input.btn {
