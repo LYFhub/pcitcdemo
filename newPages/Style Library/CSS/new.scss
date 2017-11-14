@@ -1,3 +1,16 @@
+$mainColor: #2f348f;
+$mainFontColor: #333;
+$badgeColor: #d96161;
+$sectionHeaderColor: #e8ebf0;
+$tableHeaderColor: #e5ecef;
+$tableBorderColor: #ddd;
+
+$bannerHeight: 380px;
+$lgScreenWidth: 1440px;
+$secondLgScreenWidth: 1240px;
+$lgInputBoxWidth: 698px;
+
+
 @mixin clear_float {
 	content: "";
 	display: block;
@@ -8,6 +21,7 @@
 }
 #s4-bodyContainer {
 	padding-bottom: 0;
+	min-height: 500px;
 	#contentRow {
 		input[id^="TeamBuilderButton"] {
 			font-size: 16px;
@@ -67,10 +81,12 @@ table.table.table-bordered >thead >tr >th,
 table.table.table-bordered >tbody >tr >td{
 	min-width: 100px;
 	word-break: break-all;
+	border-color: #999;
+	border-bottom-width: 1px;
 }
 table tr.darkgreytr {
 	background: #999 !important;
-	color: white;
+	color: $mainFontColor;
 }
 .ms-vb-title {
 	min-width: 100px;
@@ -267,9 +283,11 @@ table tr.darkgreytr {
 	}
 	.leftinfo {
 		float: left;
-		width: 33.3%;
-		padding-right: 22px;
-		padding-left: 22px;
+		width: 31%;
+		margin-right: 2.3%;
+		padding: 20px 0 20px 20px;
+		background-color: #ebeefd;
+		color: #333;
 
 		.infoheader {
 			//width: 300px;
@@ -279,11 +297,10 @@ table tr.darkgreytr {
 			}
 			>img {
 				float: left;
-				width: 100px;
+				width: 145px;
 				margin: 5px;
 			}
 			>div {
-				float: left;
 				width: 180px;
 				height: auto;
 				margin: 5px;
@@ -321,13 +338,21 @@ table tr.darkgreytr {
 				padding-left: 0;
 
 				li {
-					white-space: nowrap;
-    				text-overflow: ellipsis;
-    				overflow: hidden;
 					label {
-						width: 100px;
+						width: 70px;
 						text-align: right;
-						margin: 5px 5px 5px 10px;
+						margin: 5px 0;
+						float: left;
+						font-weight: normal;
+						color: #666;
+					}
+					span {
+					    display: inline-block;
+						height: 30px;
+						font-weight: 600px;
+					    line-height: 30px;
+					    width: calc(100% - 110px);
+    					word-wrap: break-word;
 					}
 				}
 			}
@@ -335,7 +360,7 @@ table tr.darkgreytr {
 		input[type='button'] {
 			display: block;
 			margin: 10px auto !important;
-			margin-left: 30px !important;
+			margin-left: 0px !important;
 		}
 	}
 	.rightinfo {
@@ -369,16 +394,19 @@ table tr.darkgreytr {
 }
 .infodescbox {
 	>p {
-		background: #666;
+		background: $tableHeaderColor;
 		text-align: center;
-		color: white;
-		height: 30px;
-		line-height: 30px;
+		color: $mainFontColor;
+		font-weight: 700;
+		height: 37px;
+		line-height: 37px;
 		margin-bottom: 0;
+		border: 1px $tableBorderColor solid;
+		border-bottom: none;
 	}
 	>div {
 		min-height: 120px;
-		border: 1px #666 solid;
+		border: 1px $tableBorderColor solid;
 		margin-bottom: 10px;
 		padding: 5px;
 	}
@@ -400,19 +428,19 @@ table tr.darkgreytr {
 
 .peopleinfo, .peopleassignrecord {
 	table.table >thead:first-child >tr:first-child >th {
-		border-top: 1px solid #333;
+		border-top: 1px solid $tableBorderColor;
 	}
 	table.table-bordered {
 		>thead >tr {
 			>th{
 				border-bottom-width: 1px;
-				border-color: #333;
+				border-color: $tableBorderColor;
 				min-width: 80px;
 			}
 		}
 		>tbody {
 			>tr >td {
-				border-color: #333;
+				border-color: $tableBorderColor;
 				min-width: 80px;
 				vertical-align: middle;
 				a img {
@@ -423,8 +451,8 @@ table tr.darkgreytr {
 	}
 	table {
 		thead {
-			background: #666;
-			color: white;
+			background: $tableHeaderColor;
+			color: $mainFontColor;
 		}
 	}
 }
@@ -811,7 +839,7 @@ table tr.darkgreytr {
 		width: 350px;
 	}
 	>div {
-		margin: 6px 0;
+		margin: 10px 0;
 		label {
 			width: 140px;
 			text-align: right;
@@ -874,19 +902,19 @@ table tr.darkgreytr {
 				>label {
 					& + textarea {
 						left: 118px;
-						width: 632px;
+						width: $lgInputBoxWidth;
 					}
 				}
 			}
 			&.col-lg-8.col-md-8.col-sm-8 {
 				>select, input {
-					width: 632px;
+					width: $lgInputBoxWidth;
 					border: solid 1px #bebebe;
 				    height: 40px;
 				    padding-left: 5px;
 				}
 				span.textbox.combo {
-					width: calc(100% - 120px) !important;
+					width: $lgInputBoxWidth !important;
 				    border-radius: 0;
 				    border: 1px solid #bebebe;
 				    span, a{
@@ -1019,7 +1047,7 @@ table tr.darkgreytr {
 		border: solid 1px #ddd;
     	margin-bottom: 20px;
     	ul.peopleTab {
-			background-color: #fafafa;
+			background-color: $sectionHeaderColor;
 			li {
 				width: 25%;
 			}
@@ -1520,11 +1548,6 @@ header {
 	background: url(../../Style%20Library/Images/headerbg.png);
 	background-size: cover;
 	color: white;
-	>.container {
-		margin-top: 0;
-		background-color: inherit;
-		color: white;
-	}
 	.pic_logo {
     	width: auto;
     	&:after {
@@ -1548,11 +1571,11 @@ header {
     	}
 	}
 	.pic_navbar {
-		background-color: rgba(255, 255, 255, 0.5);
-		height: 50px;
+		background-color: $mainColor;
+		height: 60px;
 		.navbar.navbar-default {
 			background-color: transparent;
-			height: 50px;
+			height: 60px;
 			&:after {
 				@include clear_float;
 			}
@@ -1564,8 +1587,12 @@ header {
 			}
 			ul.nav.navbar-nav {
 				>li {
-					width: 140px;
+					width: auto;
 					cursor: pointer;
+					margin: 0 24px;
+					&:first-child {
+						margin-left: 0;
+					}
 					img {
 						height: 20px;
 						margin-right: 5px;
@@ -1575,8 +1602,8 @@ header {
 					a {
 						display: inline-block;
 						color: white;
-						height: 50px;
-						line-height: 50px;
+						height: 60px;
+						line-height: 60px;
 						padding: 0 !important;
 						&:hover, &:focus {
 							background-color: none;
@@ -1586,88 +1613,6 @@ header {
 						a {
 							background-color: transparent;
 							color: #949494;
-						}
-					}
-
-					
-					&:before {
-						content: "";
-						padding: 1px 12px;
-						margin-right: 5px;
-						position: relative;
-						top: -1px;
-						background-image: url(../../Style%20Library/Images/headernav.png);
-						background-position: 0px 0px;
-					}
-					&:hover {
-						&:before {
-							background-position: 0px 20px;
-						}
-					}
-
-					&:first-child {
-						&:before {
-							padding: 1px 12px;
-							padding-top: 1px\0;
-							padding-bottom: 1px\0;
-    						background-position: 0px 0px;
-						}
-						&:hover, &.active {
-							&:before {
-								background-position: 0px 20px;
-							}
-						}
-					}
-					&:nth-child(2) {
-						&:before {
-							padding: 2px 12px;
-							padding-top: 2px\0;
-							padding-bottom: 2px\0;
-    						background-position: -25px 0px;
-						}
-						&:hover, &.active {
-							&:before {
-								background-position: -25px 20px;
-							}
-						}
-					}
-					&:nth-child(3) {
-						&:before {
-							padding: 2px 12px;
-							padding-top: 2px\0;
-							padding-bottom: 2px\0;
-    						background-position: -50px 0px;
-						}
-						&:hover, &.active {
-							&:before {
-								background-position: -50px 20px;
-							}
-						}
-					}
-					&:nth-child(4) {
-						&:before {
-							padding: 2px 13px;
-							padding-top: 2px\0;
-							padding-bottom: 2px\0;
-    						background-position: -72px 0px;
-						}
-						&:hover, &.active {
-							&:before {
-								background-position: -72px 20px;
-							}
-						}
-					}
-					&:last-child {
-						&:before {
-							padding: 2px 12px;
-							padding-top: 2px\0;
-							padding-bottom: 2px\0;
-    						background-position: -100px 0px;
-						}
-						&:hover, &.active {
-							&:before {
-								background-position: -100px 20px;
-							}
 						}
 					}
 				}
@@ -1716,17 +1661,22 @@ header {
 			}
 		}
 		.searchbox input {
-			width: 230px;
-			border-radius: 10px;
+			width: 262px;
+			height: 32px;
+			border-radius: 0px;
 			background-color: #eee;
-			margin-top: 10px;
+			margin-top: 15px;
 			font-size: 14px;
 			padding-right: 28px;
 			padding-top: 5px\0;
 			& + a {
-				margin-top: 8px;
+				position: absolute;
 				right: 0;
-    			position: absolute;
+				margin-top: 15px;
+				height: 32px;
+				width: 32px;
+				line-height: 32px;
+    			
 				img {
 					cursor: pointer;
 				}
@@ -1810,9 +1760,7 @@ header {
 	}
 }
 footer.newfooter {
-	height: 60px;
-	//position: relative;
-	//top: 172px;
+	height: 124px;
 	&:after {
 		content: none;
 	}
@@ -1821,9 +1769,10 @@ footer.newfooter {
 			@include clear_float;
 		}
 		p {
-			margin: 20px 0 15px 0;
+			width: 32%;
+			margin: 50px 0 15px 0;
 		    border-right: 1px solid;
-		    padding: 0 20px;
+		    padding: 0 4.5%;
 		    &:last-child {
 		    	border-right: none;
 		    }
@@ -1832,25 +1781,18 @@ footer.newfooter {
 }
 body {
 	overflow-y: auto;
-	background-image: url(../../Style%20Library/Images/bodybg.png) !important;
 	#s4-workspace {
 		overflow: unset;
 		height: auto !important;
 		z-index: 3;
-		background-image: url(../../Style%20Library/Images/bodybg.png);
 	}
 }
 
 header + .content,
 header + div {
-	min-height: 500px;
 	z-index: 1;
-	background-image: url(../../Style%20Library/Images/bodybg.png);
-	//position: relative;
-	//top: 172px;
 	.pcitcbanner {
-		margin-top: 20px;
-		height: 500px;
+		height: $bannerHeight;
 		ol.carousel-indicators {
 			width: 100%;
 			left: 0;
@@ -1875,25 +1817,27 @@ header + div {
 		}
 		.carousel-inner {
 			.item {
-				height: 500px;
+				height: $bannerHeight;
 				img {
-					min-height: 450px;
-					height: 500px;
+					min-height: $bannerHeight;
+					height: $bannerHeight;
 					width: 100%;
 				}
 				.pic_highlight {
 					position: absolute;
-					top: 250px;
-					left: 120px;
-					width: 400px;
+					top: 150px;
+					left: 60px;
+					height: 204px;
+					width: 560px;
 					.bannertitle {
 						background-color: rgba(47, 52, 143, .8);
 						display: inline-block;
 						width: 100%;
+						height: 50%;
     					text-align: center;
 						h3 {
-							font-size: 22px;
-							margin: 25px 5px;
+							font-size: 28px;
+    						margin: 36px 5px;
 							a {
 								color: white;
 								text-decoration: none;
@@ -1905,6 +1849,7 @@ header + div {
 						color: white;
 						display: inline-block;
 						width: 100%;
+						height: 50%;
 						padding: 10px;
 						border-top: 1px solid white;
 						p {
@@ -1921,61 +1866,64 @@ header + div {
 
 .yellowheader {
 	width: 100%;
-	padding-top: 10px;
-	padding-left: 30px;
+	padding-left: 22px;
+	background-color: $sectionHeaderColor;
 	&:after {
 		@include clear_float;
 	}
-	.yellowbox {
-		background-color: #ffcc00;
-		width: 15px;
-		height: 55px;
-		margin-right: 10px;
-		float: left;
-	}
 	.yellowtitle {
 		float: left;
-		margin-top: 15px;
+		margin-top: 13px;
 	    font-weight: bold;
 	    color: black;
 	}
 }
 .pcitcmywork {
-	height: 400px;
-	margin: 10px 0;
-	background-color: rgba(238, 238, 238, .6);
+	margin: 15px 0;
 	&:after {
 		@include clear_float;
 	}
+	.mybacklog {
+		width: 33%;
+	}
+	.mysubmit {
+		width: calc(67% - 15px);
+	}
 	>div {
-		width: calc(50% - 5px);
 		height: 100%;
 		float: left;
-		border: 1px solid #999;
+		border: 1px solid #ddd;
 
 		&:first-child {
-			margin-right: 10px;
+			margin-right: 15px;
 		}
 	}
 	.yellowtitle span {
-		background-color: #ffcc00;
+		width: 30px;
     	margin-left: 10px;
     	font-size: 18px;
+    	background-color: $badgeColor;
 	}
-	.yellowtitle + div {
-		height: 300px;
+	.yellowbody {
+		height: 338px;
 	    overflow-y: auto;
 	    overflow-x: hidden;
-	    width: 540px;
+		background-color: #fff;
 	    table {
-	    	tr td {
-	    		a {
-	    			color: #333;
-	    			&:visited, &:hover {
-	    				color: #999;
-	    				text-decoration: none;
-	    			}
+	    	tr {
+	    		border-bottom: 1px solid #ddd;
+	    		&:last-child {
+	    			border: none;
 	    		}
+	    		td {
+		    		a {
+		    			color: #333;
+		    			text-decoration: none;
+		    			&:hover {
+		    				text-decoration: none;
+		    			}
+		    		}
+		    	}
 	    	}
 	    }
 	}
@@ -1985,18 +1933,22 @@ header + div {
 	}
 	table {
 		width: 100% !important;
+		table-layout: fixed;
+		margin-bottom: 0;
 		thead {
 			display: none;
 		}
 		tbody {
 			tr {
-				td:first-child {
-					width: 90%;
+				&:hover {
+					background-color: #ddd;
 				}
 			}
 			td {
 				border: none;
 				display: inline-block;
+				width: 100%;
+				height: 36px;
 				a {
 					width: 100%;
 					display: inline-block;
@@ -2018,51 +1970,47 @@ header + div {
 	}
 	.mysubmit {
 		.quickapp, .abovequickapp, .underquickapp {
-			padding: 5px;
+			padding: 15px;
 		    position: relative;
-		    left: -10px;
 		    width: 100%;
-		    padding-top: 20px;
 			&:after {
 				@include clear_float;
 			}
 			>div {
 				float: left;
-				width: 23%;
-				margin: 1%;
-				background-color: #999;
+				width: 16%;
+    			margin: .9% 2%;
 				a {
 					display: block;
-				    height: 125px;
-				    padding-top: 15px;
 				    text-align: center;
-					&:visited, &:hover, &:active {
-						text-decoration: none;
-						color: #999;
-					}
+				    &:hover {
+				    	text-decoration: none;
+						p {
+							font-weight: bold;
+						}
+				    }
 					img {
 						display: inline-block;
-						height: 60px;
+						height: 110px;
 						width: auto;
 					}
 					p {
-						color: white;
-						margin-top: 15px;
-						font-size: 16px;
+						color: #333;
+					    margin-top: 5px;
+					    font-size: 16px;
+					    margin-bottom: 0;
 					}
 				}
 			}
 		}
 		.abovequickapp {
 			>div {
-				width: 48%;
-				margin: 1%
+				
 			}
 		}
 		.underquickapp {
 			>div {
-				width: 31%;
-				margin: 1%
+				
 			}
 		}
 	}
@@ -2070,32 +2018,22 @@ header + div {
 
 .proprocess {
 	height: 420px;
-	background-color: rgba(238, 238, 238, .6);
-	border: 1px solid #999;
+	border: 1px solid #ddd;
+	margin-bottom: 15px;
 	.projectbox {
 		padding: 0 20px;
-		.colorbar {
-			height: 5px;
-			margin-top: 30px;
-			background: -moz-linear-gradient(left, #fecb06 0%, #3401cb 100%);
-		    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fecb06), color-stop(100%,#3401cb));
-		    background: -webkit-linear-gradient(left, #fecb06 0%,#3401cb 100%);
-		    background: -o-linear-gradient(left, #fecb06 0%,#3401cb 100%);
-		    background: -ms-linear-gradient(left, #fecb06 0%,#3401cb 100%);
-		    background: linear-gradient(to right, #fecb06 0%,#3401cb 100%);
-		}
 		.projectTab {
-			float: right;
-		    position: relative;
-		    top: -25px;
-		    border-bottom: none;
+			margin-bottom: 15px;
+			font-size: 18px;
+			padding: 5px 0 0 0;
+			height: 45px;
 		    li {
 		    	a {
 		    		color: #555;
 		    		border: none;
-		    		border-right: 1px solid #999;
 		    		padding: 0px 15px !important;
 		    		margin: 0 2px;
+		    		text-align: center;
 		    		&:hover {
 		    			background-color: inherit;
 		    		}
@@ -2107,15 +2045,33 @@ header + div {
 		    			cursor: pointer;
 		    			font-weight: bold;
 		    		}
+		    		.arrowbox {
+		    			display: inline-block;
+		    		}
 		    	}
-	    		&:last-child {
-	    			a {
-	    				border-right: 0;
-	    			}
-	    		}
+		    	.arrowbox {
+		    		background: $mainColor;
+					height: 5px;
+				    position: relative;
+				    top: -4px;
+				    width: 100%;
+				    display: none;
+					&:before {
+						border-bottom: 9px solid $mainColor;
+					    border-left: 5px solid transparent;
+					    border-right: 5px solid transparent;
+					    content: "";
+					    height: 0;
+					    left: calc(50% - 5px);
+					    position: absolute;
+					    top: -9px;
+					    width: 0;
+					}
+		    	}
 		    }
 		}
 		.projectTabContent {
+			border-top: 1px solid $tableBorderColor;
 			.tab-pane {
 				position: relative;
 				>p {
@@ -2133,14 +2089,19 @@ header + div {
 						text-align: center;
 						background-color: white;
 						thead tr {
-							background-color: #d0cebb;
+							background-color: #e5ecef;
 							th {
 								text-align: center;
 							}
 						}
 						thead tr th,
 						tbody tr td {
+							font-size: 16px;
 							padding: 5px;
+							height: 46px;
+							vertical-align: middle;
+							border-bottom: 1px solid $tableBorderColor;
+							border-top: none;
 						}
 					}
 				}
@@ -2187,21 +2148,23 @@ header + div {
 }
 .ms-webpart-zone.ms-fullWidth {
 	display: block;
-	width: 1240px;
+	width: $lgScreenWidth;
     height: 530px;
     overflow: auto;
+    margin: 0 auto;
+    border: 1px solid #ddd;
 	.ms-webpart-cell-vertical {
 		display: block;
 		#MSOZoneCell_WebPartWPQ2.s4-wpcell-plain {
 			display: block;
 			>div {
-				width: 1240px;
+				width: $lgScreenWidth;
 			    height: 530px;
 			    overflow: auto;
 			}
 		}
 		#WebPartWPQ2, #WebPartWPQ3 {
-			width: 1240px;
+			width: $lgScreenWidth;
 		}
 		#WebPartWPQ3 {
 			.jsgrid-control-editbox + div + label + div {
@@ -2307,16 +2270,23 @@ header + div {
 		}
 	}
 }
-.datagrid-cell-c2-Name, td[field="Name"]{width:100px !important;}
-.datagrid-cell-c2-EmployeeType, td[field="EmployeeType"]{width:120px !important;}
-.datagrid-cell-c2-Company, td[field="Company"]{width:320px !important;}
-.datagrid-cell-c2-Department, td[field="Department"]{width:190px !important;}
-.datagrid-cell-c2-Position, td[field="Position"]{width:180px !important;}
-.datagrid-cell-c2-Level, td[field="Level"]{width:80px !important;}
-.datagrid-cell-c2-AvailableDate, td[field="AvailableDate"]{width:120px !important;}
+.datagrid-view .datagrid-view2 .datagrid-header, 
+.datagrid-view .datagrid-view2 .datagrid-body {
+	.datagrid-cell-c2-Name, td[field="Name"]{width:100px !important;display: inline-block;}
+	.datagrid-cell-c2-EmployeeType, td[field="EmployeeType"]{width:120px !important;display: inline-block;}
+	.datagrid-cell-c2-Position, td[field="Position"]{width:180px !important;display: inline-block;}
+	.datagrid-cell-c2-Level, td[field="Level"]{width:80px !important;display: inline-block;}
+	.datagrid-cell-c2-AvailableDate, td[field="AvailableDate"]{width:120px !important;display: inline-block;}
+	td[field="Company"]{width: calc(50% - 300px) !important;display: inline-block;}
+	td[field="Department"]{width: calc(50% - 300px) !important;display: inline-block;}
+}
+
 
 // optimize easyui dropdown style of ProjectMemberRequest page
 //.changerequest {
+	.combo-panel.panel-body.panel-body-noheader {
+		overflow: hidden;
+	}
 	.datagrid .panel-body {
 		overflow: auto !important;
 		.datagrid-view {
@@ -2332,7 +2302,7 @@ header + div {
 			td[field="AssignedSubProjectId"] { width:160px !important;}
 			td[field="AssignedSubProjectManager"] { width:120px !important;}
 			td {
-				display: inline-block;
+				display: table-cell;
 			    height: 25px;
 			    line-height: 25px;
 			    padding-top: 3px;
@@ -2492,7 +2462,7 @@ table.ms-usereditor > tbody > tr > td > table > tbody > tr > td > div {
 .container.content .mywork {
 	border: 1px solid #ddd;
 	ul.myworkTab {
-		background-color: #fafafa;
+		background-color: $sectionHeaderColor;
 
 		li a {
 			color: #999;
@@ -2848,7 +2818,7 @@ table.ms-usereditor > tbody > tr > td > table > tbody > tr > td > div {
 		border: solid 1px #ddd;
     	margin-bottom: 20px;
     	.planapprovaltab {
-			background-color: #fafafa;
+			background-color: $sectionHeaderColor;
 			li {
 				width: 20%;
 				a {
