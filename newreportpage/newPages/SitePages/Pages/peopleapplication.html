@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>人员申请</title>
+	<link href="../../Style Library/CSS/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../../Style Library/CSS/fullcalendar.min.css" rel="stylesheet">
+	<link href="../../Style Library/CSS/fullcalendar.print.min.css" rel="stylesheet" media='print'>
+	<link href="../../Style Library/CSS/dataTables.bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="../../Style Library/JS/Common/bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.min.css">
+	<link rel="stylesheet" href="../../Style Library/CSS/main.css">
+	<link rel="stylesheet" href="../../Style Library/CSS/new.css">
+</head>
+<body>
+	
+<div class="container content">
+	<div class="changerequest">
+		<div class="panel panel-default newpeople">
+		  <div class="panel-heading">
+		    <h3 class="panel-title">新建人员申请</h3>
+		  </div>
+		  <div class="panel-body">
+	    	<div class="">
+	    		<div class="col-lg-12 col-md-12 col-sm-12">
+	    			<label class="changelabel">
+	    				<span class="redstar">*</span>
+						人员申请标题</label>
+    				<input type="text" name="changenum" class="requiretitle" />
+    			</div>
+	    		<div class="col-lg-4 col-md-4 col-sm-4">
+					<label class="changelabel">人员申请编号</label>
+    				<input type="text" name="projectnum" />
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-4">
+					<label class="changelabel">人员申请状态</label>
+    				<select class="">
+						<option value="xx">xx</option>
+					    <option value="xxx">xxx</option>
+					    <option value="xxxx">xxxx</option>
+					</select>
+				</div>
+	    		<div class="col-lg-4 col-md-4 col-sm-4">
+    				<label class="changelabel"><span class="redstar">*</span>业务主线</label>
+					<select class="">
+						<option value="xx">xx</option>
+					    <option value="xxx">xxx</option>
+					    <option value="xxxx">xxxx</option>
+					</select>
+    			</div>
+    			<div class="col-lg-8 col-md-8 col-sm-8">
+					<label class="changelabel"><span class="redstar">*</span>相关子项目</label>
+    				<input type="text" name="projectnum" />
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-4">
+					<label class="changelabel"><span class="redstar">*</span>相关子项目经理</label>
+    				<input type="text" name="projectnum" />
+				</div>
+
+	    		<div class="topdash">
+	    			<div class="col-lg-4 col-md-4 col-sm-4">
+						<label class="changelabel"><span class="redstar">*</span>预计开始日期</label>
+						<input type="text" class="inputdatepicker">
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4">
+						<label class="changelabel"><span class="redstar">*</span>预计结束日期</label>
+						<input type="text" class="inputdatepicker">
+					</div>
+	    			<div class="fourtextbox">
+	    				<div class="positiondesc">
+	    					<span class="redstar">*</span>
+	    					<p>岗位描述</p>
+	    					<textarea name="" id="" cols="30" rows="6"></textarea>
+	    				</div>
+	    				<div class="skillrequire">
+	    					<span class="redstar">*</span>
+	    					<p>技能要求</p>
+	    					<textarea name="" id="" cols="30" rows="6"></textarea>
+	    				</div>
+	    				<div class="potentialpeople">
+	    					<p>意向人员</p>
+	    					<textarea name="" id="" cols="30" rows="6"></textarea>
+	    				</div>
+	    				<div class="applycomment">
+	    					<p>申请备注</p>
+	    					<textarea name="" id="" cols="30" rows="6"></textarea>
+	    				</div>
+	    			</div>
+					<div>
+						<input type="button" value="查询" class="btn btn-lg">
+						<span class="uploadfile">
+							<input type="file" size="1">
+							<a href="">上传附件</a>
+						</span>
+					</div>
+	    		</div>		    	
+	    	</div>
+		  </div>
+		</div>
+		<div class="panel panel-default resourcematch">
+		  	<div class="panel-heading">
+		    	<h3 class="panel-title">资源匹配</h3>
+		  	</div>
+		  	<div class="panel-body">
+		    	<p>其他工作项</p>
+				<button onclick="addtr(this)" type="button" class="btn btn-default" >
+						<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+				</button>
+				<table id="" class="table table-striped table-bordered">
+					<thead>
+						<tr>
+							<th>姓名</th>
+							<th>资源类型</th>
+							<th>工号</th>
+							<th>备注</th>
+							<th>查看人员信息</th>
+							<th>删除</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>张XX</td>
+							<td>大项目内部人员</td>
+							<td>00000000</td>
+							<td></td>
+							<td>
+								<button type="button" class="btn btn-default">
+									<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+								</button>
+							</td>
+							<td>
+								<button type="button" class="btn btn-default">
+									<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td>王XX</td>
+							<td>大项目内部人员</td>
+							<td>00000000</td>
+							<td></td>
+							<td>
+								<button type="button" class="btn btn-default">
+									<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+								</button>
+							</td>
+							<td>
+								<button type="button" class="btn btn-default">
+									<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td>赵XX</td>
+							<td>大项目内部人员</td>
+							<td>00000000</td>
+							<td></td>
+							<td>
+								<button type="button" class="btn btn-default">
+									<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+								</button>
+							</td>
+							<td>
+								<button type="button" class="btn btn-default">
+									<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td>李XX</td>
+							<td>大项目内部人员</td>
+							<td>00000000</td>
+							<td>xxxxxxxxxxxxxxxxxxxxxx</td>
+							<td>
+								<button type="button" class="btn btn-default">
+									<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+								</button>
+							</td>
+							<td>
+								<button type="button" class="btn btn-default">
+									<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+								</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div>
+					<p>资源调度人意见</p>
+					<textarea name="" id="" cols="30" rows="6"></textarea>
+				</div>
+				<div>
+					<input type="button" value="提交" class="btn btn-lg">
+					<span class="uploadfile">
+						<input type="file" size="1">
+						<a href="">上传附件</a>
+					</span>
+				</div>
+		  	</div>
+		</div>
+		<div class="panel panel-default resourceinit">
+		  	<div class="panel-heading">
+		    	<h3 class="panel-title">资源初步确认</h3>
+		  	</div>
+		  	<div class="panel-body">
+		    	<div>
+					<p>申请人意见</p>
+					<textarea name="" id="" cols="30" rows="6"></textarea>
+				</div>
+				<div>
+					<input type="button" value="保存" class="btn btn-lg">
+					<input type="button" value="撤销申请" class="btn btn-lg btn-warning">
+				</div>
+				<div class="topdash">
+					<div class="col-lg-4 col-md-4 col-sm-4">
+	    				<label class="changelabel">选择人员</label>
+						<select class="">
+							<option value="xx">xxxx</option>
+						    <option value="xxx">xxx</option>
+						    <option value="xxxx">xxxx</option>
+						</select>
+	    			</div>
+	    			<input type="button" value="确认" class="btn btn-lg">
+				</div>
+		  	</div>
+		</div>
+		<div class="panel panel-default resourcefinal">
+		  	<div class="panel-heading">
+		    	<h3 class="panel-title">资源最终确认</h3>
+		  	</div>
+		  	<div class="panel-body">
+		    	<a href="">查看XXX的相关申请</a>
+		    	<div>
+		    		<div class="col-lg-4 col-md-4 col-sm-4">
+						<span class="redstar">*</span>
+						<label class="changelabel">确认结论</label>
+						<input type="text">
+					</div>
+		    		<div class="col-lg-4 col-md-4 col-sm-4">
+						<span class="redstar">*</span>
+						<label class="changelabel">确认开始日期</label>
+						<input type="text" class="inputdatepicker">
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4">
+						<span class="redstar">*</span>
+						<label class="changelabel">确认结束日期</label>
+						<input type="text" class="inputdatepicker">
+					</div>
+		    	</div>
+		    	<div>
+					<p><span class="redstar">*</span>确认意见</p>
+					<textarea name="" id="" cols="30" rows="6"></textarea>
+				</div>
+				<input type="button" value="提交" class="btn btn-lg">
+		  	</div>
+		</div>
+		<div class="panel panel-default resourceconfig">
+		  	<div class="panel-heading">
+		    	<h3 class="panel-title">资源账号配置</h3>
+		  	</div>
+		  	<div class="panel-body">
+		  		<div>
+		  			<div class="col-lg-4 col-md-4 col-sm-4">
+						<span class="redstar">*</span>
+						<label class="changelabel">登陆用户名</label>
+						<input type="text">
+					</div>
+		  		</div>
+		    	<input type="button" value="提交" class="btn btn-lg">
+		  	</div>
+		</div>
+	</div>
+</div>
+
+	<script src="../../Style Library/JS/Common/moment.min.js"></script>
+	<script src="../../Style Library/JS/Common/jquery.min.js"></script>
+	<script src="../../Style Library/CSS/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+	<script src="../../Style Library/JS/Common/echarts.min.js"></script>
+	<script src="../../Style Library/JS/Common/fullcalendar.min.js"></script>
+	<script src="../../Style Library/JS/Common/jquery.dataTables.min.js"></script>
+	<script src="../../Style Library/JS/Common/bootstrap-datetimepicker-master/js/bootstrap-datetimepicker.min.js"></script>
+	<script src="../../Style Library/JS/Common/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+	<script src="../../Style Library/JS/Common/index.js"></script>
+</body>
+</html>

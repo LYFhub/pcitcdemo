@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>项目人员分配</title>
+	<link href="../../Style Library/CSS/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../../Style Library/CSS/fullcalendar.min.css" rel="stylesheet">
+	<link href="../../Style Library/CSS/fullcalendar.print.min.css" rel="stylesheet" media='print'>
+	<link href="../../Style Library/CSS/dataTables.bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="../../Style Library/JS/Common/bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.min.css">
+	<link rel="stylesheet" href="../../Style Library/CSS/main.css">
+	<link rel="stylesheet" href="../../Style Library/CSS/new.css">
+</head>
+<body>
+	
+<div class="container content">
+	<div class="changerequest">
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+		    <h3 class="panel-title">项目人员分配信息查询条件</h3>
+		  </div>
+		  <div class="panel-body">
+		    <div>
+		    	<div class="assigncondition">
+		    		<div class="col-lg-12 col-md-12 col-sm-12">
+		    			<label class="changelabel">
+		    				<span class="redstar">*</span>
+							相关子项目
+						</label>
+	    				<input type="text" name="changenum" class="requiretitle" />
+	    			</div>
+	    			
+	    			<div class="radiogroup">
+	    				<label class="radio-inline">
+						    <input type="radio" name="resultradio" id="inlineRadio1" value="option1"> 查看当前分配信息
+						</label>
+						<label class="radio-inline">
+						    <input type="radio" name="resultradio" id="inlineRadio2" value="option2"> 查看所有分配
+						</label>
+	    			</div>
+	    			<div class="checkboxgroup">
+	    				<label class="">
+						    <input type="checkbox" name="resultcheckbox" id="" value=""> 包括借调人员
+						</label>
+	    			</div>
+					<div class="btngroup">
+						<input type="button" value="查询" class="btn btn-lg">
+					</div>	    	
+		    	</div>
+		    </div>
+		  </div>
+		</div>
+		<div class="panel panel-default assignresult">
+		  	<div class="panel-heading">
+		    	<h3 class="panel-title">项目人员分配信息查询结果</h3>
+		  	</div>
+		  	<div class="panel-body">
+		    	<table class="table table-bordered aligncenter">
+					<thead>
+						<tr>
+							<th>分配编号</th>
+							<th>分配类型</th>
+							<th>人员姓名</th>
+							<th>人员工号</th>
+							<th>分配开始日期</th>
+							<th>分配结束日期</th>
+							<th>备注</th>
+							<th>变更操作</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>ASS-YYYYMMDD-###</td>
+							<td>常规</td>
+							<td>赵XX</td>
+							<td>00000001</td>
+							<td>2016-10-10</td>
+							<td>2017-04-30</td>
+							<td>
+								<a href=""><span class="glyphicon glyphicon-file" aria-hidden="true"></span></a>
+							</td>
+							<td>
+								<a href=""><img class="undoicon" src="../../Style Library/Images/undo.png">撤销</a>
+								<a href=""><img class="extendicon" src="../../Style Library/Images/extend.png">延长</a>
+								<a href=""><img class="releaseicon" src="../../Style Library/Images/release.png">释放</a>
+							</td>
+						</tr>
+						<tr>
+							<td>ASS-YYYYMMDD-###</td>
+							<td>借调</td>
+							<td>钱XX</td>
+							<td>00000002</td>
+							<td>2016-10-10</td>
+							<td>2017-04-30</td>
+							<td>
+								<a href=""><span class="glyphicon glyphicon-file" aria-hidden="true"></span></a>
+							</td>
+							<td>
+								<a href=""><img class="undoicon" src="../../Style Library/Images/undo.png">撤销</a>
+								<a href=""><img class="extendicon" src="../../Style Library/Images/extend.png">延长</a>
+								<a href=""><img class="releaseicon" src="../../Style Library/Images/release.png">释放</a>
+							</td>
+						</tr>
+						<tr>
+							<td>ASS-YYYYMMDD-###</td>
+							<td>常规</td>
+							<td>孙XX</td>
+							<td>00000003</td>
+							<td>2016-10-10</td>
+							<td>2017-04-30</td>
+							<td>
+								<a href=""><span class="glyphicon glyphicon-file" aria-hidden="true"></span></a>
+							</td>
+							<td>
+								<a href=""><img class="undoicon" src="../../Style Library/Images/undo.png">撤销</a>
+								<a href=""><img class="extendicon" src="../../Style Library/Images/extend.png">延长</a>
+								<a href=""><img class="releaseicon" src="../../Style Library/Images/release.png">释放</a>
+							</td>
+						</tr>
+						<tr>
+							<td>ASS-YYYYMMDD-###</td>
+							<td>常规</td>
+							<td>李XX</td>
+							<td>00000004</td>
+							<td>2016-10-10</td>
+							<td>2017-04-30</td>
+							<td>
+								<a href=""><span class="glyphicon glyphicon-file" aria-hidden="true"></span></a>
+							</td>
+							<td>
+								<a href=""><img class="undoicon" src="../../Style Library/Images/undo.png">撤销</a>
+								<a href=""><img class="extendicon" src="../../Style Library/Images/extend.png">延长</a>
+								<a href=""><img class="releaseicon" src="../../Style Library/Images/release.png">释放</a>
+							</td>
+						</tr>
+						<tr>
+							<td>ASS-YYYYMMDD-###</td>
+							<td>常规</td>
+							<td>周XX</td>
+							<td>00000005</td>
+							<td>2016-10-10</td>
+							<td>2017-04-30</td>
+							<td>
+								<a href=""><span class="glyphicon glyphicon-file" aria-hidden="true"></span></a>
+							</td>
+							<td>
+								<a href=""><img class="undoicon" src="../../Style Library/Images/undo.png">撤销</a>
+								<a href=""><img class="extendicon" src="../../Style Library/Images/extend.png">延长</a>
+								<a href=""><img class="releaseicon" src="../../Style Library/Images/release.png">释放</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+		  	</div>
+		</div>
+	</div>
+</div>
+
+	<script src="../../Style Library/JS/Common/moment.min.js"></script>
+	<script src="../../Style Library/JS/Common/jquery.min.js"></script>
+	<script src="../../Style Library/CSS/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+	<script src="../../Style Library/JS/Common/echarts.min.js"></script>
+	<script src="../../Style Library/JS/Common/fullcalendar.min.js"></script>
+	<script src="../../Style Library/JS/Common/jquery.dataTables.min.js"></script>
+	<script src="../../Style Library/JS/Common/bootstrap-datetimepicker-master/js/bootstrap-datetimepicker.min.js"></script>
+	<script src="../../Style Library/JS/Common/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+	<script src="../../Style Library/JS/Common/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>计划执行</title>
+	<link href="../../Style Library/CSS/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../../Style Library/CSS/fullcalendar.min.css" rel="stylesheet">
+	<link href="../../Style Library/CSS/fullcalendar.print.min.css" rel="stylesheet" media='print'>
+	<link href="../../Style Library/CSS/dataTables.bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="../../Style Library/JS/Common/bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.min.css">
+	<link rel="stylesheet" href="../../Style Library/CSS/main.css">
+	<link rel="stylesheet" href="../../Style Library/CSS/new.css">
+</head>
+<body>
+	<header class="">
+		<div class="container">
+			<div class="pic_logo">
+				<img src="../../Style Library/Images/logo2.png" alt="pic_logo">
+				<div>
+					<h3>大项目交付协作平台</h3>
+					<p>中科炼化</p>
+				</div>
+			</div>
+			<div class="userinfo">
+				<div class="userpic">
+					<img src="../../Style Library/Images/header_people.png" alt="pic_userinfo">
+				</div>
+				<div>
+					<div class="username">
+						<a onclick="shownextdiv(event)">李明宇</a>
+					</div>
+					<div class="usersetting">
+						<a onclick="shownextdiv(event)">
+							网站设置
+						</a>
+						<div>
+							<p>2017-09-22</p>
+							<p>星期五</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="pic_navbar">
+			<nav class=" container navbar navbar-default" role="navigation">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse"
+							data-target="#pcitc-navbar-collapse">
+						<span class="sr-only">切换导航</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse" id="pcitc-navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li onclick="addActive(event)" class="homepage" role="presentation">
+							<a href="./index.html">首页</a>
+						</li>
+					  	<li onclick="addActive(event)" class="requirepage" role="presentation">
+						  	<a href="./reqmgt.html">需求管理</a>
+						</li>
+					  	<li onclick="addActive(event)" class="planpage" role="presentation">
+						  	<a href="./planmgt.html">计划管理</a>
+						</li>
+					  	<li onclick="addActive(event)" class="resourcepage" role="presentation">
+						  	<a href="">资源管理</a>
+						</li>
+					  	<li class="doccenter dropdown" role="presentation">
+						  	<a id="drop6" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">文档中心<span class="caret"></span></a>
+						  	<ul id="menu3" class="dropdown-menu" aria-labelledby="drop6">
+						  		<li class="dropdown-header"><a>标准文档</a></li>
+					            <li><a href="#">业务标准</a></li>
+					            <li><a href="#">技术标准</a></li>
+					            <li><a href="#">数据标准</a></li>
+					            <li class="dropdown-header"><a>模板文档</a></li>
+					            <li><a href="#">通知模板</a></li>
+					            <li><a href="#">验收模板</a></li>
+					            <li><a href="#">报告模板</a></li>
+        					</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="searchbox">
+					<input type="text" class="form-control" placeholder="网站内搜索">
+					<a href=""><img src="../../Style Library/Images/search-01.png" alt=""></span></a>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<div>
+		<div class="container content">
+			<p>当前位置：<span>计划管理 > 计划执行</span></p>
+			<div class="execplandetail">
+				<div class="peoplecontent">
+					<ul id="" class="peopleTab nav nav-tabs">
+						<li>
+							<a href="#execmytask" data-toggle="tab">我的任务</a>
+						</li>
+						<li class="active">
+							<a href="#execmyissue" data-toggle="tab">我的问题与风险</a>
+						</li>
+						<li>
+							<a href="#execrecord" data-toggle="tab">我的工作记录</a>
+						</li>		
+					</ul>
+					<div id="" class="tab-content peopleTabContent">
+						<div class="tab-pane fade" id="execmytask">
+							
+						</div>
+						<div class="tab-pane fade in active" id="execmyissue">
+							<p>待解决的问题</p>
+							<table id="" class="table table-bordered">
+								<thead>
+									<tr>
+										<th>子项目</th>
+										<th>问题描述</th>
+										<th>解决方案</th>
+										<th>严重程度</th>
+										<th>状态</th>
+										<th>计划解决日期</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>XXXXXXXXXXXXXXXXXXXXXXXX</td>
+										<td>XXXXXXXXXXXXXXXXXXXXXXXX</td>
+										<td>XXXXXXXXXXXXXXXXXXXXXXXX</td>
+										<td>XX</td>
+										<td>XX</td>
+										<td>2017-10-20</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+							<p>待应对的风险</p>
+							<table id="" class="table table-bordered">
+								<thead>
+									<tr>
+										<th>子项目</th>
+										<th>风险描述</th>
+										<th>解决方案</th>
+										<th>发生概率</th>
+										<th>影响程度</th>
+										<th>状态</th>
+										<th>计划缓解日期</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>XXXXXXXXXXXXXXXXXXXXXXXX</td>
+										<td>XXXXXXXXXXXXXXXXXXXXXXXX</td>
+										<td>XXXXXXXXXXXXXXXXXXXXXXXX</td>
+										<td>XX</td>
+										<td>XX</td>
+										<td>XX</td>
+										<td>2017-10-20</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="tab-pane fade" id="execrecord">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="../../Style Library/JS/Common/moment.min.js"></script>
+	<script src="../../Style Library/JS/Common/jquery.min.js"></script>
+	<script src="../../Style Library/CSS/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+	<script src="../../Style Library/JS/Common/echarts.min.js"></script>
+	<script src="../../Style Library/JS/Common/fullcalendar.min.js"></script>
+	<script src="../../Style Library/JS/Common/jquery.dataTables.min.js"></script>
+	<script src="../../Style Library/JS/Common/bootstrap-datetimepicker-master/js/bootstrap-datetimepicker.min.js"></script>
+	<script src="../../Style Library/JS/Common/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+	<script src="../../Style Library/JS/Common/index.js"></script>
+</body>
+</html>

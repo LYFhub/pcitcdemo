@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>我的任务</title>
+	<link href="../../Style Library/CSS/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../../Style Library/CSS/fullcalendar.min.css" rel="stylesheet">
+	<link href="../../Style Library/CSS/fullcalendar.print.min.css" rel="stylesheet" media='print'>
+	<link href="../../Style Library/CSS/dataTables.bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="../../Style Library/JS/Common/bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.min.css">
+	<link rel="stylesheet" href="../../Style Library/CSS/main.css">
+	<link rel="stylesheet" href="../../Style Library/CSS/new.css">
+</head>
+<body>
+	<header></header>
+	<div>
+		<div class="container content">
+			<div class="changerequest mywork">
+				<div class="">
+					<ul id="" class="myworkTab nav nav-tabs">
+						<li class="active">
+							<a href="#mytasktab" data-toggle="tab">我的任务与工作记录</a>
+						</li>
+						<li>
+							<a href="#myissuetab" data-toggle="tab">我的问题与风险</a>
+						</li>		
+					</ul>
+					<div id="" class="tab-content">
+						<div class="tab-pane fade in active" id="mytasktab">
+							<div>
+					    		<div class="col-lg-12 col-md-12 col-sm-12">
+									<label class="changelabel">子项目</label>
+				    				<select class="">
+				    					<option value=""></option>
+										<option value="xx">xx</option>
+									    <option value="xxx">xxx</option>
+									    <option value="xxxx">xxxx</option>
+									</select>
+								</div>
+								<div class="col-lg-12 col-md-12 col-sm-12">
+									<label class="changelabel">任务状态</label>
+				    				<div class="checkboxgroup">
+					    				<label class="">
+										    <input type="checkbox" name="status" id="" value="">未开始
+										</label>
+										<label class="">
+										    <input type="checkbox" name="status" id="" value="">进行中
+										</label>
+										<label class="">
+										    <input type="checkbox" name="status" id="" value="">已完成
+										</label>
+					    			</div>
+								</div>
+					    		<div class="col-lg-12 col-md-12 col-sm-12">
+				    				<label class="changelabel">任务基线开始日期</label>
+									<input type="text" class="inputdatepicker"> -- <input type="text" class="inputdatepicker">
+				    			</div>
+						    </div>
+						    <div>
+								<input type="button" value="查询任务进度" class="btn btn-lg">
+							</div>
+							<div class="topdash">
+								<table id="" class="table table-bordered">
+									<thead>
+										<tr>
+											<th>任务标题</th>
+											<th>基线开始时间</th>
+											<th>基线完成时间</th>
+											<th>实际开始时间</th>
+											<th>实际完成时间</th>
+											<th>完成百分比</th>
+											<th>距实际开始已消耗天数</th>
+											<th>距基线完成还剩余天数</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr class="projecttitle">
+											<td>
+												<a class="project1"><img src="../../Style%20Library/Images/hiderow.png" alt="">子项目1</a>
+											</td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+										</tr>
+										<tr class="project1">
+											<td>任务1的详细标题描述详细标题描述XXXXX</td>
+											<td>2017-09-01</td>
+											<td>2017-09-10</td>
+											<td><input type="text" class="inputdatepicker"></td>
+											<td><input type="text" class="inputdatepicker"></td>
+											<td><input type="text"></td>
+											<td>5</td>
+											<td>3</td>
+										</tr>
+										<tr class="project1">
+											<td>任务2的详细标题标题描述XXXXX</td>
+											<td>2017-09-11</td>
+											<td>2017-09-30</td>
+											<td><input type="text" class="inputdatepicker"></td>
+											<td><input type="text" class="inputdatepicker"></td>
+											<td><input type="text"></td>
+											<td>5</td>
+											<td>23</td>
+										</tr>
+										<tr class="projecttitle">
+											<td>
+												<a class="project2"><img src="../../Style%20Library/Images/hiderow.png" alt="">子项目2</a>
+											</td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+										</tr>
+										<tr class="project2">
+											<td>任务1的详细标题描述详细标题描述XXXXX</td>
+											<td>2017-09-01</td>
+											<td>2017-09-10</td>
+											<td><input type="text" class="inputdatepicker"></td>
+											<td><input type="text" class="inputdatepicker"></td>
+											<td><input type="text"></td>
+											<td class="redfont">-5</td>
+											<td>3</td>
+										</tr>
+										<tr class="project2">
+											<td>任务2的详细标题标题描述XXXXX</td>
+											<td>2017-09-11</td>
+											<td>2017-09-30</td>
+											<td><input type="text" class="inputdatepicker"></td>
+											<td><input type="text" class="inputdatepicker"></td>
+											<td><input type="text"></td>
+											<td>5</td>
+											<td>23</td>
+										</tr>
+									</tbody>
+								</table>
+								<div>
+									<input type="button" value="保存任务进度" class="btn btn-lg">
+								</div>
+							</div>
+							<div class="topdash">
+								<div class="taskworkrecord">
+									<label class="changelabel">工作记录周期</label>
+									<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+									<select name="" id="">
+										<option value="2017-10-16 - 2017-10-22">2017-10-16 - 2017-10-22</option>
+										<option value="2017-10-23 - 2017-10-29">2017-10-23 - 2017-10-29</option>
+									</select>
+									<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+								</div>
+								<table id="" class="recordtable table table-bordered">
+									<thead>
+										<tr>
+											<th>日期</th>
+											<th>2017.9.4 (周一)</th>
+											<th>2017.9.5 (周二)</th>
+											<th>2017.9.6 (周三)</th>
+											<th>2017.9.7 (周四)</th>
+											<th>2017.9.8 (周五)</th>
+											<th>2017.9.9 (周六)</th>
+											<th>2017.9.10 (周日)</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>上午WBS</td>
+											<td>XXXXXXXXXX-01</td>
+											<td>XXXXXXXXXX-01</td>
+											<td>XXXXXXXXXX-01</td>
+											<td>XXXXXXXXXX-01</td>
+											<td>XXXXXXXXXX-01</td>
+											<td>
+												<select name="" id="">
+													<option value="XXXXXXXXXX-02">XXXXXXXXXX-02</option>
+													<option value="XXXXXXXXXX-03">XXXXXXXXXX-03</option>
+												</select>
+											</td>
+											<td>
+												<select name="" id="">
+													<option value="XXXXXXXXXX-02">XXXXXXXXXX-02</option>
+													<option value="XXXXXXXXXX-03">XXXXXXXXXX-03</option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td>下午WBS</td>
+											<td>XXXXXXXXXX-01</td>
+											<td>XXXXXXXXXX-01</td>
+											<td>XXXXXXXXXX-01</td>
+											<td>XXXXXXXXXX-01</td>
+											<td>XXXXXXXXXX-01</td>
+											<td>
+												<select name="" id="">
+													<option value="XXXXXXXXXX-02">XXXXXXXXXX-02</option>
+													<option value="XXXXXXXXXX-03">XXXXXXXXXX-03</option>
+												</select>
+											</td>
+											<td>
+												<select name="" id="">
+													<option value="XXXXXXXXXX-02">XXXXXXXXXX-02</option>
+													<option value="XXXXXXXXXX-03">XXXXXXXXXX-03</option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td>当日任务</td>
+											<td>
+												<select name="" id="">
+													<option value="XXXXXXXXXXXXXXXXXXXXXXXX">XXXXXXXXXXXXXXXXXXXXXXXX</option>
+													<option value="XXXXXXXXXXXXXXXXXXXXXXXX">XXXXXXXXXXXXXXXXXXXXXXXX</option>
+												</select>
+											</td>
+											<td>
+												<select name="" id="">
+													<option value="XXXXXXXXXXXX">XXXXXXXXXXXX</option>
+													<option value="XXXXXXXXXXXX">XXXXXXXXXXXX</option>
+												</select>
+											</td>
+											<td>
+												<select name="" id="">
+													<option value="XXXXXXXXXXXX">XXXXXXXXXXXX</option>
+													<option value="XXXXXXXXXXXX">XXXXXXXXXXXX</option>
+												</select>
+											</td>
+											<td>
+												<select name="" id="">
+													<option value="XXXXXXXXXXXX">XXXXXXXXXXXX</option>
+													<option value="XXXXXXXXXXXX">XXXXXXXXXXXX</option>
+												</select>
+											</td>
+											<td>
+												<select name="" id="">
+													<option value="XXXXXXXXXXXX">XXXXXXXXXXXX</option>
+													<option value="XXXXXXXXXXXX">XXXXXXXXXXXX</option>
+												</select>
+											</td>
+											<td>
+												<select name="" id="">
+													<option value="XXXXXXXXXXXX">XXXXXXXXXXXX</option>
+													<option value="XXXXXXXXXXXX">XXXXXXXXXXXX</option>
+												</select>
+											</td>
+											<td>
+												<select name="" id="">
+													<option value="XXXXXXXXXXXX">XXXXXXXXXXXX</option>
+													<option value="XXXXXXXXXXXX">XXXXXXXXXXXX</option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td>工作记录</td>
+											<td>
+												<textarea name="" id="" cols="30" rows="10"></textarea>
+											</td>
+											<td>
+												<textarea name="" id="" cols="30" rows="10"></textarea>
+											</td>
+											<td>
+												<textarea name="" id="" cols="30" rows="10"></textarea>
+											</td>
+											<td>
+												<textarea name="" id="" cols="30" rows="10"></textarea>
+											</td>
+											<td>
+												<textarea name="" id="" cols="30" rows="10"></textarea>
+											</td>
+											<td>
+												<textarea name="" id="" cols="30" rows="10"></textarea>
+											</td>
+											<td>
+												<textarea name="" id="" cols="30" rows="10"></textarea>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<div>
+									<input type="button" value="保存工作记录" class="btn btn-lg">
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane fade in" id="myissuetab">
+								
+						</div>
+						
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="../../Style Library/JS/Common/moment.min.js"></script>
+	<script src="../../Style Library/JS/Common/jquery.min.js"></script>
+	<script src="../../Style Library/CSS/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+	<script src="../../Style Library/JS/Common/echarts.min.js"></script>
+	<script src="../../Style Library/JS/Common/fullcalendar.min.js"></script>
+	<script src="../../Style Library/JS/Common/jquery.dataTables.min.js"></script>
+	<script src="../../Style Library/JS/Common/bootstrap-datetimepicker-master/js/bootstrap-datetimepicker.min.js"></script>
+	<script src="../../Style Library/JS/Common/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+	<script src="../../Style Library/JS/Common/index.js"></script>
+
+	<script>
+		$(document).ready(function() {
+			$('#mytasktab table .projecttitle').on('click', 'a', function(e) {
+				$('tr.' + e.currentTarget.className).toggle();
+			});
+		});
+	</script>
+</body>
+</html>

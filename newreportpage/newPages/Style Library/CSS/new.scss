@@ -1,0 +1,2859 @@
+$mainColor: #2f348f;
+$mainFontColor: #333;
+$badgeColor: #d96161;
+$sectionHeaderColor: #e8ebf0;
+$tableHeaderColor: #e5ecef;
+$tableBorderColor: #ddd;
+
+$bannerHeight: 380px;
+$lgScreenWidth: 1440px;
+$secondLgScreenWidth: 1240px;
+$lgInputBoxWidth: 698px;
+
+
+@mixin clear_float {
+	content: "";
+	display: block;
+	clear: both;
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+#s4-bodyContainer {
+	padding-bottom: 0;
+	min-height: 500px;
+	#contentRow {
+		input[id^="TeamBuilderButton"] {
+			font-size: 16px;
+		}
+	}
+}
+.front-star {
+	&:before {
+		content: "*";
+
+	}
+}
+.radiogroup {
+	&:after {
+		@include clear_float;
+	}
+}
+table.aligncenter {
+	text-align: center;
+	th {
+		text-align: center;
+	}
+}
+.hidebox {
+	visibility: hidden !important;
+}
+div.model {
+	z-index: 1505;
+	padding: 20px;
+	height: auto;
+	top: 25%;
+	&:after {
+		@include clear_float;
+	}
+}
+.masklayer {
+	position: fixed;
+	_position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0.85;
+    background-color: #999;
+    z-index: 1504;
+    display: none;
+}
+.bootstrap-select.dropup .dropdown-menu.inner {
+	max-height: 280px !important;
+}
+table {
+	th {
+		vertical-align: middle !important;
+	}
+}
+table.table.table-bordered >thead >tr >th,
+table.table.table-bordered >tbody >tr >td{
+	min-width: 100px;
+	word-break: break-all;
+	border-color: #999;
+	border-bottom-width: 1px;
+}
+table tr.darkgreytr {
+	background: #999 !important;
+	color: $mainFontColor;
+}
+.ms-vb-title {
+	min-width: 100px;
+}
+.ms-dlgContent {
+	position: fixed;
+}
+.container.content div.changerequest div.panel.panel-default:last-child {
+	//border-top: 1px solid #ddd;
+}
+.container.content textarea {
+	height: 120px !important;
+	min-height: 100px !important;
+	resize: none;
+}
+.panel-default {
+	border: 1px solid #ccc !important;
+	.panel-heading {
+		border-top: none !important;
+	}
+	.panel-body {
+		border: none;
+		overflow: visible;
+	}
+}
+.panel {
+	box-shadow: none;
+}
+.topdash {
+	width: 100%;
+}
+
+.searchcondition {
+	>div {
+		display: inline-block;
+	    margin: 12px 0;
+	    padding: 0;
+	    margin-right: 19px;
+	    label {
+	    	text-align: right;
+	    }
+	}
+
+	.employeeid, .employeetype {
+		label {
+			width: 160px;
+		}
+	}
+	.employeeskill, .employeelevel {
+		label {
+			width: 80px;
+			& + div {
+				width: 240px !important;
+				height: 40px;
+				button{
+					width: 240px;
+					height: 40px;
+					border-radius: 0;
+				}
+			}
+		}
+	}
+	.employeelevel {
+		.dropdown-menu.inner {
+			max-height: 245px !important;
+		}
+		.bootstrap-select.dropup {
+			.dropdown-menu.inner {
+				max-height: 135px !important;
+			}
+		}
+	}
+	
+	.radiogroup {
+		margin-top: 20px;
+		label {
+			height: 40px;
+			line-height: 40px;
+			margin-right: 48px;
+
+			input {
+				top: 10px;
+			}
+			input[type="radio"] +.inputdatepicker {
+				margin-left: 14px;
+			}
+			.inputdatepicker {
+				width: 120px !important;
+			}
+		}
+	}
+}
+.searchresult {
+	.datagrid-wrap.panel-body {
+		border: none;
+	}
+	.datagrid-view {
+		height: auto !important;
+    	width: auto !important;
+		border: 1px solid #ccc;
+    	border-bottom: none;
+		.datagrid-view1 {
+			display: none;
+		}
+		.datagrid-view2 {
+			position: relative;
+			.datagrid-header {
+				height: 35px !important;
+				table {
+					height: 35px !important;
+					td {
+						border-style: solid;
+					}
+				}
+			}
+			.datagrid-body {
+				height: auto !important;
+				overflow: hidden;
+				table {
+					td {
+						border-style: solid;
+					}
+				}
+				.datagrid-row {
+					height: 35px !important;
+				}
+			}
+		}
+	}
+	.pagination {
+		border: 1px solid #ccc;
+    	border-radius: 0;
+    	border-width: 0 1px 1px 1px !important;
+		input, select {
+			height: 22px !important;
+			font-size: inherit !important;
+		}
+	}
+}
+.container.content div.changerequest {
+	.employeeskill {
+		input {
+			width: 586px;
+		}
+	}
+	input.btn-lg {
+		font-size: 16px;
+	}
+}
+.searchlist {
+	list-style: none;
+	padding-left: 0;
+	&:after {
+		@include clear_float;
+	}
+
+	>li {
+		border-bottom: 1px dashed #999;
+		margin-bottom: 10px;
+		&:after {
+			@include clear_float;
+		}
+	}
+	
+	.leftlist {
+		float: left;
+		min-width: 50px;
+		margin-right: 30px;
+
+		h4 {
+			margin-top: 0;
+			a {
+				color: #333;
+			}
+		}
+	}
+	.rightlist {
+		float: left;
+
+		.infoitem {
+			display: inline-block;
+			min-width: 210px;
+			margin-bottom: 5px;	
+
+			label {
+				color: #666;
+			}
+		}
+	}
+}
+.peopleinfo {
+	&:after {
+		@include clear_float;
+	}
+	.leftinfo {
+		float: left;
+		width: 31%;
+		margin-right: 2.3%;
+		padding: 20px 0 20px 20px;
+		background-color: #ebeefd;
+		color: #333;
+
+		.infoheader {
+			//width: 300px;
+    		margin: 0 auto;
+			&:after {
+				@include clear_float;
+			}
+			>img {
+				float: left;
+				width: 145px;
+				margin: 5px;
+			}
+			>div {
+				width: 180px;
+				height: auto;
+				margin: 5px;
+				padding-top: 8px;
+				>div {
+					position: relative;
+					&:last-child {
+						p:last-child {
+							position: absolute;
+							top: 0;
+						}
+					}
+				}
+				h3 {
+					display: inline-block;
+					margin-right: 10px;
+					width: 100px;
+				}
+				p {
+					display: inline-block;
+					margin-right: 0px;
+					width: 60px;
+					&:first-child {
+						width: 100px;
+						margin-right: 10px;
+					}
+				}
+			}
+		}
+		.infodetail {
+			//width: 300px;
+    		margin: 0 auto;
+			ul {
+				list-style: none;
+				padding-left: 0;
+
+				li {
+					label {
+						width: 70px;
+						text-align: right;
+						margin: 5px 0;
+						float: left;
+						font-weight: normal;
+						color: #666;
+					}
+					span {
+					    display: inline-block;
+						height: 30px;
+						font-weight: 600px;
+					    line-height: 30px;
+					    width: calc(100% - 110px);
+    					word-wrap: break-word;
+					}
+				}
+			}
+		}
+		input[type='button'] {
+			display: block;
+			margin: 10px auto !important;
+			margin-left: 0px !important;
+		}
+	}
+	.rightinfo {
+		float: left;
+		width: 66.6%;
+
+		.rightinfoheader {
+			label + span {
+				margin-right: 20px;				
+			}
+			>a {
+				float: right;
+				color: #333;
+				&:hover {
+					text-decoration: none;
+				}
+				img {
+					width: 15px;
+					margin-bottom: 3px;
+				}
+			}
+		}
+		table {
+			text-align: center;
+			th {
+				text-align: center;
+			}
+		}
+	}
+
+}
+.infodescbox {
+	>p {
+		background: $tableHeaderColor;
+		text-align: center;
+		color: $mainFontColor;
+		font-weight: 700;
+		height: 37px;
+		line-height: 37px;
+		margin-bottom: 0;
+		border: 1px $tableBorderColor solid;
+		border-bottom: none;
+	}
+	>div {
+		min-height: 120px;
+		border: 1px $tableBorderColor solid;
+		margin-bottom: 10px;
+		padding: 5px;
+	}
+}
+
+.peopleassignrecord {
+	.panel-body >div {
+		>span {
+			margin-right: 20px;
+		}
+	}
+	table {
+		text-align: center;
+		th {
+			text-align: center;
+		}
+	}
+}
+
+.peopleinfo, .peopleassignrecord {
+	table.table >thead:first-child >tr:first-child >th {
+		border-top: 1px solid $tableBorderColor;
+	}
+	table.table-bordered {
+		>thead >tr {
+			>th{
+				border-bottom-width: 1px;
+				border-color: $tableBorderColor;
+				min-width: 80px;
+			}
+		}
+		>tbody {
+			>tr >td {
+				border-color: $tableBorderColor;
+				min-width: 80px;
+				vertical-align: middle;
+				a img {
+					width: 15px;
+				}
+			}
+		}
+	}
+	table {
+		thead {
+			background: $tableHeaderColor;
+			color: $mainFontColor;
+		}
+	}
+}
+
+.newpeople {
+	.panel-body {
+		overflow: visible;
+		>div {
+			&:after {
+				@include clear_float;
+			}
+			>div {
+				margin: 10px 0;
+				label {
+					width: 110px;
+					text-align: right;
+				}
+			}
+			div.col-lg-12.col-md-12.col-sm-12,
+			div.col-lg-8.col-md-8.col-sm-8 {
+				input, select {
+					width: calc(100% - 120px);
+				}
+			}
+			div.col-lg-8.col-md-8.col-sm-8 {
+				input {
+					height: 40px !important;
+				}
+				>span.textbox.combo {
+					width: calc(100% - 120px) !important;
+				    border-radius: 0;
+				    border: 1px solid #bebebe;
+				    span, a{
+				    	height: 40px !important;
+				    }
+				    .combo-arrow {
+				    	background-color: white;
+				    	color: black;
+					    line-height: 35px;
+					    text-align: center;
+				    	&:hover {
+				    		background-color: white;
+				    	}
+				    }
+				    input.textbox-text.validatebox-text {
+				    	width: calc(100% - 18px) !important;
+    					border-radius: 0;
+    					height: 40px !important;
+    					border-top: none;
+    					border-left: none;
+				    }
+				}
+			}
+			.spcomponent .ms-taxonomy.ms-taxonomy-height.ms-taxonomy-width,
+			.spcomponent table.ms-usereditor,
+			.spcomponent > input {
+				left: 110px;
+			}
+			.spcomponent table.ms-usereditor >tbody {
+				>tr:first-child {
+					>td:last-child {
+						padding-left: 3px !important;
+					}
+				}
+			}
+		}
+		span.uploadfile {
+			position: relative;
+			top: 16px;
+		}
+	}
+	.topdash {
+		float: left;
+		width: 100%;
+		padding-top: 20px;
+		label {
+			margin-bottom: 0;
+		}
+		>div.col-lg-4 {
+			margin: 10px 0 !important;
+			padding: 0 15px !important;
+			.btn.dropdown-toggle.btn-default {
+				border-radius: 0;
+				height: 40px;
+			}
+			>div {
+				height: 40px;
+			}
+			>select {
+				font-size: inherit;
+			}
+			.bootstrap-select.dropup .dropdown-menu.inner {
+				max-height: 280px !important;
+			}
+		}
+		div.fourtextbox,
+		div.fourtextbox + div {
+			float: left;
+		}
+		div input.btn.btn-lg {
+			margin-left: 10px;
+			font-size: 16px;
+		}
+	}
+}
+
+.datagrid-view {
+	.datagrid-view2 {
+		.datagrid-header-inner, .datagrid-btable {
+			width: 100%;
+			table {
+				width: 100%;
+			}
+		}
+	}
+}
+
+.fourtextbox {
+	width: 100%;
+	&:after {
+		@include clear_float;
+	}
+	>div {
+		float: left;
+		width: 48%;
+		margin: 10px 1%;
+		>p {
+			display: inline-block;
+			font-weight: bold;
+		}
+	}
+}
+
+.resourcematch {
+	.panel-body {
+		>p {
+			display: inline-block;
+			font-weight: bold;
+			& + button {
+				border: none;
+			}
+		}
+		>table {
+			text-align: center;
+			th{
+				text-align: center;
+				&:nth-child(5) {
+					width: 110px;
+				}
+				&:nth-child(6) {
+					width: 140px;
+				}
+			}
+			td {
+				button {
+					border: none;
+					background-color: transparent;
+					padding-top: 0;
+    				padding-bottom: 0;
+				}
+			}
+		}
+
+		>div {
+			>p {
+				font-weight: bold;
+			}
+			input + span.uploadfile {
+				top: 16px;
+			}
+		}
+	}
+}
+
+.resourceinit {
+	.panel-body {
+		>div >p {
+			font-weight: bold;
+		}
+		input.btn.btn-lg.btn-warning {
+			background: #ec971f;
+			&:hover {
+				background: #f0ad4e;
+			}
+		}
+		.topdash {
+			input.btn.btn-lg {
+				margin: 32px 0;
+			}
+		}
+	}
+}
+
+.resourcefinal {
+	.panel-body {
+		>a {
+			margin: 10px 0;
+			display: inline-block;
+		}
+		>div {
+			&:after {
+				@include clear_float;
+			}
+			div.col-lg-4.col-md-4.col-sm-4 {
+				padding-left: 0;
+				padding-right: 0;
+			}
+			>p {
+				margin-top: 10px;
+				font-weight: bold;
+			}
+		}
+		
+	}
+}
+.resourceconfig {
+	.panel-body {
+		>div {
+			&:after {
+				@include clear_float;
+			}
+			div.col-lg-4.col-md-4.col-sm-4 {
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
+	}
+}
+
+.assigncondition {
+	&:after {
+		@include clear_float;
+	}
+	>div {
+	    margin: 12px 0;
+	    padding: 0;
+	    margin-left: 83px;
+	}
+	div.col-lg-12.col-md-12.col-sm-12 {
+		float: none;
+		margin-left: 0;
+	}
+	div.btngroup {
+		margin-left: 0;
+	}
+	select.checksize {
+		width: 480px !important;
+	}
+	span.textbox.combo {
+	    border-radius: 0;
+	    border: 1px solid #bebebe;
+	    width: 632.66px !important;
+	    background-color: white;
+	    span, a{
+	    	height: 40px !important;
+	    }
+	    .combo-arrow {
+	    	background-color: white;
+	    	color: black;
+		    line-height: 35px;
+		    text-align: center;
+	    	&:hover {
+	    		background-color: white;
+	    	}
+	    }
+	    input.textbox-text.validatebox-text {
+	    	width: calc(100% - 18px) !important;
+			border-radius: 0;
+			height: 40px !important;
+			border-top: none;
+			border-left: none;
+	    }
+	}
+}
+
+.assignresult {
+	table {
+		td {
+			a {
+				display: inline-block;
+    			width: 60px;
+    			text-decoration: none;
+    			color: #333;
+    			&:hover {
+    				color: #337ab7;
+    			}
+    			img {
+    				margin-right: 5px;
+    			}
+			}
+		}
+	}
+}
+
+.assigninfo {
+	&:after {
+		@include clear_float;
+	}
+	& + .inputgroup {
+		margin-top: 15px;
+	}
+	.leftinfo {
+		float: left;
+		width: 40%;
+		border-right: 1px dashed #555;
+	}
+	.rightinfo {
+		float: right;
+		width: 60%;
+	}
+	ul {
+		list-style: none;
+		li {
+			label {
+				margin-right: 15px;
+				width: 120px;
+				text-align: right;
+			}
+		}
+	}
+}
+
+.undoassign, .extendassign, .earlyrelease, .extendassignanalysis{
+	.handlereason {
+		&:after {
+			@include clear_float;
+		}
+		>div > p {
+			font-weight: bold;
+		}
+		.leftreason {
+			width: 50%;
+			float: left;
+			textarea {
+				width: 90% !important;
+				height: 122px !important;
+				min-height: 1px !important;
+			}
+		}
+		.centerreason, .rightreason {
+			width: 25%;
+			float: left;
+			p + input {
+				margin-bottom: 10px;
+			}
+		}
+		.spcomponent {
+			>input {
+				left: 0;
+				margin-left: 0;
+			}
+		}
+		.spcomponent table.ms-usereditor {
+			left: 0;
+			margin-left: 0;
+			table .ms-inputuserfield.ms-inputBox {
+				line-height: 38px !important;
+			}
+		}
+	}
+}
+.extendassignanalysis {
+	.changelabel {
+		font-weight: bold;
+	}
+	.handlereason {
+		margin-top: 10px;
+	}
+	table {
+		th, td {
+			text-align: center;
+		}
+	}
+}
+
+.loanedapplication .loanedinfo, 
+.loanedapproval .panel-body,
+.releasepeople .releaseinfo,
+.releaseapproval .panel-body {
+	div.leftbox {
+		width: 420px;
+	}
+	div.rightbox {
+		width: 350px;
+	}
+	>div {
+		margin: 10px 0;
+		label {
+			width: 140px;
+			text-align: right;
+			margin-right: 5px;
+		}
+
+		&:last-child {
+			width: 100%;
+			float: left;
+		}
+		&.col-lg-12.col-md-12.col-sm-12 {
+			position: relative;
+			>label {
+				position: absolute;
+				top: 0;
+				& + textarea {
+					width: 80%;
+					position: relative;
+					left: 148px;
+					height: 122px;
+					min-height: 20px;
+				}
+			}
+		}
+	}
+}
+
+.container.content div.changerequest {
+	.configaccount {
+		.panel-body {
+			a {
+				color: #333;
+				text-decoration: underline;
+				display: inline-block;
+    			width: 160px;
+    			text-align: center;
+    			margin-top: 10px;
+    			font-weight: bold;
+    			&:hover {
+    				color: black;
+    			}
+			}
+			input {
+				margin: 10px 0 0 0;
+			}
+		}
+	}
+}
+
+.loanedapplication {
+	.loanedinfo {
+		&:after {
+			@include clear_float;
+		}
+		>div {
+			label {
+				width: 110px;
+			}
+			&.col-lg-12.col-md-12.col-sm-12 {
+				>label {
+					& + textarea {
+						left: 118px;
+						width: $lgInputBoxWidth;
+					}
+				}
+			}
+			&.col-lg-8.col-md-8.col-sm-8 {
+				>select, input {
+					width: $lgInputBoxWidth;
+					border: solid 1px #bebebe;
+				    height: 40px;
+				    padding-left: 5px;
+				}
+				span.textbox.combo {
+					width: $lgInputBoxWidth !important;
+				    border-radius: 0;
+				    border: 1px solid #bebebe;
+				    span, a{
+				    	height: 40px !important;
+				    }
+				    .combo-arrow {
+				    	background-color: white;
+				    	color: black;
+					    line-height: 35px;
+					    text-align: center;
+				    	&:hover {
+				    		background-color: white;
+				    	}
+				    }
+				    input.textbox-text.validatebox-text {
+				    	width: calc(100% - 18px) !important;
+    					border-radius: 0;
+    					height: 40px !important;
+    					border-top: none;
+    					border-left: none;
+				    }
+				}
+			}
+		}
+		.spcomponent {
+			>input {
+				left: 115px;
+			}
+			.ms-taxonomy.ms-taxonomy-height.ms-taxonomy-width {
+				left: 115px;
+			}
+			.ms-taxonomy.ms-taxonomy-height.ms-taxonomy-width  .ms-inputBox {
+				width: 240px;
+			}
+			table.ms-usereditor {
+				left: 115px;
+				margin-left: 3px;
+				>tbody {
+					>tr:first-child {
+						>td:last-child {
+							padding-left: 4px !important;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.loanedapproval, .releaseapproval {
+	.panel-body {
+		&:after {
+			@include clear_float;
+		}
+		>div {
+			padding-left: 0;
+			label {
+				width: auto;
+				& + textarea {
+					left: 70px !important;
+				}
+			}
+		}
+	}
+}
+.releasepeople .releaseinfo {
+	.checkboxgroup.leftbox {
+		width: 100%;
+		float: left;
+		label {
+			width: 170px;
+    		position: relative;
+    		left: 150px;
+		}
+		input {
+			margin: 0;
+		}
+	}
+}
+
+.lightgrey {
+	background: rgba(241, 241, 241, 1);
+	p {
+		color: #999 !important;
+	}
+}
+.darkgrey {
+	background: rgba(240, 240, 240, 1);
+	p {
+		color: #333  !important;
+	}
+}
+.lightblue {
+	background: rgba(222, 235, 247, 1);
+}
+.peoplemgt, .projectmanager, .requiremgt, .newplanmgt, .execplandetail{
+	.peopleheader {
+		height: 85px;
+	    background-color: #ebead5;
+	    margin-bottom: 20px;
+		ul {
+			list-style: none;
+			width: 100%;
+			padding-top: 32px;
+			padding-left: 45px;
+			&:after {
+				@include clear_float;
+			}
+
+			li {
+				float: left;
+				width: auto;
+				margin-right: 45px;
+
+				img {
+					margin-right: 8px;
+				}
+				
+				a {
+					color: #666;
+					font-weight: 400;
+					font-size: 16px;
+					position: relative;
+    				top: 3px;
+				}
+				
+			}
+		}
+	}
+	.peoplecontent {
+		border: solid 1px #ddd;
+    	margin-bottom: 20px;
+    	ul.peopleTab {
+			background-color: $sectionHeaderColor;
+			li {
+				width: 25%;
+			}
+			li a {
+				color: #999;
+			    font-weight: bold;
+			    font-size: 16px;
+			    text-align: center;
+			    &:hover {
+			    	color: #333;
+    				background-color: white;
+			    }
+			}
+			li.active a {
+				color: #333;
+			}
+		}
+		.peopleTabContent {
+			>div {
+				text-align: center;
+				>a {
+					display: inline-block;
+    				text-decoration: none;
+    				&:first-child {
+    					position: relative;
+    					top: -40px;
+    					>div {
+    						margin-left: 0;
+    						&:before {
+    							background: none !important;
+    						}
+    					}
+    				}
+    				>div {
+    					height: auto;
+					    width: 130px;
+					    margin: 50px 0 50px 40px;
+					    position: relative;
+					    background-size: contain;
+					    border-radius: 10px;
+					    border: 1px dashed #555;
+					    text-align: initial;
+					    text-align: -webkit-auto;
+					    text-align: left;
+					    &:hover {
+					    	background: rgba(222, 235, 247, 1);
+					    }
+					    &:before {
+					    	content: '';
+						    display: inline-block;
+						    position: relative;
+						    left: -32px;
+						    top: 80px;
+						    width: 19px;
+						    height: 22px;
+						    background: url(../../Style%20Library/Images/greyarrow.png);
+					    }
+
+					    img {
+					    	display: block;
+    						margin: 0 auto;
+						    width: 80px;
+						    height: 100px;
+					    }
+					    p {
+					    	margin-bottom: 0;
+						    color: #666;
+						    font-weight: bold;
+						    text-align: center;
+						    height: 20px;
+						    line-height: 20px;
+						    &:last-child {
+						    	line-height: 20px;
+						    	margin-top: 20px;
+						    	margin-bottom: 10px;
+						    }
+					    }
+    				}
+				}
+			}
+			#peoplechangetab {
+
+				>a {
+					width: 200px;
+					display: inline-block;
+					margin-left: -5px;
+					div {
+						margin-bottom: 10px;
+					}
+					>p {
+						color: #333;
+						font-weight: bold;
+						margin-top: 20px;
+					}
+					&:first-child {
+						top: 0;
+					    display: inline-block;
+					    margin: 20px;
+					    margin-left: 0;
+					    margin-right: 25px;
+					    div {
+					    	margin: 50px auto;
+					    	margin-bottom: 10px;
+					    }
+					}
+					&:nth-child(2) {
+						>div {
+							&:before {
+								left: -62px;
+							}
+						}
+						>p {
+							position: relative;
+							left: 80px;
+						}
+					}
+					&:nth-child(3) {
+						margin-left: -50px;
+					}
+					&:nth-child(3),
+					&:nth-child(4),
+					&:nth-child(5) {
+						>div {
+							&:before {
+								background: none;
+							}
+						}
+					}
+					
+				}
+			}
+			#peopleloantab {
+				>a {
+					&:first-child {
+						>div {
+							margin-left: 0;
+						}
+					}
+					>div {
+						margin-left: 200px;
+						&:before {
+							left: -110px;
+						}
+					}
+				}
+			}
+			#peoplereleasetab {
+				>a {
+					&:first-child {
+						>div {
+							margin-left: 0;
+						}
+					}
+					>div {
+						margin-left: 100px;
+						&:before {
+							left: -60px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.projectmanager {
+	.peopleheader ul {
+		padding-left: 60px;
+		li {
+		    float: left;
+		    margin-right: 60px;
+		}
+	}
+	.peoplecontent ul.peopleTab li {
+		width: 33.3%;
+		&:last-child {
+			width: 33.4%;
+		}
+	}
+}
+.requiremgt {
+	.peopleheader ul {
+		padding-left: 35px;
+		li {
+		    margin-right: 25px;
+		}
+	}
+	.peoplecontent {
+		ul.peopleTab li {
+			width: 50%;
+		}
+		.peopleTabContent {
+			>div >a >div {
+				width: 110px;
+				margin-left: 20px;
+				&:before {
+					left: -22px;
+				}
+			}
+		}
+	}
+}
+.planmgt {
+	#thisweektask,
+	#nextweekplan {
+		table {
+			th, td {
+				&:first-child {
+					text-align: left;
+				}
+			}
+		}
+	}
+	#viewhistoryreport {
+		div.col-lg-12 {
+			select {
+				// clear default select arrow style
+				appearance: none;
+			    -moz-appearance: none;
+			    -webkit-appearance: none;
+			    // set arrow picture
+			    background: url(http://spapp/sites/sppwa/Style%20Library/images/combo_arrow.png) no-repeat scroll right center transparent;
+			    padding-right: 20px;
+			}
+			// clear default select arrow style for ie
+			select::-ms-expand { display: none; }
+			&:nth-child(2) {
+				span.textbox.combo {
+					border-left: none;
+					input.textbox-text.validatebox-text {
+						border-right: none;
+    					border-top: none;
+					}
+					span {
+						a.textbox-icon {
+							background-color: transparent;
+							opacity: 1;
+						}
+					}
+				}
+			}
+		}
+	}
+	#editthisweekreport {
+		div.col-lg-12 {
+			&:first-child {
+				span.textbox.combo {
+					border-left: none;
+					input.textbox-text.validatebox-text {
+						border-right: none;
+    					border-top: none;
+					}
+					span {
+						a.textbox-icon {
+							background-color: transparent;
+							opacity: 1;
+							&:focus {
+								color: white;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.newplanmgt {
+	.peopleheader {
+		ul {
+			padding-left: 120px;
+			li {
+	    		margin-right: 120px;
+			}
+		}
+	}
+	.peoplecontent {
+		ul.peopleTab li {
+			width: 33%;
+			&:last-child {
+				width: 34%;
+			}
+		}
+		.peopleTabContent {
+
+			#newplantab, #changeplantab {
+				>a:first-child {
+					top: 0;
+				}
+			}
+			#execplantab {
+				padding: 50px 20px;
+				.abovemanager {
+					&:after {
+						@include clear_float;
+					}
+					.workassist {
+						width: 33%;
+    					margin: .5%;
+						.execcontent {
+							>div {
+								width: 48%;
+							    margin: 1%;
+							    margin-top: 4px;
+							}
+						}
+					}
+					.planprojectreport {
+						width: 65%;
+						margin: .5%;
+						.execcontent {
+							>div {
+								width: 24%;
+								margin: .5%;
+							}
+						}
+					}
+					>div {
+						float: left;
+						background-color: #eee;
+						>p {
+							font-size: 16px;
+							font-weight: bold;
+							margin: 40px 0 30px 0;
+						}
+						.execcontent {
+							padding: 5px;
+							&:after {
+								@include clear_float;
+							}
+							>div {
+								float: left;
+								background-color: #999;
+								a {
+									display: block;
+									height: 179px;
+    								padding-top: 40px;
+									&:hover {
+										text-decoration: none;
+									}
+									img {
+										display: inline-block;
+										height: 60px;
+										width: auto;
+									}
+									p {
+										color: white;
+										margin-top: 25px;
+										font-size: 16px;
+									}
+								}
+							}
+						}
+					}
+				}
+				.undermanager {
+					&:after {
+						@include clear_float;
+					}
+					.workassist, .editprojectreport {
+						>p {
+							margin-bottom: 56px;
+						}
+					}
+					.workassist, .changeplan {
+						height: 501.06px;
+					}
+
+					>div {
+						float: left;
+						width: 32.3%;
+						margin: 0.5%;
+						background-color: #eee;
+						>p {
+							font-size: 16px;
+							font-weight: bold;
+							margin: 40px 0 30px 0;
+						}
+						.projectselector {
+							margin-top: -15px;
+							margin-bottom: 10px;
+							label {
+								font-size: 16px;
+								font-weight: normal;
+							}
+							>select, >span.textbox.combo {
+								height: 30px;
+								line-height: 30px;
+								width: 80% !important;
+								border-radius: 0;
+								>span {
+									height: 30px;
+								}
+								input.textbox-text.validatebox-text {
+									width: calc(100% - 18px) !important;
+								    border-radius: 0;
+								    height: 30px !important;
+								    border-top: none;
+								    border-left: none;
+								    vertical-align: middle;
+								    position: relative;
+    								top: -3px;
+								}
+								a {
+									height: 30px !important;
+								}
+							}
+						}
+						
+						.execcontent {
+							padding: 5px;
+							&:after {
+								@include clear_float;
+							}
+							>div {
+								float: left;
+								width: 48%;
+								margin: 1%;
+								background-color: #999;
+								a {
+									display: block;
+									height: 179px;
+    								padding-top: 40px;
+									&:hover {
+										text-decoration: none;
+									}
+									img {
+										display: inline-block;
+										height: 60px;
+										width: auto;
+									}
+									p {
+										color: white;
+										margin-top: 25px;
+										font-size: 16px;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.execplandetail {
+	.peoplecontent {
+		ul.peopleTab li {
+			width: 180px;
+		}
+	}
+	.peopleTabContent {
+		padding: 20px;
+		>div {
+			>p {
+				font-size: 16px;
+				font-weight: bold;
+				text-align: left;
+				margin-top: 30px;
+			}
+			table {
+				th, td {
+					height: 40px;
+				}
+				th {
+					background-color: #666;
+					color: white;
+					text-align: center;
+					font-weight: normal;
+				}
+				& + p {
+					margin-top: 50px;
+				}
+			}
+		}
+		#execmyissue {
+			table {
+				th, td {
+					&:first-child, 
+					&:nth-child(2), 
+					&:nth-child(3) {
+						text-align: left;
+					}
+				}
+			}
+		}
+	}
+}
+.requiremgt, .peoplemgt, .projectmanager, .newplanmgt, .execplandetail{
+	.peopleTabContent {
+		background-color: #fff;
+	}
+}
+
+header {
+	position: relative;
+	z-index: 2;
+	width: 100%;
+	background: url(../../Style%20Library/Images/headerbg.png);
+	background-size: cover;
+	color: white;
+	.pic_logo {
+    	width: auto;
+    	&:after {
+    		@include clear_float;
+    	}
+    	img {
+    		width: 140px;
+    		float: left;
+    		margin-right: 20px;
+    		& + div {
+    			float: left;
+    			padding-left: 20px;
+    			border-left: 1px solid white;
+    			h3 {
+    				font-weight: bold;
+    			}
+    			p {
+    				font-size: 18px;
+    			}
+    		}
+    	}
+	}
+	.pic_navbar {
+		background-color: $mainColor;
+		height: 60px;
+		.navbar.navbar-default {
+			background-color: transparent;
+			height: 60px;
+			&:after {
+				@include clear_float;
+			}
+
+			.navbar-nav> .open >a, 
+			.navbar-nav> .open >a:focus, 
+			.navbar-nav> .open >a:hover {
+				background: transparent;
+			}
+			ul.nav.navbar-nav {
+				>li {
+					width: auto;
+					cursor: pointer;
+					margin: 0 24px;
+					&:first-child {
+						margin-left: 0;
+					}
+					img {
+						height: 20px;
+						margin-right: 5px;
+						position: relative;
+    					top: -2px;
+					}
+					a {
+						display: inline-block;
+						color: white;
+						height: 60px;
+						line-height: 60px;
+						padding: 0 !important;
+						&:hover, &:focus {
+							background-color: none;
+						}
+					}
+					&.active, &:hover, &:focus {
+						a {
+							background-color: transparent;
+							color: #949494;
+						}
+					}
+				}
+				li.doccenter.dropdown {
+					.dropdown-menu {
+						background: rgba(175, 197, 219, .9);
+						min-width: 100px;
+    					margin-left: 10px;
+    					padding-top: 0;
+    					padding-bottom: 0;
+    					border-top: none;
+    					z-index: 1000;
+						li {
+							height: 40px;
+							line-height: 40px;
+							width: 180px;
+							padding: 0 5px;
+							&:first-child {
+								border-top: none;
+							}
+							&:hover {
+								background-color: #999;
+							}
+							a {
+								height: 30px;
+								line-height: 30px;
+								font-weight: normal;
+								color: white;
+								font-size: 15px;
+							}
+
+						}
+						.dropdown-header {
+							text-align: left;
+							border-top: 1px solid white;
+    						border-bottom: 1px solid white;
+							a {
+								font-weight: bold;
+							}
+							&:hover {
+								background: rgba(175, 197, 219, .9);
+							}
+						}
+					}
+				}
+			}
+		}
+		.searchbox input {
+			width: 262px;
+			height: 32px;
+			border-radius: 0px;
+			background-color: #eee;
+			margin-top: 15px;
+			font-size: 14px;
+			padding-right: 28px;
+			padding-top: 5px\0;
+			& + a {
+				position: absolute;
+				right: 0;
+				margin-top: 15px;
+				height: 32px;
+				width: 32px;
+				line-height: 32px;
+    			
+				img {
+					cursor: pointer;
+				}
+			}
+
+		}
+	}
+	.userinfo {
+		margin-top: 36px;
+		>div {
+			float: left;
+			img {
+				margin-right: 0;
+				width: 40px;
+			}
+		}
+		.userpic {
+			padding: 10px;
+		    border-radius: 50%;
+		    margin-right: 18px;
+		    background: -moz-linear-gradient(top, #e4e4e4 0%, #b9bcbd 100%);
+		    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e4e4e4), color-stop(100%,#b9bcbd));
+		    background: -webkit-linear-gradient(top, #e4e4e4 0%,#b9bcbd 100%);
+		    background: -o-linear-gradient(top, #e4e4e4 0%,#b9bcbd 100%);
+		    background: -ms-linear-gradient(top, #e4e4e4 0%,#b9bcbd 100%);
+		    background: linear-gradient(to bottom, #e4e4e4 0%,#b9bcbd 100%);
+		}
+		.username {
+			margin-bottom: 0;
+			margin-top: 0;
+			a {
+				color: white;
+				&:hover {
+					color: #949494;
+				}
+			}
+			.o365spo.contextMenuPopup {
+				color: white;
+				background: rgba(175, 197, 219, 0.9);
+				a {
+					color: white;
+					&:hover {
+						background-color: #999;
+					}
+				}
+			}
+		}
+		.usersetting {
+			>a {
+				color: white !important;
+				&:hover {
+					color: #949494 !important;
+				}
+			}
+			a {
+				color: white;
+			}
+			&+div {
+				width: auto;
+				&:after {
+					@include clear_float;
+				}
+				>p {
+					margin: 10px 0 0 0;
+    				float: left;
+    				&:first-child {
+    					margin-right: 5px;
+    				}
+				}
+			}
+			.o365spo.contextMenuPopup {
+				color: white;
+				background: rgba(175, 197, 219, 0.9);
+				a {
+					color: white;
+					&:hover {
+						background-color: #999;
+					}
+				}
+			}
+		}
+	}
+}
+footer.newfooter {
+	height: 124px;
+	&:after {
+		content: none;
+	}
+	div {
+		&:after {
+			@include clear_float;
+		}
+		p {
+			width: 32%;
+			margin: 50px 0 15px 0;
+		    border-right: 1px solid;
+		    padding: 0 4.5%;
+		    &:last-child {
+		    	border-right: none;
+		    }
+		}
+	}
+}
+body {
+	overflow-y: auto;
+	#s4-workspace {
+		overflow: unset;
+		height: auto !important;
+		z-index: 3;
+	}
+}
+
+header + .content,
+header + div {
+	z-index: 1;
+	.pcitcbanner {
+		height: $bannerHeight;
+		ol.carousel-indicators {
+			width: 100%;
+			left: 0;
+			margin-left: 0;
+			text-align: right;
+			&:after {
+				@include clear_float;
+			}
+			li {
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				margin-right: 10px;
+				background-color: rgba(255, 255, 255, .5);
+				&:last-child {
+					margin-right: 20px;
+				}
+				&.active {
+					background-color: rgba(255, 170, 0, .5);
+				}
+			}
+		}
+		.carousel-inner {
+			.item {
+				height: $bannerHeight;
+				img {
+					min-height: $bannerHeight;
+					height: $bannerHeight;
+					width: 100%;
+				}
+				.pic_highlight {
+					position: absolute;
+					top: 150px;
+					left: 60px;
+					height: 204px;
+					width: 560px;
+					.bannertitle {
+						background-color: rgba(47, 52, 143, .8);
+						display: inline-block;
+						width: 100%;
+						height: 50%;
+    					text-align: center;
+						h3 {
+							font-size: 28px;
+    						margin: 36px 5px;
+							a {
+								color: white;
+								text-decoration: none;
+							}
+						}
+					}
+					.bannerdes {
+						background-color: rgba(0, 0, 0, .5);
+						color: white;
+						display: inline-block;
+						width: 100%;
+						height: 50%;
+						padding: 10px;
+						border-top: 1px solid white;
+						p {
+							padding: 5px;
+							font-size: 16px;
+						}
+					}
+				}
+			}
+		}
+	}
+	
+}
+
+.yellowheader {
+	width: 100%;
+	padding-left: 22px;
+	background-color: $sectionHeaderColor;
+	&:after {
+		@include clear_float;
+	}
+	.yellowtitle {
+		float: left;
+		margin-top: 13px;
+	    font-weight: bold;
+	    color: black;
+	}
+}
+.pcitcmywork {
+	margin: 15px 0;
+	&:after {
+		@include clear_float;
+	}
+	.mybacklog {
+		width: 33%;
+	}
+	.mysubmit {
+		width: calc(67% - 15px);
+	}
+	>div {
+		height: 100%;
+		float: left;
+		border: 1px solid #ddd;
+
+		&:first-child {
+			margin-right: 15px;
+		}
+	}
+	.yellowtitle span {
+		width: 30px;
+    	margin-left: 10px;
+    	font-size: 18px;
+    	background-color: $badgeColor;
+	}
+	.yellowbody {
+		height: 338px;
+	    overflow-y: auto;
+	    overflow-x: hidden;
+		background-color: #fff;
+	    table {
+	    	tr {
+	    		border-bottom: 1px solid #ddd;
+	    		&:last-child {
+	    			border: none;
+	    		}
+	    		td {
+		    		a {
+		    			color: #333;
+		    			text-decoration: none;
+		    			&:hover {
+		    				text-decoration: none;
+		    			}
+		    		}
+		    	}
+	    	}
+	    }
+	}
+	.dataTables_wrapper {
+		position: relative;
+		overflow: hidden;
+	}
+	table {
+		width: 100% !important;
+		table-layout: fixed;
+		margin-bottom: 0;
+		thead {
+			display: none;
+		}
+		tbody {
+			tr {
+				&:hover {
+					background-color: #ddd;
+				}
+			}
+			td {
+				border: none;
+				display: inline-block;
+				width: 100%;
+				height: 36px;
+				a {
+					width: 100%;
+					display: inline-block;
+					white-space: nowrap;
+	    			overflow: hidden;
+	    			text-overflow: ellipsis;
+				}
+			}
+		}
+		& + .dataTables_paginate.paging_simple_numbers {
+		    a {
+		    	padding: 0 5px;
+		    	color: black;
+		  		&.current {
+		  			font-weight: bold;
+		  		}
+		    }
+		}
+	}
+	.mysubmit {
+		.quickapp, .abovequickapp, .underquickapp {
+			padding: 15px;
+		    position: relative;
+		    width: 100%;
+			&:after {
+				@include clear_float;
+			}
+			>div {
+				float: left;
+				width: 16%;
+    			margin: .9% 2%;
+				a {
+					display: block;
+				    text-align: center;
+				    &:hover {
+				    	text-decoration: none;
+						p {
+							font-weight: bold;
+						}
+				    }
+					img {
+						display: inline-block;
+						height: 110px;
+						width: auto;
+					}
+					p {
+						color: #333;
+					    margin-top: 5px;
+					    font-size: 16px;
+					    margin-bottom: 0;
+					}
+				}
+			}
+		}
+		.abovequickapp {
+			>div {
+				
+			}
+		}
+		.underquickapp {
+			>div {
+				
+			}
+		}
+	}
+}
+
+.proprocess {
+	height: 420px;
+	border: 1px solid #ddd;
+	margin-bottom: 15px;
+	.projectbox {
+		padding: 0 20px;
+		.projectTab {
+			margin-bottom: 15px;
+			font-size: 18px;
+			padding: 5px 0 0 0;
+			height: 45px;
+		    li {
+		    	a {
+		    		color: #555;
+		    		border: none;
+		    		padding: 0px 15px !important;
+		    		margin: 0 2px;
+		    		text-align: center;
+		    		&:hover {
+		    			background-color: inherit;
+		    		}
+		    	}
+		    	&.active {
+		    		a {
+		    			color: #333;
+		    			background-color: inherit;
+		    			cursor: pointer;
+		    			font-weight: bold;
+		    		}
+		    		.arrowbox {
+		    			display: inline-block;
+		    		}
+		    	}
+		    	.arrowbox {
+		    		background: $mainColor;
+					height: 5px;
+				    position: relative;
+				    top: -4px;
+				    width: 100%;
+				    display: none;
+					&:before {
+						border-bottom: 9px solid $mainColor;
+					    border-left: 5px solid transparent;
+					    border-right: 5px solid transparent;
+					    content: "";
+					    height: 0;
+					    left: calc(50% - 5px);
+					    position: absolute;
+					    top: -9px;
+					    width: 0;
+					}
+		    	}
+		    }
+		}
+		.projectTabContent {
+			border-top: 1px solid $tableBorderColor;
+			.tab-pane {
+				position: relative;
+				>p {
+					width: 120px;
+				    position: absolute;
+				    top: -30px;
+    				left: 35px;
+				    color: black;
+				}
+				.tablebox {
+					width: 100%;
+					height: 280px;
+					overflow: auto;
+					table {
+						text-align: center;
+						background-color: white;
+						thead tr {
+							background-color: #e5ecef;
+							th {
+								text-align: center;
+							}
+						}
+						thead tr th,
+						tbody tr td {
+							font-size: 16px;
+							padding: 5px;
+							height: 46px;
+							vertical-align: middle;
+							border-bottom: 1px solid $tableBorderColor;
+							border-top: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.newspage {
+	background-color: white;
+	padding: 0 10px 10px 10px;
+	.newsheader {
+		text-align: center;
+		h3 {
+			margin-bottom: 20px;
+		}
+		.newinfo {
+			&:after {
+				@include clear_float;
+			}
+		}
+	}
+	.newscontent {
+		margin-top: 40px;
+		color: #666;
+		.newsimg {
+			text-align: center;
+			img {
+				max-width: 100%;
+			}
+		}
+		.newtext {
+			margin: 40px 0;
+			p {
+				color: #666;
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 22px;
+				text-align: left;
+				margin-bottom: 15px;
+			}
+		}
+	}
+}
+.ms-webpart-zone.ms-fullWidth {
+	display: block;
+	width: $lgScreenWidth;
+    height: 530px;
+    overflow: auto;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+	.ms-webpart-cell-vertical {
+		display: block;
+		#MSOZoneCell_WebPartWPQ2.s4-wpcell-plain {
+			display: block;
+			>div {
+				width: $lgScreenWidth;
+			    height: 530px;
+			    overflow: auto;
+			}
+		}
+		#WebPartWPQ2, #WebPartWPQ3 {
+			width: $lgScreenWidth;
+		}
+		#WebPartWPQ3 {
+			.jsgrid-control-editbox + div + label + div {
+				width: 100% !important;
+				>div:first-child {
+				}
+			}
+			.outer-scroll-bar {
+				position: relative;
+				>div:last-child {
+					position: absolute;
+					right: 0;
+				}
+			}
+		}
+	}
+	.ms-webpart-zone.ms-fullWidth table #scriptWPQ2 .ms-csrlistview-controldiv {
+		background-color: transparent;
+	}
+	table#Hero-WPQ2 {
+		display: none;
+	}
+}
+
+.viewreport {
+	background-color: white;
+	.textbox.combo {
+		width: 632px !important;
+    	border-radius: 0;
+    	input.textbox-text {
+			width: 612px !important;
+			border-radius: 0;
+    	}
+	}
+	.panel-body {
+		div.col-lg-12 {
+			margin: 5px 0;
+		}
+		label {
+			width: 110px;
+		    text-align: right;
+		    font-size: 16px;
+		    color: #333;
+		    margin-right: 15px;
+		}
+		select {
+			width: 632px !important;
+		}
+		input.btn {
+			margin: 30px 0 30px 30px !important;
+		}
+		table {
+			th, td {
+				text-align: center;
+				font-size: 16px;
+				height: 40px;
+				border: 1px solid #666;
+				a {
+					color: #666;
+					text-decoration: underline;
+					&:hover {
+						color: #333;
+					}
+				}
+			}
+			th {
+				background-color: #666;
+				color: white;
+			}
+		}
+	}
+}
+
+// for execplan module of planmgt page
+.updateplanselect {
+	.panel-body {
+		overflow: hidden;
+	}
+	.datagrid .panel-body {
+		overflow: auto;
+	}
+    .datagrid-view{
+    	overflow: visible;
+    	.datagrid-view2 {
+    		width: auto !important;
+    		right: auto;
+    		.datagrid-header, .datagrid-body {
+    			width: 631px !important;
+    		}
+    		.datagrid-body {
+    			height: auto !important;
+    		}
+    	}
+    }
+}
+
+// align text of table in search people result page
+.searchresult .datagrid-view .datagrid-view2 {
+	.datagrid-header,.datagrid-body .datagrid-row {
+		td {
+			height: 35px;
+			padding-top: 9px;
+		}
+	}
+}
+.datagrid-view .datagrid-view2 .datagrid-header, 
+.datagrid-view .datagrid-view2 .datagrid-body {
+	.datagrid-cell-c2-Name, td[field="Name"]{width:100px !important;display: inline-block;}
+	.datagrid-cell-c2-EmployeeType, td[field="EmployeeType"]{width:120px !important;display: inline-block;}
+	.datagrid-cell-c2-Position, td[field="Position"]{width:180px !important;display: inline-block;}
+	.datagrid-cell-c2-Level, td[field="Level"]{width:80px !important;display: inline-block;}
+	.datagrid-cell-c2-AvailableDate, td[field="AvailableDate"]{width:120px !important;display: inline-block;}
+	td[field="Company"]{width: calc(50% - 300px) !important;display: inline-block;}
+	td[field="Department"]{width: calc(50% - 300px) !important;display: inline-block;}
+}
+
+
+// optimize easyui dropdown style of ProjectMemberRequest page
+//.changerequest {
+	.combo-panel.panel-body.panel-body-noheader {
+		overflow: hidden;
+	}
+	.datagrid .panel-body {
+		overflow: auto !important;
+		.datagrid-view {
+			overflow: visible;
+		}
+	}
+	.datagrid-view .datagrid-view2 {
+		.datagrid-header, .datagrid-body {
+			td[field="Title"] { width:350px !important;}
+			td[field="Id"] { width:160px !important;}
+			td[field="Manager"] { width:120px !important;}
+			td[field="AssignedSubProjectName"] { width:350px !important;}
+			td[field="AssignedSubProjectId"] { width:160px !important;}
+			td[field="AssignedSubProjectManager"] { width:120px !important;}
+			td {
+				display: table-cell;
+			    height: 25px;
+			    line-height: 25px;
+			    padding-top: 3px;
+			}
+			td > div {
+				width: 100% !important;
+				white-space: nowrap;
+            	overflow: hidden;
+              	text-overflow: ellipsis;
+				
+			}
+		}
+		.datagrid-body {
+			overflow: hidden;
+			height: auto !important;
+		}
+		.datagrid-cell {
+			font-size: 14px;
+			span {
+				font-size: 14px;
+			}
+		}
+	}
+//}
+
+
+// change form fontSize to 14px 
+.container.content div.changerequest  {
+	.requirelist div .changelabel, 
+	.changeinfo div .changelabel, 
+	.manualreview div .changelabel, 
+	.schemeapproval div .changelabel,
+	.plancheck div .changelabel,
+	.feasiblestudy .panel-body label,
+	.feasiblestudy .panel-body > div > div p,
+	.requiresearch div label,
+	select,
+	label + input,
+	textarea,
+	input[type='text'],
+	input[type='date'],
+	.topdash > p.desctitle,
+	.topdash > p.desctitle span,
+	.reviewresult .panel-body > p,
+	#editthisweekreport > .col-lg-12.col-md-12.col-sm-12 label,
+	.desctitle {
+		font-size: 14px !important;
+	}
+	.feasiblestudy .panel-body > div > div input[type='checkbox'] {
+		width: 15px;
+	}
+	.feasiblestudy .panel-body > div.col-lg-12.col-md-12.col-sm-12 .changelabel {
+		width: auto !important;
+	}
+	.requirelist {
+		>div {
+			>span, >input {
+				white-space: nowrap;
+	    		overflow: hidden;
+	    		text-overflow: ellipsis;
+			}
+		}
+	}
+	div[class^="col-lg"] {
+		>input, >select, >span {
+			white-space: nowrap;
+    		overflow: hidden;
+    		text-overflow: ellipsis;
+		}
+	}
+	.requiresearch .panel-body {
+		> div.col-lg-12.col-md-12.col-sm-12 {
+			padding: 0;
+			label {
+				margin-left: 0;
+			}
+		}
+		> div.col-lg-4.col-md-4.col-sm-4.spcomponent {
+			>input, table.ms-usereditor {
+				left: 105px;
+			}
+		}
+		.spcomponent .ms-taxonomy.ms-taxonomy-height.ms-taxonomy-width {
+			left: 60px;
+		}
+	}
+	.feasiblestudy, .requiresearch {
+		.desctitle {
+			margin-top: 10px;
+		}
+	}
+	.feasiblestudy .panel-body > div:first-child {
+		margin-bottom: 5px !important;
+	}
+	#viewhistoryreport {
+		.col-lg-12 {
+			span {
+				input, a {
+					height: 40px !important;
+					line-height: 40px !important;
+				}
+			}
+		}
+		
+	}
+	#tempTaskOverlay {
+		td >span {
+			display: inline-block;
+		}
+		.ms-usereditor {
+			width: 180px !important;
+			>tbody >tr >td {
+				&:first-child {
+					width: 100% !important;
+				}
+				&:last-child {
+					position: absolute;
+					top: 67px;
+				}
+			}
+		}
+	}
+}
+
+
+
+// hidden up and down arrow of sp component(search people)
+table.ms-usereditor > tbody > tr > td > table > tbody > tr > td > div {
+	overflow: hidden !important;
+	text-align: left;
+	line-height: 36px !important;
+	padding-left: 5px;
+}
+
+.container.content .requiresearch .panel-body > div >.uploadfile {
+	color: white;
+    width: 180px;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 10px;
+    background-color: #157efa;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: normal;
+    top: 26px;
+    &:hover {
+    	background-color: #0a3e7c;
+    }
+    input {
+    	height: 40px !important;
+    }
+    a {
+    	color: white;
+    }
+}
+
+.container.content .mywork {
+	border: 1px solid #ddd;
+	ul.myworkTab {
+		background-color: $sectionHeaderColor;
+
+		li a {
+			color: #999;
+		    font-weight: bold;
+		    font-size: 16px;
+		    width: 200px;
+		    text-align: center;
+		}
+		li.active {
+			a {
+				color: #333;
+			}
+		}
+	}
+	.tab-content {
+		background-color: #fff;
+		padding: 20px 10px;
+		#mytasktab {
+			>div {
+				&:after {
+					@include clear_float;
+				}
+				>div {
+					margin: 5px 0;
+					span {
+						border-radius: 0;
+						input {
+							border-radius: 0;
+						}
+						a {
+							height: 40px !important;
+						}
+					}
+				}
+			}
+			label {
+				width: 130px;
+				text-align: right;
+				margin-right: 5px;
+			}
+			select {
+				width: 632px;
+			}
+			.topdash select {
+				width: 240px;
+			}
+			.checkboxgroup {
+				display: inline-block;
+				label {
+					width: auto;
+					margin-right: 15px;
+					font-weight: normal;
+					input {
+						margin: 0 0 2px 0;
+					}
+				}
+			}
+			input.btn {
+				margin: 30px 30px 20px 30px;
+			}
+			.topdash {
+				margin-left: 30px;
+    			margin-right: 30px;
+    			width: auto;
+    			input.btn {
+    				margin-left: 0;
+    			}
+				table {
+					margin-top: 20px;
+					th {
+						background-color: #666;
+						color: white;
+						border: 1px solid #333;
+						&:last-child,
+						&:nth-child(7) {
+							width: 90px;
+						}
+					}
+					th, td {
+						text-align: center;
+						vertical-align: middle;
+					}
+					td {
+						border: 1px solid #666;
+						input {
+							width: 100px;
+							height: auto;
+						}
+					}
+					.projecttitle {
+						td {
+							text-align: left;
+							a {
+								color: #333;
+								cursor: pointer;
+								img {
+									margin-right: 5px;
+									margin-bottom: 3px;
+								}
+							}
+						}
+					}
+				}
+				table.recordtable {
+					th {
+						&:last-child,
+						&:nth-child(7) {
+							width: auto;
+						}
+					}
+					td {
+						padding: 5px;
+						select {
+							width: 140px;
+							height: 30px;
+							max-width: 140px;
+						}
+						textarea {
+							height: 120px !important;
+						}
+						.bootstrap-select.btn-group .dropdown-toggle .filter-option {
+							width: 100px;
+						}
+					}
+				}
+				div.taskworkrecord {
+					margin-top: 20px;
+					label {
+						width: auto;
+						margin-right: 10px;
+					}
+					span + select {
+						width: 194px;
+					}
+				}
+			}
+		}
+	}
+}
+
+// optimize model style
+.container.content div.changerequest {
+	.model {
+		table {
+			th, td {
+				text-align: center;
+				textarea {
+					height: 40px !important;
+	    			min-height: 20px !important;
+				}
+			}
+		}
+	}
+	#issueOverlay {
+		table {
+			th, td {
+				&:nth-child(3), &:nth-child(4) {
+					width: 90px;
+					select {
+						width: 80px;
+					}
+				}				
+				&:nth-child(5), &:nth-child(6){
+					width: 110px !important;
+					input {
+						width: 100px;
+						text-align: center;
+					}
+				}
+				&:nth-child(7) {
+					width: 150px;
+					.ms-usereditor {
+						width: 140px !important;
+						> tbody > tr > td > a {
+							right: 3px;
+						}
+					}
+					div.ms-inputBox {
+						text-align: left;
+						width: 140px;
+					}
+				}
+			}
+		}
+	}
+	#riskOverlay {
+		table {
+			th, td {
+				&:nth-child(3), &:nth-child(4), &:nth-child(5) {
+					width: 90px;
+					select {
+						width: 80px;
+					}
+				}
+				&:nth-child(6), &:nth-child(7){
+					width: 110px !important;
+					input {
+						width: 100px;
+						text-align: center;
+					}
+				}
+				&:nth-child(8) {
+					width: 150px;
+					.ms-usereditor {
+						width: 140px !important;
+						> tbody > tr > td > a {
+							right: 3px;
+						}
+					}
+					div.ms-inputBox {
+						text-align: left;
+						width: 140px;
+					}
+				}
+			}
+		}
+	}
+	#candidateOverlay {
+		table {
+			tr {
+				td:last-child {
+					position: relative;
+    				vertical-align: middle;
+    				label {
+    					margin-right: 10px;
+    					& + span {
+    						position: absolute;
+    						top: 20px;
+    						right: 5px;
+    					}
+    				}
+				}
+			}
+		}
+	}
+}
+
+.createplan, .childproject {
+	.projectinfo {
+		&:after {
+			@include clear_float;
+		}
+		>div {
+			border-top: 1px solid #999;
+			border-right: 1px solid #999;
+			padding: 0;
+			height: 30px;
+			position: relative;
+			&:last-child {
+				border-bottom: 1px solid #999;
+				height: 60px;
+				width: 99.99%;
+				>label {
+					height: 100%;
+					line-height: 60px;
+					position: relative;
+				}
+			}
+			>label {
+				border-right: 1px solid #999;
+				width: 140px;
+				background-color: #666;
+				color: white;
+				font-weight: normal;
+				position: absolute;
+			}
+			>p {
+				width: calc(99% - 140px);
+				position: absolute;
+				left: 140px;
+				white-space: nowrap;
+            	overflow: hidden;
+                text-overflow: ellipsis;
+				padding-left: 1px;
+				padding-right: 1px;
+			}
+			>p, >label {
+				display: inline-block;
+				margin: 0;
+				text-align: center;
+				line-height: 30px;
+			}
+			>textarea {
+				height: 100% !important;
+				min-height: 0 !important;
+				width: calc(99% - 135px) !important;
+				border: none;
+				&:focus {
+					border: none;
+				}
+				&:disabled {
+					background-color: white !important;
+					color: #333 !important;
+				}
+			}
+		}
+	}
+}
+.extendinfo {
+	.panel-body {
+		>div {
+			margin-bottom: 10px;
+			label {
+				width: 60px;
+				text-align: right;
+				margin-right: 5px;
+			}
+			input.btn {
+				margin: 20px 0 0 18px !important;
+			}
+		}
+		.spcomponent {
+			>input,
+			.ms-taxonomy.ms-taxonomy-height.ms-taxonomy-width {
+				left: 66px;
+			}
+			.ms-taxonomy.ms-taxonomy-height.ms-taxonomy-width {
+				.ms-taxonomy-control-holder.ms-taxonomy-width {
+					.ms-taxonomy-fieldeditor.ms-taxonomy-fieldeditor-standard {
+						width: 243px !important;
+					}
+				}
+			}
+		}
+	}
+}
+.editdetailplan, .approvaldetailplan {
+	.panel-body {
+		padding-left: 50px !important;
+		img {
+			margin-right: 15px;
+			position: relative;
+			top: -2px;
+		}
+		>p {
+			margin: 20px 0 0 0;
+		}
+		>a {
+			margin-right: 50px;
+			color: #333;
+			text-decoration: underline;
+			&:hover {
+				color: black;
+			}
+		}
+		input.btn {
+			margin: 20px 20px 0 0 !important;
+		}
+	}
+}
+.childprojectplan {
+	.projectplancontent {
+		border: solid 1px #ddd;
+    	margin-bottom: 20px;
+    	.planapprovaltab {
+			background-color: $sectionHeaderColor;
+			li {
+				width: 20%;
+				a {
+					color: #999;
+					text-align: center;
+				}
+			}
+			li.active a {
+				color: #333;
+			}
+		}
+		.planapprovaltabcontent {
+			padding: 20px;
+			#milestonetab,
+			#costbudgettab,
+			#procurementtab,
+			#internalactivitytab,
+			#externalactivitytab {
+				table {
+					th,td {
+						text-align: center;
+						vertical-align: middle;
+					}
+					th {
+						height: 45px;
+						background-color: #666;
+						color: white;
+						font-weight: normal;
+					}
+					td {
+						height: 40px;
+					}
+				}
+			}
+		}
+	}
+}

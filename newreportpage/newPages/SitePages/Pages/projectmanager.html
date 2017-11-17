@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>子项目经理</title>
+	<link href="../../Style Library/CSS/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../../Style Library/CSS/fullcalendar.min.css" rel="stylesheet">
+	<link href="../../Style Library/CSS/fullcalendar.print.min.css" rel="stylesheet" media='print'>
+	<link href="../../Style Library/CSS/dataTables.bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="../../Style Library/JS/Common/bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.min.css">
+	<link rel="stylesheet" href="../../Style Library/CSS/main.css">
+	<link rel="stylesheet" href="../../Style Library/CSS/new.css">
+</head>
+<body>
+	
+<div class="container content">
+	<p>当前位置：<span>人员管理</span></p>
+	<div class="projectmanager">
+		<div class="peopleheader">
+			<ul>
+				<li><img src="../../Style Library/Images/peoplesearch.png" alt=""><a href="./requireapplication.html">查询人员信息</a></li>
+				<li><img src="../../Style Library/Images/peoplesearch.png" alt=""><a href="./specsreview.html">查询人员分配</a></li>
+				<li><img src="../../Style Library/Images/searchrecord.png" alt=""><a href="./specsreview.html">我提交的人员申请记录</a></li>
+				<li><img src="../../Style Library/Images/searchrecord.png" alt=""><a href="./specsreview.html">我提交的人员分配变更记录</a></li>
+				<li><img src="../../Style Library/Images/searchrecord.png" alt=""><a href="./specsreview.html">我提交的人员借调记录</a></li>
+			</ul>
+		</div>
+		<div class="peoplecontent">
+			<ul id="" class="peopleTab nav nav-tabs">
+				<li class="active">
+					<a href="#peopleapplicationtab" data-toggle="tab">人员申请</a>
+				</li>
+				<li>
+					<a href="#peoplechangetab" data-toggle="tab">人员分配变更</a>
+				</li>
+				<li>
+					<a href="#peopleloantab" data-toggle="tab">人员借调</a>
+				</li>
+			</ul>
+			<div id="" class="tab-content peopleTabContent">
+				<div class="tab-pane fade in active" id="peopleapplicationtab">
+					<a href="">
+						<div class="lightgrey">
+							<img src="../../Style%20Library/Images/darksubmit.png" alt="darksubmit.png">
+							<p>提交人员申请</p>
+							<p></p>
+						</div>							
+					</a>
+					<a href="">
+						<div class="lightgrey">
+							<img src="../../Style%20Library/Images/lightsearchicon.png" alt="lightsearchicon.png">
+							<p>待资源匹配</p>
+							<p>(8)</p>
+						</div>
+					</a>
+					<a href="">
+						<div class="darkgrey">
+							<img src="../../Style%20Library/Images/darkopenlock.png" alt="darkopenlock.png">
+							<p>待资源初步确认</p>
+							<p>(10)</p>
+						</div>
+					</a>
+					<a href="">
+						<div class="lightgrey">
+							<img src="../../Style%20Library/Images/lightlock.png" alt="lightlock.png">
+							<p>待资源最终确认</p>
+							<p>(8)</p>
+						</div>
+					</a>
+					<a href="">
+						<div class="lightgrey">
+							<img src="../../Style%20Library/Images/lightkey.png" alt="lightkey.png">
+							<p>待账号与权限配置</p>
+							<p>(8)</p>
+						</div>
+					</a>
+					<a href="">
+						<div class="darkgrey">
+							<img src="../../Style%20Library/Images/complete.png" alt="scope7.png">
+							<p>完成人员申请</p>
+							<p>(10)</p>
+						</div>
+					</a>
+				</div>
+				<div class="tab-pane fade" id="peoplechangetab">
+					<a href="">
+						<div class="darkgrey">
+							<img src="../../Style%20Library/Images/darksubmit.png" alt="darksubmit.png">
+							<p>提交人员分配变更申请</p>
+							<p></p>
+						</div>
+						<p class="hidebox">提交人员分配变更申请</p>				
+					</a>
+					<a href="">
+						<div class="lightgrey">
+							<img src="../../Style%20Library/Images/lightsearchicon.png" alt="lightsearchicon.png">
+							<p>待延长人员分配评估</p>
+							<p>(8)</p>
+						</div>
+						<p>人员延长分配</p>
+					</a>
+					<a href="">
+						<div class="darkgrey">
+							<img src="../../Style%20Library/Images/complete.png" alt="complete.png">
+							<p>完成人员延长分配</p>
+							<p>(10)</p>
+						</div>
+						<p class="hidebox">完成人员延长分配</p>
+					</a>
+					<a href="">
+						<div class="darkgrey">
+							<img src="../../Style%20Library/Images/complete.png" alt="complete.png">
+							<p>完成人员申请撤销</p>
+							<p>(8)</p>
+						</div>
+						<p>人员申请撤销</p>
+					</a>
+					<a href="">
+						<div class="darkgrey">
+							<img src="../../Style%20Library/Images/complete.png" alt="complete.png">
+							<p>完成人员提前释放</p>
+							<p>(8)</p>
+						</div>
+						<p>人员提前释放</p>
+					</a>
+				</div>
+				<div class="tab-pane fade" id="peopleloantab">
+					<a href="">
+						<div class="darkgrey">
+							<img src="../../Style%20Library/Images/darksubmit.png" alt="darksubmit.png">
+							<p>提交人员借调申请</p>
+							<p></p>
+						</div>			
+					</a>
+					<a href="">
+						<div class="darkgrey">
+							<img src="../../Style%20Library/Images/darktime.png" alt="darktime.png">
+							<p>待审批借调申请</p>
+							<p>(8)</p>
+						</div>
+					</a>
+					<a href="">
+						<div class="darkgrey">
+							<img src="../../Style%20Library/Images/complete.png" alt="complete.png">
+							<p>完成人员借调</p>
+							<p>(10)</p>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+	<script src="../../Style Library/JS/Common/moment.min.js"></script>
+	<script src="../../Style Library/JS/Common/jquery.min.js"></script>
+	<script src="../../Style Library/CSS/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+	<script src="../../Style Library/JS/Common/echarts.min.js"></script>
+	<script src="../../Style Library/JS/Common/fullcalendar.min.js"></script>
+	<script src="../../Style Library/JS/Common/jquery.dataTables.min.js"></script>
+	<script src="../../Style Library/JS/Common/bootstrap-datetimepicker-master/js/bootstrap-datetimepicker.min.js"></script>
+	<script src="../../Style Library/JS/Common/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+	<script src="../../Style Library/JS/Common/index.js"></script>
+</body>
+</html>
