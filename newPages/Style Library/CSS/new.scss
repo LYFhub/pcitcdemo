@@ -376,12 +376,17 @@ table tr.darkgreytr {
 .container.content div.changerequest.peopleinfopage >div:first-child .panel-body {
     padding-left: 0;
     padding-top: 0;
-    padding-right: 10px;
+    padding-right: 0px;
 }
 
 .peopleinfo {
     &:after {
         @include clear_float;
+    }
+    >div:first-child {
+        &:after {
+            @include clear_float;
+        }
     }
 
     .leftinfo {
@@ -402,15 +407,15 @@ table tr.darkgreytr {
             }
 
             > img {
-                float: left;
                 width: 145px;
-                margin: 5px;
+                margin: 0 auto;
+                display: block;
             }
 
             > div {
                 width: 220px;
                 height: auto;
-                margin: 5px;
+                margin: 0 auto;
                 padding-top: 8px;
 
                 > div {
@@ -418,26 +423,26 @@ table tr.darkgreytr {
 
                     &:last-child {
                         p:last-child {
-                            position: absolute;
-                            top: 0;
                         }
                     }
                 }
 
                 h3 {
                     display: inline-block;
-                    margin-right: 10px;
-                    width: 140px;
+                    margin-right: 0px;
+                    width: 160px;
+                    text-align: center;
                 }
 
                 p {
                     display: inline-block;
                     margin-right: 0px;
-                    width: 60px;
+                    width: 50px;
+                    text-align: center;
 
                     &:first-child {
-                        width: 140px;
-                        margin-right: 10px;
+                        width: 160px;
+                        margin-right: 0px;
                     }
                 }
             }
@@ -454,11 +459,13 @@ table tr.darkgreytr {
                 li {
                     label {
                         width: 70px;
-                        text-align: right;
-                        margin: 5px 0;
+                        text-align: left;
                         float: left;
                         font-weight: normal;
                         color: #666;
+                        height: 30px;
+                        line-height: 30px;
+                        margin: 0;
                     }
 
                     span {
@@ -484,6 +491,7 @@ table tr.darkgreytr {
         float: left;
         width: calc(72% - 10px);
         padding-top: 12px;
+        padding-right: 10px;
 
         .rightinfoheader {
             border-bottom: 1px dashed #ddd;
@@ -519,6 +527,16 @@ table tr.darkgreytr {
         table {
             text-align: center;
             border: none;
+            margin-bottom: 0;
+            margin-top: 20px;
+            &:first-child, &:nth-child(2) {
+                th, td {
+                    width: 17.5%;
+                    &:nth-child(4) {
+                        width: 12%;
+                    }
+                }
+            }
             th {
                 text-align: left;
                 border: none;
@@ -540,6 +558,45 @@ table tr.darkgreytr {
             }
         }
     }
+    .belowinfo {
+        float: left;
+        width: calc(100% - 20px);
+        margin: 0 10px;
+        >div {
+            min-height: 72px;
+            background-color: #f6f6f6;
+        }
+        table.table.table-bordered {
+            margin-top: 20px;
+            margin-bottom: 0;
+            border: none;
+            &:first-child, &:nth-child(2) {
+                tr th, tr td {
+                    &:first-child, &:nth-child(2) {
+                        width: 110px;
+                    }
+                }
+            }
+            th {
+                text-align: left;
+                border: none;
+                background-color: white !important;
+                color: $mainColor;
+            }
+            td {
+                background-color: #f6f6f6 !important;
+                text-align: left;
+                border: none;
+            }
+            tr {
+                th, td {
+                    height: 37px;
+                    min-width: 110px;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
 }
 
 .infodescbox {
@@ -555,7 +612,6 @@ table tr.darkgreytr {
 
     > div {
         min-height: 120px;
-        margin-bottom: 10px;
         padding: 5px;
         background-color: #f6f6f6;
     }
@@ -565,6 +621,7 @@ table tr.darkgreytr {
     .panel-body > div {
         > span {
             margin-right: 20px;
+            vertical-align: text-bottom;
         }
     }
 
@@ -1054,19 +1111,11 @@ table tr.darkgreytr {
 .loanedapproval .panel-body,
 .releasepeople .releaseinfo,
 .releaseapproval .panel-body {
-    div.leftbox {
-        width: 420px;
-    }
-
-    div.rightbox {
-        width: 350px;
-    }
-
     > div {
         margin: 10px 0;
+        padding-left: 0;
 
         label {
-            width: 140px;
             text-align: right;
             margin-right: 5px;
         }
@@ -1084,10 +1133,9 @@ table tr.darkgreytr {
                 top: 0;
 
                 & + textarea {
-                    width: 80%;
+                    width: 698px;
                     position: relative;
-                    left: 148px;
-                    height: 122px;
+                    left: 118px;
                     min-height: 20px;
                 }
             }
@@ -1228,6 +1276,9 @@ table tr.darkgreytr {
 }
 
 .releasepeople .releaseinfo {
+    >div label {
+        width: 110px;
+    }
     .checkboxgroup.leftbox {
         width: 100%;
         float: left;
@@ -1235,7 +1286,7 @@ table tr.darkgreytr {
         label {
             width: 170px;
             position: relative;
-            left: 150px;
+            left: 105px;
         }
 
         input {
@@ -1338,7 +1389,7 @@ table tr.darkgreytr {
 
             #peoplechangetab {
                 .rightarrow {
-                    top: -100px;
+                    top: -115px;
                 }
                 .processitem {
                     >p {
@@ -1365,6 +1416,23 @@ table tr.darkgreytr {
                 
             }
         }
+    }
+}
+
+
+.requiremgt {
+    .processitem {
+        width: 125px;
+        margin: 0;
+        a {
+            p {
+                height: 37px;
+                padding: 0 10px;
+            }
+        }
+    }
+    .rightarrow {
+        top: -95px;
     }
 }
 
@@ -2899,6 +2967,7 @@ header + div {
 
         .ms-usereditor {
             width: 180px !important;
+            position: relative;
 
             > tbody > tr > td {
                 &:first-child {
@@ -2907,6 +2976,11 @@ header + div {
 
                 &:last-child {
                     position: absolute;
+                }
+            }
+            > tbody > tr:first-child td:last-child {
+                &:last-child {
+                    top: 0;
                 }
             }
         }
